@@ -1,0 +1,2 @@
+#Ignoramos el cache de python al ejecutar funciones
+*.pyc
