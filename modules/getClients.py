@@ -39,7 +39,7 @@ def getAllClientPaisRegionCiudad(pais, region=None, ciudad=None):
                     clientZone.append(val)
     return clientZone
 
-# Filtrar por código postal
+# 1 Filtrar por código postal
 def getClientCodigoPostal(codigoPostal):
     clientPostalCode = []
     for val in cli.clientes:
@@ -52,10 +52,27 @@ def getClientCodigoPostal(codigoPostal):
             clientPostalCode.append(client_info)
     return clientPostalCode
 
-# Filtrar por representante de ventas
+# 2 Filtrar por representante de ventas
 def getClientByRepresentanteVentas(codeRepreVen):
     clientRepreVentas = []
     for val in cli.clientes:
         if (val.get('codigo_empleado_rep_ventas') == codeRepreVen):
             clientRepreVentas.append(val)
     return clientRepreVentas
+# 3 Filtrar por país y código postal
+def getClientByCountryAndPostalCode(country, postal_code):
+    clientsByCountryPostal = []
+    for client in cli.clientes:
+        if client.get('pais') == country and client.get('codigo_postal') == postal_code:
+            clientsByCountryPostal.append(client)
+    return clientsByCountryPostal
+
+# 4 Filtrar por nombre de contacto y país
+def getClientByContactNameAndCountry(contact_name, country):
+    clientsByContactNameCountry = []
+    for client in cli.clientes:
+        if client.get('nombre_contacto') == contact_name and client.get('pais') == country:
+            clientsByContactNameCountry.append(client)
+    return clientsByContactNameCountry
+
+

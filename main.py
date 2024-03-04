@@ -10,4 +10,8 @@ import modules.getClients as cliente
 
 # print(tabulate(cliente.getClientCodigoPostal("28942"),tablefmt="grid"))
 
-print(tabulate(cliente.getClientByRepresentanteVentas(11),tablefmt="grid"))
+# print(tabulate(cliente.getClientByRepresentanteVentas(11),tablefmt="grid"))
+
+# print(tabulate(cliente.getClientByCountryAndPostalCode("Spain","28942"),tablefmt="grid"))
+
+print(tabulate(cliente.getClientByContactNameAndCountry("Jose","Spain"),tablefmt="grid"))
