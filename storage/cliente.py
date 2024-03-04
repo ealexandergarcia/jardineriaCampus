@@ -521,7 +521,7 @@ clientes = [
         "linea_direccion1": 'level 24, St. Martins Tower.-31 Market St.',
         "linea_direccion2": None,
         "ciudad": 'Sydney',
-        "region": 'Nueva Gales del Sur',
+        "region": 'Sur',
         "pais": 'Australia',
         "codigo_postal": '2000',
         "codigo_empleado_rep_ventas": 31,
