@@ -6,6 +6,8 @@ import modules.getClients as cliente
 
 # print(cliente.getAllClientCreditCiudad(5000,"London"))
 
-print(tabulate(cliente.getAllClientPaisRegionCiudad("Australia","Sur"),tablefmt="grid"))
-# cliente.getAllClientPaisRegionCiudad("France"," ","Paris")
+# print(tabulate(cliente.getAllClientPaisRegionCiudad("Spain","Cataluña","Barcelona"),tablefmt="grid"))
 
+# print(tabulate(cliente.getClientCodigoPostal("28942"),tablefmt="grid"))
+
+print(tabulate(cliente.getClientByRepresentanteVentas(11),tablefmt="grid"))

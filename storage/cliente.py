@@ -107,7 +107,7 @@ clientes = [
         "ciudad": 'Madrid',
         "region": 'Madrid',
         "pais": 'Spain',
-        "codigo_postal": '28930',
+        "codigo_postal": '28942',
         "codigo_empleado_rep_ventas": 11,
         "limite_credito": 40000.0
     },
@@ -139,7 +139,7 @@ clientes = [
         "ciudad": 'Fuenlabrada',
         "region": 'Madrid',
         "pais": 'Spain',
-        "codigo_postal": '28946',
+        "codigo_postal": '28942',
         "codigo_empleado_rep_ventas": 11,
         "limite_credito": 50000.0
     },
