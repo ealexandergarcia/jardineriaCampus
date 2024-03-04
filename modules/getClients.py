@@ -29,28 +29,13 @@ def getAllClientCreditCiudad(limitCredit, ciudad):
         })
     return clientCredit
 
-def getAllClientPaisRegionCiudad(pais,region = None,ciudad = None):
+# Correccion del filtro de pasi/region/ciudad
+def getAllClientPaisRegionCiudad(pais, region=None, ciudad=None):
     clientZone = []
     for val in cli.clientes:
-        if(val.get('pais') == pais):
-            if(region != val.get('region')):
-                clientZone.append(val)
-            else:
-                clientZone.append(val)
-            # if((region != None and val.get('region')==region)):
-            #     clientZone.append(val)
-            # elif(val.get('region')==region):
-            #     clientZone.append(val)
-           
-        # if (val.get('pais') == pais or 
-        #     (val.get('region') == region or val.get('region') == None) or 
-        #     (val.get('ciudad') == ciudad or val.get('ciudad') == None)):
-        #     clientZone.append(val)
-
-        # if (val.get('pais') == pais):
-        #      if (val.get('region') == region or val.get('region') == None):
-        #          if(val.get('ciudad') == ciudad or val.get('ciudad') == None):
-        #             clientZone.append(val)
-    # print(clientZone)
+        if val.get('pais') == pais:
+            if region is None or val.get('region') == region:
+                if ciudad is None or val.get('ciudad') == ciudad:
+                    clientZone.append(val)
     return clientZone
 
