@@ -36,3 +36,5 @@ import modules.getPago as pago
 # print(tabulate(cliente.getAllClientesEspañoles("Spain"),headers="keys", tablefmt="grid"))
 
 print(pago.getAllClientPayYear())
+
+#print(pedido.getAllListadoEstadoPedidos())

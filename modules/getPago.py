@@ -7,8 +7,6 @@ def getAllClientPayYear():
     for pay in pag.pago:
         año = pay.get("fecha_pago")
         if año[0:4] == "2008":
-            ClientPayYear.append({
-            "codigo_cliente": pay.get("codigo_cliente"),
-            "fecha_pago": pay.get("fecha_pago")
-        })
-    return ClientPayYear
+            ClientPayYear.append(pay.get("codigo_cliente"))
+    cliente_unicos = list(set(ClientPayYear))
+    return cliente_unicos
