@@ -1,6 +1,12 @@
 from tabulate import tabulate
 import modules.getClients as cliente
 import modules.getOficina as oficina
+import modules.getEmpleados as empleado
+import modules.getPedido as pedido
+import modules.getPago as pago
+# print(empleado.emp.empleados)
+
+
 # print(tabulate(cliente.getAllClientName(),tablefmt="grid"))
 
 # print(cliente.getOneClientCodigo(15))
@@ -17,7 +23,16 @@ import modules.getOficina as oficina
 
 # print(tabulate(cliente.getClientByContactNameAndCountry("Jose","Spain"), headers="keys",tablefmt="grid"))
 
-
 # print(tabulate(oficina.getAllCodigoCiudad(), headers="keys",tablefmt="grid"))
 
-print(tabulate(oficina.getAllCiudadTelefono("España")))
+# print(tabulate(oficina.getAllCiudadTelefono("España")))
+
+# print(tabulate(empleado.getAllNombresApellidoEmailJefe(7), headers="keys",tablefmt="grid"))
+
+# print(tabulate(empleado.getAllNombrePuestoNombreApellidoEmailJefe(), headers="keys",tablefmt="grid"))
+
+# print(tabulate(empleado.getAllNombreApellidoNombrePuesto(), headers="keys",tablefmt="grid"))
+
+# print(tabulate(cliente.getAllClientesEspañoles("Spain"),headers="keys", tablefmt="grid"))
+
+print(pago.getAllClientPayYear())

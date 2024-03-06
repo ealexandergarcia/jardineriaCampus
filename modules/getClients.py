@@ -75,4 +75,14 @@ def getClientByContactNameAndCountry(contact_name, country):
             clientsByContactNameCountry.append(client)
     return clientsByContactNameCountry
 
+# Devuelve un listado con el nombre de todos los clientes españoles
+
+def getAllClientesEspañoles(nacionalidad):
+    ClientesEspañoles = []
+    for client in cli.clientes:
+        if (client.get("pais")) == nacionalidad:
+            ClientesEspañoles.append({
+            "clientes españoles": client.get("nombre_cliente")
+        })
+    return ClientesEspañoles
 
