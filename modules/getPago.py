@@ -7,6 +7,13 @@ def getAllClientPayYear():
     for pay in pag.pago:
         año = pay.get("fecha_pago")
         if año[0:4] == "2008":
-            ClientPayYear.append(pay.get("codigo_cliente"))
-    cliente_unicos = list(set(ClientPayYear))
-    return cliente_unicos
+            ClientPayYear.append({
+                "codigo_cliente": pay.get("codigo_cliente"),
+                "fecha_pago": pay.get("fecha_pago")
+            })
+
+    # Eliminar valores repetidos usando un conjunto y luego convertirlo a lista
+    unique_clients = list({client['codigo_cliente']:client for client in ClientPayYear}.values())
+
+    return unique_clients
+
