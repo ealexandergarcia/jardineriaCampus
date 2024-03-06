@@ -1,5 +1,6 @@
 from tabulate import tabulate
 import modules.getClients as cliente
+import modules.getOficina as oficina
 # print(tabulate(cliente.getAllClientName(),tablefmt="grid"))
 
 # print(cliente.getOneClientCodigo(15))
@@ -8,10 +9,15 @@ import modules.getClients as cliente
 
 # print(tabulate(cliente.getAllClientPaisRegionCiudad("Spain","Cataluña","Barcelona"),tablefmt="grid"))
 
-# print(tabulate(cliente.getClientCodigoPostal("28942"),tablefmt="grid"))
+# print(tabulate(cliente.getClientCodigoPostal("28942"), headers="keys",tablefmt="grid"))
 
 # print(tabulate(cliente.getClientByRepresentanteVentas(11),tablefmt="grid"))
 
-# print(tabulate(cliente.getClientByCountryAndPostalCode("Spain","28942"),tablefmt="grid"))
+# print(tabulate(cliente.getClientByCountryAndPostalCode("Spain","28942"), headers="keys",tablefmt="grid"))
 
-print(tabulate(cliente.getClientByContactNameAndCountry("Jose","Spain"),tablefmt="grid"))
+# print(tabulate(cliente.getClientByContactNameAndCountry("Jose","Spain"), headers="keys",tablefmt="grid"))
+
+
+# print(tabulate(oficina.getAllCodigoCiudad(), headers="keys",tablefmt="grid"))
+
+print(tabulate(oficina.getAllCiudadTelefono("España")))
