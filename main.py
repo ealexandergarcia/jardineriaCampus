@@ -4,6 +4,7 @@ import modules.getOficina as oficina
 import modules.getEmpleados as empleado
 import modules.getPedido as pedido
 import modules.getPago as pago
+import modules.getProducto as producto
 # print(empleado.emp.empleados)
 
 
@@ -35,6 +36,14 @@ import modules.getPago as pago
 
 # print(tabulate(cliente.getAllClientesEspañoles("Spain"),headers="keys", tablefmt="grid"))
 
-print(tabulate(pago.getAllClientPayYear(),headers="keys", tablefmt="grid"))
+# print(tabulate(pago.getAllClientPayYear(),headers="keys", tablefmt="grid"))
 
 #print(pedido.getAllListadoEstadoPedidos())
+
+# print(tabulate(pedido.getAllEntregadosEnero(),headers="keys", tablefmt="grid"))
+
+# print(tabulate(pago.getAllPagosPaypal(),headers="keys", tablefmt="grid"))
+
+# print(tabulate(pago.getAllFormasPago(),headers="keys", tablefmt="grid"))
+
+print(tabulate(producto.getAllProductosOrnamentales(),headers="keys",tablefmt="grid"))
