@@ -39,3 +39,17 @@ def getAllPagosPaypal():
     valores_ord = sorted(pagosPaypal, key=lambda x: x["total"], reverse=True)
     return valores_ord
 
+# Devuelve un listado con todas las formas de pago que aparecen en la tabla pago.
+# Tenga en cuenta que no deben aparecer formas de pago repetidas
+
+def getAllFormasPago():
+    formasPago = []
+    for pay in pag.pago:
+        formasPago.append({
+            "forma_pago": pay.get("forma_pago")
+        })
+
+    # Eliminar valores repetidos usando un conjunto y luego convertirlo a lista
+    unique_pay = list({client['forma_pago']:client for client in formasPago}.values())
+
+    return unique_pay
