@@ -1,5 +1,4 @@
 import storage.cliente as cli
-import sys
 from tabulate import tabulate
 
 def getAllClientName():
@@ -59,7 +58,12 @@ def getClientByRepresentanteVentas(codeRepreVen):
     clientRepreVentas = []
     for val in cli.clientes:
         if (val.get('codigo_empleado_rep_ventas') == codeRepreVen):
-            clientRepreVentas.append(val)
+            clientRepreVentas.append({
+            "Representante de ventas": val.get("codigo_empleado_rep_ventas"),
+            "Credito": val.get("limite_credito"),
+            "Nombre": val.get("nombre_cliente"),
+            "Nombre": val.get("nombre_cliente")
+        })
     return clientRepreVentas
 # 3 Filtrar por país y código postal
 def getClientByCountryAndPostalCode(country, postal_code):
@@ -128,17 +132,35 @@ Reportes de los clientes
           7. Obtener todos los clientes por país y código postal
           8. 
 """)
-    opcion = int(input("\n Ingrese su opcion: "))
+    opcion = int(input("\n Ingrese su opcionssssssssss: "))
 
     match opcion:
         case 1:
-            print(tabulate(getAllClientName(),headers="keys", tablefmt="grid"))
+            print(tabulate(getAllClientName(), headers="keys", tablefmt="grid"))
         case 2:
-            codigoC = int(input("Ingrese el codigo del cliente"))
-            print(tabulate(getOneClientCodigo(codigoC),headers="keys", tablefmt="grid"))
+            codigoC = int(input("Ingrese el código del cliente: "))
+            print(tabulate(getOneClientCodigo(codigoC), headers="keys", tablefmt="grid"))
         case 3:
             ciudad = input("Ingrese la ciudad deseada: ")
-            limitCredit = float(input("Ingrese el limite de credito: "))
-            print(tabulate(getAllClientCreditCiudad(limitCredit, ciudad),headers="keys", tablefmt="grid"))
+            limitCredit = float(input("Ingrese el límite de crédito: "))
+            print(tabulate(getAllClientCreditCiudad(limitCredit, ciudad), headers="keys", tablefmt="grid"))
         case 4:
-            print("Opcion invalida")
+            pais = input("Ingrese el país: ")
+            region = input("Ingrese la región (opcional): ") or None
+            ciudad = input("Ingrese la ciudad (opcional): ") or None
+            print(tabulate(getAllClientPaisRegionCiudad(pais, region, ciudad), headers="keys", tablefmt="grid"))
+        case 5:
+            codigoPostal = input("Ingrese el código postal: ")
+            print(tabulate(getClientCodigoPostal(codigoPostal), headers="keys", tablefmt="grid"))
+        case 6:
+            codeRepreVen = int(input("Ingrese el código del representante de ventas: "))
+            print(tabulate(getClientByRepresentanteVentas(codeRepreVen), headers="keys", tablefmt="grid"))
+        case 7:
+            country = input("Ingrese el país: ")
+            postal_code = input("Ingrese el código postal: ")
+            print(tabulate(getClientByCountryAndPostalCode(country, postal_code), headers="keys", tablefmt="grid"))
+        case 8:
+            nacionalidad = "España"  # Fijo para obtener clientes españoles
+            print(tabulate(getAllClientesEspañoles(nacionalidad), headers="keys", tablefmt="grid"))
+        case _:
+            print("Opción inválida")

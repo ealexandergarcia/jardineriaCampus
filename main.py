@@ -59,15 +59,7 @@ if(__name__ == "__main__"):
     MMMMMMMM               MMMMMMMM    eeeeeeeeeeeeee    nnnnnn    nnnnnn    uuuuuuuu  uuuu
                                                                                         
                                         1. Cliente
-                                        2. Oficina                                                                                   
-                                                                                        
-                                                                                        
-                                                                                        
-                                                                                        
-                                                                                        
-
-                                
-
+                                        2. Oficina                                                                                                                                                               
     """)
 
     opcion = int(input("\n Ingrese su opcion: "))
