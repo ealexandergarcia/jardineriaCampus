@@ -1,6 +1,8 @@
 from os import system #import of the standard function os.system()
 from tabulate import tabulate
 import time
+import keyboard
+from main import mainMenu
 import storage.empleado as emp
 
 # Devuelve los datos de los empleados que tienen un jefe = 7
@@ -84,3 +86,5 @@ def menu():
             case _:
                 print("Opcion invalida")
                 time.sleep(2) # espera en segundos
+
+# keyboard.add_hotkey("ctrl+m", mainMenu)

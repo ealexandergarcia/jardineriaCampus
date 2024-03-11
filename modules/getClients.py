@@ -123,7 +123,6 @@ def menu():
     07. Obtener todos los clientes por país y código postal
     08. Obtener todos los clientes Españoles
     09. Volver al menu princupal
-    10. Terminar la consulta
     """)
         opcion = int(input("\n Ingrese su opcion: "))
 

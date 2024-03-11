@@ -57,7 +57,7 @@ def menu():
                 print(tabulate(getAllCodigoCiudad(), headers="keys", tablefmt="grid"))
                 input("\nPresiona Enter para volver al menú...")
             case 2:
-                paisOficina = int(input("Ingrese el Pais deseado: "))
+                paisOficina = input("Ingrese el Pais deseado: ")
                 print(tabulate(getAllCiudadTelefono(paisOficina), headers="keys", tablefmt="grid"))
                 input("\nPresiona Enter para volver al menú...")
             case 3:

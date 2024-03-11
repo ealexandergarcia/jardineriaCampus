@@ -8,9 +8,7 @@ import modules.getPedido as pedido
 import modules.getPago as pago
 import modules.getProducto as producto
 
-# print(tabulate(producto.getAllStocksPriceGama("Ornamentales",100),headers="keys", tablefmt="grid"))
-# print(tabulate(empleado.getAllNombrePuestoNombreApellidoEmailJefe(), headers="keys", tablefmt="grid"))
-if(__name__ == "__main__"): 
+def mainMenu():
     while True:
         try:
             Menu = """                                                                             
@@ -69,15 +67,15 @@ if(__name__ == "__main__"):
                 case 1:
                     cliente.menu()
                 case 2:
-                    empleado.menu()
+                    oficina.menu()
                 case 3:
                     empleado.menu()
                 case 4:
-                    cliente.menu()
+                    pedido.menu()
                 case 5:
-                    cliente.menu()
+                    pago.menu()
                 case 6:
-                    cliente.menu()
+                    producto.menu()
                 case 7:
                     break
                 case _:
@@ -85,3 +83,6 @@ if(__name__ == "__main__"):
         except KeyboardInterrupt:
                 print("\nSaliendo del menú...")
                 break
+
+if(__name__ == "__main__"): 
+   mainMenu()

@@ -1,5 +1,7 @@
-import storage.pedido as ped
+from os import system #import of the standard function os.system()
+from tabulate import tabulate
 from datetime import datetime
+import storage.pedido as ped
 
 # Devuelve un listado con los distintos estados por los que puede pasar un pedido
 def getAllListadoEstadoPedidos():
@@ -11,7 +13,6 @@ def getAllListadoEstadoPedidos():
 
 # Devuelve un listado con el codigo de pedido,codigo cliente, fecha esperada y
 # fecha de entrega de los pedidos que no han sido entregados a tiempo
-
 def getAllPedidosEntregadosAtrasadosDeTiempo():
     pedidosEntregado = []
     for pedidos in ped.pedido:
@@ -34,10 +35,8 @@ def getAllPedidosEntregadosAtrasadosDeTiempo():
 
     return pedidosEntregado
 
-
 # Devuelve un listado con el codigo de pedido, codigo de cliente, fecha esperada y fecha de entrega 
 # de los pedidos cuya fecha de entrega ha sido al menos dos dias antes de la fecha esperada
-
 def getAllPedidosEntregadosAntesDeTiempo():
     pedidosEntregados = []
     for pedidos in ped.pedido:
@@ -95,3 +94,54 @@ def getAllEntregadosEnero():
                     "fecha_de_entrega": pedido.get("fecha_entrega")
                 })
     return entregadosEnero
+
+# Menu
+def menu():
+    while True:
+        system("clear")
+        
+        print(""" 
+    _______                                            __                         
+    |       \                                          |  \                        
+    | $$$$$$$\  ______    ______    ______    ______  _| $$_     ______    _______ 
+    | $$__| $$ /      \  /      \  /      \  /      \|   $$ \   /      \  /       $
+    | $$    $$|  $$$$$$\|  $$$$$$\|  $$$$$$\|  $$$$$$\\$$$$$$  |  $$$$$$\|  $$$$$$$
+    | $$$$$$$\| $$    $$| $$  | $$| $$  | $$| $$   \$$ | $$ __ | $$    $$ \$$    \ 
+    | $$  | $$| $$$$$$$$| $$__/ $$| $$__/ $$| $$       | $$|  \| $$$$$$$$ _\$$$$$$$
+    | $$  | $$ \$$     \| $$    $$ \$$    $$| $$        \$$  $$ \$$     \|       $$
+    \$$   \$$  \$$$$$$$| $$$$$$$   \$$$$$$  \$$         \$$$$   \$$$$$$$ \$$$$$$$ 
+                        | $$                                                       
+                        | $$                                                       
+                        \$$                                                                                                       
+    """)
+        print ("""
+    01. Obtener todos los distintos estados por los que puede pasar un pedido
+    02. Obtener datos de todos los pedidos que no han sido entregados a tiempo
+    03. Obtener datos de los pedidos cuya fecha de entrega ha sido al menos dos dias antes de la fecha esperada
+    04. Obtener todos los pedidos que fueron rechazados en 2009
+    05. Obtener todos los pedidos que han sido entregados en el mes de enero de cualquier año
+    06. Volver al menu princupal
+    """)
+        opcion = int(input("\n Ingrese su opcion: "))
+
+        match opcion:
+            case 1:
+                print(tabulate(getAllListadoEstadoPedidos(), headers="keys", tablefmt="grid"))
+                input("\nPresiona Enter para volver al menú...")
+            case 2:
+                print(tabulate(getAllPedidosEntregadosAtrasadosDeTiempo(), headers="keys", tablefmt="grid"))
+                input("\nPresiona Enter para volver al menú...")
+            case 3:
+                print(tabulate(getAllPedidosEntregadosAntesDeTiempo(), headers="keys", tablefmt="grid"))
+                input("\nPresiona Enter para volver al menú...")
+            case 4:
+                print(tabulate(getAllPedidosRechazados(), headers="keys", tablefmt="grid"))
+                input("\nPresiona Enter para volver al menú...")
+            case 5:
+                print(tabulate(getAllEntregadosEnero(), headers="keys", tablefmt="grid"))
+                input("\nPresiona Enter para volver al menú...")
+            case 6:
+                break
+            case _:
+                print("Opcion invalida")
+                time.sleep(2) # espera en segundos

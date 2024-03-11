@@ -1,8 +1,11 @@
-import storage.pago as pag
+from os import system #import of the standard function os.system()
+from tabulate import tabulate
 from datetime import datetime
+import time
+import storage.pago as pag
+
 # Devuelve un listado con el codigo de cliente de aquellos clientes que realizaron algun pago
 # en 2008. Tenga en cuenta que debera eliminar aquellos codigos de cliente que aparezcan repeditos
-
 def getAllClientPayYear():
     ClientPayYear = []
     for pay in pag.pago:
@@ -41,7 +44,6 @@ def getAllPagosPaypal():
 
 # Devuelve un listado con todas las formas de pago que aparecen en la tabla pago.
 # Tenga en cuenta que no deben aparecer formas de pago repetidas
-
 def getAllFormasPago():
     formasPago = []
     for pay in pag.pago:
@@ -53,3 +55,46 @@ def getAllFormasPago():
     unique_pay = list({client['forma_pago']:client for client in formasPago}.values())
 
     return unique_pay
+
+# Menu
+def menu():
+    while True:
+        system("clear")
+        
+        print(""" 
+    _______                                            __                         
+    |       \                                          |  \                        
+    | $$$$$$$\  ______    ______    ______    ______  _| $$_     ______    _______ 
+    | $$__| $$ /      \  /      \  /      \  /      \|   $$ \   /      \  /       $
+    | $$    $$|  $$$$$$\|  $$$$$$\|  $$$$$$\|  $$$$$$\\$$$$$$  |  $$$$$$\|  $$$$$$$
+    | $$$$$$$\| $$    $$| $$  | $$| $$  | $$| $$   \$$ | $$ __ | $$    $$ \$$    \ 
+    | $$  | $$| $$$$$$$$| $$__/ $$| $$__/ $$| $$       | $$|  \| $$$$$$$$ _\$$$$$$$
+    | $$  | $$ \$$     \| $$    $$ \$$    $$| $$        \$$  $$ \$$     \|       $$
+    \$$   \$$  \$$$$$$$| $$$$$$$   \$$$$$$  \$$         \$$$$   \$$$$$$$ \$$$$$$$ 
+                        | $$                                                       
+                        | $$                                                       
+                        \$$                                                                                                       
+    """)
+        print ("""
+    01. Obtener todos los clientes que realizaron pagos en 2008
+    02. Obtener todos los pagos que se realizaron en el año 2008 mediante PayPal
+    03. Obtener todas las formas de pago
+    04. Volver al menu princupal
+    """)
+        opcion = int(input("\n Ingrese su opcion: "))
+
+        match opcion:
+            case 1:
+                print(tabulate(getAllClientPayYear(), headers="keys", tablefmt="grid"))
+                input("\nPresiona Enter para volver al menú...")
+            case 2:
+                print(tabulate(getAllPagosPaypal(), headers="keys", tablefmt="grid"))
+                input("\nPresiona Enter para volver al menú...")
+            case 3:
+                print(tabulate(getAllFormasPago(), headers="keys", tablefmt="grid"))
+                input("\nPresiona Enter para volver al menú...")
+            case 4:
+                break
+            case _:
+                print("Opcion invalida")
+                time.sleep(2) # espera en segundos
