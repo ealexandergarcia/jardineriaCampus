@@ -1,5 +1,6 @@
 from os import system #import of the standard function os.system()
 from tabulate import tabulate
+import time
 import storage.cliente as cli
 
 def getAllClientName():
@@ -96,68 +97,74 @@ def getAllClientesEspañoles(nacionalidad):
 # Menu
 
 def menu():
-    
-    system("clear")
-    print("""       
+    while True:
+        system("clear")
+        print(""" 
+    _______                                            __                         
+    |       \                                          |  \                        
+    | $$$$$$$\  ______    ______    ______    ______  _| $$_     ______    _______ 
+    | $$__| $$ /      \  /      \  /      \  /      \|   $$ \   /      \  /       $
+    | $$    $$|  $$$$$$\|  $$$$$$\|  $$$$$$\|  $$$$$$\\$$$$$$  |  $$$$$$\|  $$$$$$$
+    | $$$$$$$\| $$    $$| $$  | $$| $$  | $$| $$   \$$ | $$ __ | $$    $$ \$$    \ 
+    | $$  | $$| $$$$$$$$| $$__/ $$| $$__/ $$| $$       | $$|  \| $$$$$$$$ _\$$$$$$$
+    | $$  | $$ \$$     \| $$    $$ \$$    $$| $$        \$$  $$ \$$     \|       $$
+    \$$   \$$  \$$$$$$$| $$$$$$$   \$$$$$$  \$$         \$$$$   \$$$$$$$ \$$$$$$$ 
+                        | $$                                                       
+                        | $$                                                       
+                        \$$                                                                                                       
+    """)
+        print ("""
+    01. Obtener todos los clientes (codigo y nombre)
+    02. Obtener un cliente por el codigo
+    03. Obtener toda la informacion de un cliente de una ciudad en especifico segun su limite de credito especifico (ej: 3000, San Francisco)
+    04. Obtener todos los clientes segun su pasi/region/ciudad
+    05. Obtener todos los clientes por código postal
+    06. Obtener todos lo clientes que segun el representante de ventas que los atendio
+    07. Obtener todos los clientes por país y código postal
+    08. Obtener todos los clientes Españoles
+    09. Volver al menu princupal
+    10. Terminar la consulta
+    """)
+        opcion = int(input("\n Ingrese su opcion: "))
 
-
- _______                                            __                         
-|       \                                          |  \                        
-| $$$$$$$\  ______    ______    ______    ______  _| $$_     ______    _______ 
-| $$__| $$ /      \  /      \  /      \  /      \|   $$ \   /      \  /       $
-| $$    $$|  $$$$$$\|  $$$$$$\|  $$$$$$\|  $$$$$$\\$$$$$$  |  $$$$$$\|  $$$$$$$
-| $$$$$$$\| $$    $$| $$  | $$| $$  | $$| $$   \$$ | $$ __ | $$    $$ \$$    \ 
-| $$  | $$| $$$$$$$$| $$__/ $$| $$__/ $$| $$       | $$|  \| $$$$$$$$ _\$$$$$$$
-| $$  | $$ \$$     \| $$    $$ \$$    $$| $$        \$$  $$ \$$     \|       $$
- \$$   \$$  \$$$$$$$| $$$$$$$   \$$$$$$  \$$         \$$$$   \$$$$$$$ \$$$$$$$ 
-                    | $$                                                       
-                    | $$                                                       
-                     \$$                                                       
-                         
-                                                   
-""")
-    print ("""
-01. Obtener todos los clientes (codigo y nombre)
-02. Obtener un cliente por el codigo
-03. Obtener toda la informacion de un cliente de una ciudad en especifico segun su limite de credito especifico (ej: 3000, San Francisco)
-04. Obtener todos los clientes segun su pasi/region/ciudad
-05. Obtener todos los clientes por código postal
-06. Obtener todos lo clientes que segun el representante de ventas que los atendio
-07. Obtener todos los clientes por país y código postal
-08. Obtener todos los clientes Españoles
-09. Realizar otra consulta de Clientes
-10. Volver al menu princupal
-11. Terminar la consulta
-""")
-    opcion = int(input("\n Ingrese su opcion: "))
-
-    match opcion:
-        case 1:
-            print(tabulate(getAllClientName(), headers="keys", tablefmt="grid"))
-        case 2:
-            codigoC = int(input("Ingrese el código del cliente: "))
-            print(tabulate(getOneClientCodigo(codigoC), headers="keys", tablefmt="grid"))
-        case 3:
-            ciudad = input("Ingrese la ciudad deseada: ")
-            limitCredit = float(input("Ingrese el límite de crédito: "))
-            print(tabulate(getAllClientCreditCiudad(limitCredit, ciudad), headers="keys", tablefmt="grid"))
-        case 4:
-            pais = input("Ingrese el país: ")
-            region = input("Ingrese la región (opcional): ") or None
-            ciudad = input("Ingrese la ciudad (opcional): ") or None
-            print(tabulate(getAllClientPaisRegionCiudad(pais, region, ciudad), headers="keys", tablefmt="grid"))
-        case 5:
-            codigoPostal = input("Ingrese el código postal: ")
-            print(tabulate(getClientCodigoPostal(codigoPostal), headers="keys", tablefmt="grid"))
-        case 6:
-            codeRepreVen = int(input("Ingrese el código del representante de ventas: "))
-            print(tabulate(getClientByRepresentanteVentas(codeRepreVen), headers="keys", tablefmt="grid"))
-        case 7:
-            country = input("Ingrese el país: ")
-            postal_code = input("Ingrese el código postal: ")
-            print(tabulate(getClientByCountryAndPostalCode(country, postal_code), headers="keys", tablefmt="grid"))
-        case 8:
-            nacionalidad = "Spain" 
-            print(tabulate(getAllClientesEspañoles(nacionalidad), headers="keys", tablefmt="grid"))
-        case 9:
-            exit
+        match opcion:
+            case 1:
+                print(tabulate(getAllClientName(), headers="keys", tablefmt="grid"))
+                input("\nPresiona Enter para volver al menú...")
+            case 2:
+                codigoC = int(input("Ingrese el código del cliente: "))
+                print(tabulate(getOneClientCodigo(codigoC), headers="keys", tablefmt="grid"))
+                input("\nPresiona Enter para volver al menú...")
+            case 3:
+                ciudad = input("Ingrese la ciudad deseada: ")
+                limitCredit = float(input("Ingrese el límite de crédito: "))
+                print(tabulate(getAllClientCreditCiudad(limitCredit, ciudad), headers="keys", tablefmt="grid"))
+                input("\nPresiona Enter para volver al menú...")
+            case 4:
+                pais = input("Ingrese el país: ")
+                region = input("Ingrese la región (opcional): ") or None
+                ciudad = input("Ingrese la ciudad (opcional): ") or None
+                print(tabulate(getAllClientPaisRegionCiudad(pais, region, ciudad), headers="keys", tablefmt="grid"))
+                input("\nPresiona Enter para volver al menú...")
+            case 5:
+                codigoPostal = input("Ingrese el código postal: ")
+                print(tabulate(getClientCodigoPostal(codigoPostal), headers="keys", tablefmt="grid"))
+                input("\nPresiona Enter para volver al menú...")
+            case 6:
+                codeRepreVen = int(input("Ingrese el código del representante de ventas: "))
+                print(tabulate(getClientByRepresentanteVentas(codeRepreVen), headers="keys", tablefmt="grid"))
+                input("\nPresiona Enter para volver al menú...")
+            case 7:
+                country = input("Ingrese el país: ")
+                postal_code = input("Ingrese el código postal: ")
+                print(tabulate(getClientByCountryAndPostalCode(country, postal_code), headers="keys", tablefmt="grid"))
+                input("\nPresiona Enter para volver al menú...")
+            case 8:
+                nacionalidad = "Spain" 
+                print(tabulate(getAllClientesEspañoles(nacionalidad), headers="keys", tablefmt="grid"))
+                input("\nPresiona Enter para volver al menú...")
+            case 9:
+                break
+            case _:
+                print("Opcion invalida")
+                time.sleep(2) # espera en segundos
