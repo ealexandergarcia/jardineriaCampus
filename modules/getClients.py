@@ -124,11 +124,14 @@ def getAllClientNameRepreName():
 # Muestra el nombre de los clientes que hayan realizado pagos junto con el nombre de sus representantes de ventas
 def getAllClientPago():
     clientesPagos = []
+    clientesSinPagos = []
     for client in cli.clientes:
         idClient = client.get("codigo_cliente")
         idRepre = client.get("codigo_empleado_rep_ventas")
+        has_pago = False
         for pago in pag.pago:
             if idClient == pago.get("codigo_cliente"):
+                 has_pago = True
                  for empleado in emp.empleados:
                     if idRepre == empleado.get("codigo_empleado") and empleado.get("puesto") == "Representante Ventas":
                         clientesPagos.append({
@@ -136,9 +139,19 @@ def getAllClientPago():
                             "Nombre del cliente": client.get("nombre_cliente"),
                             "Nombre del representante de ventas": f'{empleado.get("nombre")} {empleado.get("apellido1")}'
                         })
-
-    unique_clients = list({client['Nombre del cliente']:client for client in clientesPagos}.values())
-    return unique_clients
+                        break
+            if not has_pago:
+                for empleado in emp.empleados:
+                    if idRepre == empleado.get("codigo_empleado") and empleado.get("puesto") == "Representante Ventas":
+                        clientesSinPagos.append({
+                            "cod_cliente": client.get("codigo_cliente"),
+                            "Nombre del cliente": client.get("nombre_cliente"),
+                            "Nombre del representante de ventas": f'{empleado.get("nombre")} {empleado.get("apellido1")}'
+                        })
+                        break
+    clientesPagos = list({client['Nombre del cliente']:client for client in clientesPagos}.values())
+    clientesSinPagos = list({client['Nombre del cliente']:client for client in clientesSinPagos}.values())
+    return clientesPagos, clientesSinPagos
 
 
 # Menu
@@ -214,7 +227,8 @@ def menu():
                 print(tabulate(getAllClientNameRepreName(), headers="keys", tablefmt="grid"))
                 input("\nPresiona Enter para volver al menú...")
             case 11:
-                print(tabulate(getAllClientPago(), headers="keys", tablefmt="grid"))
+                clientes_con_pagos, clientes_sin_pagos = getAllClientPago()
+                print(tabulate(clientes_sin_pagos, headers="keys", tablefmt="grid"))
                 input("\nPresiona Enter para volver al menú...")
             case 12:
                 break

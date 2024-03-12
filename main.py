@@ -7,8 +7,21 @@ import modules.getEmpleados as empleado
 import modules.getPedido as pedido
 import modules.getPago as pago
 import modules.getProducto as producto
+import modules.prueba as pr
 
 # print(tabulate(producto.getAllStocksPriceGama("Ornamentales",100),headers="keys",tablefmt="grid"))
+
+# # Suponiendo que la función getAllClientPago() devuelve dos valores
+# clientes_con_pagos, clientes_sin_pagos = pr.getAllClientPago()
+
+# # Si solo quieres imprimir los clientes con pagos
+# print("Clientes con pagos:")
+# print(tabulate(clientes_sin_pagos,headers="keys",tablefmt="grid"))
+
+# # Si solo quieres imprimir los clientes sin pagos
+# print("Clientes sin pagos:")
+# print(tabulate(clientes_con_pagos,headers="keys",tablefmt="grid"))
+
 
 def mainMenu():
     while True:
