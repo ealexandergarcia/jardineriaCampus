@@ -3,6 +3,7 @@ from tabulate import tabulate
 import time
 import storage.cliente as cli
 import storage.empleado as emp
+import storage.pago as pag
 
 def getAllClientName():
     clienteName = []
@@ -120,6 +121,24 @@ def getAllClientNameRepreName():
                 })
     return clientesNames
 
+# Muestra el nombre de los clientes que hayan realizado pagos junto con el nombre de sus representantes de ventas
+def getAllClientPago():
+    clientesPagos = []
+    for client in cli.clientes:
+        idClient = client.get("codigo_cliente")
+        idRepre = client.get("codigo_empleado_rep_ventas")
+        for pago in pag.pago:
+            if idClient == pago.get("codigo_cliente"):
+                 for empleado in emp.empleados:
+                    if idRepre == empleado.get("codigo_empleado") and empleado.get("puesto") == "Representante Ventas":
+                        clientesPagos.append({
+                            "cod_cliente": client.get("codigo_cliente"),
+                            "Nombre del cliente": client.get("nombre_cliente"),
+                            "Nombre del representante de ventas": f'{empleado.get("nombre")} {empleado.get("apellido1")}'
+                        })
+
+    unique_clients = list({client['Nombre del cliente']:client for client in clientesPagos}.values())
+    return unique_clients
 
 
 # Menu
@@ -147,7 +166,8 @@ def menu():
     08. Obtener todos los clientes Españoles
     09. Obtener todos los clientes que sean de la ciudad de Madrid y cuyo representante de ventas tenga el código de empleado 11 o 30
     10. Obtener todos los nombres de cada cliente y el nombre y apellido de su representante de ventas.
-    11. Volver al menu princupal
+    11. Obtener todos los clientes que hayan realizado pagos junto con el nombre de sus representantes de ventas
+    12. Volver al menu princupal
     """)
         opcion = int(input("\n Ingrese su opcion: "))
 
@@ -194,6 +214,9 @@ def menu():
                 print(tabulate(getAllClientNameRepreName(), headers="keys", tablefmt="grid"))
                 input("\nPresiona Enter para volver al menú...")
             case 11:
+                print(tabulate(getAllClientPago(), headers="keys", tablefmt="grid"))
+                input("\nPresiona Enter para volver al menú...")
+            case 12:
                 break
             case _:
                 print("Opcion invalida")
