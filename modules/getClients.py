@@ -2,6 +2,7 @@ from os import system #import of the standard function os.system()
 from tabulate import tabulate
 import time
 import storage.cliente as cli
+import storage.empleado as emp
 
 def getAllClientName():
     clienteName = []
@@ -84,7 +85,6 @@ def getClientByContactNameAndCountry(contact_name, country):
     return clientsByContactNameCountry
 
 # Devuelve un listado con el nombre de todos los clientes españoles
-
 def getAllClientesEspañoles(nacionalidad):
     ClientesEspañoles = []
     for client in cli.clientes:
@@ -94,8 +94,35 @@ def getAllClientesEspañoles(nacionalidad):
         })
     return ClientesEspañoles
 
-# Menu
+# Devuelve un listado con todos los clientes que sean de la ciudad de Madrid y cuyo representante de ventas tenga el código de empleado 11 o 30.
+def getAllClientMadridRepre():
+    clientesMadrid = []
+    for client in cli.clientes:
+        if (client.get("ciudad") == 'Madrid'):
+            if (client.get("codigo_empleado_rep_ventas") == 11 or client.get("codigo_empleado_rep_ventas") == 30):
+                clientesMadrid.append({
+                    "Nombre_del_cliente": client.get("nombre_cliente"),
+                    "Ciudad": client.get("ciudad"),
+                    "Representante_ventas": client.get("codigo_empleado_rep_ventas"),
+                })
+    return clientesMadrid
 
+# Obtén un listado con el nombre de cada cliente y el nombre y apellido de su representante de ventas.
+def getAllClientNameRepreName():
+    clientesNames = []
+    for client in cli.clientes:
+        idRepre = client.get("codigo_empleado_rep_ventas")
+        for empleado in emp.empleados:
+            if idRepre == empleado.get("codigo_empleado") and empleado.get("puesto") == "Representante Ventas":
+                clientesNames.append({
+                    "Nombre del cliente": client.get("nombre_cliente"),
+                    "Nombre del representante de ventas": f'{empleado.get("nombre")} {empleado.get("apellido1")}'
+                })
+    return clientesNames
+
+
+
+# Menu
 def menu():
     while True:
         system("clear")
@@ -118,7 +145,9 @@ def menu():
     06. Obtener todos lo clientes que segun el representante de ventas que los atendio
     07. Obtener todos los clientes por país y código postal
     08. Obtener todos los clientes Españoles
-    09. Volver al menu princupal
+    09. Obtener todos los clientes que sean de la ciudad de Madrid y cuyo representante de ventas tenga el código de empleado 11 o 30
+    10. Obtener todos los nombres de cada cliente y el nombre y apellido de su representante de ventas.
+    11. Volver al menu princupal
     """)
         opcion = int(input("\n Ingrese su opcion: "))
 
@@ -159,6 +188,12 @@ def menu():
                 print(tabulate(getAllClientesEspañoles(nacionalidad), headers="keys", tablefmt="grid"))
                 input("\nPresiona Enter para volver al menú...")
             case 9:
+                print(tabulate(getAllClientMadridRepre(), headers="keys", tablefmt="grid"))
+                input("\nPresiona Enter para volver al menú...")
+            case 10:
+                print(tabulate(getAllClientNameRepreName(), headers="keys", tablefmt="grid"))
+                input("\nPresiona Enter para volver al menú...")
+            case 11:
                 break
             case _:
                 print("Opcion invalida")
