@@ -7,7 +7,6 @@ import modules.getEmpleados as empleado
 import modules.getPedido as pedido
 import modules.getPago as pago
 import modules.getProducto as producto
-import modules.prueba as pr
 
 # print(tabulate(producto.getAllStocksPriceGama("Ornamentales",100),headers="keys",tablefmt="grid"))
 

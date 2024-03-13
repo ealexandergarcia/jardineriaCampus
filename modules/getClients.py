@@ -123,36 +123,34 @@ def getAllClientNameRepreName():
 
 # Muestra el nombre de los clientes que hayan realizado pagos junto con el nombre de sus representantes de ventas
 def getAllClientPago():
-    clientesPagos = []
     clientesSinPagos = []
+    clientePago = []
     for client in cli.clientes:
         idClient = client.get("codigo_cliente")
         idRepre = client.get("codigo_empleado_rep_ventas")
         has_pago = False
         for pago in pag.pago:
             if idClient == pago.get("codigo_cliente"):
-                 has_pago = True
-                 for empleado in emp.empleados:
-                    if idRepre == empleado.get("codigo_empleado") and empleado.get("puesto") == "Representante Ventas":
-                        clientesPagos.append({
-                            "cod_cliente": client.get("codigo_cliente"),
-                            "Nombre del cliente": client.get("nombre_cliente"),
-                            "Nombre del representante de ventas": f'{empleado.get("nombre")} {empleado.get("apellido1")}'
-                        })
-                        break
-            if not has_pago:
-                for empleado in emp.empleados:
-                    if idRepre == empleado.get("codigo_empleado") and empleado.get("puesto") == "Representante Ventas":
-                        clientesSinPagos.append({
-                            "cod_cliente": client.get("codigo_cliente"),
-                            "Nombre del cliente": client.get("nombre_cliente"),
-                            "Nombre del representante de ventas": f'{empleado.get("nombre")} {empleado.get("apellido1")}'
-                        })
-                        break
-    clientesPagos = list({client['Nombre del cliente']:client for client in clientesPagos}.values())
-    clientesSinPagos = list({client['Nombre del cliente']:client for client in clientesSinPagos}.values())
-    return clientesPagos, clientesSinPagos
-
+                has_pago = True
+                break
+        if not has_pago:
+            for empleado in emp.empleados:
+                if idRepre == empleado.get("codigo_empleado") and empleado.get("puesto") == "Representante Ventas":
+                    clientesSinPagos.append({
+                        "cod_cliente": client.get("codigo_cliente"),
+                        "Nombre del cliente": client.get("nombre_cliente"),
+                        "Nombre del representante de ventas": f'{empleado.get("nombre")} {empleado.get("apellido1")}'
+                    })
+        else:
+             for empleado in emp.empleados:
+                if idRepre == empleado.get("codigo_empleado") and empleado.get("puesto") == "Representante Ventas":
+                    clientePago.append({
+                        "cod_cliente": client.get("codigo_cliente"),
+                        "Nombre del cliente": client.get("nombre_cliente"),
+                        "Nombre del representante de ventas": f'{empleado.get("nombre")} {empleado.get("apellido1")}'
+                    })
+    return  clientePago, clientesSinPagos
+clientes_con_pagos, clientes_sin_pagos = getAllClientPago()
 
 # Menu
 def menu():
@@ -180,7 +178,8 @@ def menu():
     09. Obtener todos los clientes que sean de la ciudad de Madrid y cuyo representante de ventas tenga el código de empleado 11 o 30
     10. Obtener todos los nombres de cada cliente y el nombre y apellido de su representante de ventas.
     11. Obtener todos los clientes que hayan realizado pagos junto con el nombre de sus representantes de ventas
-    12. Volver al menu princupal
+    12. Obtener todos los clientes que no hayan realizado pagos junto con el nombre de sus representantes de ventas
+    13. Volver al menu princupal
     """)
         opcion = int(input("\n Ingrese su opcion: "))
 
@@ -227,11 +226,11 @@ def menu():
                 print(tabulate(getAllClientNameRepreName(), headers="keys", tablefmt="grid"))
                 input("\nPresiona Enter para volver al menú...")
             case 11:
-                clientes_con_pagos, clientes_sin_pagos = getAllClientPago()
-                print(tabulate(clientes_sin_pagos, headers="keys", tablefmt="grid"))
+                print(tabulate(clientes_con_pagos, headers="keys", tablefmt="grid"))
                 input("\nPresiona Enter para volver al menú...")
             case 12:
-                break
+                print(tabulate(clientes_sin_pagos, headers="keys", tablefmt="grid"))
+                input("\nPresiona Enter para volver al menú...")
             case _:
                 print("Opcion invalida")
                 time.sleep(2) # espera en segundos
