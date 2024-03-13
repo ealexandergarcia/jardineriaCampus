@@ -1,24 +1,22 @@
 from os import system #import of the standard function os.system()
-from tabulate import tabulate
 import time
-import storage.producto as pr
+from tabulate import tabulate
+import requests
+import modules.postProductp as psProducto
+
+def getAllData():
+    # json-server producto.json -b 5501
+    peticion = requests.get("http://172.16.100.141:5501",timeout=10)
+    data = peticion.json()
+    return data
+
 # Devuelve un listado con todos los productos que pertenecen a la gama "ornamentales" y que
 # tienen mas de 100 unidades en stock. El listado debe estar ordenado por su precio de venta,
 # mostrando en primer lugar los de mayor precio
-
-# def getAllProductosOrnamentales():
-#     ProductosOrnamentales = []
-#     for prodctos in prod.producto:
-#         ProductosOrnamentales.append({
-#                     "gama": prodctos.get("gama")
-#                 })
-#     unique_products = list({prodcto['gama']:prodcto for prodcto in ProductosOrnamentales}.values())
-#     return unique_products
-
 def getAllStocksPriceGama(gama, stock):
     condiciones = []
-    for val in pr.producto:
-        if(val.get("gama") == gama and val.get("cantidad_en_stock") >= 100):
+    for val in getAllData():
+        if(val.get("gama") == gama and val.get("cantidad_en_stock") >= stock):
             condiciones.append(val)
 
     def price(val):
@@ -56,6 +54,7 @@ def menu():
         print ("""
     01. Obtener todos los productos que pertenecen a la gama seleccionada y que tenga mas de 100 unidades en stock (ejm: Ornamentales, 100)
     02. Volver al menu princupal
+    03. Guardar info
     """)
         opcion = int(input("\n Ingrese su opcion: "))
 
@@ -67,6 +66,22 @@ def menu():
                 input("\nPresiona Enter para volver al menú...")
             case 2:
                 break
+            case 3:
+                producto = {
+                    "codigo_producto": input("Ingrese el codigo del producto: "),
+                    "nombre": input("Ingrese el nombre del producto: "),
+                    "gama": input("Ingrese la gama del producto: "),
+                    "dimensiones": input("Ingrese las dimensiones del producto: "),
+                    "proveedor": input("Ingrese el proveedor del producto: "),
+                    "descripcion": input("Ingrese la descripcion del producto: "),
+                    "cantidad_en_stock": int(input("Ingrese la cantidad de stock: ")),
+                    "precio_venta": float(input("Ingrese el precio de venta: ")),
+                    "precio_proveedor": int(input("Ingrese el precio del proveedor: "))
+                    }
+                # print(producto)
+                psProducto.postProducto(producto)
+                print("producto Guardado")
+                input("\nPresiona Enter para volver al menú...")
             case _:
                 print("Opcion invalida")
                 time.sleep(2) # espera en segundos
