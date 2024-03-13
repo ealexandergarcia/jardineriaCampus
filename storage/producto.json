@@ -2831,5 +2831,29 @@
         "precio_venta": 15,
         "precio_proveedor": 20,
         "id": 277
+    },
+    {
+        "codigo_producto": "prubea",
+        "nombre": "prueba",
+        "gama": "prueba",
+        "dimensiones": "15",
+        "proveedor": "s",
+        "descripcion": "s",
+        "cantidad_en_stock": 15,
+        "precio_venta": 1.0,
+        "precio_proveedor": 1,
+        "id": 278
+    },
+    {
+        "codigo_producto": "s",
+        "nombre": "s",
+        "gama": "a",
+        "dimensiones": "Futales",
+        "proveedor": "s",
+        "descripcion": "s",
+        "cantidad_en_stock": 52,
+        "precio_venta": 10.0,
+        "precio_proveedor": 10,
+        "id": 279
     }
 ]

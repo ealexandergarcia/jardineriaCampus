@@ -3,10 +3,11 @@ import time
 from tabulate import tabulate
 import requests
 import modules.postProductp as psProducto
+import modules.getGamas as gG
 
 def getAllData():
-    # json-server producto.json -b 5501
-    peticion = requests.get("http://172.16.100.141:5501",timeout=10)
+    # json-server producto.json -b 5503
+    peticion = requests.get("http://172.16.100.141:5503",timeout=10)
     data = peticion.json()
     return data
 
@@ -65,12 +66,10 @@ def menu():
                 print(tabulate(getAllStocksPriceGama(gamaProd,stockProd), headers="keys", tablefmt="grid"))
                 input("\nPresiona Enter para volver al menú...")
             case 2:
-                break
-            case 3:
                 producto = {
                     "codigo_producto": input("Ingrese el codigo del producto: "),
                     "nombre": input("Ingrese el nombre del producto: "),
-                    "gama": input("Ingrese la gama del producto: "),
+                    "gama": input(f"Seleccione la gama:\n"+"\t\n".join([f"{i}. {val}" for i, val in enumerate(gG.getAllNombre())])+"\t\n" ),
                     "dimensiones": input("Ingrese las dimensiones del producto: "),
                     "proveedor": input("Ingrese el proveedor del producto: "),
                     "descripcion": input("Ingrese la descripcion del producto: "),
@@ -82,6 +81,8 @@ def menu():
                 psProducto.postProducto(producto)
                 print("producto Guardado")
                 input("\nPresiona Enter para volver al menú...")
+            case 3:
+                break
             case _:
                 print("Opcion invalida")
                 time.sleep(2) # espera en segundos
