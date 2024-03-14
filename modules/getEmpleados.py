@@ -4,15 +4,13 @@ import time
 import requests
 
 def getAllData():
-    # json-server empleado.json -b 5505
-    peticion = requests.get("http://172.16.103.33:5505", timeout=10)
+    # json-server empleado.json -b 5503
+    peticion = requests.get("http://172.25.202.224:5503", timeout=10)
     data = peticion.json()
     return data
 
 
 # Devuelve los datos de los empleados que tienen un jefe = 7
-
-
 def getAllNombresApellidoEmailJefe(codigo):
     NombresApellidoEmailJefe = []
     for val in getAllData():

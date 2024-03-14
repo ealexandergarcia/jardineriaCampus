@@ -5,8 +5,8 @@ from tabulate import tabulate
 import requests
 import modules.getEmpleados as gE
 
-def postCliente():
-    # json-server cliente.json -b 5505
+def postEmpleado():
+    # json-server empleado.json -b 5503
     last = gE.getAllData()[-1]
     ultimo_elemento = last["codigo_empleado"]
     empleado = {
@@ -14,12 +14,13 @@ def postCliente():
         "nombre": input("Ingrese el nombre del empleado: "),
         "apellido1": input("Ingrese primer apellido: "),
         "apellido2": input("Ingrese el segundo apellido: "),
+        "extension": input("Ingrese la extension: "),
         "email": input("Ingrese la direccion de correo electronico: "),
         "codigo_oficina": input("Ingrese el codigo de la oficina: " )or None,
         "codigo_jefe": int(input("Ingrese el codigo del jefe: ")),
         "puesto": input("Ingrese el puesto del empleado: "),
     }
-    peticion = requests.post("http://172.16.103.33:5505",
+    peticion = requests.post("http://172.25.202.224:5503",
                              timeout=10, data=json.dumps(empleado).encode("UTF-8"))
     res = peticion.json()
     return [res]
@@ -42,20 +43,15 @@ def menu():
                            /_/                                                                                                                                                                                                
     """)
         print("""
-    01. Guardar un producto nuevo
+    01. Guardar un empleado nuevo
     02. Atras
     """)
         opcion = int(input("\n Ingrese su opcion: "))
 
         match opcion:
             case 1:
-                print(tabulate(postCliente(), headers="keys", tablefmt="grid"))
+                print(tabulate(postEmpleado(), headers="keys", tablefmt="grid"))
                 input("\nPresiona Enter para volver al menú...")
-            # case 2:
-            #     # print(psProducto.postProducto())
-            #     print(tabulate(psProducto.postProducto(), headers="keys", tablefmt="grid"))
-            #     input("\nPresiona Enter para volver al menú...")
-            #     input("\nPresiona Enter para volver al menú...")
             case 2:
                 break
             case _:

@@ -3,13 +3,13 @@ import time
 from tabulate import tabulate
 import requests
 import modules.getEmpleados as gE
-import storage.pago as pag
+# import storage.pago as pag
 
 
 # Data
 def getAllData():
-    # json-server producto.json -b 5503
-    peticion = requests.get("http://172.25.202.224:5503", timeout=10)
+    # json-server producto.json -b 5501
+    peticion = requests.get("http://172.25.202.224:5501", timeout=10)
     data = peticion.json()
     return data
 

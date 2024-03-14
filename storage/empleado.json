@@ -2,7 +2,7 @@
     {
         "codigo_empleado": 1,
         "nombre": "Marcos",
-        "apellido1": "Magaña",
+        "apellido1": "Maga\u00f1a",
         "apellido2": "Perez",
         "extension": "3897",
         "email": "marcos@jardineria.es",
@@ -13,7 +13,7 @@
     {
         "codigo_empleado": 2,
         "nombre": "Ruben",
-        "apellido1": "López",
+        "apellido1": "L\u00f3pez",
         "apellido2": "Martinez",
         "extension": "2899",
         "email": "rlopez@jardineria.es",
@@ -35,7 +35,7 @@
     {
         "codigo_empleado": 4,
         "nombre": "Maria",
-        "apellido1": "Solís",
+        "apellido1": "Sol\u00eds",
         "apellido2": "Jerez",
         "extension": "2847",
         "email": "msolis@jardineria.es",
@@ -79,7 +79,7 @@
     {
         "codigo_empleado": 8,
         "nombre": "Mariano",
-        "apellido1": "López",
+        "apellido1": "L\u00f3pez",
         "apellido2": "Murcia",
         "extension": "2442",
         "email": "mlopez@jardineria.es",
@@ -91,7 +91,7 @@
         "codigo_empleado": 9,
         "nombre": "Lucio",
         "apellido1": "Campoamor",
-        "apellido2": "Martín",
+        "apellido2": "Mart\u00edn",
         "extension": "2442",
         "email": "lcampoamor@jardineria.es",
         "codigo_oficina": "MAD-ES",
@@ -112,7 +112,7 @@
     {
         "codigo_empleado": 11,
         "nombre": "Emmanuel",
-        "apellido1": "Magaña",
+        "apellido1": "Maga\u00f1a",
         "apellido2": "Perez",
         "extension": "2518",
         "email": "manu@jardineria.es",
@@ -122,7 +122,7 @@
     },
     {
         "codigo_empleado": 12,
-        "nombre": "José Manuel",
+        "nombre": "Jos\u00e9 Manuel",
         "apellido1": "Martinez",
         "apellido2": "De la Osa",
         "extension": "2519",
@@ -339,5 +339,16 @@
         "codigo_oficina": "SYD-AU",
         "codigo_jefe": 29,
         "puesto": "Representante Ventas"
+    },
+    {
+        "codigo_cliente": 32,
+        "nombre": "Alex",
+        "apellido1": "Gar",
+        "apellido2": "pame",
+        "email": "sss",
+        "codigo_oficina": "sdasd",
+        "codigo_jefe": 11,
+        "puesto": "Dios del olimpo",
+        "id": 32
     }
 ]

@@ -7,7 +7,7 @@ import modules.getClients as gC
 
 
 def postCliente():
-    # json-server cliente.json -b 5503
+    # json-server cliente.json -b 5501
     last = gC.getAllData()[-1]
     ultimo_elemento = last["codigo_cliente"]
     cliente = {
@@ -22,11 +22,11 @@ def postCliente():
         "ciudad": input("Ingrese la ciudad del cliente: " )or None,
         "region": input("Ingrese la region del cliente: " )or None,
         "pais": input("Ingrese el pais del cliente: "),
-        "codigo_postal": input("Ingrese el codigo del cliente: "),
+        "codigo_postal": input("Ingrese el codigo postal del cliente: "),
         "codigo_empleado_rep_ventas": int(input("Ingrese el codigo del representanre de ventas: ")),
         "limite_credito": int(input("Ingrese su limite de credito: ")),
     }
-    peticion = requests.post("http://172.25.202.224:5503",
+    peticion = requests.post("http://172.25.202.224:5501",
                              timeout=10, data=json.dumps(cliente).encode("UTF-8"))
     res = peticion.json()
     return [res]

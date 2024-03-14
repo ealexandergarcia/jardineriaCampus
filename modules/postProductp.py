@@ -7,7 +7,7 @@ import modules.getGamas as gG
 
 
 def postProducto():
-    # json-server producto.json -b 5501
+    # json-server producto.json -b 5506
     producto = {
         "codigo_producto": input("Ingrese el codigo del producto: "),
         "nombre": input("Ingrese el nombre del producto: "),
@@ -19,7 +19,7 @@ def postProducto():
         "precio_venta": float(input("Ingrese el precio de venta: ")),
         "precio_proveedor": int(input("Ingrese el precio del proveedor: "))
     }
-    peticion = requests.post("http://172.16.103.33:5501",
+    peticion = requests.post("http://172.25.202.224:5506",
                              timeout=10, data=json.dumps(producto))
     res = peticion.json()
     res["Mensaje"] = "Producto Guardado"

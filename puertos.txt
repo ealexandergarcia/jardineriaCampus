@@ -1,1 +1,7 @@
-json-server producto.json -b 5501 & json-server gama_producto.json -b 5502 & json-server cliente.json -b 5503 & json-server oficina.json -b 5504
+json-server cliente.json -b 5501 &  /
+json-server oficina.json -b 5502 &  /
+json-server empleado.json -b 5503 &  /
+json-server pedido.json -b 5504 &  /
+json-server pago.json -b 5505 & /
+json-server producto.json -b 5506 & /
+json-server gama_producto.json -b 5507 & /

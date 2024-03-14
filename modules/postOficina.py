@@ -6,7 +6,7 @@ import requests
 
 
 def postOficina():
-    # json-server oficina.json -b 5504
+    # json-server oficina.json -b 5502
     oficina = {
         "codigo_oficina": input("Ingrese el codigo de la oficina: "),
         "ciudad": input("Ingrese el nombre de la ciudad: "),
@@ -17,7 +17,7 @@ def postOficina():
         "linea_direccion1": input("Ingrese la direccion principal: "),
         "linea_direccion2": input("Ingrese la direccion secundaria: ") or None
     }
-    peticion = requests.post("http://172.16.103.33:5504",
+    peticion = requests.post("http://172.25.202.224:5502",
                              timeout=10, data=json.dumps(oficina).encode("UTF-8"))
     res = peticion.json()
     return [res]
@@ -48,7 +48,9 @@ def menu():
 
         match opcion:
             case 1:
-                print(tabulate(postOficina(), headers="keys", tablefmt="grid"))
+                postOficina()
+                print("SE GUARDO CORRECTAMENTE")
+                # print(tabulate(postOficina(), headers="keys", tablefmt="grid"))
                 input("\nPresiona Enter para volver al menú...")
             case 2:
                 break

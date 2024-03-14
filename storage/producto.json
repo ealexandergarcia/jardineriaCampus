@@ -2855,5 +2855,17 @@
         "precio_venta": 10.0,
         "precio_proveedor": 10,
         "id": 279
+    },
+    {
+        "codigo_producto": "pc-54",
+        "nombre": "Pc mamalona",
+        "gama": "Frutales",
+        "dimensiones": "150x520",
+        "proveedor": "hp",
+        "descripcion": "Pcerda",
+        "cantidad_en_stock": 10000000,
+        "precio_venta": 1.0,
+        "precio_proveedor": 1,
+        "id": 280
     }
 ]

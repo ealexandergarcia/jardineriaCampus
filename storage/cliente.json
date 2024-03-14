@@ -574,5 +574,39 @@
         "codigo_postal": "2003",
         "codigo_empleado_rep_ventas": 31,
         "limite_credito": 8000.0
+    },
+    {
+        "codigo_cliente": 39,
+        "nombre_cliente": "Alex",
+        "nombre_contacto": "Paco",
+        "apellido_contacto": "Gonzalez",
+        "telefono": "321456",
+        "fax": "987456",
+        "linea_direccion1": "Calle tal",
+        "linea_direccion2": null,
+        "ciudad": "Buca",
+        "region": "Santander",
+        "pais": "Colombia",
+        "codigo_postal": "5",
+        "codigo_empleado_rep_ventas": 16,
+        "limite_credito": 12000,
+        "id": 37
+    },
+    {
+        "codigo_cliente": 40,
+        "nombre_cliente": "s",
+        "nombre_contacto": "s",
+        "apellido_contacto": "s",
+        "telefono": "d",
+        "fax": "d",
+        "linea_direccion1": "f",
+        "linea_direccion2": null,
+        "ciudad": "f",
+        "region": "f",
+        "pais": "f",
+        "codigo_postal": "15",
+        "codigo_empleado_rep_ventas": 15,
+        "limite_credito": 12000,
+        "id": 38
     }
 ]
