@@ -8,8 +8,8 @@ import storage.pago as pag
 
 # Data
 def getAllData():
-    # json-server producto.json -b 5504
-    peticion = requests.get("http://172.16.103.33:5504", timeout=10)
+    # json-server producto.json -b 5503
+    peticion = requests.get("http://172.25.202.224:5503", timeout=10)
     data = peticion.json()
     return data
 
@@ -269,10 +269,10 @@ def menu():
                       headers="keys", tablefmt="grid"))
                 input("\nPresiona Enter para volver al menú...")
             case 11:
-                print(tabulate(clientes_con_pagos, headers="keys", tablefmt="grid"))
+                # print(tabulate(clientes_con_pagos, headers="keys", tablefmt="grid"))
                 input("\nPresiona Enter para volver al menú...")
             case 12:
-                print(tabulate(clientes_sin_pagos, headers="keys", tablefmt="grid"))
+                # print(tabulate(clientes_sin_pagos, headers="keys", tablefmt="grid"))
                 input("\nPresiona Enter para volver al menú...")
             case 13:
                 break

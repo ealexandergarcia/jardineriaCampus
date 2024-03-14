@@ -1,12 +1,20 @@
-from os import system #import of the standard function os.system()
-from tabulate import tabulate
+from os import system  # import of the standard function os.system()
 import time
-import storage.oficina as of
+from tabulate import tabulate
+import requests
+
+
+def getAllData():
+    # json-server producto.json -b 5504
+    peticion = requests.get("http://172.25.202.224:5504", timeout=10)
+    data = peticion.json()
+    return data
+
 
 def getAllCodigoCiudad():
     codigoCiudad = []
 
-    for val in of.oficina:
+    for val in getAllData():
         codigoCiudad.append({
             "Codigo": val.get("codigo_oficina"),
             "Ciudad": val.get("ciudad")
@@ -14,10 +22,12 @@ def getAllCodigoCiudad():
     return codigoCiudad
 
 # Otro
+
+
 def getAllCiudadTelefono(pais):
     ciudadTelefono = []
-    for val in of.oficina:
-        if(val.get("pais") == pais):
+    for val in getAllData():
+        if (val.get("pais") == pais):
             ciudadTelefono.append({
                 "Ciudad": val.get("ciudad"),
                 "Telefono": val.get("telefono"),
@@ -27,10 +37,12 @@ def getAllCiudadTelefono(pais):
     return ciudadTelefono
 
 # Menu
+
+
 def menu():
     while True:
         system("clear")
-        
+
         print(""" 
 
     ____                        __              __        ____  _____      _                 
@@ -41,7 +53,7 @@ def menu():
           /_/                                                                                
                                                                                                      
     """)
-        print ("""
+        print("""
     01. Obtener todos los codigos de oficina y su locacion
     02. Obtener datos de las oficinas de un pais especifico
     03. Volver al menu princupal
@@ -50,14 +62,16 @@ def menu():
 
         match opcion:
             case 1:
-                print(tabulate(getAllCodigoCiudad(), headers="keys", tablefmt="grid"))
+                print(tabulate(getAllCodigoCiudad(),
+                      headers="keys", tablefmt="grid"))
                 input("\nPresiona Enter para volver al menú...")
             case 2:
                 paisOficina = input("Ingrese el Pais deseado: ")
-                print(tabulate(getAllCiudadTelefono(paisOficina), headers="keys", tablefmt="grid"))
+                print(tabulate(getAllCiudadTelefono(paisOficina),
+                      headers="keys", tablefmt="grid"))
                 input("\nPresiona Enter para volver al menú...")
             case 3:
                 break
             case _:
                 print("Opcion invalida")
-                time.sleep(2) # espera en segundos
+                time.sleep(2)  # espera en segundos

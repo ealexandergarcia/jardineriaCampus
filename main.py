@@ -1,8 +1,8 @@
-# import sys
-# import os
+from os import system 
 import modules.getClients as listCliente
 import modules.postClientes as CRUDCliente
-import modules.getOficina as oficina
+import modules.getOficina as listOficina
+import modules.postOficina as CRUDOficina
 import modules.getEmpleados as listEmpleado
 import modules.postEmpleados as CRUDEmpleado
 import modules.getPedido as pedido
@@ -11,8 +11,35 @@ import modules.getProducto as listProducto
 import modules.postProductp as CRUDProducto
 
 
+def menuOficinas():
+    while True:
+        system("clear")
+        print("""
+    __  ___                        __        ____  _____      _                 
+   /  |/  /__  ____  __  __   ____/ /__     / __ \/ __(_)____(_)___  ____ ______
+  / /|_/ / _ \/ __ \/ / / /  / __  / _ \   / / / / /_/ / ___/ / __ \/ __ `/ ___/
+ / /  / /  __/ / / / /_/ /  / /_/ /  __/  / /_/ / __/ / /__/ / / / / /_/ (__  ) 
+/_/  /_/\___/_/ /_/\__,_/   \__,_/\___/   \____/_/ /_/\___/_/_/ /_/\__,_/____/  
+                                                                                                                                                      
+        1. Reportes de las oficinas
+        2. Guardar, Actualizar y Eliminar Oficinas
+        3. Volver al menu princupal                                                                                                                                                                                                                                      
+        """)
+        opcion = int(input("Ingrese su opcion: "))
+        match opcion:
+            case 1:
+                listOficina.menu()
+            case 2:
+                CRUDOficina.menu()
+            case 3:
+                break
+            case _:
+                print("Opcion invalida")
+
+
 def menuEmpleado():
     while True:
+        system("clear")
         print("""                                                                             
     __  ___                        __        ______                __               __          
    /  |/  /__  ____  __  __   ____/ /__     / ____/___ ___  ____  / /__  ____ _____/ /___  _____
@@ -36,9 +63,9 @@ def menuEmpleado():
                 print("Opcion invalida")
 
 
-
 def menuCliente():
     while True:
+        system("clear")
         print("""                                                                             
     __  ___                        __        _________            __           
    /  |/  /__  ____  __  __   ____/ /__     / ____/ (_)__  ____  / /____  _____
@@ -65,6 +92,7 @@ def menuCliente():
 
 def menuProducto():
     while True:
+        system("clear")
         print("""                                                                             
     __  ___                        __               
    /  |/  /__  ____  __  __   ____/ /__             
@@ -94,6 +122,7 @@ def menuProducto():
 
 def mainMenu():
     while True:
+        system("clear")
         try:
             Menu = """                                                                             
     __  ___                    ____       _            _             __
@@ -146,7 +175,7 @@ def mainMenu():
                 case 1:
                     menuCliente()
                 case 2:
-                    oficina.menu()
+                    menuOficinas()
                 case 3:
                     menuEmpleado()
                 case 4:
