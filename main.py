@@ -1,7 +1,7 @@
-import sys
-import os
-from tabulate import tabulate
-import modules.getClients as cliente
+# import sys
+# import os
+import modules.getClients as listCliente
+import modules.postClientes as CRUDCliente
 import modules.getOficina as oficina
 import modules.getEmpleados as empleado
 import modules.getPedido as pedido
@@ -21,6 +21,32 @@ import modules.postProductp as CRUDProducto
 # # Si solo quieres imprimir los clientes sin pagos
 # print("Clientes sin pagos:")
 # print(tabulate(clientes_con_pagos,headers="keys",tablefmt="grid"))
+
+
+def menuCliente():
+    while True:
+        print("""                                                                             
+    __  ___                        __        _________            __           
+   /  |/  /__  ____  __  __   ____/ /__     / ____/ (_)__  ____  / /____  _____
+  / /|_/ / _ \/ __ \/ / / /  / __  / _ \   / /   / / / _ \/ __ \/ __/ _ \/ ___/
+ / /  / /  __/ / / / /_/ /  / /_/ /  __/  / /___/ / /  __/ / / / /_/  __(__  ) 
+/_/  /_/\___/_/ /_/\__,_/   \__,_/\___/   \____/_/_/\___/_/ /_/\__/\___/____/  
+                                                                               
+                                                             
+        1. Reportes de los clientes
+        2. Guardar, Actualizar y Eliminar Clientes
+        3. Volver al menu princupal                                                                                                                                                                                                                                      
+        """)
+        opcion = int(input("Ingrese su opcion: "))
+        match opcion:
+            case 1:
+                listCliente.menu()
+            case 2:
+                CRUDCliente.menu()
+            case 3:
+                break
+            case _:
+                print("Opcion invalida")
 
 
 def menuProducto():
@@ -104,7 +130,7 @@ def mainMenu():
 
             match opcion:
                 case 1:
-                    cliente.menu()
+                    menuCliente()
                 case 2:
                     oficina.menu()
                 case 3:
