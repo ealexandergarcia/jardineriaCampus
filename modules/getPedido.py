@@ -2,21 +2,30 @@ from os import system #import of the standard function os.system()
 from tabulate import tabulate
 from datetime import datetime
 import time
-import storage.pedido as ped
+import requests
+
+# Data
+def getAllData():
+    # json-server producto.json -b 5504
+    peticion = requests.get("http://172.25.202.224:5504", timeout=10)
+    data = peticion.json()
+    return data
 
 # Devuelve un listado con los distintos estados por los que puede pasar un pedido
 def getAllListadoEstadoPedidos():
     estados = []
-    for pedido in ped.pedido:
-        estados.append(pedido.get('estado'))
-    estados_unicos = list(set(estados))
+    for pedido in getAllData():
+        estados.append({
+            "Estado del pedido":pedido.get('estado')
+        })
+    estados_unicos = list({estado['Estado del pedido']: estado for estado in estados}.values())
     return estados_unicos
 
 # Devuelve un listado con el codigo de pedido,codigo cliente, fecha esperada y
 # fecha de entrega de los pedidos que no han sido entregados a tiempo
 def getAllPedidosEntregadosAtrasadosDeTiempo():
     pedidosEntregado = []
-    for pedidos in ped.pedido:
+    for pedidos in getAllData():
         if (pedidos.get("estado") == "Entregado" and pedidos.get("fecha_entrega") is None):
             pedidos["fecha_entrega"]= pedidos.get("fecha_esperada")
         if pedidos.get("estado") == "Entregado":
@@ -40,7 +49,7 @@ def getAllPedidosEntregadosAtrasadosDeTiempo():
 # de los pedidos cuya fecha de entrega ha sido al menos dos dias antes de la fecha esperada
 def getAllPedidosEntregadosAntesDeTiempo():
     pedidosEntregados = []
-    for pedidos in ped.pedido:
+    for pedidos in getAllData():
         if (pedidos.get("estado") == "Entregado" and pedidos.get("fecha_entrega") is None):
             pedidos["fecha_entrega"]= pedidos.get("fecha_esperada")
         if pedidos.get("estado") == "Entregado":
@@ -63,7 +72,7 @@ def getAllPedidosEntregadosAntesDeTiempo():
 # Devuelve un listado de todos los pedidos que fueron rechazados en 2009
 def getAllPedidosRechazados():
     pedidosRechazados = []
-    for pedidos in ped.pedido:
+    for pedidos in getAllData():
         if pedidos.get("estado") == "Rechazado":
             if pedidos.get("fecha_pedido")[0:4] == "2009" and pedidos.get("fecha_esperada")[0:4] == "2009":
                 pedidosRechazados.append({
@@ -80,7 +89,7 @@ def getAllPedidosRechazados():
 def getAllEntregadosEnero():
     entregadosEnero = []
 
-    for pedido in ped.pedido:
+    for pedido in getAllData():
         if (pedido.get("estado") == "Entregado" and pedido.get("fecha_entrega") is None):
             pedido["fecha_entrega"]= pedido.get("fecha_esperada")
         if pedido.get("estado") == "Entregado":

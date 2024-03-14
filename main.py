@@ -6,32 +6,34 @@ import modules.getOficina as listOficina
 import modules.postOficina as CRUDOficina
 import modules.getEmpleados as listEmpleado
 import modules.postEmpleados as CRUDEmpleado
-import modules.getPedido as pedido
+import modules.getPedido as listPedido
+import modules.postPedido as CRUDPedido
 import modules.getPago as listPago
 import modules.postPago as CRUDPago
 import modules.getProducto as listProducto
 import modules.postProductp as CRUDProducto
 
-def menuPagos():
+def menuCliente():
     while True:
         system("clear")
-        print("""
-    __  ___                        __        ____                        
-   /  |/  /__  ____  __  __   ____/ /__     / __ \____ _____ _____  _____
-  / /|_/ / _ \/ __ \/ / / /  / __  / _ \   / /_/ / __ `/ __ `/ __ \/ ___/
- / /  / /  __/ / / / /_/ /  / /_/ /  __/  / ____/ /_/ / /_/ / /_/ (__  ) 
-/_/  /_/\___/_/ /_/\__,_/   \__,_/\___/  /_/    \__,_/\__, /\____/____/  
-                                                     /____/                                                                                                                                                              
-        1. Reportes de las oficinas
-        2. Guardar, Actualizar y Eliminar Oficinas
+        print("""                                                                             
+    __  ___                        __        _________            __           
+   /  |/  /__  ____  __  __   ____/ /__     / ____/ (_)__  ____  / /____  _____
+  / /|_/ / _ \/ __ \/ / / /  / __  / _ \   / /   / / / _ \/ __ \/ __/ _ \/ ___/
+ / /  / /  __/ / / / /_/ /  / /_/ /  __/  / /___/ / /  __/ / / / /_/  __(__  ) 
+/_/  /_/\___/_/ /_/\__,_/   \__,_/\___/   \____/_/_/\___/_/ /_/\__/\___/____/  
+                                                                               
+                                                             
+        1. Reportes de los clientes
+        2. Guardar, Actualizar y Eliminar Clientes
         3. Volver al menu princupal                                                                                                                                                                                                                                      
         """)
         opcion = int(input("Ingrese su opcion: "))
         match opcion:
             case 1:
-                listPago.menu()
+                listCliente.menu()
             case 2:
-                CRUDPago.menu()
+                CRUDCliente.menu()
             case 3:
                 break
             case _:
@@ -62,7 +64,6 @@ def menuOficinas():
             case _:
                 print("Opcion invalida")
 
-
 def menuEmpleado():
     while True:
         system("clear")
@@ -88,33 +89,54 @@ def menuEmpleado():
             case _:
                 print("Opcion invalida")
 
-
-def menuCliente():
+def menuPedidos():
     while True:
         system("clear")
-        print("""                                                                             
-    __  ___                        __        _________            __           
-   /  |/  /__  ____  __  __   ____/ /__     / ____/ (_)__  ____  / /____  _____
-  / /|_/ / _ \/ __ \/ / / /  / __  / _ \   / /   / / / _ \/ __ \/ __/ _ \/ ___/
- / /  / /  __/ / / / /_/ /  / /_/ /  __/  / /___/ / /  __/ / / / /_/  __(__  ) 
-/_/  /_/\___/_/ /_/\__,_/   \__,_/\___/   \____/_/_/\___/_/ /_/\__/\___/____/  
-                                                                               
-                                                             
-        1. Reportes de los clientes
-        2. Guardar, Actualizar y Eliminar Clientes
+        print("""
+    __  ___                        __        ____           ___     __          
+   /  |/  /__  ____  __  __   ____/ /__     / __ \___  ____/ (_)___/ /___  _____
+  / /|_/ / _ \/ __ \/ / / /  / __  / _ \   / /_/ / _ \/ __  / / __  / __ \/ ___/
+ / /  / /  __/ / / / /_/ /  / /_/ /  __/  / ____/  __/ /_/ / / /_/ / /_/ (__  ) 
+/_/  /_/\___/_/ /_/\__,_/   \__,_/\___/  /_/    \___/\__,_/_/\__,_/\____/____/                                                                                                                                                      
+        1. Reportes de los pedidos
+        2. Guardar, Actualizar y Eliminar Pedidos
         3. Volver al menu princupal                                                                                                                                                                                                                                      
         """)
         opcion = int(input("Ingrese su opcion: "))
         match opcion:
             case 1:
-                listCliente.menu()
+                listPedido.menu()
             case 2:
-                CRUDCliente.menu()
+                CRUDPedido.menu()
             case 3:
                 break
             case _:
                 print("Opcion invalida")
 
+def menuPagos():
+    while True:
+        system("clear")
+        print("""
+    __  ___                        __        ____                        
+   /  |/  /__  ____  __  __   ____/ /__     / __ \____ _____ _____  _____
+  / /|_/ / _ \/ __ \/ / / /  / __  / _ \   / /_/ / __ `/ __ `/ __ \/ ___/
+ / /  / /  __/ / / / /_/ /  / /_/ /  __/  / ____/ /_/ / /_/ / /_/ (__  ) 
+/_/  /_/\___/_/ /_/\__,_/   \__,_/\___/  /_/    \__,_/\__, /\____/____/  
+                                                     /____/                                                                                                                                                              
+        1. Reportes de las oficinas
+        2. Guardar, Actualizar y Eliminar Oficinas
+        3. Volver al menu princupal                                                                                                                                                                                                                                      
+        """)
+        opcion = int(input("Ingrese su opcion: "))
+        match opcion:
+            case 1:
+                listPago.menu()
+            case 2:
+                CRUDPago.menu()
+            case 3:
+                break
+            case _:
+                print("Opcion invalida")
 
 def menuProducto():
     while True:
@@ -140,7 +162,6 @@ def menuProducto():
                 break
             case _:
                 print("Opcion invalida")
-
 
 def mainMenu():
     while True:
@@ -205,7 +226,7 @@ def mainMenu():
                 case 3:
                     menuEmpleado()
                 case 4:
-                    pedido.menu()
+                    menuPedidos()
                 case 5:
                     menuPagos()
                 case 6:
