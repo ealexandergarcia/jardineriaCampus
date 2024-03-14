@@ -1,26 +1,29 @@
-from os import system #import of the standard function os.system()
+from os import system  # import of the standard function os.system()
 from tabulate import tabulate
 import time
 import storage.cliente as cli
 import storage.empleado as emp
 import storage.pago as pag
 
+
 def getAllClientName():
     clienteName = []
     for val in cli.clientes:
         clienteName.append({
             "codigo_cliente": val.get('codigo_cliente'),
-            "nombre_cliente":val.get('nombre_cliente')
+            "nombre_cliente": val.get('nombre_cliente')
         })
     return clienteName
+
 
 def getOneClientCodigo(codigo):
     for val in cli.clientes:
         if (val.get('codigo_cliente') == codigo):
             return [{
                 "Codigo_de_cliente": val.get('codigo_cliente'),
-                "nombre_del_cliente":val.get('nombre_cliente')
+                "nombre_del_cliente": val.get('nombre_cliente')
             }]
+
 
 def getAllClientCreditCiudad(limitCredit, ciudad):
     clientCredit = []
@@ -28,13 +31,15 @@ def getAllClientCreditCiudad(limitCredit, ciudad):
         if (val.get('limite_credito') >= limitCredit and val.get('ciudad') == ciudad):
             # clientCredit.append(val)
             clientCredit.append({
-            "codigo": val.get('codigo_cliente'),
-            "Nombre":val.get('nombre_cliente'),
-            "ciudad":val.get('ciudad')
-        })
+                "codigo": val.get('codigo_cliente'),
+                "Nombre": val.get('nombre_cliente'),
+                "ciudad": val.get('ciudad')
+            })
     return clientCredit
 
 # Correccion del filtro de pasi/region/ciudad
+
+
 def getAllClientPaisRegionCiudad(pais, region=None, ciudad=None):
     clientZone = []
     for val in cli.clientes:
@@ -45,6 +50,8 @@ def getAllClientPaisRegionCiudad(pais, region=None, ciudad=None):
     return clientZone
 
 # 1 Filtrar por código postal
+
+
 def getClientCodigoPostal(codigoPostal):
     clientPostalCode = []
     for val in cli.clientes:
@@ -58,18 +65,22 @@ def getClientCodigoPostal(codigoPostal):
     return clientPostalCode
 
 # 2 Filtrar por representante de ventas
+
+
 def getClientByRepresentanteVentas(codeRepreVen):
     clientRepreVentas = []
     for val in cli.clientes:
         if (val.get('codigo_empleado_rep_ventas') == codeRepreVen):
             clientRepreVentas.append({
-            "Representante de ventas": val.get("codigo_empleado_rep_ventas"),
-            "Credito": val.get("limite_credito"),
-            "Nombre": val.get("nombre_cliente"),
-            "Nombre": val.get("nombre_cliente")
-        })
+                "Representante de ventas": val.get("codigo_empleado_rep_ventas"),
+                "Credito": val.get("limite_credito"),
+                "Nombre": val.get("nombre_cliente"),
+                "Nombre": val.get("nombre_cliente")
+            })
     return clientRepreVentas
 # 3 Filtrar por país y código postal
+
+
 def getClientByCountryAndPostalCode(country, postal_code):
     clientsByCountryPostal = []
     for client in cli.clientes:
@@ -78,6 +89,8 @@ def getClientByCountryAndPostalCode(country, postal_code):
     return clientsByCountryPostal
 
 # 4 Filtrar por nombre de contacto y país
+
+
 def getClientByContactNameAndCountry(contact_name, country):
     clientsByContactNameCountry = []
     for client in cli.clientes:
@@ -86,16 +99,20 @@ def getClientByContactNameAndCountry(contact_name, country):
     return clientsByContactNameCountry
 
 # Devuelve un listado con el nombre de todos los clientes españoles
+
+
 def getAllClientesEspañoles(nacionalidad):
     ClientesEspañoles = []
     for client in cli.clientes:
         if (client.get("pais")) == nacionalidad:
             ClientesEspañoles.append({
-            "clientes españoles": client.get("nombre_cliente")
-        })
+                "clientes españoles": client.get("nombre_cliente")
+            })
     return ClientesEspañoles
 
 # Devuelve un listado con todos los clientes que sean de la ciudad de Madrid y cuyo representante de ventas tenga el código de empleado 11 o 30.
+
+
 def getAllClientMadridRepre():
     clientesMadrid = []
     for client in cli.clientes:
@@ -109,6 +126,8 @@ def getAllClientMadridRepre():
     return clientesMadrid
 
 # Obtén un listado con el nombre de cada cliente y el nombre y apellido de su representante de ventas.
+
+
 def getAllClientNameRepreName():
     clientesNames = []
     for client in cli.clientes:
@@ -122,6 +141,8 @@ def getAllClientNameRepreName():
     return clientesNames
 
 # Muestra el nombre de los clientes que hayan realizado pagos junto con el nombre de sus representantes de ventas
+
+
 def getAllClientPago():
     clientesSinPagos = []
     clientePago = []
@@ -142,17 +163,21 @@ def getAllClientPago():
                         "Nombre del representante de ventas": f'{empleado.get("nombre")} {empleado.get("apellido1")}'
                     })
         else:
-             for empleado in emp.empleados:
+            for empleado in emp.empleados:
                 if idRepre == empleado.get("codigo_empleado") and empleado.get("puesto") == "Representante Ventas":
                     clientePago.append({
                         "cod_cliente": client.get("codigo_cliente"),
                         "Nombre del cliente": client.get("nombre_cliente"),
                         "Nombre del representante de ventas": f'{empleado.get("nombre")} {empleado.get("apellido1")}'
                     })
-    return  clientePago, clientesSinPagos
+    return clientePago, clientesSinPagos
+
+
 clientes_con_pagos, clientes_sin_pagos = getAllClientPago()
 
 # Menu
+
+
 def menu():
     while True:
         system("clear")
@@ -166,7 +191,7 @@ def menu():
           /_/                                                                               
                                                                                                     
     """)
-        print ("""
+        print("""
     01. Obtener todos los clientes (codigo y nombre)
     02. Obtener un cliente por el codigo
     03. Obtener toda la informacion de un cliente de una ciudad en especifico segun su limite de credito especifico (ej: 3000, San Francisco)
@@ -189,41 +214,51 @@ def menu():
                 input("\nPresiona Enter para volver al menú...")
             case 2:
                 codigoC = int(input("Ingrese el código del cliente: "))
-                print(tabulate(getOneClientCodigo(codigoC), headers="keys", tablefmt="grid"))
+                print(tabulate(getOneClientCodigo(codigoC),
+                      headers="keys", tablefmt="grid"))
                 input("\nPresiona Enter para volver al menú...")
             case 3:
                 ciudad = input("Ingrese la ciudad deseada: ")
                 limitCredit = float(input("Ingrese el límite de crédito: "))
-                print(tabulate(getAllClientCreditCiudad(limitCredit, ciudad), headers="keys", tablefmt="grid"))
+                print(tabulate(getAllClientCreditCiudad(
+                    limitCredit, ciudad), headers="keys", tablefmt="grid"))
                 input("\nPresiona Enter para volver al menú...")
             case 4:
                 pais = input("Ingrese el país: ")
                 region = input("Ingrese la región (opcional): ") or None
                 ciudad = input("Ingrese la ciudad (opcional): ") or None
-                print(tabulate(getAllClientPaisRegionCiudad(pais, region, ciudad), headers="keys", tablefmt="grid"))
+                print(tabulate(getAllClientPaisRegionCiudad(
+                    pais, region, ciudad), headers="keys", tablefmt="grid"))
                 input("\nPresiona Enter para volver al menú...")
             case 5:
                 codigoPostal = input("Ingrese el código postal: ")
-                print(tabulate(getClientCodigoPostal(codigoPostal), headers="keys", tablefmt="grid"))
+                print(tabulate(getClientCodigoPostal(codigoPostal),
+                      headers="keys", tablefmt="grid"))
                 input("\nPresiona Enter para volver al menú...")
             case 6:
-                codeRepreVen = int(input("Ingrese el código del representante de ventas: "))
-                print(tabulate(getClientByRepresentanteVentas(codeRepreVen), headers="keys", tablefmt="grid"))
+                codeRepreVen = int(
+                    input("Ingrese el código del representante de ventas: "))
+                print(tabulate(getClientByRepresentanteVentas(
+                    codeRepreVen), headers="keys", tablefmt="grid"))
                 input("\nPresiona Enter para volver al menú...")
             case 7:
                 country = input("Ingrese el país: ")
                 postal_code = input("Ingrese el código postal: ")
-                print(tabulate(getClientByCountryAndPostalCode(country, postal_code), headers="keys", tablefmt="grid"))
+                print(tabulate(getClientByCountryAndPostalCode(
+                    country, postal_code), headers="keys", tablefmt="grid"))
                 input("\nPresiona Enter para volver al menú...")
             case 8:
-                nacionalidad = "Spain" 
-                print(tabulate(getAllClientesEspañoles(nacionalidad), headers="keys", tablefmt="grid"))
+                nacionalidad = "Spain"
+                print(tabulate(getAllClientesEspañoles(
+                    nacionalidad), headers="keys", tablefmt="grid"))
                 input("\nPresiona Enter para volver al menú...")
             case 9:
-                print(tabulate(getAllClientMadridRepre(), headers="keys", tablefmt="grid"))
+                print(tabulate(getAllClientMadridRepre(),
+                      headers="keys", tablefmt="grid"))
                 input("\nPresiona Enter para volver al menú...")
             case 10:
-                print(tabulate(getAllClientNameRepreName(), headers="keys", tablefmt="grid"))
+                print(tabulate(getAllClientNameRepreName(),
+                      headers="keys", tablefmt="grid"))
                 input("\nPresiona Enter para volver al menú...")
             case 11:
                 print(tabulate(clientes_con_pagos, headers="keys", tablefmt="grid"))
@@ -231,6 +266,8 @@ def menu():
             case 12:
                 print(tabulate(clientes_sin_pagos, headers="keys", tablefmt="grid"))
                 input("\nPresiona Enter para volver al menú...")
+            case 13:
+                break
             case _:
                 print("Opcion invalida")
-                time.sleep(2) # espera en segundos
+                time.sleep(2)  # espera en segundos
