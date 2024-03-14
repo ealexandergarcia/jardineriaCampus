@@ -1,14 +1,21 @@
-from os import system #import of the standard function os.system()
-from tabulate import tabulate
+from os import system  # import of the standard function os.system()
 from datetime import datetime
 import time
-import storage.pago as pag
+from tabulate import tabulate
+import requests
+
+# Data
+def getAllData():
+    # json-server producto.json -b 5505
+    peticion = requests.get("http://172.25.202.224:5505", timeout=10)
+    data = peticion.json()
+    return data
 
 # Devuelve un listado con el codigo de cliente de aquellos clientes que realizaron algun pago
 # en 2008. Tenga en cuenta que debera eliminar aquellos codigos de cliente que aparezcan repeditos
 def getAllClientPayYear():
     ClientPayYear = []
-    for pay in pag.pago:
+    for pay in getAllData():
         año = pay.get("fecha_pago")
         if año[0:4] == "2008":
             ClientPayYear.append({
@@ -17,16 +24,16 @@ def getAllClientPayYear():
             })
 
     # Eliminar valores repetidos usando un conjunto y luego convertirlo a lista
-    unique_clients = list({client['codigo_cliente']:client for client in ClientPayYear}.values())
+    unique_clients = list(
+        {client['codigo_cliente']: client for client in ClientPayYear}.values())
 
     return unique_clients
-
 
 # Devuelve un listado con todos los pagos que se realizaron en el año 2008 mediante PayPal.
 # Ordene el resultado de mayor a menor
 def getAllPagosPaypal():
-    pagosPaypal=[]
-    for pay in pag.pago:
+    pagosPaypal = []
+    for pay in getAllData():
         if pay.get("forma_pago") == "PayPal":
             date_1 = "/".join(pay.get("fecha_pago").split("-")[::-1])
             paymentDate = datetime.strptime(date_1, "%d/%m/%Y")
@@ -46,13 +53,14 @@ def getAllPagosPaypal():
 # Tenga en cuenta que no deben aparecer formas de pago repetidas
 def getAllFormasPago():
     formasPago = []
-    for pay in pag.pago:
+    for pay in getAllData():
         formasPago.append({
             "forma_pago": pay.get("forma_pago")
         })
 
     # Eliminar valores repetidos usando un conjunto y luego convertirlo a lista
-    unique_pay = list({client['forma_pago']:client for client in formasPago}.values())
+    unique_pay = list(
+        {client['forma_pago']: client for client in formasPago}.values())
 
     return unique_pay
 
@@ -60,7 +68,7 @@ def getAllFormasPago():
 def menu():
     while True:
         system("clear")
-        
+
         print(""" 
 
     ____                        __              __        ____                        
@@ -71,7 +79,7 @@ def menu():
           /_/                                                     /____/              
                                                                                                     
     """)
-        print ("""
+        print("""
     01. Obtener todos los clientes que realizaron pagos en 2008
     02. Obtener todos los pagos que se realizaron en el año 2008 mediante PayPal
     03. Obtener todas las formas de pago
@@ -81,10 +89,12 @@ def menu():
 
         match opcion:
             case 1:
-                print(tabulate(getAllClientPayYear(), headers="keys", tablefmt="grid"))
+                print(tabulate(getAllClientPayYear(),
+                      headers="keys", tablefmt="grid"))
                 input("\nPresiona Enter para volver al menú...")
             case 2:
-                print(tabulate(getAllPagosPaypal(), headers="keys", tablefmt="grid"))
+                print(tabulate(getAllPagosPaypal(),
+                      headers="keys", tablefmt="grid"))
                 input("\nPresiona Enter para volver al menú...")
             case 3:
                 print(tabulate(getAllFormasPago(), headers="keys", tablefmt="grid"))
@@ -93,4 +103,4 @@ def menu():
                 break
             case _:
                 print("Opcion invalida")
-                time.sleep(2) # espera en segundos
+                time.sleep(2)  # espera en segundos
