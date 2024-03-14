@@ -2,14 +2,14 @@ from os import system  # import of the standard function os.system()
 import time
 from tabulate import tabulate
 import requests
-import storage.empleado as emp
+import modules.getEmpleados as gE
 import storage.pago as pag
 
 
 # Data
 def getAllData():
     # json-server producto.json -b 5504
-    peticion = requests.get("http://172.16.100.141:5504", timeout=10)
+    peticion = requests.get("http://172.16.103.33:5504", timeout=10)
     data = peticion.json()
     return data
 
@@ -140,7 +140,7 @@ def getAllClientNameRepreName():
     clientesNames = []
     for client in getAllData():
         idRepre = client.get("codigo_empleado_rep_ventas")
-        for empleado in emp.empleados:
+        for empleado in gE.getAllData():
             if idRepre == empleado.get("codigo_empleado") and empleado.get("puesto") == "Representante Ventas":
                 clientesNames.append({
                     "Nombre del cliente": client.get("nombre_cliente"),
@@ -151,37 +151,37 @@ def getAllClientNameRepreName():
 # Muestra el nombre de los clientes que hayan realizado pagos junto con el nombre de sus representantes de ventas
 
 
-def getAllClientPago():
-    clientesSinPagos = []
-    clientePago = []
-    for client in getAllData():
-        idClient = client.get("codigo_cliente")
-        idRepre = client.get("codigo_empleado_rep_ventas")
-        has_pago = False
-        for pago in pag.pago:
-            if idClient == pago.get("codigo_cliente"):
-                has_pago = True
-                break
-        if not has_pago:
-            for empleado in emp.empleados:
-                if idRepre == empleado.get("codigo_empleado") and empleado.get("puesto") == "Representante Ventas":
-                    clientesSinPagos.append({
-                        "cod_cliente": client.get("codigo_cliente"),
-                        "Nombre del cliente": client.get("nombre_cliente"),
-                        "Nombre del representante de ventas": f'{empleado.get("nombre")} {empleado.get("apellido1")}'
-                    })
-        else:
-            for empleado in emp.empleados:
-                if idRepre == empleado.get("codigo_empleado") and empleado.get("puesto") == "Representante Ventas":
-                    clientePago.append({
-                        "cod_cliente": client.get("codigo_cliente"),
-                        "Nombre del cliente": client.get("nombre_cliente"),
-                        "Nombre del representante de ventas": f'{empleado.get("nombre")} {empleado.get("apellido1")}'
-                    })
-    return clientePago, clientesSinPagos
+# def getAllClientPago():
+#     clientesSinPagos = []
+#     clientePago = []
+#     for client in getAllData():
+#         idClient = client.get("codigo_cliente")
+#         idRepre = client.get("codigo_empleado_rep_ventas")
+#         has_pago = False
+#         for pago in pag.pago:
+#             if idClient == pago.get("codigo_cliente"):
+#                 has_pago = True
+#                 break
+#         if not has_pago:
+#             for empleado in gE.getAllData():
+#                 if idRepre == empleado.get("codigo_empleado") and empleado.get("puesto") == "Representante Ventas":
+#                     clientesSinPagos.append({
+#                         "cod_cliente": client.get("codigo_cliente"),
+#                         "Nombre del cliente": client.get("nombre_cliente"),
+#                         "Nombre del representante de ventas": f'{empleado.get("nombre")} {empleado.get("apellido1")}'
+#                     })
+#         else:
+#             for empleado in gE.getAllData():
+#                 if idRepre == empleado.get("codigo_empleado") and empleado.get("puesto") == "Representante Ventas":
+#                     clientePago.append({
+#                         "cod_cliente": client.get("codigo_cliente"),
+#                         "Nombre del cliente": client.get("nombre_cliente"),
+#                         "Nombre del representante de ventas": f'{empleado.get("nombre")} {empleado.get("apellido1")}'
+#                     })
+#     return clientePago, clientesSinPagos
 
 
-clientes_con_pagos, clientes_sin_pagos = getAllClientPago()
+# clientes_con_pagos, clientes_sin_pagos = getAllClientPago()
 
 # Menu
 

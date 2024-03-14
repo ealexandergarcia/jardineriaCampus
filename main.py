@@ -3,24 +3,38 @@
 import modules.getClients as listCliente
 import modules.postClientes as CRUDCliente
 import modules.getOficina as oficina
-import modules.getEmpleados as empleado
+import modules.getEmpleados as listEmpleado
+import modules.postEmpleados as CRUDEmpleado
 import modules.getPedido as pedido
 import modules.getPago as pago
 import modules.getProducto as listProducto
 import modules.postProductp as CRUDProducto
 
-# print(tabulate(producto.getAllStocksPriceGama("Ornamentales",100),headers="keys",tablefmt="grid"))
 
-# # Suponiendo que la función getAllClientPago() devuelve dos valores
-# clientes_con_pagos, clientes_sin_pagos = pr.getAllClientPago()
+def menuEmpleado():
+    while True:
+        print("""                                                                             
+    __  ___                        __        ______                __               __          
+   /  |/  /__  ____  __  __   ____/ /__     / ____/___ ___  ____  / /__  ____ _____/ /___  _____
+  / /|_/ / _ \/ __ \/ / / /  / __  / _ \   / __/ / __ `__ \/ __ \/ / _ \/ __ `/ __  / __ \/ ___/
+ / /  / /  __/ / / / /_/ /  / /_/ /  __/  / /___/ / / / / / /_/ / /  __/ /_/ / /_/ / /_/ (__  ) 
+/_/  /_/\___/_/ /_/\__,_/   \__,_/\___/  /_____/_/ /_/ /_/ .___/_/\___/\__,_/\__,_/\____/____/  
+                                                        /_/                                                                              
+        1. Reportes de los empleados
+        2. Guardar, Actualizar y Eliminar Empleados
+        3. Volver al menu princupal                                                                                                                                                                                                                                      
+        """)
+        opcion = int(input("Ingrese su opcion: "))
+        match opcion:
+            case 1:
+                listEmpleado.menu()
+            case 2:
+                CRUDEmpleado.menu()
+            case 3:
+                break
+            case _:
+                print("Opcion invalida")
 
-# # Si solo quieres imprimir los clientes con pagos
-# print("Clientes con pagos:")
-# print(tabulate(clientes_sin_pagos,headers="keys",tablefmt="grid"))
-
-# # Si solo quieres imprimir los clientes sin pagos
-# print("Clientes sin pagos:")
-# print(tabulate(clientes_con_pagos,headers="keys",tablefmt="grid"))
 
 
 def menuCliente():
@@ -134,7 +148,7 @@ def mainMenu():
                 case 2:
                     oficina.menu()
                 case 3:
-                    empleado.menu()
+                    menuEmpleado()
                 case 4:
                     pedido.menu()
                 case 5:
