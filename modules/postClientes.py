@@ -26,7 +26,7 @@ def postCliente():
         "codigo_empleado_rep_ventas": int(input("Ingrese el codigo del representanre de ventas: ")),
         "limite_credito": int(input("Ingrese su limite de credito: ")),
     }
-    peticion = requests.post("http://172.25.202.224:5501",
+    peticion = requests.post("http://172.16.100.141:5501",
                              timeout=10, data=json.dumps(cliente).encode("UTF-8"))
     res = peticion.json()
     return [res]

@@ -14,7 +14,7 @@ def postPedido():
         "fecha_pago": input("Ingrese la fecha de pago: "),
         "total": int(input("Ingrese total de la compra: "))
     }
-    peticion = requests.post("http://172.25.202.224:5504",
+    peticion = requests.post("http://172.16.100.141:5504",
                              timeout=10, data=json.dumps(pedido).encode("UTF-8"))
     res = peticion.json()
     return [res]

@@ -9,7 +9,7 @@ import modules.getPago as gP
 # Data
 def getAllData():
     # json-server producto.json -b 5501
-    peticion = requests.get("http://172.25.202.224:5501", timeout=10)
+    peticion = requests.get("http://172.16.100.141:5501", timeout=10)
     data = peticion.json()
     return data
 

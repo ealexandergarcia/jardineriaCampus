@@ -7,7 +7,7 @@ import requests
 # Data
 def getAllData():
     # json-server producto.json -b 5504
-    peticion = requests.get("http://172.25.202.224:5504", timeout=10)
+    peticion = requests.get("http://172.16.100.141:5504", timeout=10)
     data = peticion.json()
     return data
 

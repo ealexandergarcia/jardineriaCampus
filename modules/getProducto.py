@@ -7,9 +7,17 @@ import modules.postProductp as psProducto
 
 def getAllData():
     # json-server producto.json -b 5506
-    peticion = requests.get("http://172.25.202.224:5506", timeout=10)
+    peticion = requests.get("http://172.16.100.141:5506", timeout=10)
     data = peticion.json()
     return data
+
+def getProductCodigo(codigo):
+    for val in getAllData():
+        if(val.get("codigo_producto") == codigo):
+            return[val]
+
+    
+
 
 # Devuelve un listado con todos los productos que pertenecen a la gama "ornamentales" y que
 # tienen mas de 100 unidades en stock. El listado debe estar ordenado por su precio de venta,
