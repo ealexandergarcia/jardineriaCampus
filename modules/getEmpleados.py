@@ -5,7 +5,7 @@ import requests
 
 def getAllData():
     # json-server empleado.json -b 5503
-    peticion = requests.get("http://172.16.103.33:5503", timeout=10)
+    peticion = requests.get("http://localhost:5503", timeout=10)
     data = peticion.json()
     return data
 

@@ -2867,5 +2867,29 @@
         "precio_venta": 1.0,
         "precio_proveedor": 1,
         "id": 280
+    },
+    {
+        "codigo_producto": "AS-963",
+        "nombre": "Martillo",
+        "gama": "Herramientas",
+        "dimensiones": "15x15",
+        "proveedor": "Prueba",
+        "descripcion": "Martillo de Thor",
+        "cantidad_en_stock": "1",
+        "precio_venta": "100",
+        "precio_proveedor": "10000",
+        "id": 281
+    },
+    {
+        "codigo_producto": "AS-852",
+        "nombre": "StormBraker",
+        "gama": "Herramientas",
+        "dimensiones": "15x54",
+        "proveedor": "Nidavellir",
+        "descripcion": "Stormbreaker is an enchanted axe of Dwarvian manufacture, forged from Uru on Nidavellir with the ability to summon the Bifrost. Following Mj\u00f8lnir's destruction, the weapon was forged by Thor in order to defeat Thanos. After Mj\u00f8lnir's reassembly, Thor allowed his adoptive daughter Love to wield Stormbreaker in combat.",
+        "cantidad_en_stock": 1,
+        "precio_venta": 100000,
+        "precio_proveedor": 1000000,
+        "id": 282
     }
 ]

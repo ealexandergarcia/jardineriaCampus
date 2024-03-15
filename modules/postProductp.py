@@ -6,19 +6,25 @@ import requests
 import modules.getGamas as gG
 import modules.getProducto as gP
 import modules.validaciones as vali
+import json
 
 
 def postProducto():
     # json-server producto.json -b 5506
     producto = {}
+     # Gamas
+    gammas = gG.getAllNombre()
     while True:
         try:
-            if (not producto.get("codigo_producto")):
-                codigo = input("Ingrese el codigo del producto: ")
-                # expresion regular que valide de una cadena Numero y letras en mayusculas pero la cadena es de 6 caracteres  los dos primeros son las letras en mayusculas seguido de un guion y los 3 ultimos caracteres
-                if (vali.validacionCodProd(codigo) is not None):
+            # Codigo del prodcuto
+            if not producto.get("codigo_producto"):
+                codigo = input("Ingrese el codigo del producto (AB-132): ")
+                # expresion regular que valide de una cadena Numero y letras en
+                # mayusculas pero la cadena es de 6 caracteres  los dos primeros son
+                # las letras en mayusculas seguido de un guion y los 3 ultimos caracteres
+                if vali.validacionCodProd(codigo) is not None:
                     data = gP.getProductCodigo(codigo)
-                    if (data):
+                    if data:
                         print(tabulate(data, headers="keys", tablefmt="grid"))
                         raise Exception(
                             "El codigo del producto ya existe")
@@ -27,40 +33,90 @@ def postProducto():
                 else:
                     raise Exception(
                         "El codigo del producto no cumple con el estandar establecido")
+            
+            # Nombre del producto
+            if not producto.get("nombre"):
+                nombre = input("Ingrese el nombre del producto (Martillo Grande): ")
+                if vali.valiNombres(nombre) is not None:
+                    producto["nombre"] = nombre
+                else:
+                    raise Exception("El nombre del producto no cumple con lo establecido")
 
-            # if(not producto.get("nombre")):
-            #     nombre = input("Ingrese el nombre del producto: ")
-            #     if(vali.valiNombres(nombre) is not None):
-            #         producto["nombre"] = nombre
-            #         break
-            #     else:
-            #         raise Exception("El nombre del producto no cumple con lo establecido")
+            # Gamas
+            if not producto.get("gama"):
+                print("\nSeleccione la gama:")
+                for i, gamma in enumerate(gammas):
+                    print(f"{i}. {gamma}")
+                seleccion = input()
+                if re.match(r'^\d+$', seleccion) is not None:
+                    print("funciona")
+                    seleccion = int(seleccion)
+                    if 0 <= seleccion < len(gammas):
+                        print("funciona2")
+                        gamma_seleccionada = gammas[seleccion]
+                        producto["gama"] = gamma_seleccionada
+                    else:
+                        raise Exception(f"Entrada inválida. Por favor, ingrese un número entero válido")
+                else:
+                    raise Exception(f"Entrada inválida. Por favor, ingrese un número entero válido")
 
-            # expresion regular que valide de una cadena Numero los primeros catacteres son numeros seguido de un X y los  ultimos caracteres son numeros
-            # if (not producto.get("dimensiones")):
-            #     dimensiones = input("Ingrese las dimensiones del producto (54x54): ")
-            #     if (re.match(r'^\d+[x]\d+$', dimensiones) is not None):
-            #         producto["dimensiones"] = dimensiones
-            #     else:
-            #         raise Exception(
-            #             "El nombre no cumple con el estandar establecido")
-
-            # if (not producto.get("proveedor")):
-            #     proveedor = input("Ingrese nombre del proveedor: ")
-            #     if (vali.valiNombres(proveedor) is not None):
-            #         producto["proveedor"] = proveedor
-            #     else:
-            #         raise Exception(
-            #             "El nombre no cumple con el estandar establecido") 
-
-            if (not producto.get("descripcion")):
-                descripcion = input("Ingrese nombre del descripcion: ")
-                if (re.match(r'^[A-Z][^.]*\.?(\s*[A-Z][^.]*\.?)*$', descripcion) is not None):
-                    producto["descripcion"] = descripcion
-                    break
+            # # expresion regular que valide de una cadena Numero los primeros catacteres son
+            # numeros seguido de un X y los  ultimos caracteres son numeros
+            # Dimensiones
+            if not producto.get("dimensiones"):
+                dimensiones = input("Ingrese las dimensiones del producto (54x54): ")
+                if re.match(r'^\d+[x]\d+$', dimensiones) is not None:
+                    producto["dimensiones"] = dimensiones
                 else:
                     raise Exception(
-                        "La descripcion no cumple con el estandar establecido") 
+                        "El nombre no cumple con el estandar establecido")
+
+            # Proveedor
+            if not producto.get("proveedor"):
+                proveedor = input("Ingrese nombre del proveedor: ")
+                if vali.valiNombres(proveedor) is not None:
+                    producto["proveedor"] = proveedor
+                else:
+                    raise Exception(
+                        "El nombre no cumple con el estandar establecido") 
+
+            # Descripcion
+            if not producto.get("descripcion"):
+                descripcion = input("Ingrese nombre del descripcion: ")
+                if re.match(r'^[A-Z][^.]*\.?(\s*[A-Z][^.]*\.?)*$', descripcion) is not None:
+                    producto["descripcion"] = descripcion
+                else:
+                    raise Exception(
+                        "La descripcion no cumple con el estandar establecido")
+
+            # Cantidad de stock
+            if not producto.get("cantidad_en_stock"):
+                cantidadStock = input("Ingrese la cantidad de stock: ")
+                if re.match(r'^[0-9]+$', cantidadStock) is not None:
+                    cantidadStock= int(cantidadStock)
+                    producto["cantidad_en_stock"] = cantidadStock
+                else:
+                    raise Exception("El Stock no cumple con el estandar establecido")
+
+            # Precio de venta
+            if not producto.get("precio_venta"):
+                precioVenta = input("Ingrese el precio de venta: ")
+                if re.match(r'^[0-9]+$', precioVenta) is not None:
+                    precioVenta= int(precioVenta)
+                    producto["precio_venta"] = precioVenta
+                else:
+                    raise Exception("El Stock no cumple con el estandar establecido")
+
+            # Precio de proveedor
+            if not producto.get("precio_proveedor"):
+                precioProveedor = input("Ingrese el precio de venta: ")
+                if re.match(r'^[0-9]+$', precioProveedor) is not None:
+                    precioProveedor= int(precioProveedor)
+                    producto["precio_proveedor"] = precioProveedor
+                    break
+                else:
+                    raise Exception("El Stock no cumple con el estandar establecido")
+
         except Exception as error:
             print(error)
 
@@ -76,11 +132,11 @@ def postProducto():
     #     "precio_venta": float(input("Ingrese el precio de venta: ")),
     #     "precio_proveedor": int(input("Ingrese el precio del proveedor: "))
     # }
-    # peticion = requests.post("http://172.16.100.141:5506",
-    #                          timeout=10, data=json.dumps(producto))
-    # res = peticion.json()
-    # res["Mensaje"] = "Producto Guardado"
-    # return [res]
+    peticion = requests.post("http://localhost:5506",
+                             timeout=10, data=json.dumps(producto))
+    res = peticion.json()
+    res["Mensaje"] = "Producto Guardado"
+    return [res]
 
 
 def menu():
