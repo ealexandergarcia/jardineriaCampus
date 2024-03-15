@@ -19,13 +19,13 @@ def getAllClientPayYear():
         año = pay.get("fecha_pago")
         if año[0:4] == "2008":
             ClientPayYear.append({
-                "codigo_cliente": pay.get("codigo_cliente"),
-                "fecha_pago": pay.get("fecha_pago")
+                "Codigo": pay.get("codigo_cliente"),
+                "Fecha de Pago": pay.get("fecha_pago")
             })
 
     # Eliminar valores repetidos usando un conjunto y luego convertirlo a lista
     unique_clients = list(
-        {client['codigo_cliente']: client for client in ClientPayYear}.values())
+        {client['Codigo']: client for client in ClientPayYear}.values())
 
     return unique_clients
 
@@ -40,10 +40,10 @@ def getAllPagosPaypal():
 
             if paymentDate.year == 2008:
                 pagosPaypal.append({
-                    "codigo_cliente": pay.get("codigo_cliente"),
-                    "fecha_pago": pay.get("fecha_pago"),
-                    "forma_pago": pay.get("forma_pago"),
-                    "id_transaccion": pay.get("id_transaccion"),
+                    "codigo": pay.get("codigo_cliente"),
+                    "Fecha de pago": pay.get("fecha_pago"),
+                    "Forma de pago": pay.get("forma_pago"),
+                    "Identidicador de transaccion": pay.get("id_transaccion"),
                     "total": pay.get("total"),
                 })
     valores_ord = sorted(pagosPaypal, key=lambda x: x["total"], reverse=True)
@@ -55,12 +55,12 @@ def getAllFormasPago():
     formasPago = []
     for pay in getAllData():
         formasPago.append({
-            "forma_pago": pay.get("forma_pago")
+            "Formas de pago": pay.get("forma_pago")
         })
 
     # Eliminar valores repetidos usando un conjunto y luego convertirlo a lista
     unique_pay = list(
-        {client['forma_pago']: client for client in formasPago}.values())
+        {client['Formas de pago']: client for client in formasPago}.values())
 
     return unique_pay
 

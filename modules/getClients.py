@@ -3,7 +3,7 @@ import time
 from tabulate import tabulate
 import requests
 import modules.getEmpleados as gE
-# import storage.pago as pag
+import modules.getPago as gP
 
 
 # Data
@@ -18,8 +18,8 @@ def getAllClientName():
     clienteName = []
     for val in getAllData():
         clienteName.append({
-            "codigo_cliente": val.get('codigo_cliente'),
-            "nombre_cliente": val.get('nombre_cliente')
+            "Codigo": val.get('codigo_cliente'),
+            "Nombre": val.get('nombre_cliente')
         })
     return clienteName
 
@@ -28,8 +28,8 @@ def getOneClientCodigo(codigo):
     for val in getAllData():
         if (val.get('codigo_cliente') == codigo):
             return [{
-                "Codigo_de_cliente": val.get('codigo_cliente'),
-                "nombre_del_cliente": val.get('nombre_cliente')
+                "Codigo": val.get('codigo_cliente'),
+                "Nombre": val.get('nombre_cliente')
             }]
 
 
@@ -54,7 +54,13 @@ def getAllClientPaisRegionCiudad(pais, region=None, ciudad=None):
         if val.get('pais') == pais:
             if region is None or val.get('region') == region:
                 if ciudad is None or val.get('ciudad') == ciudad:
-                    clientZone.append(val)
+                    clientZone.append({
+                        "Nombre del cliente": val.get("nombre_cliente"),
+                        "Pais": val.get("pais"),
+                        "Region": val.get("region"),
+                        "Ciudad": val.get("ciudad"),
+                        "Nombre del contacto": f"{val.get('nombre_contacto')} {val.get('apellido_contacto')}"
+                    })
     return clientZone
 
 # 1 Filtrar por código postal
@@ -65,9 +71,9 @@ def getClientCodigoPostal(codigoPostal):
     for val in getAllData():
         if (val.get('codigo_postal') == codigoPostal):
             client_info = {
-                "nombre_cliente": val.get('nombre_cliente'),
-                "codigo_cliente": val.get('codigo_cliente'),
-                "codigo_postal": val.get('codigo_postal')
+                "Nombre": val.get('nombre_cliente'),
+                "Codigo": val.get('codigo_cliente'),
+                "Codigo postal": val.get('codigo_postal')
             }
             clientPostalCode.append(client_info)
     return clientPostalCode
@@ -102,7 +108,11 @@ def getClientByContactNameAndCountry(contact_name, country):
     clientsByContactNameCountry = []
     for client in getAllData():
         if client.get('nombre_contacto') == contact_name and client.get('pais') == country:
-            clientsByContactNameCountry.append(client)
+            clientsByContactNameCountry.append({
+                "Nombre": client.get("nombre_cliente"),
+                "Pais": client.get("pais"),
+                "Codigo Postal": client.get("codigo_postal")
+            })
     return clientsByContactNameCountry
 
 # Devuelve un listado con el nombre de todos los clientes españoles
@@ -127,9 +137,9 @@ def getAllClientMadridRepre():
         if (client.get("ciudad") == 'Madrid'):
             if (client.get("codigo_empleado_rep_ventas") == 11 or client.get("codigo_empleado_rep_ventas") == 30):
                 clientesMadrid.append({
-                    "Nombre_del_cliente": client.get("nombre_cliente"),
+                    "Nombre": client.get("nombre_cliente"),
                     "Ciudad": client.get("ciudad"),
-                    "Representante_ventas": client.get("codigo_empleado_rep_ventas"),
+                    "Representante de ventas": client.get("codigo_empleado_rep_ventas"),
                 })
     return clientesMadrid
 
@@ -144,44 +154,42 @@ def getAllClientNameRepreName():
             if idRepre == empleado.get("codigo_empleado") and empleado.get("puesto") == "Representante Ventas":
                 clientesNames.append({
                     "Nombre del cliente": client.get("nombre_cliente"),
-                    "Nombre del representante de ventas": f'{empleado.get("nombre")} {empleado.get("apellido1")}'
+                    "Representante de ventas": f'{empleado.get("nombre")} {empleado.get("apellido1")}'
                 })
     return clientesNames
 
 # Muestra el nombre de los clientes que hayan realizado pagos junto con el nombre de sus representantes de ventas
+def getAllClientPago():
+    clientesSinPagos = []
+    clientePago = []
+    for client in getAllData():
+        idClient = client.get("codigo_cliente")
+        idRepre = client.get("codigo_empleado_rep_ventas")
+        has_pago = False
+        for pago in gP.getAllData():
+            if idClient == pago.get("codigo_cliente"):
+                has_pago = True
+                break
+        if not has_pago:
+            for empleado in gE.getAllData():
+                if idRepre == empleado.get("codigo_empleado") and empleado.get("puesto") == "Representante Ventas":
+                    clientesSinPagos.append({
+                        "cod_cliente": client.get("codigo_cliente"),
+                        "Nombre del cliente": client.get("nombre_cliente"),
+                        "Nombre del representante de ventas": f'{empleado.get("nombre")} {empleado.get("apellido1")}'
+                    })
+        else:
+            for empleado in gE.getAllData():
+                if idRepre == empleado.get("codigo_empleado") and empleado.get("puesto") == "Representante Ventas":
+                    clientePago.append({
+                        "Codigo": client.get("codigo_cliente"),
+                        "Nombre del cliente": client.get("nombre_cliente"),
+                        "Nombre del representante de ventas": f'{empleado.get("nombre")} {empleado.get("apellido1")}'
+                    })
+    return clientePago, clientesSinPagos
 
 
-# def getAllClientPago():
-#     clientesSinPagos = []
-#     clientePago = []
-#     for client in getAllData():
-#         idClient = client.get("codigo_cliente")
-#         idRepre = client.get("codigo_empleado_rep_ventas")
-#         has_pago = False
-#         for pago in pag.pago:
-#             if idClient == pago.get("codigo_cliente"):
-#                 has_pago = True
-#                 break
-#         if not has_pago:
-#             for empleado in gE.getAllData():
-#                 if idRepre == empleado.get("codigo_empleado") and empleado.get("puesto") == "Representante Ventas":
-#                     clientesSinPagos.append({
-#                         "cod_cliente": client.get("codigo_cliente"),
-#                         "Nombre del cliente": client.get("nombre_cliente"),
-#                         "Nombre del representante de ventas": f'{empleado.get("nombre")} {empleado.get("apellido1")}'
-#                     })
-#         else:
-#             for empleado in gE.getAllData():
-#                 if idRepre == empleado.get("codigo_empleado") and empleado.get("puesto") == "Representante Ventas":
-#                     clientePago.append({
-#                         "cod_cliente": client.get("codigo_cliente"),
-#                         "Nombre del cliente": client.get("nombre_cliente"),
-#                         "Nombre del representante de ventas": f'{empleado.get("nombre")} {empleado.get("apellido1")}'
-#                     })
-#     return clientePago, clientesSinPagos
-
-
-# clientes_con_pagos, clientes_sin_pagos = getAllClientPago()
+clientes_con_pagos, clientes_sin_pagos = getAllClientPago()
 
 # Menu
 
@@ -269,10 +277,10 @@ def menu():
                       headers="keys", tablefmt="grid"))
                 input("\nPresiona Enter para volver al menú...")
             case 11:
-                # print(tabulate(clientes_con_pagos, headers="keys", tablefmt="grid"))
+                print(tabulate(clientes_con_pagos, headers="keys", tablefmt="grid"))
                 input("\nPresiona Enter para volver al menú...")
             case 12:
-                # print(tabulate(clientes_sin_pagos, headers="keys", tablefmt="grid"))
+                print(tabulate(clientes_sin_pagos, headers="keys", tablefmt="grid"))
                 input("\nPresiona Enter para volver al menú...")
             case 13:
                 break
