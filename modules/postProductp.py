@@ -13,39 +13,54 @@ def postProducto():
     producto = {}
     while True:
         try:
-            # if (not producto.get("codigo_producto")):
-            #     codigo = input("Ingrese el codigo del producto: ")
-            #     # expresion regular que valide de una cadena Numero y letras en mayusculas pero la cadena es de 6 caracteres  los dos primeros son las letras en mayusculas seguido de un guion y los 3 ultimos caracteres
-            #     if (vali.validacionCodProd(codigo) is not None):
-            #         data = gP.getProductCodigo(codigo)
-            #         if (data):
-            #             print(tabulate(data, headers="keys", tablefmt="grid"))
-            #             raise Exception(
-            #                 "El codigo del producto ya existe")
-            #         else:
-            #             producto["codigo_producto"] = codigo
-            #     else:
-            #         raise Exception(
-            #             "El codigo del producto no cumple con el estandar establecido")
+            if (not producto.get("codigo_producto")):
+                codigo = input("Ingrese el codigo del producto: ")
+                # expresion regular que valide de una cadena Numero y letras en mayusculas pero la cadena es de 6 caracteres  los dos primeros son las letras en mayusculas seguido de un guion y los 3 ultimos caracteres
+                if (vali.validacionCodProd(codigo) is not None):
+                    data = gP.getProductCodigo(codigo)
+                    if (data):
+                        print(tabulate(data, headers="keys", tablefmt="grid"))
+                        raise Exception(
+                            "El codigo del producto ya existe")
+                    else:
+                        producto["codigo_producto"] = codigo
+                else:
+                    raise Exception(
+                        "El codigo del producto no cumple con el estandar establecido")
 
-            # if (not producto.get("nombre")):
-            #     nombre = input("Ingrese nombre del producto: ")
-            #     if (vali.ValiNomProd(nombre) is not None):
+            # if(not producto.get("nombre")):
+            #     nombre = input("Ingrese el nombre del producto: ")
+            #     if(vali.valiNombres(nombre) is not None):
             #         producto["nombre"] = nombre
+            #         break
+            #     else:
+            #         raise Exception("El nombre del producto no cumple con lo establecido")
+
+            # expresion regular que valide de una cadena Numero los primeros catacteres son numeros seguido de un X y los  ultimos caracteres son numeros
+            # if (not producto.get("dimensiones")):
+            #     dimensiones = input("Ingrese las dimensiones del producto (54x54): ")
+            #     if (re.match(r'^\d+[x]\d+$', dimensiones) is not None):
+            #         producto["dimensiones"] = dimensiones
             #     else:
             #         raise Exception(
             #             "El nombre no cumple con el estandar establecido")
 
-            # expresion regular que valide de una cadena Numero los primeros catacteres son numeros seguido de un X y los  ultimos caracteres son numeros
-            if (not producto.get("dimensiones")):
-                dimensiones = input("Ingrese las dimensiones del producto (54x54): ")
-                if (re.match(r'^\d+[x]\d+$', dimensiones) is not None):
-                    producto["dimensiones"] = dimensiones
+            # if (not producto.get("proveedor")):
+            #     proveedor = input("Ingrese nombre del proveedor: ")
+            #     if (vali.valiNombres(proveedor) is not None):
+            #         producto["proveedor"] = proveedor
+            #     else:
+            #         raise Exception(
+            #             "El nombre no cumple con el estandar establecido") 
+
+            if (not producto.get("descripcion")):
+                descripcion = input("Ingrese nombre del descripcion: ")
+                if (re.match(r'^[A-Z][^.]*\.?(\s*[A-Z][^.]*\.?)*$', descripcion) is not None):
+                    producto["descripcion"] = descripcion
                     break
                 else:
                     raise Exception(
-                        "El nombre no cumple con el estandar establecido")
-
+                        "La descripcion no cumple con el estandar establecido") 
         except Exception as error:
             print(error)
 

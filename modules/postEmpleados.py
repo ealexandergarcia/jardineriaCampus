@@ -20,7 +20,7 @@ def postEmpleado():
         "codigo_jefe": int(input("Ingrese el codigo del jefe: ")),
         "puesto": input("Ingrese el puesto del empleado: "),
     }
-    peticion = requests.post("http://172.16.100.141:5503",
+    peticion = requests.post("http://172.16.103.33:5503",
                              timeout=10, data=json.dumps(empleado).encode("UTF-8"))
     res = peticion.json()
     return [res]
