@@ -337,7 +337,7 @@ import json
 if(__name__ == "__main__"):
     # mainMenu()
     # CRUDCliente.postCliente()
-    CRUDProducto.deleteProducto(5)
+    CRUDProducto.menu()
 
 
 # # Actualziar los json para agregar el id

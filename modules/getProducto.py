@@ -7,14 +7,18 @@ import modules.postProductp as psProducto
 
 def getAllData():
     # json-server producto.json -b 5506
-    peticion = requests.get("http://localhost:5506", timeout=10)
+    peticion = requests.get("http://localhost:5506/productos", timeout=10)
     data = peticion.json()
     return data
 
 def getProductCodigo(codigo):
-    for val in getAllData():
-        if(val.get("codigo_producto") == codigo):
-            return[val]
+    peticion = requests.get(f"http://localhost:5506/productos/{codigo}", timeout=10)
+
+    return [peticion.json()] if peticion.ok else []
+    # if(peticion.ok):
+    #     return [peticion.json()]
+    # else:
+    #     return[]
 
     
 

@@ -12,7 +12,7 @@ import json
 def postProducto():
     # json-server producto.json -b 5506
     producto = {}
-     # Gamas
+    # Gamas
     gammas = gG.getAllNombre()
     while True:
         try:
@@ -33,14 +33,16 @@ def postProducto():
                 else:
                     raise Exception(
                         "El codigo del producto no cumple con el estandar establecido")
-            
+
             # Nombre del producto
             if not producto.get("nombre"):
-                nombre = input("Ingrese el nombre del producto (Martillo Grande): ")
+                nombre = input(
+                    "Ingrese el nombre del producto (Martillo Grande): ")
                 if vali.valiNombres(nombre) is not None:
                     producto["nombre"] = nombre
                 else:
-                    raise Exception("El nombre del producto no cumple con lo establecido")
+                    raise Exception(
+                        "El nombre del producto no cumple con lo establecido")
 
             # Gamas
             if not producto.get("gama"):
@@ -56,15 +58,18 @@ def postProducto():
                         gamma_seleccionada = gammas[seleccion]
                         producto["gama"] = gamma_seleccionada
                     else:
-                        raise Exception(f"Entrada inválida. Por favor, ingrese un número entero válido")
+                        raise Exception(
+                            f"Entrada inválida. Por favor, ingrese un número entero válido")
                 else:
-                    raise Exception(f"Entrada inválida. Por favor, ingrese un número entero válido")
+                    raise Exception(
+                        f"Entrada inválida. Por favor, ingrese un número entero válido")
 
             # # expresion regular que valide de una cadena Numero los primeros catacteres son
             # numeros seguido de un X y los  ultimos caracteres son numeros
             # Dimensiones
             if not producto.get("dimensiones"):
-                dimensiones = input("Ingrese las dimensiones del producto (54x54): ")
+                dimensiones = input(
+                    "Ingrese las dimensiones del producto (54x54): ")
                 if re.match(r'^\d+[x]\d+$', dimensiones) is not None:
                     producto["dimensiones"] = dimensiones
                 else:
@@ -78,7 +83,7 @@ def postProducto():
                     producto["proveedor"] = proveedor
                 else:
                     raise Exception(
-                        "El nombre no cumple con el estandar establecido") 
+                        "El nombre no cumple con el estandar establecido")
 
             # Descripcion
             if not producto.get("descripcion"):
@@ -93,39 +98,64 @@ def postProducto():
             if not producto.get("cantidad_en_stock"):
                 cantidadStock = input("Ingrese la cantidad de stock: ")
                 if re.match(r'^[0-9]+$', cantidadStock) is not None:
-                    cantidadStock= int(cantidadStock)
+                    cantidadStock = int(cantidadStock)
                     producto["cantidad_en_stock"] = cantidadStock
                 else:
-                    raise Exception("El Stock no cumple con el estandar establecido")
+                    raise Exception(
+                        "El Stock no cumple con el estandar establecido")
 
             # Precio de venta
             if not producto.get("precio_venta"):
                 precioVenta = input("Ingrese el precio de venta: ")
                 if re.match(r'^[0-9]+$', precioVenta) is not None:
-                    precioVenta= int(precioVenta)
+                    precioVenta = int(precioVenta)
                     producto["precio_venta"] = precioVenta
                 else:
-                    raise Exception("El Stock no cumple con el estandar establecido")
+                    raise Exception(
+                        "El Stock no cumple con el estandar establecido")
 
             # Precio de proveedor
             if not producto.get("precio_proveedor"):
                 precioProveedor = input("Ingrese el precio de proveedor: ")
                 if re.match(r'^[0-9]+$', precioProveedor) is not None:
-                    precioProveedor= int(precioProveedor)
+                    precioProveedor = int(precioProveedor)
                     producto["precio_proveedor"] = precioProveedor
                     break
                 else:
-                    raise Exception("El precio de proveedor no cumple con el estandar establecido")
+                    raise Exception(
+                        "El precio de proveedor no cumple con el estandar establecido")
 
         except Exception as error:
             print(error)
 
     print(producto)
-    peticion = requests.post("http://localhost:5506",
+    peticion = requests.post("http://localhost:5506/productos",
                              timeout=10, data=json.dumps(producto))
     res = peticion.json()
     res["Mensaje"] = "Producto Guardado"
     return [res]
+
+
+def deleteProducto(id):
+    data = gP.getProductCodigo(id)
+
+    if (len(data)):
+        peticion = requests.delete(f"http://localhost:5506/productos/{id}")
+        if (peticion.status_code == 204):
+            data.append({"message" : "Producto eliminado correctamente"})
+            return {
+                "body": data,
+                "status": peticion.status_code,
+            }
+    else:
+        return {
+            "body": [{
+                "message": "Producto no encontrado",
+                "data": id
+
+            }],
+            "status": 400
+        }
 
 
 def menu():
@@ -146,7 +176,8 @@ def menu():
     """)
         print("""
     01. Guardar un producto nuevo
-    02. Atras
+    02. Eliminar un productos
+    03. Atras
     """)
         opcion = int(input("\n Ingrese su opcion: "))
 
@@ -154,13 +185,14 @@ def menu():
             case 1:
                 print(tabulate(postProducto(), headers="keys", tablefmt="grid"))
                 input("\nPresiona Enter para volver al menú...")
-            # case 2:
-            #     # print(psProducto.postProducto())
-            #     print(tabulate(psProducto.postProducto(), headers="keys", tablefmt="grid"))
-            #     input("\nPresiona Enter para volver al menú...")
-            #     input("\nPresiona Enter para volver al menú...")
             case 2:
+                idProducto = int(input(
+                    "Ingrese el id del producto que desea eliminar: "))
+                print(tabulate(deleteProducto(idProducto)["body"], headers="keys", tablefmt="grid"))
+                input("\nPresiona Enter para volver al menú...")
+            case 3:
                 break
             case _:
                 print("Opcion invalida")
                 time.sleep(2)  # espera en segundos
+    

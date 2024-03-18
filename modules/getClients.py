@@ -94,102 +94,102 @@ def getClientByRepresentanteVentas(codeRepreVen):
 # 3 Filtrar por país y código postal
 
 
-def getClientByCountryAndPostalCode(country, postal_code):
-    clientsByCountryPostal = []
-    for client in getAllData():
-        if client.get('pais') == country and client.get('codigo_postal') == postal_code:
-            clientsByCountryPostal.append(client)
-    return clientsByCountryPostal
+# def getClientByCountryAndPostalCode(country, postal_code):
+#     clientsByCountryPostal = []
+#     for client in getAllData():
+#         if client.get('pais') == country and client.get('codigo_postal') == postal_code:
+#             clientsByCountryPostal.append(client)
+#     return clientsByCountryPostal
 
-# 4 Filtrar por nombre de contacto y país
-
-
-def getClientByContactNameAndCountry(contact_name, country):
-    clientsByContactNameCountry = []
-    for client in getAllData():
-        if client.get('nombre_contacto') == contact_name and client.get('pais') == country:
-            clientsByContactNameCountry.append({
-                "Nombre": client.get("nombre_cliente"),
-                "Pais": client.get("pais"),
-                "Codigo Postal": client.get("codigo_postal")
-            })
-    return clientsByContactNameCountry
-
-# Devuelve un listado con el nombre de todos los clientes españoles
+# # 4 Filtrar por nombre de contacto y país
 
 
-def getAllClientesEspañoles(nacionalidad):
-    ClientesEspañoles = []
-    for client in getAllData():
-        if (client.get("pais")) == nacionalidad:
-            ClientesEspañoles.append({
-                "clientes españoles": client.get("nombre_cliente"),
-                "Pais": client.get("pais")
-            })
-    return ClientesEspañoles
+# def getClientByContactNameAndCountry(contact_name, country):
+#     clientsByContactNameCountry = []
+#     for client in getAllData():
+#         if client.get('nombre_contacto') == contact_name and client.get('pais') == country:
+#             clientsByContactNameCountry.append({
+#                 "Nombre": client.get("nombre_cliente"),
+#                 "Pais": client.get("pais"),
+#                 "Codigo Postal": client.get("codigo_postal")
+#             })
+#     return clientsByContactNameCountry
 
-# Devuelve un listado con todos los clientes que sean de la ciudad de Madrid y cuyo representante de ventas tenga el código de empleado 11 o 30.
-
-
-def getAllClientMadridRepre():
-    clientesMadrid = []
-    for client in getAllData():
-        if (client.get("ciudad") == 'Madrid'):
-            if (client.get("codigo_empleado_rep_ventas") == 11 or client.get("codigo_empleado_rep_ventas") == 30):
-                clientesMadrid.append({
-                    "Nombre": client.get("nombre_cliente"),
-                    "Ciudad": client.get("ciudad"),
-                    "Representante de ventas": client.get("codigo_empleado_rep_ventas"),
-                })
-    return clientesMadrid
-
-# Obtén un listado con el nombre de cada cliente y el nombre y apellido de su representante de ventas.
+# # Devuelve un listado con el nombre de todos los clientes españoles
 
 
-def getAllClientNameRepreName():
-    clientesNames = []
-    for client in getAllData():
-        idRepre = client.get("codigo_empleado_rep_ventas")
-        for empleado in gE.getAllData():
-            if idRepre == empleado.get("codigo_empleado") and empleado.get("puesto") == "Representante Ventas":
-                clientesNames.append({
-                    "Nombre del cliente": client.get("nombre_cliente"),
-                    "Representante de ventas": f'{empleado.get("nombre")} {empleado.get("apellido1")}'
-                })
-    return clientesNames
+# def getAllClientesEspañoles(nacionalidad):
+#     ClientesEspañoles = []
+#     for client in getAllData():
+#         if (client.get("pais")) == nacionalidad:
+#             ClientesEspañoles.append({
+#                 "clientes españoles": client.get("nombre_cliente"),
+#                 "Pais": client.get("pais")
+#             })
+#     return ClientesEspañoles
 
-# Muestra el nombre de los clientes que hayan realizado pagos junto con el nombre de sus representantes de ventas
-def getAllClientPago():
-    clientesSinPagos = []
-    clientePago = []
-    for client in getAllData():
-        idClient = client.get("codigo_cliente")
-        idRepre = client.get("codigo_empleado_rep_ventas")
-        has_pago = False
-        for pago in gP.getAllData():
-            if idClient == pago.get("codigo_cliente"):
-                has_pago = True
-                break
-        if not has_pago:
-            for empleado in gE.getAllData():
-                if idRepre == empleado.get("codigo_empleado") and empleado.get("puesto") == "Representante Ventas":
-                    clientesSinPagos.append({
-                        "cod_cliente": client.get("codigo_cliente"),
-                        "Nombre del cliente": client.get("nombre_cliente"),
-                        "Nombre del representante de ventas": f'{empleado.get("nombre")} {empleado.get("apellido1")}'
-                    })
-        else:
-            for empleado in gE.getAllData():
-                if idRepre == empleado.get("codigo_empleado") and empleado.get("puesto") == "Representante Ventas":
-                    clientePago.append({
-                        "Codigo": client.get("codigo_cliente"),
-                        "Nombre del cliente": client.get("nombre_cliente"),
-                        "Nombre del representante de ventas": f'{empleado.get("nombre")} {empleado.get("apellido1")}'
-                    })
-    return clientePago, clientesSinPagos
+# # Devuelve un listado con todos los clientes que sean de la ciudad de Madrid y cuyo representante de ventas tenga el código de empleado 11 o 30.
 
 
-clientes_con_pagos, clientes_sin_pagos = getAllClientPago()
+# def getAllClientMadridRepre():
+#     clientesMadrid = []
+#     for client in getAllData():
+#         if (client.get("ciudad") == 'Madrid'):
+#             if (client.get("codigo_empleado_rep_ventas") == 11 or client.get("codigo_empleado_rep_ventas") == 30):
+#                 clientesMadrid.append({
+#                     "Nombre": client.get("nombre_cliente"),
+#                     "Ciudad": client.get("ciudad"),
+#                     "Representante de ventas": client.get("codigo_empleado_rep_ventas"),
+#                 })
+#     return clientesMadrid
+
+# # Obtén un listado con el nombre de cada cliente y el nombre y apellido de su representante de ventas.
+
+
+# def getAllClientNameRepreName():
+#     clientesNames = []
+#     for client in getAllData():
+#         idRepre = client.get("codigo_empleado_rep_ventas")
+#         for empleado in gE.getAllData():
+#             if idRepre == empleado.get("codigo_empleado") and empleado.get("puesto") == "Representante Ventas":
+#                 clientesNames.append({
+#                     "Nombre del cliente": client.get("nombre_cliente"),
+#                     "Representante de ventas": f'{empleado.get("nombre")} {empleado.get("apellido1")}'
+#                 })
+#     return clientesNames
+
+# # Muestra el nombre de los clientes que hayan realizado pagos junto con el nombre de sus representantes de ventas
+# def getAllClientPago():
+#     clientesSinPagos = []
+#     clientePago = []
+#     for client in getAllData():
+#         idClient = client.get("codigo_cliente")
+#         idRepre = client.get("codigo_empleado_rep_ventas")
+#         has_pago = False
+#         for pago in gP.getAllData():
+#             if idClient == pago.get("codigo_cliente"):
+#                 has_pago = True
+#                 break
+#         if not has_pago:
+#             for empleado in gE.getAllData():
+#                 if idRepre == empleado.get("codigo_empleado") and empleado.get("puesto") == "Representante Ventas":
+#                     clientesSinPagos.append({
+#                         "cod_cliente": client.get("codigo_cliente"),
+#                         "Nombre del cliente": client.get("nombre_cliente"),
+#                         "Nombre del representante de ventas": f'{empleado.get("nombre")} {empleado.get("apellido1")}'
+#                     })
+#         else:
+#             for empleado in gE.getAllData():
+#                 if idRepre == empleado.get("codigo_empleado") and empleado.get("puesto") == "Representante Ventas":
+#                     clientePago.append({
+#                         "Codigo": client.get("codigo_cliente"),
+#                         "Nombre del cliente": client.get("nombre_cliente"),
+#                         "Nombre del representante de ventas": f'{empleado.get("nombre")} {empleado.get("apellido1")}'
+#                     })
+#     return clientePago, clientesSinPagos
+
+
+# clientes_con_pagos, clientes_sin_pagos = getAllClientPago()
 
 # Menu
 
