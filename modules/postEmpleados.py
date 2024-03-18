@@ -1,12 +1,11 @@
 from os import system
 import json
 import time
-from tabulate import tabulate
-import requests
 import re
+import requests
+from tabulate import tabulate
 import modules.getEmpleados as gE
 import modules.validaciones as vali
-import modules.getOficina as gO
 
 def postEmpleado():
     # json-server empleado.json -b 5503
@@ -117,6 +116,26 @@ def postEmpleado():
     res = peticion.json()
     return [res]
 
+def deleteEmpleado(id):
+    data =  gE.getEmpleadoCodigo(id)
+
+    if (len(data)):
+        peticion = requests.delete(f"http://localhost:5503/empleado/{id}")
+        if (peticion.status_code == 204):
+            data.append({"message" : "Empleado eliminado correctamente"})
+            return {
+                "body": data,
+                "status": peticion.status_code,
+            }
+    else:
+        return {
+            "body": [{
+                "message": "Empleado no encontrado",
+                "data": id
+
+            }],
+            "status": 400
+        }
 
 def menu():
     while True:
@@ -136,7 +155,8 @@ def menu():
     """)
         print("""
     01. Guardar un empleado nuevo
-    02. Atras
+    02. Eliminar un Empleado
+    03. Atras
     """)
         opcion = int(input("\n Ingrese su opcion: "))
 
@@ -145,6 +165,11 @@ def menu():
                 print(tabulate(postEmpleado(), headers="keys", tablefmt="grid"))
                 input("\nPresiona Enter para volver al menú...")
             case 2:
+                idEmpleado = int(input(
+                    "Ingrese el id del empleado que desea eliminar: "))
+                print(tabulate(deleteEmpleado(idEmpleado)["body"], headers="keys", tablefmt="grid"))
+                input("\nPresiona Enter para volver al menú...")
+            case 3:
                 break
             case _:
                 print("Opcion invalida")

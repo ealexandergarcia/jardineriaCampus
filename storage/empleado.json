@@ -371,29 +371,6 @@
             "codigo_jefe": 29,
             "puesto": "Representante Ventas",
             "id": 31
-        },
-        {
-            "codigo_empleado": 32,
-            "nombre": "Alex",
-            "apellido1": "Gar",
-            "apellido2": "pame",
-            "email": "sss",
-            "codigo_oficina": "sdasd",
-            "codigo_jefe": 11,
-            "puesto": "Dios del olimpo",
-            "id": 32
-        },
-        {
-            "codigo_cliente": 33,
-            "nombre": "Marcos",
-            "apellido1": "Lopez",
-            "apellido2": "Lopez",
-            "extension": "9865",
-            "email": "Prueba@gmail.com",
-            "codigo_oficina": "BCN-ES",
-            "codigo_jefe": 23,
-            "puesto": "Representante Ventas",
-            "id": 33
         }
     ]
 }
