@@ -109,6 +109,27 @@ def postOficina():
     return [res]
 
 
+def deleteOficina(id):
+    data = gO.getOficinaCodigo(id)
+    print(data)
+    if(len(data)):
+        peticion = requests.delete(f"http://localhost:5502/oficina/{id}",timeout=10)
+        if(peticion.status_code == 204):
+            data.append({"message": "Oficina eliminada correctamente"})
+            return {
+                "body": data,
+                "status": peticion.status_code
+            }
+    else:
+        return {
+            "body":[{
+                "message": "Oficina no encontrada",
+                "data": id
+            }],
+            "status": 400
+        }
+
+
 def menu():
     while True:
         system("clear")
@@ -128,7 +149,8 @@ def menu():
 """)
         print("""
     01. Guardar una oficina nueva
-    02. Atras
+    02. Eliminar una oficina
+    03. Atras
     """)
         opcion = int(input("\n Ingrese su opcion: "))
 
@@ -139,6 +161,11 @@ def menu():
                 # print(tabulate(postOficina(), headers="keys", tablefmt="grid"))
                 input("\nPresiona Enter para volver al menú...")
             case 2:
+                idOficina= int(input(
+                    "Ingrese el id del cliente que desea eliminar: "))
+                print(tabulate(deleteOficina(idOficina)["body"], headers="keys", tablefmt="grid"))
+                input("\nPresiona Enter para volver al menú...")
+            case 3:
                 break
             case _:
                 print("Opcion invalida")
