@@ -10,6 +10,11 @@ def getAllData():
     data = peticion.json()
     return data
 
+def getOficinaCodigo(codigo):
+    for val in getAllData():
+        if(val.get("codigo_oficina") == codigo):
+            return[val]
+
 
 def getAllCodigoCiudad():
     codigoCiudad = []

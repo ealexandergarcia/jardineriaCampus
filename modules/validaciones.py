@@ -12,7 +12,7 @@ def valiNombres(nombre):
 
 
 def valiTel(telefono):
-    patron = re.match(r'^\d{10}$', telefono)
+    patron = re.match(r'^\+?\d{1,3}\s?\d{2,3}\s?\d{6,7}$', telefono)
     return patron
 
 
