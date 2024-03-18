@@ -14,6 +14,12 @@ def getAllData():
     return data
 
 
+def getClienteCodigo(codigo):
+    peticion = requests.get(f"http://localhost:5501/cliente/{codigo}", timeout=10)
+
+    return [peticion.json()] if peticion.ok else []
+
+
 def getAllClientName():
     clienteName = []
     for val in getAllData():

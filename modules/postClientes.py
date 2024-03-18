@@ -176,6 +176,27 @@ def postCliente():
     return [res]
 
 
+def deleteCliente(id):
+    data = gC.getClienteCodigo(id)
+
+    if(len(data)):
+        peticion = requests.delete(f"http://localhost:5501/cliente/{id}")
+        if(peticion.status_code == 204):
+            data.append({"message": "Cliente eliminado correctamente"})
+            return {
+                "body": data,
+                "status": peticion.status_code
+            }
+    else:
+        return {
+            "body":[{
+                "message": "Cliente no encontrado",
+                "data": id
+            }],
+            "status": 400
+        }
+
+
 def menu():
     while True:
         system("clear")
@@ -194,7 +215,8 @@ def menu():
 """)
         print("""
     01. Guardar un cliente nuevo
-    02. Atras
+    02. Eliminar un cliente
+    03. Atras
     """)
         opcion = int(input("\n Ingrese su opcion: "))
 
@@ -202,12 +224,12 @@ def menu():
             case 1:
                 print(tabulate(postCliente(), headers="keys", tablefmt="grid"))
                 input("\nPresiona Enter para volver al menú...")
-            # case 2:
-            #     # print(psProducto.postProducto())
-            #     print(tabulate(psProducto.postProducto(), headers="keys", tablefmt="grid"))
-            #     input("\nPresiona Enter para volver al menú...")
-            #     input("\nPresiona Enter para volver al menú...")
             case 2:
+                idCliente = int(input(
+                    "Ingrese el id del cliente que desea eliminar: "))
+                print(tabulate(deleteCliente(idCliente)["body"], headers="keys", tablefmt="grid"))
+                input("\nPresiona Enter para volver al menú...")
+            case 3:
                 break
             case _:
                 print("Opcion invalida")

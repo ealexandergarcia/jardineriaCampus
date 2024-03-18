@@ -176,7 +176,7 @@ def menu():
     """)
         print("""
     01. Guardar un producto nuevo
-    02. Eliminar un productos
+    02. Eliminar un producto
     03. Atras
     """)
         opcion = int(input("\n Ingrese su opcion: "))
