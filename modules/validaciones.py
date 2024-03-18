@@ -31,3 +31,7 @@ def valUbi(ubicacion):
 def valCodPostal(codigo_postal):
     patron = r'^\d{5}(?:-\d{4})?$'
     return re.match(patron, codigo_postal) is not None
+
+def valEmail(email):
+    patron = r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$'
+    return re.match(patron, email)

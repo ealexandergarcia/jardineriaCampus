@@ -5,10 +5,18 @@ import requests
 
 def getAllData():
     # json-server empleado.json -b 5503
-    peticion = requests.get("http://localhost:5503", timeout=10)
+    peticion = requests.get("http://localhost:5503/empleado", timeout=10)
     data = peticion.json()
     return data
 
+# Obtener cliente por Id
+def getEmpleadoCodigo(codigo):
+    peticion = requests.get(f"http://localhost:5503/empleado/{codigo}", timeout=10)
+    return [peticion.json()] if peticion.ok else []
+
+# Obtener los puestos 
+def getAllPuesto():
+    return list({pay.get("puesto") for pay in getAllData()})
 
 # Devuelve los datos de los empleados que tienen un jefe = 7
 def getAllNombresApellidoEmailJefe(codigo):
@@ -24,8 +32,6 @@ def getAllNombresApellidoEmailJefe(codigo):
     return NombresApellidoEmailJefe
 
 # Devuelve el nombre del puesto, nombre, apellidos y email de la empresa
-
-
 def getAllNombrePuestoNombreApellidoEmailJefe():
     NombrePuestoNombreApellidoEmail = []
     for val in getAllData():
@@ -39,7 +45,6 @@ def getAllNombrePuestoNombreApellidoEmailJefe():
     return NombrePuestoNombreApellidoEmail
 
 # Devuelve un listado con el nombre, apellidos y puesto de aquellos empleados que no sean Representante Ventas
-
 def getAllNombreApellidoNombrePuesto():
     NombrePuestoNombreApellidoEmail = []
     for val in getAllData():
@@ -63,8 +68,6 @@ def getRepreVentas():
     return repreVentas
 
 # Menu
-
-
 def menu():
     while True:
         system("clear")
@@ -105,4 +108,3 @@ def menu():
                 print("Opcion invalida")
                 time.sleep(2)  # espera en segundos
 
-# keyboard.add_hotkey("ctrl+m", mainMenu)
