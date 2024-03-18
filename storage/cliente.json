@@ -608,5 +608,22 @@
         "codigo_empleado_rep_ventas": 15,
         "limite_credito": 12000,
         "id": 38
+    },
+    {
+        "codigo_cliente": 41,
+        "nombre_cliente": "Prueba A",
+        "nombre_contacto": "Prueba B",
+        "apellido_contacto": "Prueba B",
+        "telefono": "7410852963",
+        "fax": "7410852963",
+        "linea_direccion1": "Calle Falsa",
+        "linea_direccion2": "Calle Falsa A",
+        "ciudad": "Prueba C",
+        "region": "Prueba R",
+        "pais": "Prueba P",
+        "codigo_postal": "12345",
+        "codigo_empleado_rep_ventas": 31,
+        "limite_credito": 3000.0,
+        "id": 39
     }
 ]

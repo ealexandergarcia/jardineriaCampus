@@ -335,4 +335,4 @@ import modules.postProductp as CRUDProducto
 
 if(__name__ == "__main__"):
     # mainMenu()
-    CRUDProducto.postProducto()
+    CRUDCliente.postCliente()

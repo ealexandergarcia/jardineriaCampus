@@ -109,29 +109,18 @@ def postProducto():
 
             # Precio de proveedor
             if not producto.get("precio_proveedor"):
-                precioProveedor = input("Ingrese el precio de venta: ")
+                precioProveedor = input("Ingrese el precio de proveedor: ")
                 if re.match(r'^[0-9]+$', precioProveedor) is not None:
                     precioProveedor= int(precioProveedor)
                     producto["precio_proveedor"] = precioProveedor
                     break
                 else:
-                    raise Exception("El Stock no cumple con el estandar establecido")
+                    raise Exception("El precio de proveedor no cumple con el estandar establecido")
 
         except Exception as error:
             print(error)
 
     print(producto)
-    # producto = {
-    #     "codigo_producto": input("Ingrese el codigo del producto: "),
-    #     "nombre": input("Ingrese el nombre del producto: "),
-    #     "gama": gG.getAllNombre()[int(input(f"Seleccione la gama:\n"+"\t\n".join([f"{i}. {val}" for i, val in enumerate(gG.getAllNombre())])+"\t\n"))],
-    #     "dimensiones": input("Ingrese las dimensiones del producto: "),
-    #     "proveedor": input("Ingrese el proveedor del producto: "),
-    #     "descripcion": input("Ingrese la descripcion del producto: "),
-    #     "cantidad_en_stock": int(input("Ingrese la cantidad de stock: ")),
-    #     "precio_venta": float(input("Ingrese el precio de venta: ")),
-    #     "precio_proveedor": int(input("Ingrese el precio del proveedor: "))
-    # }
     peticion = requests.post("http://localhost:5506",
                              timeout=10, data=json.dumps(producto))
     res = peticion.json()

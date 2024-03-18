@@ -40,7 +40,6 @@ def getAllNombrePuestoNombreApellidoEmailJefe():
 
 # Devuelve un listado con el nombre, apellidos y puesto de aquellos empleados que no sean Representante Ventas
 
-
 def getAllNombreApellidoNombrePuesto():
     NombrePuestoNombreApellidoEmail = []
     for val in getAllData():
@@ -51,6 +50,17 @@ def getAllNombreApellidoNombrePuesto():
                 "puesto": val.get("puesto")
             })
     return NombrePuestoNombreApellidoEmail
+
+# Devuelve un listado con el nombre, apellidos y puesto de aquellos empleados que sean Representante Ventas
+def getRepreVentas():
+    repreVentas = []
+    for val in getAllData():
+        if (val.get("puesto")) == "Representante Ventas":
+            repreVentas.append({
+                "Identificador": val.get("codigo_empleado"),
+                "apellidos": f"{val.get('nombre')} {val.get('apellido1')} {val.get('apellido2')}"
+            })
+    return repreVentas
 
 # Menu
 
