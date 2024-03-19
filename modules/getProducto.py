@@ -7,12 +7,12 @@ import modules.postProductp as psProducto
 
 def getAllData():
     # json-server producto.json -b 5506
-    peticion = requests.get("http://localhost:5506/productos", timeout=10)
+    peticion = requests.get("http://154.38.171.54:5008/productos", timeout=10)
     data = peticion.json()
     return data
 
 def getProductCodigo(codigo):
-    peticion = requests.get(f"http://localhost:5506/productos/{codigo}", timeout=10)
+    peticion = requests.get(f"http://154.38.171.54:5008/productos/{codigo}", timeout=10)
     return [peticion.json()] if peticion.ok else []
     # if(peticion.ok):
     #     return [peticion.json()]
@@ -28,14 +28,9 @@ def getProductCodigo(codigo):
 
 
 def getAllStocksPriceGama(gama, stock):
-    condiciones = []
-    for val in getAllData():
-        if (val.get("gama") == gama and val.get("cantidad_en_stock") >= stock):
-            condiciones.append(val)
 
-    def price(val):
-        return val.get("precio_venta")
-    condiciones.sort(key=price, reverse=True)
+    peticion = requests.get(f"http://154.38.171.54:5008/productos?gama={gama}&cantidadEnStock={stock}&_sort=-precio_venta")
+    condiciones = peticion.json()
     for i, val in enumerate(condiciones):
         condiciones[i] = {
             "Codigo": val.get("codigo_producto"),

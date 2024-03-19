@@ -129,7 +129,7 @@ def postProducto():
             print(error)
 
     print(producto)
-    peticion = requests.post("http://localhost:5506/productos",
+    peticion = requests.post("http://154.38.171.54:5008/productos",
                              timeout=10, data=json.dumps(producto))
     res = peticion.json()
     res["Mensaje"] = "Producto Guardado"

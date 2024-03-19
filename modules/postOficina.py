@@ -17,7 +17,8 @@ def postOficina():
             if not oficina.get("codigo_oficina"):
                 codigo = input("Ingrese el codigo de la oficina (BCN-ES): ")
                 if (re.match(r'^[A-Z]{3}-[A-Za-z0-9]{1,3}$', codigo)):
-                    data = gO.getOficinaCodigo(codigo)
+                    peticion = requests.get(f"http://154.38.171.54:5005/oficinas?codigo_oficina={codigo}", timeout=10)
+                    data = peticion.json()
                     if data:
                         print(tabulate(data, headers="keys", tablefmt="grid"))
                         raise Exception(
