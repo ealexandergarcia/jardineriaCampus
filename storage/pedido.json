@@ -1175,10 +1175,10 @@
             "fecha_pedido": "2006-01-17",
             "fecha_esperada": "2006-01-17",
             "fecha_entrega": "2006-01-17",
-            "estado": "Entregado",
-            "comentario": "Prueba",
+            "estado": "Rechazado",
+            "comentario": "No paso la tarjeta",
             "codigo_cliente": 22,
-            "id": 118
+            "id": 119
         }
     ]
 }

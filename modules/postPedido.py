@@ -100,6 +100,26 @@ def postPedido():
     res = peticion.json()
     return [res]
 
+def deletePedido(id):
+    data = gP.getPedidoCodigo(id)
+
+    if(len(data)):
+        peticion = requests.delete(f"http://localhost:5504/pedido/{id}")
+        if(peticion.status_code == 204):
+            data.append({"message" : "Pedido eliminado correctamente"})
+            return {
+                "body": data,
+                "status": peticion.status_code,
+            }
+    else:
+        return {
+            "body": [{
+                "message": "Pedido no encontrado",
+                "data": id
+
+            }],
+            "status": 400
+        }
 
 def menu():
     while True:
@@ -119,7 +139,8 @@ def menu():
 """)
         print("""
     01. Guardar un nuevo pedido
-    02. Atras
+    02. Eliminar un pedido
+    03. Atras
     """)
         opcion = int(input("\n Ingrese su opcion: "))
 
@@ -128,6 +149,11 @@ def menu():
                 print(tabulate(postPedido(), headers="keys", tablefmt="grid"))
                 input("\nPresiona Enter para volver al menú...")
             case 2:
+                idPedido = int(input(
+                    "Ingrese el id del pedido que desea eliminar: "))
+                print(tabulate(deletePedido(idPedido)["body"], headers="keys", tablefmt="grid"))
+                input("\nPresiona Enter para volver al menú...")
+            case 3:
                 break
             case _:
                 print("Opcion invalida")
