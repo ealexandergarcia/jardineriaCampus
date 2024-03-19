@@ -7,9 +7,14 @@ import requests
 # Data
 def getAllData():
     # json-server producto.json -b 5505
-    peticion = requests.get("http://localhost:5505", timeout=10)
+    peticion = requests.get("http://localhost:5505/pago", timeout=10)
     data = peticion.json()
     return data
+
+# Obtener el pedido por Id
+def getPedidoCodigo(codigo):
+    peticion = requests.get(f"http://localhost:5505/pago/{codigo}", timeout=10)
+    return [peticion.json()] if peticion.ok else []
 
 # Devuelve un listado con el codigo de cliente de aquellos clientes que realizaron algun pago
 # en 2008. Tenga en cuenta que debera eliminar aquellos codigos de cliente que aparezcan repeditos

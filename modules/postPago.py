@@ -1,20 +1,86 @@
 from os import system
 import json
 import time
-from tabulate import tabulate
+import re
 import requests
-
+from tabulate import tabulate
+import modules.validaciones as vali
+import modules.getClients as gC
+import modules.getPago as gP
 
 def postPago():
     # json-server pago.json -b 5505
-    pago = {
-        "codigo_cliente": int(input("Ingrese el codigo del usuario: ")),
-        "forma_pago": input("Ingrese la forma de pago: "),
-        "id_transaccion": input("Ingrese el identificar de la transaccion: "),
-        "fecha_pago": input("Ingrese la fecha de pago: "),
-        "total": int(input("Ingrese total de la compra: "))
-    }
-    peticion = requests.post("http://localhost:5505",
+    pago = {}
+    formasPago = gP.getAllFormasPago()
+    system("clear")
+    while True:
+        try:
+            # Codigo de cliente
+            if not pago.get("codigo_cliente"):
+                print("Ingrese el codigo del cliente".center(50,"="))
+                codCliente = input()
+                if re.match(r'^\d+$', codCliente):
+                    codCliente = int(codCliente)
+                    clienteValido = True if any(codCliente == i.get("codigo_cliente") for i in gC.getAllData()) else False
+                    if clienteValido:
+                        pago["codigo_cliente"] = codCliente
+                    else:
+                        raise Exception("El codigo del cliente no existe")
+                else:
+                    raise Exception(
+                        f"Entrada inválida. Por favor, ingrese un número entero válido")
+
+            # Forma de pago
+            if not pago.get("forma_pago"):
+                print("Seleccione la forma de pago".center(50,"="))
+                for i, formas in enumerate(formasPago):
+                    print(f"{i+1}. {formas.get('Formas de pago')}")
+                seleccion = input()
+                if re.match(r'^\d+$', seleccion):
+                    seleccion = int(seleccion)-1
+                    if 0 <= seleccion <= len(formasPago):
+                        estadoSeleccionado = formasPago[seleccion].get("Formas de pago")
+                        pago["forma_pago"] = estadoSeleccionado
+                    else:
+                        raise Exception(
+                            f"Entrada inválida. Por favor, ingrese un número entero válido")
+                else:
+                    raise Exception(
+                        f"Entrada inválida. Por favor, ingrese un número entero válido")
+
+            # Identificador de transaccion
+            if not pago.get("id_transaccion"):
+                print("Ingrese el Identificador de transaccion (ej. ak-std-000001)".center(50,"="))
+                idTran = input()
+                if (re.match(r'^(?i)[a-z]{2}-[a-z]{3}-\d{6}$', idTran)):
+                    pago["id_transaccion"] = idTran
+                else:
+                    raise Exception(
+                        f"El identificador no cumple con el estandar")
+
+            # Fecha de Pedido
+            if not pago.get("fecha_pago"):
+                print("Fecha de pago".center(50,"="))
+                fechaPago = input("Ingrese la fecha de pago (ej. 2006-01-17): ")
+                if vali.valFecha(fechaPago):
+                    pago["fecha_pago"] = fechaPago
+                else:
+                    raise Exception("La fecha no cumple con lo establecido")
+
+            # Pago total
+            if not pago.get("total"):
+                print("Pago total (ej. 3000):".center(50,"="))
+                pagoTot = input()
+                if re.match(r'^\d*\.?\d+$', pagoTot) is not None:
+                    pagoTot= float(pagoTot)
+                    pago["total"] = pagoTot
+                    break
+                raise Exception( "La dirección del cliente no cumple con lo establecido")
+
+        except Exception as error:
+            print(error)
+    print(pago)
+    peticion = requests.post("http://localhost:5505/pago",
                              timeout=10, data=json.dumps(pago).encode("UTF-8"))
     res = peticion.json()
     return [res]
