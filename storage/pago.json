@@ -213,9 +213,8 @@
             "forma_pago": "PayPal",
             "id_transaccion": "ak-std-000001",
             "fecha_pago": "2008-11-10",
-            "total": 2000,
-            "id": 28,
-            "precio_venta": 5
+            "total": 100,
+            "id": 28
         }
     ]
 }

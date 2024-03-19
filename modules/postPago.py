@@ -114,7 +114,7 @@ def modificarPago(producto_id, nuevoValorPago):
             print(f"No se encontró un producto con ID {producto_id}")
         else:
             # print(pago)
-            pago["precio_venta"] = nuevoValorPago
+            pago["total"] = nuevoValorPago
             peticion = requests.put(f"http://localhost:5505/pago/{producto_id}", timeout=10, data=json.dumps(pago).encode("UTF-8"))
             res = peticion.json()
             return [res]
