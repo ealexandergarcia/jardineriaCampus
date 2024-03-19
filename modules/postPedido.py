@@ -95,7 +95,7 @@ def postPedido():
         except Exception as error:
             print(error)
 
-    peticion = requests.post("http://localhost:5504/pedido",
+    peticion = requests.post("http://154.38.171.54:5007/pedidos",
                              timeout=10, data=json.dumps(pedido).encode("UTF-8"))
     res = peticion.json()
     return [res]
@@ -104,7 +104,7 @@ def deletePedido(id):
     data = gP.getPedidoCodigo(id)
 
     if(len(data)):
-        peticion = requests.delete(f"http://localhost:5504/pedido/{id}")
+        peticion = requests.delete(f"http://154.38.171.54:5007/pedidos/{id}")
         if(peticion.status_code == 204):
             data.append({"message" : "Pedido eliminado correctamente"})
             return {

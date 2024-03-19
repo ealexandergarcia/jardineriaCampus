@@ -140,7 +140,7 @@ def deleteProducto(id):
     data = gP.getProductCodigo(id)
 
     if (len(data)):
-        peticion = requests.delete(f"http://localhost:5506/productos/{id}")
+        peticion = requests.delete(f"http://154.38.171.54:5008/productos/{id}")
         if (peticion.status_code == 204):
             data.append({"message" : "Producto eliminado correctamente"})
             return {
@@ -186,8 +186,8 @@ def menu():
                 print(tabulate(postProducto(), headers="keys", tablefmt="grid"))
                 input("\nPresiona Enter para volver al menú...")
             case 2:
-                idProducto = int(input(
-                    "Ingrese el id del producto que desea eliminar: "))
+                idProducto = input(
+                    "Ingrese el id del producto que desea eliminar: ")
                 print(tabulate(deleteProducto(idProducto)["body"], headers="keys", tablefmt="grid"))
                 input("\nPresiona Enter para volver al menú...")
             case 3:

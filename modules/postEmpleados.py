@@ -111,7 +111,7 @@ def postEmpleado():
         except Exception as error:
             print(error)
     # print(empleado)
-    peticion = requests.post("http://localhost:5503/empleado",
+    peticion = requests.post("http://154.38.171.54:5003/empleados",
                              timeout=10, data=json.dumps(empleado).encode("UTF-8"))
     res = peticion.json()
     return [res]
@@ -120,7 +120,7 @@ def deleteEmpleado(id):
     data =  gE.getEmpleadoCodigo(id)
 
     if (len(data)):
-        peticion = requests.delete(f"http://localhost:5503/empleado/{id}")
+        peticion = requests.delete(f"http://154.38.171.54:5003/empleados/{id}")
         if (peticion.status_code == 204):
             data.append({"message" : "Empleado eliminado correctamente"})
             return {

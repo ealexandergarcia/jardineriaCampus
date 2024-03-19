@@ -80,7 +80,7 @@ def postPago():
         except Exception as error:
             print(error)
     print(pago)
-    peticion = requests.post("http://localhost:5505/pago",
+    peticion = requests.post("http://154.38.171.54:5006/pagos",
                              timeout=10, data=json.dumps(pago).encode("UTF-8"))
     res = peticion.json()
     return [res]
@@ -88,7 +88,7 @@ def postPago():
 def deletePago(id):
     data = gP.getPedidoCodigo(id)
     if(len(data)):
-        peticion = requests.delete(f"http://localhost:5505/pago/{id}")
+        peticion = requests.delete(f"http://154.38.171.54:5006/pagos/{id}")
         if(peticion.status_code == 204):
             data.append({"message" : "Pago eliminado correctamente"})
             return {
@@ -115,7 +115,7 @@ def modificarPago(producto_id, nuevoValorPago):
         else:
             # print(pago)
             pago["total"] = nuevoValorPago
-            peticion = requests.put(f"http://localhost:5505/pago/{producto_id}", timeout=10, data=json.dumps(pago).encode("UTF-8"))
+            peticion = requests.put(f"http://154.38.171.54:5006/pagos/{producto_id}", timeout=10, data=json.dumps(pago).encode("UTF-8"))
             res = peticion.json()
             return [res]
 

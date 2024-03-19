@@ -7,13 +7,13 @@ import requests
 # Data
 def getAllData():
     # json-server producto.json -b 5504
-    peticion = requests.get("http://localhost:5504/pedido", timeout=10)
+    peticion = requests.get("http://154.38.171.54:5007/pedidos", timeout=10)
     data = peticion.json()
     return data
 
 # Obtener el pedido por Id
 def getPedidoCodigo(codigo):
-    peticion = requests.get(f"http://localhost:5504/pedido/{codigo}", timeout=10)
+    peticion = requests.get(f"http://154.38.171.54:5007/pedidos/{codigo}", timeout=10)
     return [peticion.json()] if peticion.ok else []
 
 # Devuelve un listado con los distintos estados por los que puede pasar un pedido
@@ -34,7 +34,6 @@ def getAllPedidosEntregadosAtrasadosDeTiempo():
         if (pedidos.get("estado") == "Entregado" and pedidos.get("fecha_entrega") is None):
             pedidos["fecha_entrega"]= pedidos.get("fecha_esperada")
         if pedidos.get("estado") == "Entregado":
-
             date_1 = "/".join(pedidos.get("fecha_entrega").split("-")[::-1])
             date_2 = "/".join(pedidos.get("fecha_esperada").split("-")[::-1])
             start = datetime.strptime(date_1, "%d/%m/%Y")
@@ -47,7 +46,7 @@ def getAllPedidosEntregadosAtrasadosDeTiempo():
                     "fecha_esperada": pedidos.get("fecha_esperada"),
                     "fecha_de_entrega": pedidos.get("fecha_entrega")
                 })
-
+                print(pedidosEntregado)
     return pedidosEntregado
 
 # Devuelve un listado con el codigo de pedido, codigo de cliente, fecha esperada y fecha de entrega 

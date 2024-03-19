@@ -104,7 +104,7 @@ def postOficina():
         except Exception as error:
             print(error)
 
-    peticion = requests.post("http://localhost:5502",
+    peticion = requests.post("http://154.38.171.54:5005/oficinas",
                              timeout=10, data=json.dumps(oficina).encode("UTF-8"))
     res = peticion.json()
     return [res]
@@ -114,7 +114,7 @@ def deleteOficina(id):
     data = gO.getOficinaCodigo(id)
     print(data)
     if(len(data)):
-        peticion = requests.delete(f"http://localhost:5502/oficina/{id}",timeout=10)
+        peticion = requests.delete(f"http://154.38.171.54:5005/oficinas/{id}",timeout=10)
         if(peticion.status_code == 204):
             data.append({"message": "Oficina eliminada correctamente"})
             return {

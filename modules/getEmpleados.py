@@ -5,13 +5,13 @@ import requests
 
 def getAllData():
     # json-server empleado.json -b 5503
-    peticion = requests.get("http://localhost:5503/empleado", timeout=10)
+    peticion = requests.get("http://154.38.171.54:5003/empleados", timeout=10)
     data = peticion.json()
     return data
 
 # Obtener cliente por Id
 def getEmpleadoCodigo(codigo):
-    peticion = requests.get(f"http://localhost:5503/empleado/{codigo}", timeout=10)
+    peticion = requests.get(f"http://154.38.171.54:5003/empleados/{codigo}", timeout=10)
     return [peticion.json()] if peticion.ok else []
 
 # Obtener los puestos 

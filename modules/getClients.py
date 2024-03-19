@@ -9,25 +9,25 @@ import modules.getPago as gP
 # Data
 def getAllData():
     # json-server producto.json -b 5501
-    peticion = requests.get("http://154.38.171.54:5001/cliente", timeout=10)
+    peticion = requests.get("http://154.38.171.54:5001/cliente", timeout=30)
     data = peticion.json()
     return data
 
 
 def getClienteCodigo(codigo):
-    peticion = requests.get(f"http://154.38.171.54:5001/cliente/{codigo}", timeout=10)
+    peticion = requests.get(f"http://154.38.171.54:5001/cliente/{codigo}", timeout=30)
 
     return [peticion.json()] if peticion.ok else []
 
 
-# def getAllClientName():
-#     clienteName = []
-#     for val in getAllData():
-#         clienteName.append({
-#             "Codigo": val.get('codigo_cliente'),
-#             "Nombre": val.get('nombre_cliente')
-#         })
-#     return clienteName
+def getAllClientName():
+    clienteName = []
+    for val in getAllData():
+        clienteName.append({
+            "Codigo": val.get('codigo_cliente'),
+            "Nombre": val.get('nombre_cliente')
+        })
+    return clienteName
 
 
 def getOneClientCodigo(codigo):
@@ -191,6 +191,7 @@ def getAllClientPago():
                         "Nombre del cliente": client.get("nombre_cliente"),
                         "Nombre del representante de ventas": f'{empleado.get("nombre")} {empleado.get("apellido1")}'
                     })
+            # print(clientePago)
     return clientePago, clientesSinPagos
 
 

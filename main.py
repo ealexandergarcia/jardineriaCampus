@@ -341,7 +341,7 @@ if(__name__ == "__main__"):
     # data = json.dumps(peticion.json(), indent=4)
     # print(data)
     mainMenu()
-    # menuOficinas(i)
+    # print(listCliente.getAllClientPago())
 
     # CRUDPago.menu()
 
