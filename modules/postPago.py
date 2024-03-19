@@ -85,7 +85,25 @@ def postPago():
     res = peticion.json()
     return [res]
 
+def deletePago(id):
+    data = gP.getPedidoCodigo(id)
+    if(len(data)):
+        peticion = requests.delete(f"http://localhost:5505/pago/{id}")
+        if(peticion.status_code == 204):
+            data.append({"message" : "Pago eliminado correctamente"})
+            return {
+                "body": data,
+                "status": peticion.status_code,
+            }
+    else:
+        return {
+            "body": [{
+                "message": "Pago no encontrado",
+                "data": id
 
+            }],
+            "status": 400
+        }
 def menu():
     while True:
         system("clear")
@@ -105,7 +123,8 @@ def menu():
 """)
         print("""
     01. Guardar un nuevo pago
-    02. Atras
+    02. Eliminar un pago
+    03. Atras
     """)
         opcion = int(input("\n Ingrese su opcion: "))
 
@@ -114,6 +133,11 @@ def menu():
                 print(tabulate(postPago(), headers="keys", tablefmt="grid"))
                 input("\nPresiona Enter para volver al menú...")
             case 2:
+                idPago = int(input(
+                    "Ingrese el id del pago que desea eliminar: "))
+                print(tabulate(deletePago(idPago)["body"], headers="keys", tablefmt="grid"))
+                input("\nPresiona Enter para volver al menú...")
+            case 3:
                 break
             case _:
                 print("Opcion invalida")
