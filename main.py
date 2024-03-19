@@ -335,19 +335,18 @@ def mainMenu():
 
 
 if(__name__ == "__main__"):
-    mainMenu()
-    # CRUDCliente.postCliente()
-    # CRUDProducto.menu()
+    # mainMenu()
 
+    CRUDPago.menu()
 
 # # Actualziar los json para agregar el id
-#     with open("storage/cliente.json", "r") as f:
-#         fichero = f.read()
-#         data = json.loads(fichero)
-#         for i, val in enumerate(data):
-#             data[i]["id"] = (i+1)
-#         data = json.dumps(data, indent=4).encode("utf-8")
-#         with open("storage/cliente.json", "wb+") as f1:
-#             f1.write(data)
-#             f1.close()
+    # with open("storage/pago.json", "r") as f:
+    #     fichero = f.read()
+    #     data = json.loads(fichero)
+    #     for i, val in enumerate(data):
+    #         data[i]["id"] = (i+1)
+    #     data = json.dumps(data, indent=4).encode("utf-8")
+    #     with open("storage/pago.json", "wb+") as f1:
+    #         f1.write(data)
+    #         f1.close()
     

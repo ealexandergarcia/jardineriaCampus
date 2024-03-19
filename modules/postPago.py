@@ -104,6 +104,21 @@ def deletePago(id):
             }],
             "status": 400
         }
+
+# Función para modificar los datos
+def modificarPago(producto_id, nuevoValorPago):
+    pagos = gP.getAllData()
+    for pago in pagos:
+        pagoId= True if any(producto_id == pago.get("id") for i in pagos) else False
+        if pagoId:
+            print(f"No se encontró un producto con ID {producto_id}")
+        else:
+            # print(pago)
+            pago["precio_venta"] = nuevoValorPago
+            peticion = requests.put(f"http://localhost:5505/pago/{producto_id}", timeout=10, data=json.dumps(pago).encode("UTF-8"))
+            res = peticion.json()
+            return [res]
+
 def menu():
     while True:
         system("clear")
@@ -124,7 +139,8 @@ def menu():
         print("""
     01. Guardar un nuevo pago
     02. Eliminar un pago
-    03. Atras
+    03. Modificar el valor del pago
+    04. Atras
     """)
         opcion = int(input("\n Ingrese su opcion: "))
 
@@ -138,6 +154,14 @@ def menu():
                 print(tabulate(deletePago(idPago)["body"], headers="keys", tablefmt="grid"))
                 input("\nPresiona Enter para volver al menú...")
             case 3:
+                print("Ingrese el identificador del pago:".center(50,"="))
+                idPago = int(input())
+                print("Pago total (ej. 3000):".center(50,"="))
+                pagoTot = int(input())
+                print(tabulate(modificarPago(idPago,pagoTot), headers="keys", tablefmt="grid"))
+                
+                input("\nPresiona Enter para volver al menú...")
+            case 4:
                 break
             case _:
                 print("Opcion invalida")
