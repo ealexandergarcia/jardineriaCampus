@@ -180,7 +180,7 @@ def deleteCliente(id):
     data = gC.getClienteCodigo(id)
 
     if(len(data)):
-        peticion = requests.delete(f"http://localhost:5501/cliente/{id}")
+        peticion = requests.delete(f"http://154.38.171.54:5001/cliente/{id}")
         if(peticion.status_code == 204):
             data.append({"message": "Cliente eliminado correctamente"})
             return {

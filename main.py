@@ -1,6 +1,7 @@
 from os import system
 import re
 import time
+import requests
 import modules.getClients as listCliente
 import modules.postClientes as CRUDCliente
 import modules.getOficina as listOficina
@@ -335,18 +336,23 @@ def mainMenu():
 
 
 if(__name__ == "__main__"):
-    # mainMenu()
 
-    CRUDPago.menu()
+    # peticion = requests.get("http://154.38.171.54:5008/productos?gama=Ornamentales&cantidadEnStock=100&_sort=-precio_venta")
+    # data = json.dumps(peticion.json(), indent=4)
+    # print(data)
+    mainMenu()
+    # menuOficinas(i)
+
+    # CRUDPago.menu()
 
 # # Actualziar los json para agregar el id
-    # with open("storage/pago.json", "r") as f:
-    #     fichero = f.read()
-    #     data = json.loads(fichero)
-    #     for i, val in enumerate(data):
-    #         data[i]["id"] = (i+1)
-    #     data = json.dumps(data, indent=4).encode("utf-8")
-    #     with open("storage/pago.json", "wb+") as f1:
-    #         f1.write(data)
-    #         f1.close()
+#     with open("storage/pago.json", "r") as f:
+#         fichero = f.read()
+#         data = json.loads(fichero)
+#         for i, val in enumerate(data):
+#             data[i]["id"] = (i+1)
+#         data = json.dumps(data, indent=4).encode("utf-8")
+#         with open("storage/pago.json", "wb+") as f1:
+#             f1.write(data)
+#             f1.close()
     

@@ -6,12 +6,12 @@ import requests
 
 def getAllData():
     # json-server producto.json -b 5502
-    peticion = requests.get("http://154.38.171.54:5005/oficina", timeout=10)
+    peticion = requests.get("http://154.38.171.54:5005/oficinas", timeout=10)
     data = peticion.json()
     return data
 
 def getOficinaCodigo(codigo):
-    peticion = requests.get(f"http://154.38.171.54:5005/oficina/{codigo}", timeout=10)
+    peticion = requests.get(f"http://154.38.171.54:5005/oficinas/{codigo}", timeout=10)
 
     return [peticion.json()] if peticion.ok else []
     
