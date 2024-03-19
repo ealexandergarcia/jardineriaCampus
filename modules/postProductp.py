@@ -88,7 +88,7 @@ def postProducto():
             # Descripcion
             if not producto.get("descripcion"):
                 descripcion = input("Ingrese nombre del descripcion: ")
-                if re.match(r'^[A-Z][^.]*\.?(\s*[A-Z][^.]*\.?)*$', descripcion) is not None:
+                if vali.valTextoLargo(descripcion):
                     producto["descripcion"] = descripcion
                 else:
                     raise Exception(

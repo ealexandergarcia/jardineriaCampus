@@ -13,7 +13,6 @@ def getAllData():
 
 def getProductCodigo(codigo):
     peticion = requests.get(f"http://localhost:5506/productos/{codigo}", timeout=10)
-
     return [peticion.json()] if peticion.ok else []
     # if(peticion.ok):
     #     return [peticion.json()]

@@ -7,9 +7,14 @@ import requests
 # Data
 def getAllData():
     # json-server producto.json -b 5504
-    peticion = requests.get("http://localhost:5504", timeout=10)
+    peticion = requests.get("http://localhost:5504/pedido", timeout=10)
     data = peticion.json()
     return data
+
+# Obtener el pedido por Id
+def getPedidoCodigo(codigo):
+    peticion = requests.get(f"http://localhost:5504/pedido/{codigo}", timeout=10)
+    return [peticion.json()] if peticion.ok else []
 
 # Devuelve un listado con los distintos estados por los que puede pasar un pedido
 def getAllListadoEstadoPedidos():
