@@ -4,9 +4,11 @@ import time
 from tabulate import tabulate
 import json
 import requests
-import modules.getClients as gC
+import modules.clientes.getClients as gC
 import modules.getEmpleados as gE
 import modules.validaciones as vali
+import modules.clientes.deleteClientes as dC
+import modules.clientes.updateCliente as uC
 
 def postCliente():
     # json-server cliente.json -b 5501
@@ -167,82 +169,6 @@ def postCliente():
     res = peticion.json()
     return [res]
 
-   
-
-def deleteCliente(id):
-    data = gC.getClienteCodigo(id)
-    if(len(data)):
-        peticion = requests.delete(f"http://154.38.171.54:5001/cliente/{id}")
-        if(peticion.status_code == 204):
-            data.append({"message": "Cliente eliminado correctamente"})
-            return {
-                "body": data,
-                "status": peticion.status_code
-            }
-    else:
-        return {
-            "body":[{
-                "message": "Cliente no encontrado",
-                "data": id
-            }],
-            "status": 400
-        }
-
-def prueba(key, id):
-    data = gC.getClienteCodigo(id)
-    for i in data:
-        nuevoDato = input("Ingrese el nuevo dato: ")
-        i[key] = nuevoDato
-        respuesta = requests.put(f"http://154.38.171.54:5001/cliente/{id}", timeout=10, data=json.dumps(i).encode("UTF-8"))
-        if respuesta.ok:
-            print("Guardado con éxito")
-        else:
-            print(f"Error al guardar: {respuesta.status_code}")
-
-def updateCliente(id):
-    # system("clear")
-    data = gC.getClienteCodigo(id)
-    if(len(data)):
-        nombre= data[0].get("nombre_cliente")
-        print(f"Datos del cliente: {nombre}")
-        while True:
-            system("clear")
-            if vali.solicitar_confirmacion(nombre):
-                print("""
-            01. Modificar Nombre del cliente
-            02. Modificar Nombre del contacto del cliente
-            03. Modificar Apellido del contacto del cliente
-            04. Modificar telefono del cliente
-            05. Modificar fax del cliente
-            06. Modificar la direccion principal del cliente
-            07. Modificar la direccion secundaria del cliente
-            08. Modificar la ciudad del cliente
-            09. Modificar la region del cliente
-            10. Modificar el pais del cliente
-            11. Modificar el codigo postal del cliente
-            12. Modificar el limite de credito del empleado
-            13. Volver
-            """)
-                opcion = int(input("\n Ingrese su opcion: "))
-                match opcion:
-                    case 1:
-                            prueba("nombre_cliente", id)
-                            time.sleep(2)  # espera en segundos
-                    case 2:
-                            prueba("nombre_contacto",id)
-                            time.sleep(2)  # espera en segundos
-                    case 3:
-                        menu()
-                    case 4:
-                        break
-                    case _:
-                        print("Opcion invalida")
-                        time.sleep(2)  # espera en segundos
-            else:
-                print("La validacion no es corrcta")
-                time.sleep(2)  # espera en segundos
-                break
-
 def menu():
     while True:
         system("clear")
@@ -274,13 +200,13 @@ def menu():
             case 2:
                 idCliente = input(
                     "Ingrese el id del cliente que desea eliminar: ")
-                deleteCliente(idCliente)
+                dC.deleteCliente(idCliente)
                 print("Se elimino correctamente")
                 input("\nPresiona Enter para volver al menú...")
             case 3:
                 idCliente = input(
                     "Ingrese el id del cliente que desea actualizar: ")
-                updateCliente(idCliente)
+                uC.updateMenuCliente(idCliente)
                 input("\nPresiona Enter para volver al menú...")
             case 4:
                 break

@@ -53,9 +53,8 @@ def getAllClientCreditCiudad(limitCredit, ciudad):
             })
     return clientCredit
 
+
 # Correccion del filtro de pasi/region/ciudad
-
-
 def getAllClientPaisRegionCiudad(pais, region=None, ciudad=None):
     clientZone = []
     for val in getAllData():
@@ -71,9 +70,8 @@ def getAllClientPaisRegionCiudad(pais, region=None, ciudad=None):
                     })
     return clientZone
 
+
 # 1 Filtrar por código postal
-
-
 def getClientCodigoPostal(codigoPostal):
     clientPostalCode = []
     for val in getAllData():
@@ -86,9 +84,8 @@ def getClientCodigoPostal(codigoPostal):
             clientPostalCode.append(client_info)
     return clientPostalCode
 
+
 # 2 Filtrar por representante de ventas
-
-
 def getClientByRepresentanteVentas(codeRepreVen):
     clientRepreVentas = []
     for val in getAllData():
@@ -100,6 +97,7 @@ def getClientByRepresentanteVentas(codeRepreVen):
             })
     return clientRepreVentas
 
+
 # 3 Filtrar por país y código postal
 def getClientByCountryAndPostalCode(country, postal_code):
     clientsByCountryPostal = []
@@ -108,9 +106,8 @@ def getClientByCountryAndPostalCode(country, postal_code):
             clientsByCountryPostal.append(client)
     return clientsByCountryPostal
 
+
 # 4 Filtrar por nombre de contacto y país
-
-
 def getClientByContactNameAndCountry(contact_name, country):
     clientsByContactNameCountry = []
     for client in getAllData():
@@ -122,9 +119,8 @@ def getClientByContactNameAndCountry(contact_name, country):
             })
     return clientsByContactNameCountry
 
+
 # Devuelve un listado con el nombre de todos los clientes españoles
-
-
 def getAllClientesEspañoles(nacionalidad):
     ClientesEspañoles = []
     for client in getAllData():
@@ -135,9 +131,9 @@ def getAllClientesEspañoles(nacionalidad):
             })
     return ClientesEspañoles
 
-# Devuelve un listado con todos los clientes que sean de la ciudad de Madrid y cuyo representante de ventas tenga el código de empleado 11 o 30.
 
-
+# Devuelve un listado con todos los clientes que sean de la ciudad de Madrid y cuyo
+# representante de ventas tenga el código de empleado 11 o 30.
 def getAllClientMadridRepre():
     clientesMadrid = []
     for client in getAllData():
@@ -150,9 +146,8 @@ def getAllClientMadridRepre():
                 })
     return clientesMadrid
 
-# Obtén un listado con el nombre de cada cliente y el nombre y apellido de su representante de ventas.
 
-
+# Obtén un listado con el nombre de cada cliente su representante de ventas
 def getAllClientNameRepreName():
     clientesNames = []
     for client in getAllData():
@@ -164,6 +159,7 @@ def getAllClientNameRepreName():
                     "Representante de ventas": f'{empleado.get("nombre")} {empleado.get("apellido1")}'
                 })
     return clientesNames
+
 
 # Muestra el nombre de los clientes que hayan realizado pagos junto con el nombre de sus representantes de ventas
 def getAllClientPago():
@@ -199,9 +195,8 @@ def getAllClientPago():
 
 clientes_con_pagos, clientes_sin_pagos = getAllClientPago()
 
+
 # Menu
-
-
 def menu():
     while True:
         system("clear")

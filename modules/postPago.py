@@ -5,7 +5,7 @@ import re
 import requests
 from tabulate import tabulate
 import modules.validaciones as vali
-import modules.getClients as gC
+import modules.clientes.getClients as gC
 import modules.getPago as gP
 
 def postPago():

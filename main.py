@@ -2,8 +2,8 @@ from os import system
 import re
 import time
 import requests
-import modules.getClients as listCliente
-import modules.postClientes as CRUDCliente
+import modules.clientes.getClients as listCliente
+import modules.clientes.postClientes as CRUDCliente
 import modules.getOficina as listOficina
 import modules.postOficina as CRUDOficina
 import modules.getEmpleados as listEmpleado
