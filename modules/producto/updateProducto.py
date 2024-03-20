@@ -1,7 +1,7 @@
 import requests
 import json
 from tabulate import tabulate
-import modules.getProducto as gP
+import modules.producto.getProducto as gP
 
 def updateProductoNombre(codigo):
     while True:

@@ -4,7 +4,7 @@ import time
 import re
 import requests
 from tabulate import tabulate
-import modules.getEmpleados as gE
+import modules.empleado.getEmpleados as gE
 import modules.validaciones as vali
 
 def postEmpleado():

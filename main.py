@@ -4,16 +4,16 @@ import time
 import requests
 import modules.clientes.getClients as listCliente
 import modules.clientes.postClientes as CRUDCliente
-import modules.getOficina as listOficina
-import modules.postOficina as CRUDOficina
-import modules.getEmpleados as listEmpleado
-import modules.postEmpleados as CRUDEmpleado
-import modules.getPedido as listPedido
-import modules.postPedido as CRUDPedido
-import modules.getPago as listPago
-import modules.postPago as CRUDPago
-import modules.getProducto as listProducto
-import modules.postProductp as CRUDProducto
+import modules.oficina.getOficina as listOficina
+import modules.oficina.postOficina as CRUDOficina
+import modules.empleado.getEmpleados as listEmpleado
+import modules.empleado.postEmpleados as CRUDEmpleado
+import modules.pedido.getPedido as listPedido
+import modules.pedido.postPedido as CRUDPedido
+import modules.pago.getPago as listPago
+import modules.pago.postPago as CRUDPago
+import modules.producto.getProducto as listProducto
+import modules.producto.postProductp as CRUDProducto
 import json
 
 imgerror = """

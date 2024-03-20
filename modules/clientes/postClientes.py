@@ -5,7 +5,7 @@ from tabulate import tabulate
 import json
 import requests
 import modules.clientes.getClients as gC
-import modules.getEmpleados as gE
+import modules.empleado.getEmpleados as gE
 import modules.validaciones as vali
 import modules.clientes.deleteClientes as dC
 import modules.clientes.updateCliente as uC

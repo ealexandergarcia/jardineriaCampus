@@ -4,7 +4,7 @@ import time
 import re
 import requests
 from tabulate import tabulate
-import modules.getPedido as gP
+import modules.pedido.getPedido as gP
 import modules.clientes.getClients as gC
 import modules.validaciones as vali
 

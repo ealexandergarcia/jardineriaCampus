@@ -2,8 +2,8 @@ from os import system  # import of the standard function os.system()
 import time
 from tabulate import tabulate
 import requests
-import modules.getEmpleados as gE
-import modules.getPago as gP
+import modules.empleado.getEmpleados as gE
+import modules.pago.getPago as gP
 
 
 # Data

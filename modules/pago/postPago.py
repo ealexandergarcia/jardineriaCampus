@@ -6,7 +6,7 @@ import requests
 from tabulate import tabulate
 import modules.validaciones as vali
 import modules.clientes.getClients as gC
-import modules.getPago as gP
+import modules.pago.getPago as gP
 
 def postPago():
     # json-server pago.json -b 5505

@@ -4,8 +4,8 @@ import time
 from tabulate import tabulate
 import requests
 import modules.getGamas as gG
-import modules.getProducto as gP
-import modules.updateProducto as uP
+import modules.producto.getProducto as gP
+import modules.producto.updateProducto as uP
 import modules.validaciones as vali
 import json
 

@@ -4,7 +4,7 @@ import time
 from tabulate import tabulate
 import requests
 import re
-import modules.getOficina as gO
+import modules.oficina.getOficina as gO
 import modules.validaciones as vali
 
 

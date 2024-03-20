@@ -2,7 +2,7 @@ from os import system  # import of the standard function os.system()
 import time
 from tabulate import tabulate
 import requests
-import modules.postProductp as psProducto
+import modules.producto.postProductp as psProducto
 
 
 def getAllData():
