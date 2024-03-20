@@ -105,21 +105,10 @@ def deletePedido(id):
 
     if(len(data)):
         peticion = requests.delete(f"http://154.38.171.54:5007/pedidos/{id}")
-        if(peticion.status_code == 204):
-            data.append({"message" : "Pedido eliminado correctamente"})
-            return {
-                "body": data,
-                "status": peticion.status_code,
-            }
-    else:
-        return {
-            "body": [{
-                "message": "Pedido no encontrado",
-                "data": id
-
-            }],
-            "status": 400
-        }
+        if peticion.ok:
+            print("Eliminado con éxito")
+        else:
+            print(f"Error al guardar: {peticion.status_code}")
 
 def menu():
     while True:
@@ -149,9 +138,9 @@ def menu():
                 print(tabulate(postPedido(), headers="keys", tablefmt="grid"))
                 input("\nPresiona Enter para volver al menú...")
             case 2:
-                idPedido = int(input(
-                    "Ingrese el id del pedido que desea eliminar: "))
-                print(tabulate(deletePedido(idPedido)["body"], headers="keys", tablefmt="grid"))
+                idPedido = input(
+                    "Ingrese el id del pedido que desea eliminar: ")
+                deletePedido(idPedido)
                 input("\nPresiona Enter para volver al menú...")
             case 3:
                 break

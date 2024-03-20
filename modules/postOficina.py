@@ -115,20 +115,10 @@ def deleteOficina(id):
     print(data)
     if(len(data)):
         peticion = requests.delete(f"http://154.38.171.54:5005/oficinas/{id}",timeout=10)
-        if(peticion.status_code == 204):
-            data.append({"message": "Oficina eliminada correctamente"})
-            return {
-                "body": data,
-                "status": peticion.status_code
-            }
-    else:
-        return {
-            "body":[{
-                "message": "Oficina no encontrada",
-                "data": id
-            }],
-            "status": 400
-        }
+        if peticion.ok:
+            print("Guardado con éxito")
+        else:
+            print(f"Error al guardar: {peticion.status_code}")
 
 
 def menu():
@@ -159,12 +149,12 @@ def menu():
             case 1:
                 postOficina()
                 print("SE GUARDO CORRECTAMENTE")
-                # print(tabulate(postOficina(), headers="keys", tablefmt="grid"))
+                print(tabulate(postOficina(), headers="keys", tablefmt="grid"))
                 input("\nPresiona Enter para volver al menú...")
             case 2:
-                idOficina= int(input(
-                    "Ingrese el id del cliente que desea eliminar: "))
-                print(tabulate(deleteOficina(idOficina)["body"], headers="keys", tablefmt="grid"))
+                idOficina= input(
+                    "Ingrese el id del cliente que desea eliminar: ")
+                deleteOficina(idOficina)
                 input("\nPresiona Enter para volver al menú...")
             case 3:
                 break

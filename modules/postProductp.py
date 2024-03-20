@@ -141,21 +141,10 @@ def deleteProducto(id):
 
     if (len(data)):
         peticion = requests.delete(f"http://154.38.171.54:5008/productos/{id}")
-        if (peticion.status_code == 204):
-            data.append({"message" : "Producto eliminado correctamente"})
-            return {
-                "body": data,
-                "status": peticion.status_code,
-            }
-    else:
-        return {
-            "body": [{
-                "message": "Producto no encontrado",
-                "data": id
-
-            }],
-            "status": 400
-        }
+        if peticion.ok:
+            print("Eliminado con éxito")
+        else:
+            print(f"Error al guardar: {peticion.status_code}")
 
 
 def menu():
@@ -188,7 +177,7 @@ def menu():
             case 2:
                 idProducto = input(
                     "Ingrese el id del producto que desea eliminar: ")
-                print(tabulate(deleteProducto(idProducto)["body"], headers="keys", tablefmt="grid"))
+                deleteProducto(idProducto)
                 input("\nPresiona Enter para volver al menú...")
             case 3:
                 break

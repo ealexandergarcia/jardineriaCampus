@@ -11,7 +11,6 @@ def postEmpleado():
     # json-server empleado.json -b 5503
     last = gE.getAllData()[-1]
     ultimo_elemento = last["codigo_empleado"]
-    print(last)
     empleado = {}
     puestos = gE.getAllPuesto()
     system("clear")
@@ -121,21 +120,10 @@ def deleteEmpleado(id):
 
     if (len(data)):
         peticion = requests.delete(f"http://154.38.171.54:5003/empleados/{id}")
-        if (peticion.status_code == 204):
-            data.append({"message" : "Empleado eliminado correctamente"})
-            return {
-                "body": data,
-                "status": peticion.status_code,
-            }
-    else:
-        return {
-            "body": [{
-                "message": "Empleado no encontrado",
-                "data": id
-
-            }],
-            "status": 400
-        }
+        if peticion.ok:
+            print("Eliminado con éxito")
+        else:
+            print(f"Error al guardar: {peticion.status_code}")
 
 def menu():
     while True:
@@ -165,9 +153,9 @@ def menu():
                 print(tabulate(postEmpleado(), headers="keys", tablefmt="grid"))
                 input("\nPresiona Enter para volver al menú...")
             case 2:
-                idEmpleado = int(input(
-                    "Ingrese el id del empleado que desea eliminar: "))
-                print(tabulate(deleteEmpleado(idEmpleado)["body"], headers="keys", tablefmt="grid"))
+                idEmpleado = input(
+                    "Ingrese el id del empleado que desea eliminar: ")
+                print(tabulate(deleteEmpleado(idEmpleado), headers="keys", tablefmt="grid"))
                 input("\nPresiona Enter para volver al menú...")
             case 3:
                 break

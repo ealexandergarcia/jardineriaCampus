@@ -89,21 +89,10 @@ def deletePago(id):
     data = gP.getPedidoCodigo(id)
     if(len(data)):
         peticion = requests.delete(f"http://154.38.171.54:5006/pagos/{id}")
-        if(peticion.status_code == 204):
-            data.append({"message" : "Pago eliminado correctamente"})
-            return {
-                "body": data,
-                "status": peticion.status_code,
-            }
-    else:
-        return {
-            "body": [{
-                "message": "Pago no encontrado",
-                "data": id
-
-            }],
-            "status": 400
-        }
+        if peticion.ok:
+            print("Guardado con éxito")
+        else:
+            print(f"Error al guardar: {peticion.status_code}")
 
 # Función para modificar los datos
 def modificarPago(producto_id, nuevoValorPago):
@@ -149,13 +138,13 @@ def menu():
                 print(tabulate(postPago(), headers="keys", tablefmt="grid"))
                 input("\nPresiona Enter para volver al menú...")
             case 2:
-                idPago = int(input(
-                    "Ingrese el id del pago que desea eliminar: "))
-                print(tabulate(deletePago(idPago)["body"], headers="keys", tablefmt="grid"))
+                idPago = input(
+                    "Ingrese el id del pago que desea eliminar: ")
+                deletePago(idPago)
                 input("\nPresiona Enter para volver al menú...")
             case 3:
                 print("Ingrese el identificador del pago:".center(50,"="))
-                idPago = int(input())
+                idPago = input()
                 print("Pago total (ej. 3000):".center(50,"="))
                 pagoTot = int(input())
                 print(tabulate(modificarPago(idPago,pagoTot), headers="keys", tablefmt="grid"))
