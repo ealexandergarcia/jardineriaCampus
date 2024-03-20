@@ -31,10 +31,10 @@ def getAllListadoEstadoPedidos():
 def getAllPedidosEntregadosAtrasadosDeTiempo():
     pedidosEntregado = []
     for pedidos in getAllData():
-        if (pedidos.get("estado") == "Entregado" and pedidos.get("fecha_entrega") is None):
-            pedidos["fecha_entrega"]= pedidos.get("fecha_esperada")
+        if (pedidos.get("estado") == "Entregado" and pedidos.get("fechaEntrega") is None):
+            pedidos["fechaEntrega"]= pedidos.get("fecha_esperada")
         if pedidos.get("estado") == "Entregado":
-            date_1 = "/".join(pedidos.get("fecha_entrega").split("-")[::-1])
+            date_1 = "/".join(pedidos.get("fechaEntrega").split("-")[::-1])
             date_2 = "/".join(pedidos.get("fecha_esperada").split("-")[::-1])
             start = datetime.strptime(date_1, "%d/%m/%Y")
             end = datetime.strptime(date_2, "%d/%m/%Y")
@@ -44,9 +44,8 @@ def getAllPedidosEntregadosAtrasadosDeTiempo():
                     "codigo_pedido": pedidos.get("codigo_pedido"),
                     "codigo_cliente": pedidos.get("codigo_cliente"),
                     "fecha_esperada": pedidos.get("fecha_esperada"),
-                    "fecha_de_entrega": pedidos.get("fecha_entrega")
+                    "fecha_de_entrega": pedidos.get("fechaEntrega")
                 })
-                print(pedidosEntregado)
     return pedidosEntregado
 
 # Devuelve un listado con el codigo de pedido, codigo de cliente, fecha esperada y fecha de entrega 
@@ -54,11 +53,11 @@ def getAllPedidosEntregadosAtrasadosDeTiempo():
 def getAllPedidosEntregadosAntesDeTiempo():
     pedidosEntregados = []
     for pedidos in getAllData():
-        if (pedidos.get("estado") == "Entregado" and pedidos.get("fecha_entrega") is None):
-            pedidos["fecha_entrega"]= pedidos.get("fecha_esperada")
+        if (pedidos.get("estado") == "Entregado" and pedidos.get("fechaEntrega") is None):
+            pedidos["fechaEntrega"]= pedidos.get("fecha_esperada")
         if pedidos.get("estado") == "Entregado":
 
-            date_1 = "/".join(pedidos.get("fecha_entrega").split("-")[::-1])
+            date_1 = "/".join(pedidos.get("fechaEntrega").split("-")[::-1])
             date_2 = "/".join(pedidos.get("fecha_esperada").split("-")[::-1])
             start = datetime.strptime(date_1, "%d/%m/%Y")
             end = datetime.strptime(date_2, "%d/%m/%Y")
@@ -68,7 +67,7 @@ def getAllPedidosEntregadosAntesDeTiempo():
                     "codigo_pedido": pedidos.get("codigo_pedido"),
                     "codigo_cliente": pedidos.get("codigo_cliente"),
                     "fecha_esperada": pedidos.get("fecha_esperada"),
-                    "fecha_de_entrega": pedidos.get("fecha_entrega")
+                    "fecha_de_entrega": pedidos.get("fechaEntrega")
                 })
 
     return pedidosEntregados
@@ -84,7 +83,7 @@ def getAllPedidosRechazados():
                     "codigo_cliente": pedidos.get("codigo_cliente"),
                     "fecha_esperada": pedidos.get("fecha_esperada"),
                     "estado": pedidos.get("estado"),
-                    "fecha_de_entrega": pedidos.get("fecha_entrega"),
+                    "fecha_de_entrega": pedidos.get("fechaEntrega"),
                     "comentario": pedidos.get("comentario")
                 })
     return pedidosRechazados
@@ -94,10 +93,10 @@ def getAllEntregadosEnero():
     entregadosEnero = []
 
     for pedido in getAllData():
-        if (pedido.get("estado") == "Entregado" and pedido.get("fecha_entrega") is None):
-            pedido["fecha_entrega"]= pedido.get("fecha_esperada")
+        if (pedido.get("estado") == "Entregado" and pedido.get("fechaEntrega") is None):
+            pedido["fechaEntrega"]= pedido.get("fecha_esperada")
         if pedido.get("estado") == "Entregado":
-            date_1 = "/".join(pedido.get("fecha_entrega").split("-")[::-1])
+            date_1 = "/".join(pedido.get("fechaEntrega").split("-")[::-1])
             dateLine = datetime.strptime(date_1, "%d/%m/%Y")
 
             if dateLine.month == 1:
@@ -105,7 +104,7 @@ def getAllEntregadosEnero():
                     "codigo_pedido": pedido.get("codigo_pedido"),
                     "codigo_cliente": pedido.get("codigo_cliente"),
                     "estado": pedido.get("estado"),
-                    "fecha_de_entrega": pedido.get("fecha_entrega")
+                    "fecha_de_entrega": pedido.get("fechaEntrega")
                 })
     return entregadosEnero
 
