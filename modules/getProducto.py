@@ -19,7 +19,14 @@ def getProductCodigo(codigo):
     # else:
     #     return[]
 
-    
+def getProductCodigo2(codigo):
+    peticion = requests.get(f"http://154.38.171.54:5008/productos?codigo_producto={codigo.upper()}", timeout=10)
+    data = peticion.json()
+    if(len(data) == 0):
+        data = None
+    # else:
+    #     return[]
+    return data
 
 
 # Devuelve un listado con todos los productos que pertenecen a la gama "ornamentales" y que

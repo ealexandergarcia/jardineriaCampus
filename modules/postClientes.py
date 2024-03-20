@@ -160,10 +160,10 @@ def postCliente():
 
     print(cliente)
     
-    peticion = requests.post("http://localhost:5501",
-                             timeout=10, data=json.dumps(cliente).encode("UTF-8"))
-    # peticion = requests.post("http://154.38.171.54:5001/cliente",
+    # peticion = requests.post("http://localhost:5501",
     #                          timeout=10, data=json.dumps(cliente).encode("UTF-8"))
+    peticion = requests.post("http://154.38.171.54:5001/cliente",
+                             timeout=10, data=json.dumps(cliente).encode("UTF-8"))
     res = peticion.json()
     return [res]
 
@@ -172,8 +172,7 @@ def postCliente():
 def deleteCliente(id):
     data = gC.getClienteCodigo(id)
     if(len(data)):
-        # peticion = requests.delete(f"http://154.38.171.54:5001/cliente/{id}")
-        peticion = requests.delete(f"http://localhost:5501/cliente/{id}")
+        peticion = requests.delete(f"http://154.38.171.54:5001/cliente/{id}")
         if(peticion.status_code == 204):
             data.append({"message": "Cliente eliminado correctamente"})
             return {
@@ -194,7 +193,7 @@ def prueba(key, id):
     for i in data:
         nuevoDato = input("Ingrese el nuevo dato: ")
         i[key] = nuevoDato
-        respuesta = requests.put(f"http://localhost:5501/cliente/{id}", timeout=10, data=json.dumps(i).encode("UTF-8"))
+        respuesta = requests.put(f"http://154.38.171.54:5001/cliente/{id}", timeout=10, data=json.dumps(i).encode("UTF-8"))
         if respuesta.ok:
             print("Guardado con éxito")
         else:
@@ -206,7 +205,9 @@ def updateCliente(id):
     if(len(data)):
         nombre= data[0].get("nombre_cliente")
         print(f"Datos del cliente: {nombre}")
-        if vali.solicitar_confirmacion(nombre):
+        while True:
+            system("clear")
+            if vali.solicitar_confirmacion(nombre):
                 print("""
             01. Modificar Nombre del cliente
             02. Modificar Nombre del contacto del cliente
@@ -232,12 +233,15 @@ def updateCliente(id):
                             time.sleep(2)  # espera en segundos
                     case 3:
                         menu()
+                    case 4:
+                        break
                     case _:
                         print("Opcion invalida")
                         time.sleep(2)  # espera en segundos
-        else:
-            raise Exception ("La validacion fue no o fue incorrecta")
-
+            else:
+                print("La validacion no es corrcta")
+                time.sleep(2)  # espera en segundos
+                break
 
 def menu():
     while True:

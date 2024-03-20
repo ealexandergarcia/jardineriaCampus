@@ -5,6 +5,7 @@ from tabulate import tabulate
 import requests
 import modules.getGamas as gG
 import modules.getProducto as gP
+import modules.updateProducto as uP
 import modules.validaciones as vali
 import json
 
@@ -166,6 +167,7 @@ def menu():
         print("""
     01. Guardar un producto nuevo
     02. Eliminar un producto
+    03. Actualizar el nombre del producto
     03. Atras
     """)
         opcion = int(input("\n Ingrese su opcion: "))
@@ -180,6 +182,12 @@ def menu():
                 deleteProducto(idProducto)
                 input("\nPresiona Enter para volver al menú...")
             case 3:
+                idProducto = input(
+                    "Ingrese el id del producto que desea actualizar: ")
+                uP.updateProductoNombre(idProducto)
+                # print(tabulate(uP.updateProductoNombre(idProducto), headers="keys", tablefmt="grid"))
+                input("\nPresiona Enter para volver al menú...")
+            case 4:
                 break
             case _:
                 print("Opcion invalida")
