@@ -9,13 +9,15 @@ import modules.getPago as gP
 # Data
 def getAllData():
     # json-server producto.json -b 5501
-    peticion = requests.get("http://154.38.171.54:5001/cliente", timeout=30)
+    peticion = requests.get("http://localhost:5501/cliente", timeout=10)
+    # peticion = requests.get("http://154.38.171.54:5001/cliente", timeout=30)
     data = peticion.json()
     return data
 
 
 def getClienteCodigo(codigo):
-    peticion = requests.get(f"http://154.38.171.54:5001/cliente/{codigo}", timeout=30)
+    peticion = requests.get(f"http://localhost:5501/cliente/{codigo}", timeout=10)
+    # peticion = requests.get(f"http://154.38.171.54:5001/cliente/{codigo}", timeout=30)
 
     return [peticion.json()] if peticion.ok else []
 

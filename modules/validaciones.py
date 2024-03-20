@@ -48,3 +48,8 @@ def valFecha(fecha):
 def valTextoLargo(texto):
     patron = r'^[A-Z][^.]*\.?(\s*[A-Z][^.]*\.?)*$'
     return re.match(patron, texto)
+
+def solicitar_confirmacion(nombre_cliente):
+    pattern = r'\b(s[ií]|S[IÍ])\b'
+    confirmacion = input(f"Si realmente desea modificar la informacion de {nombre_cliente} escriba Si: ")
+    return re.match(pattern, confirmacion)

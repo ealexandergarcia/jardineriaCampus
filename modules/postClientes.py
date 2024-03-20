@@ -10,9 +10,10 @@ import modules.validaciones as vali
 
 def postCliente():
     # json-server cliente.json -b 5501
-    gammas = gE.getRepreVentas()
+    repreVentas = gE.getRepreVentas()
     cliente = {}
     last = gC.getAllData()[-1]
+    print(last)
     ultimo_elemento = last["codigo_cliente"]
 
     system("clear")
@@ -131,12 +132,16 @@ def postCliente():
             # Representante de ventas
             if not cliente.get("codigo_empleado_rep_ventas"):
                 print("Representantes de ventas")
-                print (tabulate(gammas, headers="keys", tablefmt="grid"))
-                # print(gammas)
+                print (tabulate(repreVentas, headers="keys", tablefmt="grid"))
+                # print(repreVentas)
                 seleccion = input("Seleccione el identificador de su representante de ventas (ej. 31): ")
                 if re.match(r'^\d+$', seleccion) is not None:
-                    seleccion = int(seleccion)
-                    cliente["codigo_empleado_rep_ventas"] = seleccion
+                    seleccion = int(seleccion) 
+                    repreExist= True if any(seleccion == i.get("Identificador") for i in repreVentas) else False
+                    if repreExist:
+                        cliente["codigo_empleado_rep_ventas"] = seleccion
+                    else:
+                         raise Exception( "El Identificador no existe")
                 else:
                     raise Exception( "El Identificador no cumple con lo establecido")
 
@@ -154,33 +159,21 @@ def postCliente():
             print(error)
 
     print(cliente)
-    # cliente = {
-    #     "codigo_cliente": ultimo_elemento + 1,
-    #     "nombre_cliente": input("Ingrese el nombre del cliente: "),
-    #     "nombre_contacto": input("Ingrese el nombre del contacto: "),
-    #     "apellido_contacto": input("Ingrese el apellido del contacto: "),
-    #     "telefono": input("Ingrese el numero telefonico del cliente: "),
-    #     "fax": input("Ingrese el numero de fax del cliente: "),
-    #     "linea_direccion1": input("Ingrese la direccion del cliente: "),
-    #     "linea_direccion2": input("Ingrese la direccion secundaria del cliente (opcional): " )or None,
-    #     "ciudad": input("Ingrese la ciudad del cliente: " )or None,
-    #     "region": input("Ingrese la region del cliente: " )or None,
-    #     "pais": input("Ingrese el pais del cliente: "),
-    #     "codigo_postal": input("Ingrese el codigo postal del cliente: "),
-    #     "codigo_empleado_rep_ventas": int(input("Ingrese el codigo del representanre de ventas: ")),
-    #     "limite_credito": int(input("Ingrese su limite de credito: ")),
-    # }
+    
     peticion = requests.post("http://localhost:5501",
                              timeout=10, data=json.dumps(cliente).encode("UTF-8"))
+    # peticion = requests.post("http://154.38.171.54:5001/cliente",
+    #                          timeout=10, data=json.dumps(cliente).encode("UTF-8"))
     res = peticion.json()
     return [res]
 
+   
 
 def deleteCliente(id):
     data = gC.getClienteCodigo(id)
-
     if(len(data)):
-        peticion = requests.delete(f"http://154.38.171.54:5001/cliente/{id}")
+        # peticion = requests.delete(f"http://154.38.171.54:5001/cliente/{id}")
+        peticion = requests.delete(f"http://localhost:5501/cliente/{id}")
         if(peticion.status_code == 204):
             data.append({"message": "Cliente eliminado correctamente"})
             return {
@@ -195,6 +188,55 @@ def deleteCliente(id):
             }],
             "status": 400
         }
+
+def prueba(key, id):
+    data = gC.getClienteCodigo(id)
+    for i in data:
+        nuevoDato = input("Ingrese el nuevo dato: ")
+        i[key] = nuevoDato
+        respuesta = requests.put(f"http://localhost:5501/cliente/{id}", timeout=10, data=json.dumps(i).encode("UTF-8"))
+        if respuesta.ok:
+            print("Guardado con éxito")
+        else:
+            print(f"Error al guardar: {respuesta.status_code}")
+
+def updateCliente(id):
+    # system("clear")
+    data = gC.getClienteCodigo(id)
+    if(len(data)):
+        nombre= data[0].get("nombre_cliente")
+        print(f"Datos del cliente: {nombre}")
+        if vali.solicitar_confirmacion(nombre):
+                print("""
+            01. Modificar Nombre del cliente
+            02. Modificar Nombre del contacto del cliente
+            03. Modificar Apellido del contacto del cliente
+            04. Modificar telefono del cliente
+            05. Modificar fax del cliente
+            06. Modificar la direccion principal del cliente
+            07. Modificar la direccion secundaria del cliente
+            08. Modificar la ciudad del cliente
+            09. Modificar la region del cliente
+            10. Modificar el pais del cliente
+            11. Modificar el codigo postal del cliente
+            12. Modificar el limite de credito del empleado
+            13. Volver
+            """)
+                opcion = int(input("\n Ingrese su opcion: "))
+                match opcion:
+                    case 1:
+                            prueba("nombre_cliente", id)
+                            time.sleep(2)  # espera en segundos
+                    case 2:
+                            prueba("nombre_contacto",id)
+                            time.sleep(2)  # espera en segundos
+                    case 3:
+                        menu()
+                    case _:
+                        print("Opcion invalida")
+                        time.sleep(2)  # espera en segundos
+        else:
+            raise Exception ("La validacion fue no o fue incorrecta")
 
 
 def menu():
@@ -216,7 +258,8 @@ def menu():
         print("""
     01. Guardar un cliente nuevo
     02. Eliminar un cliente
-    03. Atras
+    03. Actualizar un cliente
+    04. Atras
     """)
         opcion = int(input("\n Ingrese su opcion: "))
 
@@ -225,11 +268,17 @@ def menu():
                 print(tabulate(postCliente(), headers="keys", tablefmt="grid"))
                 input("\nPresiona Enter para volver al menú...")
             case 2:
-                idCliente = int(input(
-                    "Ingrese el id del cliente que desea eliminar: "))
-                print(tabulate(deleteCliente(idCliente)["body"], headers="keys", tablefmt="grid"))
+                idCliente = input(
+                    "Ingrese el id del cliente que desea eliminar: ")
+                deleteCliente(idCliente)
+                print("Se elimino correctamente")
                 input("\nPresiona Enter para volver al menú...")
             case 3:
+                idCliente = input(
+                    "Ingrese el id del cliente que desea actualizar: ")
+                updateCliente(idCliente)
+                input("\nPresiona Enter para volver al menú...")
+            case 4:
                 break
             case _:
                 print("Opcion invalida")
