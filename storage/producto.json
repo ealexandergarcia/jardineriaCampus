@@ -7,7 +7,7 @@
             "dimensiones": "0,258",
             "proveedor": "HiperGarden Tools",
             "descripcion": "Gracias a la poda se consigue manipular un poco la naturaleza, d\u00e1ndole la forma que m\u00e1s nos guste. Este trabajo b\u00e1sico de jardiner\u00eda tambi\u00e9n facilita que las plantas crezcan de un modo m\u00e1s equilibrado, y que las flores y los frutos vuelvan cada a\u00f1o con regularidad. Lo mejor es dar forma cuando los ejemplares son j\u00f3venes, de modo que exijan pocos cuidados cuando sean adultos. Adem\u00e1s de saber cu\u00e1ndo y c\u00f3mo hay que podar, tener unas herramientas adecuadas para esta labor es tambi\u00e9n de vital importancia.",
-            "cantidad_en_stock": 15,
+            "cantidadEnStock": 15,
             "precio_venta": 14,
             "precio_proveedor": 11,
             "id": 1
@@ -19,7 +19,7 @@
             "dimensiones": "0,156",
             "proveedor": "HiperGarden Tools",
             "descripcion": "Palas de acero con cresta de corte en la punta para cortar bien el terreno. Buena penetraci\u00f3n en tierras muy compactas.",
-            "cantidad_en_stock": 15,
+            "cantidadEnStock": 15,
             "precio_venta": 14,
             "precio_proveedor": 13,
             "id": 2
@@ -31,7 +31,7 @@
             "dimensiones": "1,064",
             "proveedor": "HiperGarden Tools",
             "descripcion": "Fabuloso rastillo que le ayudar\u00e1 a eliminar piedras, hojas, ramas y otros elementos inc\u00f3modos en su jard\u00edn.",
-            "cantidad_en_stock": 15,
+            "cantidadEnStock": 15,
             "precio_venta": 12,
             "precio_proveedor": 11,
             "id": 3
@@ -43,7 +43,7 @@
             "dimensiones": "0,168",
             "proveedor": "HiperGarden Tools",
             "descripcion": "Longitud:24cm. Herramienta fabricada en acero y pintura epoxi,alargando su durabilidad y preveniendo la corrosi\u00f3n.Dise\u00f1o pensado para el ahorro de trabajo.",
-            "cantidad_en_stock": 15,
+            "cantidadEnStock": 15,
             "precio_venta": 12,
             "precio_proveedor": 11,
             "id": 4
@@ -55,7 +55,7 @@
             "dimensiones": "15-20",
             "proveedor": "Murcia Seasons",
             "descripcion": "Planta arom\u00e1tica que fresca se utiliza para condimentar carnes y ensaladas, y seca, para pastas, sopas y guisantes",
-            "cantidad_en_stock": 140,
+            "cantidadEnStock": 140,
             "precio_venta": 1,
             "precio_proveedor": 0,
             "id": 5
@@ -67,7 +67,7 @@
             "dimensiones": "15-20",
             "proveedor": "Murcia Seasons",
             "descripcion": "Espliego de jard\u00edn, Alhucema rizada, Alhucema dentada, Cantueso rizado. Familia: Lamiaceae.Origen: Espa\u00f1a y Portugal. Mata de unos 60 cm de alto. Las hojas son arom\u00e1ticas, dentadas y de color verde gris\u00e1ceas.  Produce compactas espigas de flores peque\u00f1as, ligeramente arom\u00e1ticas, tubulares,de color azulado y con br\u00e1cteas p\u00farpuras.  Frutos: nuececillas alargadas encerradas en el tubo del c\u00e1liz.  Se utiliza en jardineria y no en perfumeria como otros cantuesos, espliegos y lavandas.  Tiene propiedades aromatizantes y calmantes. Adecuadas para la formaci\u00f3n de setos bajos. Se dice que su aroma ahuyenta pulgones y otros insectos perjudiciales para las plantas vecinas.",
-            "cantidad_en_stock": 140,
+            "cantidadEnStock": 140,
             "precio_venta": 1,
             "precio_proveedor": 0,
             "id": 6
@@ -79,7 +79,7 @@
             "dimensiones": "15-20",
             "proveedor": "Murcia Seasons",
             "descripcion": "Origanum majorana. No hay que confundirlo con el or\u00e9gano. Su sabor se parece m\u00e1s al tomillo, pero es m\u00e1s dulce y arom\u00e1tico.Se usan las hojas frescas o secas, picadas, machacadas o en polvo, en sopas, rellenos, quiches y tartas, tortillas, platos con papas y, como aderezo, en ramilletes de hierbas.El sabor delicado de la mejorana se elimina durante la cocci\u00f3n, de manera que es mejor agregarla cuando el plato est\u00e9 en su punto o en aqu\u00e9llos que apenas necesitan cocci\u00f3n.",
-            "cantidad_en_stock": 140,
+            "cantidadEnStock": 140,
             "precio_venta": 1,
             "precio_proveedor": 0,
             "id": 7
@@ -91,7 +91,7 @@
             "dimensiones": "15-20",
             "proveedor": "Murcia Seasons",
             "descripcion": "Es una planta perenne (dura varios a\u00f1os) conocida por el agradable y caracter\u00edstico olor a lim\u00f3n que desprenden en verano. Nunca debe faltar en la huerta o jard\u00edn por su agradable aroma y por los variados usos que tiene: planta olorosa, condimentaria y medicinal. Su cultivo es muy f\u00e1cil. Le va bien un suelo ligero, con buen drenaje y riego sin exceso. A pleno sol o por lo menos 5 horas de sol por d\u00eda. Cada a\u00f1o, su abonado mineral correspondiente.En oto\u00f1o, la melisa pierde el agradable olor a lim\u00f3n que desprende en verano sus flores azules y blancas. En este momento se debe cortar a unos 20 cm. del suelo. Brotar\u00e1 de forma densa en primavera.",
-            "cantidad_en_stock": 140,
+            "cantidadEnStock": 140,
             "precio_venta": 1,
             "precio_proveedor": 0,
             "id": 8
@@ -103,7 +103,7 @@
             "dimensiones": "15-20",
             "proveedor": "Murcia Seasons",
             "descripcion": "\u00bfQui\u00e9n no conoce la Hierbabuena? Se trata de una plantita muy arom\u00e1tica, agradable y cultivada extensamente por toda Espa\u00f1a. Es hierba perenne (por tanto vive varios a\u00f1os, no es anual). Puedes cultivarla en maceta o plantarla en la tierra del jard\u00edn o en un rinc\u00f3n del huerto. Lo m\u00e1s importante es que cuente con bastante agua. En primavera debes aportar fertilizantes minerales. Vive mejor en semisombra que a pleno sol.Si ves orugas o los agujeros en hojas consecuencia de su ataque, ret\u00edralas una a una a mano; no uses insecticidas qu\u00edmicos.",
-            "cantidad_en_stock": 140,
+            "cantidadEnStock": 140,
             "precio_venta": 1,
             "precio_proveedor": 0,
             "id": 9
@@ -115,7 +115,7 @@
             "dimensiones": "15-20",
             "proveedor": "Murcia Seasons",
             "descripcion": "Nombre cient\u00edfico o latino: Petroselinum hortense, Petroselinum crispum. Nombre com\u00fan o vulgar: Perejil, Perejil rizado Familia: Umbelliferae (Umbel\u00edferas). Origen: el origen del perejil se encuentra en el Mediterraneo. Esta naturalizada en casi toda Europa. Se utiliza como condimento y para adorno, pero tambi\u00e9n en ensaladas. Se suele regalar en las fruter\u00edas y verduler\u00edas.El perejil lo hay de 2 tipos: de hojas planas y de hojas rizadas.",
-            "cantidad_en_stock": 140,
+            "cantidadEnStock": 140,
             "precio_venta": 1,
             "precio_proveedor": 0,
             "id": 10
@@ -127,7 +127,7 @@
             "dimensiones": "15-20",
             "proveedor": "Murcia Seasons",
             "descripcion": "La Salvia es un peque\u00f1o arbusto que llega hasta el metro de alto.Tiene una vida breve, de unos pocos a\u00f1os.En el jard\u00edn, como otras arom\u00e1ticas, queda muy bien en una rocalla o para hacer una bordura perfumada a cada lado de un camino de Salvia. Abona despu\u00e9s de cada corte y recorta el arbusto una vez pase la floraci\u00f3n.",
-            "cantidad_en_stock": 140,
+            "cantidadEnStock": 140,
             "precio_venta": 1,
             "precio_proveedor": 0,
             "id": 11
@@ -139,7 +139,7 @@
             "dimensiones": "15-20",
             "proveedor": "Murcia Seasons",
             "descripcion": "Nombre com\u00fan o vulgar: Tomillo, Tremoncillo Familia: Labiatae (Labiadas).Origen: Regi\u00f3n mediterr\u00e1nea.Arbustillo bajo, de 15 a 40 cm de altura. Las hojas son muy peque\u00f1as, de unos 6 mm de longitud; seg\u00fan la variedad pueden ser verdes, verdes gris\u00e1ceas, amarillas, o jaspeadas. Las flores aparecen de mediados de primavera hasta bien entrada la \u00e9poca estival y se presentan en racimos terminales que habitualmente son de color violeta o p\u00farpura aunque tambi\u00e9n pueden ser blancas. Esta planta despide un intenso y t\u00edpico aroma, que se incrementa con el roce. El tomillo resulta de gran belleza cuando est\u00e1 en flor. El tomillo atrae a avispas y abejas. En jardiner\u00eda se usa como manchas, para hacer borduras, para aromatizar el ambiente, llenar huecos, cubrir rocas, para jardines en miniatura, etc. Arranque las flores y hojas secas del tallo y a\u00f1ad\u00e1los a un popurri, introd\u00fazcalos en saquitos de hierbas o en la almohada.Tambi\u00e9n puede usar las ramas secas con flores para a\u00f1adir aroma y textura a cestos abiertos.",
-            "cantidad_en_stock": 140,
+            "cantidadEnStock": 140,
             "precio_venta": 1,
             "precio_proveedor": 0,
             "id": 12
@@ -151,7 +151,7 @@
             "dimensiones": "15-20",
             "proveedor": "Murcia Seasons",
             "descripcion": "Nombre com\u00fan o vulgar: Tomillo, Tremoncillo Familia: Labiatae (Labiadas). Origen: Regi\u00f3n mediterr\u00e1nea. Arbustillo bajo, de 15 a 40 cm de altura. Las hojas son muy peque\u00f1as, de unos 6 mm de longitud; seg\u00fan la variedad pueden ser verdes, verdes gris\u00e1ceas, amarillas, o jaspeadas. Las flores aparecen de mediados de primavera hasta bien entrada la \u00e9poca estival y se presentan en racimos terminales que habitualmente son de color violeta o p\u00farpura aunque tambi\u00e9n pueden ser blancas. Esta planta despide un intenso y t\u00edpico aroma, que se incrementa con el roce. El tomillo resulta de gran belleza cuando est\u00e1 en flor. El tomillo atrae a avispas y abejas.rn En jardiner\u00eda se usa como manchas, para hacer borduras, para aromatizar el ambiente, llenar huecos, cubrir rocas, para jardines en miniatura, etc. Arranque las flores y hojas secas del tallo y a\u00f1ad\u00e1los a un popurri, introd\u00fazcalos en saquitos de hierbas o en la almohada. Tambi\u00e9n puede usar las ramas secas con flores para a\u00f1adir aroma y textura a cestos abiertos.",
-            "cantidad_en_stock": 140,
+            "cantidadEnStock": 140,
             "precio_venta": 1,
             "precio_proveedor": 0,
             "id": 13
@@ -162,7 +162,7 @@
             "gama": "Arom\u00e1ticas",
             "dimensiones": "15-20",
             "proveedor": "Murcia Seasons",
-            "cantidad_en_stock": 140,
+            "cantidadEnStock": 140,
             "precio_venta": 1,
             "precio_proveedor": 0,
             "id": 14
@@ -173,7 +173,7 @@
             "gama": "Frutales",
             "dimensiones": "100-120",
             "proveedor": "Frutales Talavera S.A",
-            "cantidad_en_stock": 15,
+            "cantidadEnStock": 15,
             "precio_venta": 7,
             "precio_proveedor": 5,
             "id": 15
@@ -184,7 +184,7 @@
             "gama": "Frutales",
             "proveedor": "NaranjasValencianas.com",
             "descripcion": "El limonero, pertenece al grupo de los c\u00edtricos, teniendo su origen hace unos 20 millones de a\u00f1os en el sudeste asi\u00e1tico. Fue introducido por los \u00e1rabes en el \u00e1rea mediterr\u00e1nea entre los a\u00f1os 1.000 a 1.200, habiendo experimentando numerosas modificaciones debidas tanto a la selecci\u00f3n natural mediante hibridaciones espont\u00e1neas como a las producidas por el hombre, en este caso buscando las necesidades del mercado.",
-            "cantidad_en_stock": 15,
+            "cantidadEnStock": 15,
             "precio_venta": 7,
             "precio_proveedor": 5,
             "id": 16
@@ -196,7 +196,7 @@
             "dimensiones": "8/10",
             "proveedor": "Frutales Talavera S.A",
             "descripcion": "Se trata de un \u00e1rbol derivado por mutaci\u00f3n de los melocotoneros comunes, y los \u00fanicos caracteres diferenciales son la ausencia de tomentosidad en la piel del fruto. La planta, si se deja crecer libremente, adopta un porte globoso con unas dimensiones medias de 4-6 metros",
-            "cantidad_en_stock": 50,
+            "cantidadEnStock": 50,
             "precio_venta": 11,
             "precio_proveedor": 8,
             "id": 17
@@ -207,7 +207,7 @@
             "gama": "Frutales",
             "dimensiones": "8/10",
             "proveedor": "Frutales Talavera S.A",
-            "cantidad_en_stock": 50,
+            "cantidadEnStock": 50,
             "precio_venta": 13,
             "precio_proveedor": 10,
             "id": 18
@@ -219,7 +219,7 @@
             "dimensiones": "8/10",
             "proveedor": "Frutales Talavera S.A",
             "descripcion": "Existen dos hip\u00f3tesis sobre el origen del olivo, una que postula que proviene de las costas de Siria, L\u00edbano e Israel y otra que considera que lo considera originario de Asia menor. La llegada a Europa probablemente tuvo lugar de mano de los Fenicios, en transito por Chipre, Creta, e Islas del Mar Egeo, pasando a Grecia y m\u00e1s tarde a Italia. Los primeros indicios de la presencia del olivo en las costas mediterr\u00e1neas espa\u00f1olas coinciden con el dominio romano, aunque fueron posteriormente los \u00e1rabes los que impulsaron su cultivo en Andaluc\u00eda, convirtiendo a Espa\u00f1a en el primer pa\u00eds productor de aceite de oliva a nivel mundial.",
-            "cantidad_en_stock": 50,
+            "cantidadEnStock": 50,
             "precio_venta": 18,
             "precio_proveedor": 14,
             "id": 19
@@ -231,7 +231,7 @@
             "dimensiones": "10/12",
             "proveedor": "Frutales Talavera S.A",
             "descripcion": "Existen dos hip\u00f3tesis sobre el origen del olivo, una que postula que proviene de las costas de Siria, L\u00edbano e Israel y otra que considera que lo considera originario de Asia menor. La llegada a Europa probablemente tuvo lugar de mano de los Fenicios, en transito por Chipre, Creta, e Islas del Mar Egeo, pasando a Grecia y m\u00e1s tarde a Italia. Los primeros indicios de la presencia del olivo en las costas mediterr\u00e1neas espa\u00f1olas coinciden con el dominio romano, aunque fueron posteriormente los \u00e1rabes los que impulsaron su cultivo en Andaluc\u00eda, convirtiendo a Espa\u00f1a en el primer pa\u00eds productor de aceite de oliva a nivel mundial.",
-            "cantidad_en_stock": 50,
+            "cantidadEnStock": 50,
             "precio_venta": 25,
             "precio_proveedor": 20,
             "id": 20
@@ -243,7 +243,7 @@
             "dimensiones": "12/4",
             "proveedor": "Frutales Talavera S.A",
             "descripcion": "Existen dos hip\u00f3tesis sobre el origen del olivo, una que postula que proviene de las costas de Siria, L\u00edbano e Israel y otra que considera que lo considera originario de Asia menor. La llegada a Europa probablemente tuvo lugar de mano de los Fenicios, en transito por Chipre, Creta, e Islas del Mar Egeo, pasando a Grecia y m\u00e1s tarde a Italia. Los primeros indicios de la presencia del olivo en las costas mediterr\u00e1neas espa\u00f1olas coinciden con el dominio romano, aunque fueron posteriormente los \u00e1rabes los que impulsaron su cultivo en Andaluc\u00eda, convirtiendo a Espa\u00f1a en el primer pa\u00eds productor de aceite de oliva a nivel mundial.",
-            "cantidad_en_stock": 50,
+            "cantidadEnStock": 50,
             "precio_venta": 49,
             "precio_proveedor": 39,
             "id": 21
@@ -255,7 +255,7 @@
             "dimensiones": "14/16",
             "proveedor": "Frutales Talavera S.A",
             "descripcion": "Existen dos hip\u00f3tesis sobre el origen del olivo, una que postula que proviene de las costas de Siria, L\u00edbano e Israel y otra que considera que lo considera originario de Asia menor. La llegada a Europa probablemente tuvo lugar de mano de los Fenicios, en transito por Chipre, Creta, e Islas del Mar Egeo, pasando a Grecia y m\u00e1s tarde a Italia. Los primeros indicios de la presencia del olivo en las costas mediterr\u00e1neas espa\u00f1olas coinciden con el dominio romano, aunque fueron posteriormente los \u00e1rabes los que impulsaron su cultivo en Andaluc\u00eda, convirtiendo a Espa\u00f1a en el primer pa\u00eds productor de aceite de oliva a nivel mundial.",
-            "cantidad_en_stock": 50,
+            "cantidadEnStock": 50,
             "precio_venta": 70,
             "precio_proveedor": 56,
             "id": 22
@@ -267,7 +267,7 @@
             "dimensiones": "8/10",
             "proveedor": "Frutales Talavera S.A",
             "descripcion": "\u00c1rbol piramidal, redondeado en su juventud, luego oval, que llega hasta 20 metros de altura y por t\u00e9rmino medio vive 65 a\u00f1os.Tronco alto, grueso, de corteza agrietada, gris, de la cual se destacan con frecuencia placas lenticulares.Las ramas se insertan formando \u00e1ngulo agudo con el tronco (45\u00ba), de corteza lisa, primero verde y luego gris-viol\u00e1cea, con numerosas lenticelas.",
-            "cantidad_en_stock": 50,
+            "cantidadEnStock": 50,
             "precio_venta": 11,
             "precio_proveedor": 8,
             "id": 23
@@ -279,7 +279,7 @@
             "dimensiones": "10/12",
             "proveedor": "Frutales Talavera S.A",
             "descripcion": "\u00c1rbol piramidal, redondeado en su juventud, luego oval, que llega hasta 20 metros de altura y por t\u00e9rmino medio vive 65 a\u00f1os.Tronco alto, grueso, de corteza agrietada, gris, de la cual se destacan con frecuencia placas lenticulares.Las ramas se insertan formando \u00e1ngulo agudo con el tronco (45\u00ba), de corteza lisa, primero verde y luego gris-viol\u00e1cea, con numerosas lenticelas.",
-            "cantidad_en_stock": 50,
+            "cantidadEnStock": 50,
             "precio_venta": 22,
             "precio_proveedor": 17,
             "id": 24
@@ -291,7 +291,7 @@
             "dimensiones": "12/14",
             "proveedor": "Frutales Talavera S.A",
             "descripcion": "\u00c1rbol piramidal, redondeado en su juventud, luego oval, que llega hasta 20 metros de altura y por t\u00e9rmino medio vive 65 a\u00f1os.Tronco alto, grueso, de corteza agrietada, gris, de la cual se destacan con frecuencia placas lenticulares.Las ramas se insertan formando \u00e1ngulo agudo con el tronco (45\u00ba), de corteza lisa, primero verde y luego gris-viol\u00e1cea, con numerosas lenticelas.",
-            "cantidad_en_stock": 50,
+            "cantidadEnStock": 50,
             "precio_venta": 32,
             "precio_proveedor": 25,
             "id": 25
@@ -302,7 +302,7 @@
             "gama": "Frutales",
             "proveedor": "NaranjasValencianas.com",
             "descripcion": "El limonero, pertenece al grupo de los c\u00edtricos, teniendo su origen hace unos 20 millones de a\u00f1os en el sudeste asi\u00e1tico. Fue introducido por los \u00e1rabes en el \u00e1rea mediterr\u00e1nea entre los a\u00f1os 1.000 a 1.200, habiendo experimentando numerosas modificaciones debidas tanto a la selecci\u00f3n natural mediante hibridaciones espont\u00e1neas como a las producidas por el",
-            "cantidad_en_stock": 15,
+            "cantidadEnStock": 15,
             "precio_venta": 100,
             "precio_proveedor": 80,
             "id": 26
@@ -313,7 +313,7 @@
             "gama": "Frutales",
             "proveedor": "NaranjasValencianas.com",
             "descripcion": "su nombre cient\u00edfico se origina en honor a un hoticultor escoc\u00e9s que recolect\u00f3 espec\u00edmenes en China, (\"Fortunella\"), Robert Fortune (1812-1880), y \"margarita\", del lat\u00edn margaritus-a-um = perla, en alusi\u00f3n a sus peque\u00f1os y brillantes frutos. Se trata de un arbusto o \u00e1rbol peque\u00f1o de 2-3 m de altura, inerme o con escasas espinas.Hojas lanceoladas de 4-8 (-15) cm de longitud, con el \u00e1pice redondeado y la base cuneada.Tienen el margen crenulado en su mitad superior, el haz verde brillante y el env\u00e9s m\u00e1s p\u00e1lido.Pec\u00edolo ligeramente marginado.Flores perfumadas solitarias o agrupadas en inflorescencias axilares, blancas.El fruto es lo m\u00e1s caracter\u00edstico, es el m\u00e1s peque\u00f1o de todos los c\u00edtricos y el \u00fanico cuya c\u00e1scara se puede comer.Frutos peque\u00f1os, con semillas, de corteza fina, dulce, arom\u00e1tica y comestible, y de pulpa naranja amarillenta y ligeramente \u00e1cida.Sus frutos son muy peque\u00f1os y tienen un car\u00e1cter principalmente ornamental.",
-            "cantidad_en_stock": 15,
+            "cantidadEnStock": 15,
             "precio_venta": 21,
             "precio_proveedor": 16,
             "id": 27
@@ -325,7 +325,7 @@
             "dimensiones": "150-170",
             "proveedor": "NaranjasValencianas.com",
             "descripcion": "su nombre cient\u00edfico se origina en honor a un hoticultor escoc\u00e9s que recolect\u00f3 espec\u00edmenes en China, (\"Fortunella\"), Robert Fortune (1812-1880), y \"margarita\", del lat\u00edn margaritus-a-um = perla, en alusi\u00f3n a sus peque\u00f1os y brillantes frutos. Se trata de un arbusto o \u00e1rbol peque\u00f1o de 2-3 m de altura, inerme o con escasas espinas.Hojas lanceoladas de 4-8 (-15) cm de longitud, con el \u00e1pice redondeado y la base cuneada.Tienen el margen crenulado en su mitad superior, el haz verde brillante y el env\u00e9s m\u00e1s p\u00e1lido.Pec\u00edolo ligeramente marginado.Flores perfumadas solitarias o agrupadas en inflorescencias axilares, blancas.El fruto es lo m\u00e1s caracter\u00edstico, es el m\u00e1s peque\u00f1o de todos los c\u00edtricos y el \u00fanico cuya c\u00e1scara se puede comer.Frutos peque\u00f1os, con semillas, de corteza fina, dulce, arom\u00e1tica y comestible, y de pulpa naranja amarillenta y ligeramente \u00e1cida.Sus frutos son muy peque\u00f1os y tienen un car\u00e1cter principalmente ornamental.",
-            "cantidad_en_stock": 15,
+            "cantidadEnStock": 15,
             "precio_venta": 57,
             "precio_proveedor": 45,
             "id": 28
@@ -336,7 +336,7 @@
             "gama": "Frutales",
             "proveedor": "Frutales Talavera S.A",
             "descripcion": "Se trata de un peque\u00f1o arbolito de copa densa, con tendencia a la verticalidad, inerme o con cortas espinas. Sus hojas son peque\u00f1as, el\u00edpticas de 5-10 cm de longitud, con los pec\u00edolos estrechamente alados.Posee 1 o 2 flores en situaci\u00f3n axilar, al final de las ramillas.Sus frutos son muy peque\u00f1os (3-3,5 cm de di\u00e1metro), con pocas semillas, esf\u00e9ricos u ovales, con la zona apical aplanada; corteza de color naranja-rojizo, muy fina y f\u00e1cilmente separable de la pulpa, que es dulce, \u00e1cida y comestible..",
-            "cantidad_en_stock": 15,
+            "cantidadEnStock": 15,
             "precio_venta": 10,
             "precio_proveedor": 8,
             "id": 29
@@ -347,7 +347,7 @@
             "gama": "Frutales",
             "proveedor": "Frutales Talavera S.A",
             "descripcion": "Se trata de un peque\u00f1o arbolito de copa densa, con tendencia a la verticalidad, inerme o con cortas espinas. Sus hojas son peque\u00f1as, el\u00edpticas de 5-10 cm de longitud, con los pec\u00edolos estrechamente alados.Posee 1 o 2 flores en situaci\u00f3n axilar, al final de las ramillas.Sus frutos son muy peque\u00f1os (3-3,5 cm de di\u00e1metro), con pocas semillas, esf\u00e9ricos u ovales, con la zona apical aplanada; corteza de color naranja-rojizo, muy fina y f\u00e1cilmente separable de la pulpa, que es dulce, \u00e1cida y comestible..",
-            "cantidad_en_stock": 15,
+            "cantidadEnStock": 15,
             "precio_venta": 25,
             "precio_proveedor": 20,
             "id": 30
@@ -359,7 +359,7 @@
             "dimensiones": "100-120",
             "proveedor": "Frutales Talavera S.A",
             "descripcion": "Se trata de un peque\u00f1o arbolito de copa densa, con tendencia a la verticalidad, inerme o con cortas espinas. Sus hojas son peque\u00f1as, el\u00edpticas de 5-10 cm de longitud, con los pec\u00edolos estrechamente alados.Posee 1 o 2 flores en situaci\u00f3n axilar, al final de las ramillas.Sus frutos son muy peque\u00f1os (3-3,5 cm de di\u00e1metro), con pocas semillas, esf\u00e9ricos u ovales, con la zona apical aplanada; corteza de color naranja-rojizo, muy fina y f\u00e1cilmente separable de la pulpa, que es dulce, \u00e1cida y comestible..",
-            "cantidad_en_stock": 15,
+            "cantidadEnStock": 15,
             "precio_venta": 45,
             "precio_proveedor": 36,
             "id": 31
@@ -369,7 +369,7 @@
             "nombre": "Rosal bajo 1\u00c2\u00aa -En maceta-inicio brotaci\u00f3n",
             "gama": "Frutales",
             "proveedor": "Frutales Talavera S.A",
-            "cantidad_en_stock": 15,
+            "cantidadEnStock": 15,
             "precio_venta": 2,
             "precio_proveedor": 1,
             "id": 32
@@ -379,7 +379,7 @@
             "nombre": "ROSAL TREPADOR",
             "gama": "Frutales",
             "proveedor": "Frutales Talavera S.A",
-            "cantidad_en_stock": 350,
+            "cantidadEnStock": 350,
             "precio_venta": 4,
             "precio_proveedor": 3,
             "id": 33
@@ -389,7 +389,7 @@
             "nombre": "Camelia Blanco, Chrysler Rojo, Soraya Naranja, ",
             "gama": "Frutales",
             "proveedor": "NaranjasValencianas.com",
-            "cantidad_en_stock": 350,
+            "cantidadEnStock": 350,
             "precio_venta": 4,
             "precio_proveedor": 3,
             "id": 34
@@ -400,7 +400,7 @@
             "gama": "Frutales",
             "proveedor": "NaranjasValencianas.com",
             "descripcion": "El naranjo es un \u00e1rbol peque\u00f1o, que no supera los 3-5 metros de altura, con una copa compacta, c\u00f3nica, transformada en es\u00e9rica gracias a la poda. Su tronco es de color gris y liso, y las hojas son perennes, cori\u00e1ceas, de un verde intenso y brillante, con forma oval o el\u00edptico-lanceolada. Poseen, en el caso del naranjo amargo, un t\u00edpico peciolo alado en forma de \u00c2\u2018coraz\u00f3n\u00c2\u2019, que en el naranjo dulce es m\u00e1s estrecho y menos patente.",
-            "cantidad_en_stock": 15,
+            "cantidadEnStock": 15,
             "precio_venta": 6,
             "precio_proveedor": 4,
             "id": 35
@@ -410,7 +410,7 @@
             "nombre": "Landora Amarillo, Rose Gaujard bicolor blanco-rojo",
             "gama": "Frutales",
             "proveedor": "Frutales Talavera S.A",
-            "cantidad_en_stock": 350,
+            "cantidadEnStock": 350,
             "precio_venta": 4,
             "precio_proveedor": 3,
             "id": 36
@@ -420,7 +420,7 @@
             "nombre": "Kordes Perfect bicolor rojo-amarillo, Roundelay rojo fuerte",
             "gama": "Frutales",
             "proveedor": "Frutales Talavera S.A",
-            "cantidad_en_stock": 350,
+            "cantidadEnStock": 350,
             "precio_venta": 4,
             "precio_proveedor": 3,
             "id": 37
@@ -430,7 +430,7 @@
             "nombre": "Pitimini rojo",
             "gama": "Frutales",
             "proveedor": "Frutales Talavera S.A",
-            "cantidad_en_stock": 350,
+            "cantidadEnStock": 350,
             "precio_venta": 4,
             "precio_proveedor": 3,
             "id": 38
@@ -440,7 +440,7 @@
             "nombre": "Rosal copa ",
             "gama": "Frutales",
             "proveedor": "Frutales Talavera S.A",
-            "cantidad_en_stock": 400,
+            "cantidadEnStock": 400,
             "precio_venta": 8,
             "precio_proveedor": 6,
             "id": 39
@@ -451,7 +451,7 @@
             "gama": "Frutales",
             "proveedor": "Melocotones de Cieza S.A.",
             "descripcion": "\u00e1rbol que puede pasar de los 6 m de altura, en la regi\u00f3n mediterr\u00e1nea con ramas formando una copa redondeada. La corteza del tronco es pardo-viol\u00e1cea, agrietada; las ramas son rojizas y extendidas cuando j\u00f3venes y las ramas secundarias son cortas, divergentes y escasas. Las yemas latentes son frecuentes especialmente sobre las ramas viejas.",
-            "cantidad_en_stock": 400,
+            "cantidadEnStock": 400,
             "precio_venta": 8,
             "precio_proveedor": 6,
             "id": 40
@@ -462,7 +462,7 @@
             "gama": "Frutales",
             "proveedor": "Melocotones de Cieza S.A.",
             "descripcion": "\u00e1rbol que puede pasar de los 6 m de altura, en la regi\u00f3n mediterr\u00e1nea con ramas formando una copa redondeada. La corteza del tronco es pardo-viol\u00e1cea, agrietada; las ramas son rojizas y extendidas cuando j\u00f3venes y las ramas secundarias son cortas, divergentes y escasas. Las yemas latentes son frecuentes especialmente sobre las ramas viejas.",
-            "cantidad_en_stock": 400,
+            "cantidadEnStock": 400,
             "precio_venta": 8,
             "precio_proveedor": 6,
             "id": 41
@@ -473,7 +473,7 @@
             "gama": "Frutales",
             "proveedor": "Melocotones de Cieza S.A.",
             "descripcion": "\u00e1rbol que puede pasar de los 6 m de altura, en la regi\u00f3n mediterr\u00e1nea con ramas formando una copa redondeada. La corteza del tronco es pardo-viol\u00e1cea, agrietada; las ramas son rojizas y extendidas cuando j\u00f3venes y las ramas secundarias son cortas, divergentes y escasas. Las yemas latentes son frecuentes especialmente sobre las ramas viejas.",
-            "cantidad_en_stock": 400,
+            "cantidadEnStock": 400,
             "precio_venta": 8,
             "precio_proveedor": 6,
             "id": 42
@@ -484,7 +484,7 @@
             "gama": "Frutales",
             "proveedor": "Jerte Distribuciones S.L.",
             "descripcion": "Las principales especies de cerezo cultivadas en el mundo son el cerezo dulce (Prunus avium), el guindo (P. cerasus) y el cerezo \"Duke\", h\u00edbrido de los anteriores. Ambas especies son naturales del sureste de Europa y oeste de Asia. El cerezo dulce tuvo su origen probablemente en el mar Negro y en el mar Caspio, difundi\u00e9ndose despu\u00e9s hacia Europa y Asia, llevado por los p\u00e1jaros y las migraciones humanas. Fue uno de los frutales m\u00e1s apreciados por los griegos y con el Imperio Romano se extendi\u00f3 a regiones muy diversas. En la actualidad, el cerezo se encuentra difundido por numerosas regiones y pa\u00edses del mundo con clima templado",
-            "cantidad_en_stock": 400,
+            "cantidadEnStock": 400,
             "precio_venta": 8,
             "precio_proveedor": 6,
             "id": 43
@@ -495,7 +495,7 @@
             "gama": "Frutales",
             "proveedor": "Jerte Distribuciones S.L.",
             "descripcion": "Las principales especies de cerezo cultivadas en el mundo son el cerezo dulce (Prunus avium), el guindo (P. cerasus) y el cerezo \"Duke\", h\u00edbrido de los anteriores. Ambas especies son naturales del sureste de Europa y oeste de Asia. El cerezo dulce tuvo su origen probablemente en el mar Negro y en el mar Caspio, difundi\u00e9ndose despu\u00e9s hacia Europa y Asia, llevado por los p\u00e1jaros y las migraciones humanas. Fue uno de los frutales m\u00e1s apreciados por los griegos y con el Imperio Romano se extendi\u00f3 a regiones muy diversas. En la actualidad, el cerezo se encuentra difundido por numerosas regiones y pa\u00edses del mundo con clima templado",
-            "cantidad_en_stock": 400,
+            "cantidadEnStock": 400,
             "precio_venta": 8,
             "precio_proveedor": 6,
             "id": 44
@@ -506,7 +506,7 @@
             "gama": "Frutales",
             "proveedor": "Jerte Distribuciones S.L.",
             "descripcion": "Las principales especies de cerezo cultivadas en el mundo son el cerezo dulce (Prunus avium), el guindo (P. cerasus) y el cerezo \"Duke\", h\u00edbrido de los anteriores. Ambas especies son naturales del sureste de Europa y oeste de Asia. El cerezo dulce tuvo su origen probablemente en el mar Negro y en el mar Caspio, difundi\u00e9ndose despu\u00e9s hacia Europa y Asia, llevado por los p\u00e1jaros y las migraciones humanas. Fue uno de los frutales m\u00e1s apreciados por los griegos y con el Imperio Romano se extendi\u00f3 a regiones muy diversas. En la actualidad, el cerezo se encuentra difundido por numerosas regiones y pa\u00edses del mundo con clima templado",
-            "cantidad_en_stock": 400,
+            "cantidadEnStock": 400,
             "precio_venta": 8,
             "precio_proveedor": 6,
             "id": 45
@@ -517,7 +517,7 @@
             "gama": "Frutales",
             "proveedor": "NaranjasValencianas.com",
             "descripcion": "El naranjo es un \u00e1rbol peque\u00f1o, que no supera los 3-5 metros de altura, con una copa compacta, c\u00f3nica, transformada en es\u00e9rica gracias a la poda. Su tronco es de color gris y liso, y las hojas son perennes, cori\u00e1ceas, de un verde intenso y brillante, con forma oval o el\u00edptico-lanceolada. Poseen, en el caso del naranjo amargo, un t\u00edpico peciolo alado en forma de \u00c2\u2018coraz\u00f3n\u00c2\u2019, que en el naranjo dulce es m\u00e1s estrecho y menos patente.",
-            "cantidad_en_stock": 15,
+            "cantidadEnStock": 15,
             "precio_venta": 7,
             "precio_proveedor": 5,
             "id": 46
@@ -528,7 +528,7 @@
             "gama": "Frutales",
             "proveedor": "Frutales Talavera S.A",
             "descripcion": "\u00e1rbol de tama\u00f1o mediano que alcanza una altura m\u00e1xima de 5-6 m. Tronco de corteza pardo-azulada, brillante, lisa o agrietada longitudinalmente. Produce ramas alternas, peque\u00f1as, delgadas, unas veces lisas, glabras y otras pubescentes y vellosas",
-            "cantidad_en_stock": 400,
+            "cantidadEnStock": 400,
             "precio_venta": 8,
             "precio_proveedor": 6,
             "id": 47
@@ -539,7 +539,7 @@
             "gama": "Frutales",
             "proveedor": "Frutales Talavera S.A",
             "descripcion": "\u00e1rbol de tama\u00f1o mediano que alcanza una altura m\u00e1xima de 5-6 m. Tronco de corteza pardo-azulada, brillante, lisa o agrietada longitudinalmente. Produce ramas alternas, peque\u00f1as, delgadas, unas veces lisas, glabras y otras pubescentes y vellosas",
-            "cantidad_en_stock": 400,
+            "cantidadEnStock": 400,
             "precio_venta": 8,
             "precio_proveedor": 6,
             "id": 48
@@ -550,7 +550,7 @@
             "gama": "Frutales",
             "proveedor": "Frutales Talavera S.A",
             "descripcion": "\u00e1rbol de tama\u00f1o mediano que alcanza una altura m\u00e1xima de 5-6 m. Tronco de corteza pardo-azulada, brillante, lisa o agrietada longitudinalmente. Produce ramas alternas, peque\u00f1as, delgadas, unas veces lisas, glabras y otras pubescentes y vellosas",
-            "cantidad_en_stock": 400,
+            "cantidadEnStock": 400,
             "precio_venta": 8,
             "precio_proveedor": 6,
             "id": 49
@@ -561,7 +561,7 @@
             "gama": "Frutales",
             "proveedor": "Frutales Talavera S.A",
             "descripcion": "\u00e1rbol de tama\u00f1o mediano que alcanza una altura m\u00e1xima de 5-6 m. Tronco de corteza pardo-azulada, brillante, lisa o agrietada longitudinalmente. Produce ramas alternas, peque\u00f1as, delgadas, unas veces lisas, glabras y otras pubescentes y vellosas",
-            "cantidad_en_stock": 400,
+            "cantidadEnStock": 400,
             "precio_venta": 8,
             "precio_proveedor": 6,
             "id": 50
@@ -572,7 +572,7 @@
             "gama": "Frutales",
             "proveedor": "Frutales Talavera S.A",
             "descripcion": "\u00e1rbol de tama\u00f1o mediano que alcanza una altura m\u00e1xima de 5-6 m. Tronco de corteza pardo-azulada, brillante, lisa o agrietada longitudinalmente. Produce ramas alternas, peque\u00f1as, delgadas, unas veces lisas, glabras y otras pubescentes y vellosas",
-            "cantidad_en_stock": 400,
+            "cantidadEnStock": 400,
             "precio_venta": 8,
             "precio_proveedor": 6,
             "id": 51
@@ -583,7 +583,7 @@
             "gama": "Frutales",
             "proveedor": "Frutales Talavera S.A",
             "descripcion": "\u00e1rbol de tama\u00f1o mediano que alcanza una altura m\u00e1xima de 5-6 m. Tronco de corteza pardo-azulada, brillante, lisa o agrietada longitudinalmente. Produce ramas alternas, peque\u00f1as, delgadas, unas veces lisas, glabras y otras pubescentes y vellosas",
-            "cantidad_en_stock": 400,
+            "cantidadEnStock": 400,
             "precio_venta": 8,
             "precio_proveedor": 6,
             "id": 52
@@ -594,7 +594,7 @@
             "gama": "Frutales",
             "proveedor": "Frutales Talavera S.A",
             "descripcion": "peque\u00f1o \u00e1rbol caducifolio, a veces con porte arbustivo, de 3 a 6 m de altura, con el tronco retorcido. Madera dura y corteza escamosa de color gris\u00e1ceo. Las ramitas j\u00f3venes son m\u00e1s o menos cuadrangulares o angostas y de cuatro alas, posteriormente se vuelven redondas con corteza de color caf\u00e9 gris\u00e1ceo, la mayor\u00eda de las ramas, pero especialmente las peque\u00f1as ramitas axilares, son en forma de espina o terminan en una espina aguda; la copa es extendida.",
-            "cantidad_en_stock": 400,
+            "cantidadEnStock": 400,
             "precio_venta": 9,
             "precio_proveedor": 7,
             "id": 53
@@ -605,7 +605,7 @@
             "gama": "Frutales",
             "proveedor": "Frutales Talavera S.A",
             "descripcion": "La higuera (Ficus carica L.) es un \u00e1rbol t\u00edpico de secano en los pa\u00edses mediterr\u00e1neos. Su rusticidad y su f\u00e1cil multiplicaci\u00f3n hacen de la higuera un frutal muy apropiado para el cultivo extensivo.. Siempre ha sido considerado como \u00e1rbol que no requiere cuidado alguno una vez plantado y arraigado, limit\u00e1ndose el hombre a recoger de \u00e9l los frutos cuando maduran, unos para consumo en fresco y otros para conserva. Las \u00fanicas higueras con cuidados culturales esmerados, en muchas comarcas, son las brevales, por el inter\u00e9s econ\u00f3mico de su primera cosecha, la de brevas.",
-            "cantidad_en_stock": 400,
+            "cantidadEnStock": 400,
             "precio_venta": 9,
             "precio_proveedor": 7,
             "id": 54
@@ -616,7 +616,7 @@
             "gama": "Frutales",
             "proveedor": "Frutales Talavera S.A",
             "descripcion": "La higuera (Ficus carica L.) es un \u00e1rbol t\u00edpico de secano en los pa\u00edses mediterr\u00e1neos. Su rusticidad y su f\u00e1cil multiplicaci\u00f3n hacen de la higuera un frutal muy apropiado para el cultivo extensivo.. Siempre ha sido considerado como \u00e1rbol que no requiere cuidado alguno una vez plantado y arraigado, limit\u00e1ndose el hombre a recoger de \u00e9l los frutos cuando maduran, unos para consumo en fresco y otros para conserva. Las \u00fanicas higueras con cuidados culturales esmerados, en muchas comarcas, son las brevales, por el inter\u00e9s econ\u00f3mico de su primera cosecha, la de brevas.",
-            "cantidad_en_stock": 400,
+            "cantidadEnStock": 400,
             "precio_venta": 9,
             "precio_proveedor": 7,
             "id": 55
@@ -627,7 +627,7 @@
             "gama": "Frutales",
             "proveedor": "Frutales Talavera S.A",
             "descripcion": "La higuera (Ficus carica L.) es un \u00e1rbol t\u00edpico de secano en los pa\u00edses mediterr\u00e1neos. Su rusticidad y su f\u00e1cil multiplicaci\u00f3n hacen de la higuera un frutal muy apropiado para el cultivo extensivo.. Siempre ha sido considerado como \u00e1rbol que no requiere cuidado alguno una vez plantado y arraigado, limit\u00e1ndose el hombre a recoger de \u00e9l los frutos cuando maduran, unos para consumo en fresco y otros para conserva. Las \u00fanicas higueras con cuidados culturales esmerados, en muchas comarcas, son las brevales, por el inter\u00e9s econ\u00f3mico de su primera cosecha, la de brevas.",
-            "cantidad_en_stock": 400,
+            "cantidadEnStock": 400,
             "precio_venta": 9,
             "precio_proveedor": 7,
             "id": 56
@@ -638,7 +638,7 @@
             "gama": "Frutales",
             "proveedor": "NaranjasValencianas.com",
             "descripcion": "El naranjo es un \u00e1rbol peque\u00f1o, que no supera los 3-5 metros de altura, con una copa compacta, c\u00f3nica, transformada en es\u00e9rica gracias a la poda. Su tronco es de color gris y liso, y las hojas son perennes, cori\u00e1ceas, de un verde intenso y brillante, con forma oval o el\u00edptico-lanceolada. Poseen, en el caso del naranjo amargo, un t\u00edpico peciolo alado en forma de \u00c2\u2018coraz\u00f3n\u00c2\u2019, que en el naranjo dulce es m\u00e1s estrecho y menos patente.",
-            "cantidad_en_stock": 15,
+            "cantidadEnStock": 15,
             "precio_venta": 29,
             "precio_proveedor": 23,
             "id": 57
@@ -649,7 +649,7 @@
             "gama": "Frutales",
             "proveedor": "Frutales Talavera S.A",
             "descripcion": "alcanza como m\u00e1ximo 10 m. de altura y tiene una copa globosa. Tronco derecho que normalmente alcanza de 2 a 2,5 m. de altura, con corteza cubierta de lenticelas, lisa, adherida, de color ceniciento verdoso sobre los ramos y escamosa y gris parda sobre las partes viejas del \u00e1rbol. Tiene una vida de unos 60-80 a\u00f1os. Las ramas se insertan en \u00e1ngulo abierto sobre el tallo, de color verde oscuro, a veces tendiendo a negruzco o viol\u00e1ceo. Los brotes j\u00f3venes terminan con frecuencia en una espina",
-            "cantidad_en_stock": 400,
+            "cantidadEnStock": 400,
             "precio_venta": 8,
             "precio_proveedor": 6,
             "id": 58
@@ -660,7 +660,7 @@
             "gama": "Frutales",
             "proveedor": "Frutales Talavera S.A",
             "descripcion": "alcanza como m\u00e1ximo 10 m. de altura y tiene una copa globosa. Tronco derecho que normalmente alcanza de 2 a 2,5 m. de altura, con corteza cubierta de lenticelas, lisa, adherida, de color ceniciento verdoso sobre los ramos y escamosa y gris parda sobre las partes viejas del \u00e1rbol. Tiene una vida de unos 60-80 a\u00f1os. Las ramas se insertan en \u00e1ngulo abierto sobre el tallo, de color verde oscuro, a veces tendiendo a negruzco o viol\u00e1ceo. Los brotes j\u00f3venes terminan con frecuencia en una espina",
-            "cantidad_en_stock": 400,
+            "cantidadEnStock": 400,
             "precio_venta": 8,
             "precio_proveedor": 6,
             "id": 59
@@ -671,7 +671,7 @@
             "gama": "Frutales",
             "proveedor": "Frutales Talavera S.A",
             "descripcion": "alcanza como m\u00e1ximo 10 m. de altura y tiene una copa globosa. Tronco derecho que normalmente alcanza de 2 a 2,5 m. de altura, con corteza cubierta de lenticelas, lisa, adherida, de color ceniciento verdoso sobre los ramos y escamosa y gris parda sobre las partes viejas del \u00e1rbol. Tiene una vida de unos 60-80 a\u00f1os. Las ramas se insertan en \u00e1ngulo abierto sobre el tallo, de color verde oscuro, a veces tendiendo a negruzco o viol\u00e1ceo. Los brotes j\u00f3venes terminan con frecuencia en una espina",
-            "cantidad_en_stock": 400,
+            "cantidadEnStock": 400,
             "precio_venta": 8,
             "precio_proveedor": 6,
             "id": 60
@@ -681,7 +681,7 @@
             "nombre": "Membrillero Gigante de Wranja",
             "gama": "Frutales",
             "proveedor": "Frutales Talavera S.A",
-            "cantidad_en_stock": 400,
+            "cantidadEnStock": 400,
             "precio_venta": 8,
             "precio_proveedor": 6,
             "id": 61
@@ -692,7 +692,7 @@
             "gama": "Frutales",
             "proveedor": "Melocotones de Cieza S.A.",
             "descripcion": "\u00c1rbol caducifolio de porte bajo con corteza lisa, de color ceniciento. Sus hojas son alargadas con el margen ligeramente aserrado, de color verde brillante, algo m\u00e1s claras por el env\u00e9s. El melocotonero est\u00e1 muy arraigado en la cultura asi\u00e1tica.rnEn Jap\u00f3n, el noble heroe Momotaro, una especie de Cid japon\u00e9s, naci\u00f3 del interior de un enorme melocot\u00f3n que flotaba r\u00edo abajo.rnEn China se piensa que comer melocot\u00f3n confiere longevidad al ser humano, ya que formaba parte de la dieta de sus dioses inmortales.",
-            "cantidad_en_stock": 400,
+            "cantidadEnStock": 400,
             "precio_venta": 8,
             "precio_proveedor": 6,
             "id": 62
@@ -703,7 +703,7 @@
             "gama": "Frutales",
             "proveedor": "Melocotones de Cieza S.A.",
             "descripcion": "\u00c1rbol caducifolio de porte bajo con corteza lisa, de color ceniciento. Sus hojas son alargadas con el margen ligeramente aserrado, de color verde brillante, algo m\u00e1s claras por el env\u00e9s. El melocotonero est\u00e1 muy arraigado en la cultura asi\u00e1tica.rnEn Jap\u00f3n, el noble heroe Momotaro, una especie de Cid japon\u00e9s, naci\u00f3 del interior de un enorme melocot\u00f3n que flotaba r\u00edo abajo.rnEn China se piensa que comer melocot\u00f3n confiere longevidad al ser humano, ya que formaba parte de la dieta de sus dioses inmortales.",
-            "cantidad_en_stock": 400,
+            "cantidadEnStock": 400,
             "precio_venta": 8,
             "precio_proveedor": 6,
             "id": 63
@@ -714,7 +714,7 @@
             "gama": "Frutales",
             "proveedor": "Melocotones de Cieza S.A.",
             "descripcion": "\u00c1rbol caducifolio de porte bajo con corteza lisa, de color ceniciento. Sus hojas son alargadas con el margen ligeramente aserrado, de color verde brillante, algo m\u00e1s claras por el env\u00e9s. El melocotonero est\u00e1 muy arraigado en la cultura asi\u00e1tica.rnEn Jap\u00f3n, el noble heroe Momotaro, una especie de Cid japon\u00e9s, naci\u00f3 del interior de un enorme melocot\u00f3n que flotaba r\u00edo abajo.rnEn China se piensa que comer melocot\u00f3n confiere longevidad al ser humano, ya que formaba parte de la dieta de sus dioses inmortales.",
-            "cantidad_en_stock": 400,
+            "cantidadEnStock": 400,
             "precio_venta": 8,
             "precio_proveedor": 6,
             "id": 64
@@ -725,7 +725,7 @@
             "gama": "Frutales",
             "proveedor": "Melocotones de Cieza S.A.",
             "descripcion": "\u00c1rbol caducifolio de porte bajo con corteza lisa, de color ceniciento. Sus hojas son alargadas con el margen ligeramente aserrado, de color verde brillante, algo m\u00e1s claras por el env\u00e9s. El melocotonero est\u00e1 muy arraigado en la cultura asi\u00e1tica.rnEn Jap\u00f3n, el noble heroe Momotaro, una especie de Cid japon\u00e9s, naci\u00f3 del interior de un enorme melocot\u00f3n que flotaba r\u00edo abajo.rnEn China se piensa que comer melocot\u00f3n confiere longevidad al ser humano, ya que formaba parte de la dieta de sus dioses inmortales.",
-            "cantidad_en_stock": 400,
+            "cantidadEnStock": 400,
             "precio_venta": 8,
             "precio_proveedor": 6,
             "id": 65
@@ -735,7 +735,7 @@
             "nombre": "Nogal Com\u00fan",
             "gama": "Frutales",
             "proveedor": "Frutales Talavera S.A",
-            "cantidad_en_stock": 400,
+            "cantidadEnStock": 400,
             "precio_venta": 9,
             "precio_proveedor": 7,
             "id": 66
@@ -745,7 +745,7 @@
             "nombre": "Parra Uva de Mesa",
             "gama": "Frutales",
             "proveedor": "Frutales Talavera S.A",
-            "cantidad_en_stock": 400,
+            "cantidadEnStock": 400,
             "precio_venta": 8,
             "precio_proveedor": 6,
             "id": 67
@@ -755,7 +755,7 @@
             "nombre": "Mandarino -Plant\u00f3n joven",
             "gama": "Frutales",
             "proveedor": "Frutales Talavera S.A",
-            "cantidad_en_stock": 15,
+            "cantidadEnStock": 15,
             "precio_venta": 6,
             "precio_proveedor": 4,
             "id": 68
@@ -766,7 +766,7 @@
             "gama": "Frutales",
             "proveedor": "Frutales Talavera S.A",
             "descripcion": "\u00c1rbol piramidal, redondeado en su juventud, luego oval, que llega hasta 20 metros de altura y por t\u00e9rmino medio vive 65 a\u00f1os.Tronco alto, grueso, de corteza agrietada, gris, de la cual se destacan con frecuencia placas lenticulares.Las ramas se insertan formando \u00e1ngulo agudo con el tronco (45\u00ba), de corteza lisa, primero verde y luego gris-viol\u00e1cea, con numerosas lenticelas.",
-            "cantidad_en_stock": 400,
+            "cantidadEnStock": 400,
             "precio_venta": 8,
             "precio_proveedor": 6,
             "id": 69
@@ -777,7 +777,7 @@
             "gama": "Frutales",
             "proveedor": "Frutales Talavera S.A",
             "descripcion": "\u00c1rbol piramidal, redondeado en su juventud, luego oval, que llega hasta 20 metros de altura y por t\u00e9rmino medio vive 65 a\u00f1os.Tronco alto, grueso, de corteza agrietada, gris, de la cual se destacan con frecuencia placas lenticulares.Las ramas se insertan formando \u00e1ngulo agudo con el tronco (45\u00ba), de corteza lisa, primero verde y luego gris-viol\u00e1cea, con numerosas lenticelas.",
-            "cantidad_en_stock": 400,
+            "cantidadEnStock": 400,
             "precio_venta": 8,
             "precio_proveedor": 6,
             "id": 70
@@ -788,7 +788,7 @@
             "gama": "Frutales",
             "proveedor": "Frutales Talavera S.A",
             "descripcion": "\u00c1rbol piramidal, redondeado en su juventud, luego oval, que llega hasta 20 metros de altura y por t\u00e9rmino medio vive 65 a\u00f1os.Tronco alto, grueso, de corteza agrietada, gris, de la cual se destacan con frecuencia placas lenticulares.Las ramas se insertan formando \u00e1ngulo agudo con el tronco (45\u00ba), de corteza lisa, primero verde y luego gris-viol\u00e1cea, con numerosas lenticelas.",
-            "cantidad_en_stock": 400,
+            "cantidadEnStock": 400,
             "precio_venta": 8,
             "precio_proveedor": 6,
             "id": 71
@@ -799,7 +799,7 @@
             "gama": "Frutales",
             "proveedor": "Frutales Talavera S.A",
             "descripcion": "\u00c1rbol piramidal, redondeado en su juventud, luego oval, que llega hasta 20 metros de altura y por t\u00e9rmino medio vive 65 a\u00f1os.Tronco alto, grueso, de corteza agrietada, gris, de la cual se destacan con frecuencia placas lenticulares.Las ramas se insertan formando \u00e1ngulo agudo con el tronco (45\u00ba), de corteza lisa, primero verde y luego gris-viol\u00e1cea, con numerosas lenticelas.",
-            "cantidad_en_stock": 400,
+            "cantidadEnStock": 400,
             "precio_venta": 8,
             "precio_proveedor": 6,
             "id": 72
@@ -810,7 +810,7 @@
             "gama": "Frutales",
             "proveedor": "Frutales Talavera S.A",
             "descripcion": "Aunque originario del Sudeste de China, el n\u00edspero lleg\u00f3 a Europa procedente de Jap\u00f3n en el siglo XVIII como \u00e1rbol ornamental. En el siglo XIX se inici\u00f3 el consumo de los frutos en toda el \u00e1rea mediterr\u00e1nea, donde se adapt\u00f3 muy bien a las zonas de cultivo de los c\u00edtricos.El cultivo intensivo comenz\u00f3 a desarrollarse a finales de los a\u00f1os 60 y principios de los 70, cuando comenzaron a implantarse las variedades y t\u00e9cnicas de cultivo actualmente utilizadas.",
-            "cantidad_en_stock": 400,
+            "cantidadEnStock": 400,
             "precio_venta": 9,
             "precio_proveedor": 7,
             "id": 73
@@ -821,7 +821,7 @@
             "gama": "Frutales",
             "proveedor": "Frutales Talavera S.A",
             "descripcion": "Existen dos hip\u00f3tesis sobre el origen del olivo, una que postula que proviene de las costas de Siria, L\u00edbano e Israel y otra que considera que lo considera originario de Asia menor. La llegada a Europa probablemente tuvo lugar de mano de los Fenicios, en transito por Chipre, Creta, e Islas del Mar Egeo, pasando a Grecia y m\u00e1s tarde a Italia. Los primeros indicios de la presencia del olivo en las costas mediterr\u00e1neas espa\u00f1olas coinciden con el dominio romano, aunque fueron posteriormente los \u00e1rabes los que impulsaron su cultivo en Andaluc\u00eda, convirtiendo a Espa\u00f1a en el primer pa\u00eds productor de aceite de oliva a nivel mundial.",
-            "cantidad_en_stock": 400,
+            "cantidadEnStock": 400,
             "precio_venta": 8,
             "precio_proveedor": 6,
             "id": 74
@@ -831,7 +831,7 @@
             "nombre": "Nectarina",
             "gama": "Frutales",
             "proveedor": "Frutales Talavera S.A",
-            "cantidad_en_stock": 400,
+            "cantidadEnStock": 400,
             "precio_venta": 8,
             "precio_proveedor": 6,
             "id": 75
@@ -842,7 +842,7 @@
             "gama": "Frutales",
             "proveedor": "NaranjasValencianas.com",
             "descripcion": "De crecimiento algo lento los primeros a\u00f1os, llega a alcanzar hasta doce metros de altura o m\u00e1s, aunque en cultivo se prefiere algo m\u00e1s bajo (5-6). Tronco corto y copa extendida. Ramifica muy poco debido a la dominancia apical. Porte m\u00e1s o menos piramidal, aunque con la edad se hace m\u00e1s globoso.",
-            "cantidad_en_stock": 400,
+            "cantidadEnStock": 400,
             "precio_venta": 9,
             "precio_proveedor": 7,
             "id": 76
@@ -854,7 +854,7 @@
             "dimensiones": "8/10",
             "proveedor": "Melocotones de Cieza S.A.",
             "descripcion": "\u00e1rbol que puede pasar de los 6 m de altura, en la regi\u00f3n mediterr\u00e1nea con ramas formando una copa redondeada. La corteza del tronco es pardo-viol\u00e1cea, agrietada; las ramas son rojizas y extendidas cuando j\u00f3venes y las ramas secundarias son cortas, divergentes y escasas. Las yemas latentes son frecuentes especialmente sobre las ramas viejas.",
-            "cantidad_en_stock": 200,
+            "cantidadEnStock": 200,
             "precio_venta": 11,
             "precio_proveedor": 8,
             "id": 77
@@ -866,7 +866,7 @@
             "dimensiones": "10/12",
             "proveedor": "Melocotones de Cieza S.A.",
             "descripcion": "\u00e1rbol que puede pasar de los 6 m de altura, en la regi\u00f3n mediterr\u00e1nea con ramas formando una copa redondeada. La corteza del tronco es pardo-viol\u00e1cea, agrietada; las ramas son rojizas y extendidas cuando j\u00f3venes y las ramas secundarias son cortas, divergentes y escasas. Las yemas latentes son frecuentes especialmente sobre las ramas viejas.",
-            "cantidad_en_stock": 200,
+            "cantidadEnStock": 200,
             "precio_venta": 22,
             "precio_proveedor": 17,
             "id": 78
@@ -876,7 +876,7 @@
             "nombre": "Mandarino 2 a\u00f1os injerto",
             "gama": "Frutales",
             "proveedor": "Frutales Talavera S.A",
-            "cantidad_en_stock": 15,
+            "cantidadEnStock": 15,
             "precio_venta": 7,
             "precio_proveedor": 5,
             "id": 79
@@ -888,7 +888,7 @@
             "dimensiones": "12/14",
             "proveedor": "Melocotones de Cieza S.A.",
             "descripcion": "\u00e1rbol que puede pasar de los 6 m de altura, en la regi\u00f3n mediterr\u00e1nea con ramas formando una copa redondeada. La corteza del tronco es pardo-viol\u00e1cea, agrietada; las ramas son rojizas y extendidas cuando j\u00f3venes y las ramas secundarias son cortas, divergentes y escasas. Las yemas latentes son frecuentes especialmente sobre las ramas viejas.",
-            "cantidad_en_stock": 200,
+            "cantidadEnStock": 200,
             "precio_venta": 32,
             "precio_proveedor": 25,
             "id": 80
@@ -900,7 +900,7 @@
             "dimensiones": "14/16",
             "proveedor": "Melocotones de Cieza S.A.",
             "descripcion": "\u00e1rbol que puede pasar de los 6 m de altura, en la regi\u00f3n mediterr\u00e1nea con ramas formando una copa redondeada. La corteza del tronco es pardo-viol\u00e1cea, agrietada; las ramas son rojizas y extendidas cuando j\u00f3venes y las ramas secundarias son cortas, divergentes y escasas. Las yemas latentes son frecuentes especialmente sobre las ramas viejas.",
-            "cantidad_en_stock": 200,
+            "cantidadEnStock": 200,
             "precio_venta": 49,
             "precio_proveedor": 39,
             "id": 81
@@ -912,7 +912,7 @@
             "dimensiones": "16/18",
             "proveedor": "Melocotones de Cieza S.A.",
             "descripcion": "\u00e1rbol que puede pasar de los 6 m de altura, en la regi\u00f3n mediterr\u00e1nea con ramas formando una copa redondeada. La corteza del tronco es pardo-viol\u00e1cea, agrietada; las ramas son rojizas y extendidas cuando j\u00f3venes y las ramas secundarias son cortas, divergentes y escasas. Las yemas latentes son frecuentes especialmente sobre las ramas viejas.",
-            "cantidad_en_stock": 200,
+            "cantidadEnStock": 200,
             "precio_venta": 70,
             "precio_proveedor": 56,
             "id": 82
@@ -924,7 +924,7 @@
             "dimensiones": "8/10",
             "proveedor": "Jerte Distribuciones S.L.",
             "descripcion": "Las principales especies de cerezo cultivadas en el mundo son el cerezo dulce (Prunus avium), el guindo (P. cerasus) y el cerezo \"Duke\", h\u00edbrido de los anteriores. Ambas especies son naturales del sureste de Europa y oeste de Asia. El cerezo dulce tuvo su origen probablemente en el mar Negro y en el mar Caspio, difundi\u00e9ndose despu\u00e9s hacia Europa y Asia, llevado por los p\u00e1jaros y las migraciones humanas. Fue uno de los frutales m\u00e1s apreciados por los griegos y con el Imperio Romano se extendi\u00f3 a regiones muy diversas. En la actualidad, el cerezo se encuentra difundido por numerosas regiones y pa\u00edses del mundo con clima templado",
-            "cantidad_en_stock": 300,
+            "cantidadEnStock": 300,
             "precio_venta": 11,
             "precio_proveedor": 8,
             "id": 83
@@ -936,7 +936,7 @@
             "dimensiones": "10/12",
             "proveedor": "Jerte Distribuciones S.L.",
             "descripcion": "Las principales especies de cerezo cultivadas en el mundo son el cerezo dulce (Prunus avium), el guindo (P. cerasus) y el cerezo \"Duke\", h\u00edbrido de los anteriores. Ambas especies son naturales del sureste de Europa y oeste de Asia. El cerezo dulce tuvo su origen probablemente en el mar Negro y en el mar Caspio, difundi\u00e9ndose despu\u00e9s hacia Europa y Asia, llevado por los p\u00e1jaros y las migraciones humanas. Fue uno de los frutales m\u00e1s apreciados por los griegos y con el Imperio Romano se extendi\u00f3 a regiones muy diversas. En la actualidad, el cerezo se encuentra difundido por numerosas regiones y pa\u00edses del mundo con clima templado",
-            "cantidad_en_stock": 15,
+            "cantidadEnStock": 15,
             "precio_venta": 22,
             "precio_proveedor": 17,
             "id": 84
@@ -948,7 +948,7 @@
             "dimensiones": "12/14",
             "proveedor": "Jerte Distribuciones S.L.",
             "descripcion": "Las principales especies de cerezo cultivadas en el mundo son el cerezo dulce (Prunus avium), el guindo (P. cerasus) y el cerezo \"Duke\", h\u00edbrido de los anteriores. Ambas especies son naturales del sureste de Europa y oeste de Asia. El cerezo dulce tuvo su origen probablemente en el mar Negro y en el mar Caspio, difundi\u00e9ndose despu\u00e9s hacia Europa y Asia, llevado por los p\u00e1jaros y las migraciones humanas. Fue uno de los frutales m\u00e1s apreciados por los griegos y con el Imperio Romano se extendi\u00f3 a regiones muy diversas. En la actualidad, el cerezo se encuentra difundido por numerosas regiones y pa\u00edses del mundo con clima templado",
-            "cantidad_en_stock": 200,
+            "cantidadEnStock": 200,
             "precio_venta": 32,
             "precio_proveedor": 25,
             "id": 85
@@ -960,7 +960,7 @@
             "dimensiones": "14/16",
             "proveedor": "Jerte Distribuciones S.L.",
             "descripcion": "Las principales especies de cerezo cultivadas en el mundo son el cerezo dulce (Prunus avium), el guindo (P. cerasus) y el cerezo \"Duke\", h\u00edbrido de los anteriores. Ambas especies son naturales del sureste de Europa y oeste de Asia. El cerezo dulce tuvo su origen probablemente en el mar Negro y en el mar Caspio, difundi\u00e9ndose despu\u00e9s hacia Europa y Asia, llevado por los p\u00e1jaros y las migraciones humanas. Fue uno de los frutales m\u00e1s apreciados por los griegos y con el Imperio Romano se extendi\u00f3 a regiones muy diversas. En la actualidad, el cerezo se encuentra difundido por numerosas regiones y pa\u00edses del mundo con clima templado",
-            "cantidad_en_stock": 50,
+            "cantidadEnStock": 50,
             "precio_venta": 49,
             "precio_proveedor": 39,
             "id": 86
@@ -972,7 +972,7 @@
             "dimensiones": "16/18",
             "proveedor": "Jerte Distribuciones S.L.",
             "descripcion": "Las principales especies de cerezo cultivadas en el mundo son el cerezo dulce (Prunus avium), el guindo (P. cerasus) y el cerezo \"Duke\", h\u00edbrido de los anteriores. Ambas especies son naturales del sureste de Europa y oeste de Asia. El cerezo dulce tuvo su origen probablemente en el mar Negro y en el mar Caspio, difundi\u00e9ndose despu\u00e9s hacia Europa y Asia, llevado por los p\u00e1jaros y las migraciones humanas. Fue uno de los frutales m\u00e1s apreciados por los griegos y con el Imperio Romano se extendi\u00f3 a regiones muy diversas. En la actualidad, el cerezo se encuentra difundido por numerosas regiones y pa\u00edses del mundo con clima templado",
-            "cantidad_en_stock": 50,
+            "cantidadEnStock": 50,
             "precio_venta": 70,
             "precio_proveedor": 56,
             "id": 87
@@ -984,7 +984,7 @@
             "dimensiones": "18/20",
             "proveedor": "Jerte Distribuciones S.L.",
             "descripcion": "Las principales especies de cerezo cultivadas en el mundo son el cerezo dulce (Prunus avium), el guindo (P. cerasus) y el cerezo \"Duke\", h\u00edbrido de los anteriores. Ambas especies son naturales del sureste de Europa y oeste de Asia. El cerezo dulce tuvo su origen probablemente en el mar Negro y en el mar Caspio, difundi\u00e9ndose despu\u00e9s hacia Europa y Asia, llevado por los p\u00e1jaros y las migraciones humanas. Fue uno de los frutales m\u00e1s apreciados por los griegos y con el Imperio Romano se extendi\u00f3 a regiones muy diversas. En la actualidad, el cerezo se encuentra difundido por numerosas regiones y pa\u00edses del mundo con clima templado",
-            "cantidad_en_stock": 50,
+            "cantidadEnStock": 50,
             "precio_venta": 80,
             "precio_proveedor": 64,
             "id": 88
@@ -996,7 +996,7 @@
             "dimensiones": "20/25",
             "proveedor": "Jerte Distribuciones S.L.",
             "descripcion": "Las principales especies de cerezo cultivadas en el mundo son el cerezo dulce (Prunus avium), el guindo (P. cerasus) y el cerezo \"Duke\", h\u00edbrido de los anteriores. Ambas especies son naturales del sureste de Europa y oeste de Asia. El cerezo dulce tuvo su origen probablemente en el mar Negro y en el mar Caspio, difundi\u00e9ndose despu\u00e9s hacia Europa y Asia, llevado por los p\u00e1jaros y las migraciones humanas. Fue uno de los frutales m\u00e1s apreciados por los griegos y con el Imperio Romano se extendi\u00f3 a regiones muy diversas. En la actualidad, el cerezo se encuentra difundido por numerosas regiones y pa\u00edses del mundo con clima templado",
-            "cantidad_en_stock": 50,
+            "cantidadEnStock": 50,
             "precio_venta": 91,
             "precio_proveedor": 72,
             "id": 89
@@ -1006,7 +1006,7 @@
             "nombre": "Mandarino calibre 8/10",
             "gama": "Frutales",
             "proveedor": "Frutales Talavera S.A",
-            "cantidad_en_stock": 15,
+            "cantidadEnStock": 15,
             "precio_venta": 29,
             "precio_proveedor": 23,
             "id": 90
@@ -1018,7 +1018,7 @@
             "dimensiones": "8/10",
             "proveedor": "Frutales Talavera S.A",
             "descripcion": "\u00e1rbol de tama\u00f1o mediano que alcanza una altura m\u00e1xima de 5-6 m. Tronco de corteza pardo-azulada, brillante, lisa o agrietada longitudinalmente. Produce ramas alternas, peque\u00f1as, delgadas, unas veces lisas, glabras y otras pubescentes y vellosas",
-            "cantidad_en_stock": 50,
+            "cantidadEnStock": 50,
             "precio_venta": 11,
             "precio_proveedor": 8,
             "id": 91
@@ -1030,7 +1030,7 @@
             "dimensiones": "10/12",
             "proveedor": "Frutales Talavera S.A",
             "descripcion": "\u00e1rbol de tama\u00f1o mediano que alcanza una altura m\u00e1xima de 5-6 m. Tronco de corteza pardo-azulada, brillante, lisa o agrietada longitudinalmente. Produce ramas alternas, peque\u00f1as, delgadas, unas veces lisas, glabras y otras pubescentes y vellosas",
-            "cantidad_en_stock": 50,
+            "cantidadEnStock": 50,
             "precio_venta": 22,
             "precio_proveedor": 17,
             "id": 92
@@ -1042,7 +1042,7 @@
             "dimensiones": "12/14",
             "proveedor": "Frutales Talavera S.A",
             "descripcion": "\u00e1rbol de tama\u00f1o mediano que alcanza una altura m\u00e1xima de 5-6 m. Tronco de corteza pardo-azulada, brillante, lisa o agrietada longitudinalmente. Produce ramas alternas, peque\u00f1as, delgadas, unas veces lisas, glabras y otras pubescentes y vellosas",
-            "cantidad_en_stock": 50,
+            "cantidadEnStock": 50,
             "precio_venta": 32,
             "precio_proveedor": 25,
             "id": 93
@@ -1054,7 +1054,7 @@
             "dimensiones": "8/10",
             "proveedor": "Frutales Talavera S.A",
             "descripcion": "peque\u00f1o \u00e1rbol caducifolio, a veces con porte arbustivo, de 3 a 6 m de altura, con el tronco retorcido. Madera dura y corteza escamosa de color gris\u00e1ceo. Las ramitas j\u00f3venes son m\u00e1s o menos cuadrangulares o angostas y de cuatro alas, posteriormente se vuelven redondas con corteza de color caf\u00e9 gris\u00e1ceo, la mayor\u00eda de las ramas, pero especialmente las peque\u00f1as ramitas axilares, son en forma de espina o terminan en una espina aguda; la copa es extendida.",
-            "cantidad_en_stock": 50,
+            "cantidadEnStock": 50,
             "precio_venta": 13,
             "precio_proveedor": 10,
             "id": 94
@@ -1066,7 +1066,7 @@
             "dimensiones": "10/12",
             "proveedor": "Frutales Talavera S.A",
             "descripcion": "peque\u00f1o \u00e1rbol caducifolio, a veces con porte arbustivo, de 3 a 6 m de altura, con el tronco retorcido. Madera dura y corteza escamosa de color gris\u00e1ceo. Las ramitas j\u00f3venes son m\u00e1s o menos cuadrangulares o angostas y de cuatro alas, posteriormente se vuelven redondas con corteza de color caf\u00e9 gris\u00e1ceo, la mayor\u00eda de las ramas, pero especialmente las peque\u00f1as ramitas axilares, son en forma de espina o terminan en una espina aguda; la copa es extendida.",
-            "cantidad_en_stock": 50,
+            "cantidadEnStock": 50,
             "precio_venta": 22,
             "precio_proveedor": 17,
             "id": 95
@@ -1078,7 +1078,7 @@
             "dimensiones": "12/14",
             "proveedor": "Frutales Talavera S.A",
             "descripcion": "peque\u00f1o \u00e1rbol caducifolio, a veces con porte arbustivo, de 3 a 6 m de altura, con el tronco retorcido. Madera dura y corteza escamosa de color gris\u00e1ceo. Las ramitas j\u00f3venes son m\u00e1s o menos cuadrangulares o angostas y de cuatro alas, posteriormente se vuelven redondas con corteza de color caf\u00e9 gris\u00e1ceo, la mayor\u00eda de las ramas, pero especialmente las peque\u00f1as ramitas axilares, son en forma de espina o terminan en una espina aguda; la copa es extendida.",
-            "cantidad_en_stock": 50,
+            "cantidadEnStock": 50,
             "precio_venta": 32,
             "precio_proveedor": 25,
             "id": 96
@@ -1090,7 +1090,7 @@
             "dimensiones": "14/16",
             "proveedor": "Frutales Talavera S.A",
             "descripcion": "peque\u00f1o \u00e1rbol caducifolio, a veces con porte arbustivo, de 3 a 6 m de altura, con el tronco retorcido. Madera dura y corteza escamosa de color gris\u00e1ceo. Las ramitas j\u00f3venes son m\u00e1s o menos cuadrangulares o angostas y de cuatro alas, posteriormente se vuelven redondas con corteza de color caf\u00e9 gris\u00e1ceo, la mayor\u00eda de las ramas, pero especialmente las peque\u00f1as ramitas axilares, son en forma de espina o terminan en una espina aguda; la copa es extendida.",
-            "cantidad_en_stock": 50,
+            "cantidadEnStock": 50,
             "precio_venta": 49,
             "precio_proveedor": 39,
             "id": 97
@@ -1102,7 +1102,7 @@
             "dimensiones": "16/18",
             "proveedor": "Frutales Talavera S.A",
             "descripcion": "peque\u00f1o \u00e1rbol caducifolio, a veces con porte arbustivo, de 3 a 6 m de altura, con el tronco retorcido. Madera dura y corteza escamosa de color gris\u00e1ceo. Las ramitas j\u00f3venes son m\u00e1s o menos cuadrangulares o angostas y de cuatro alas, posteriormente se vuelven redondas con corteza de color caf\u00e9 gris\u00e1ceo, la mayor\u00eda de las ramas, pero especialmente las peque\u00f1as ramitas axilares, son en forma de espina o terminan en una espina aguda; la copa es extendida.",
-            "cantidad_en_stock": 50,
+            "cantidadEnStock": 50,
             "precio_venta": 70,
             "precio_proveedor": 56,
             "id": 98
@@ -1114,7 +1114,7 @@
             "dimensiones": "8/10",
             "proveedor": "Frutales Talavera S.A",
             "descripcion": "La higuera (Ficus carica L.) es un \u00e1rbol t\u00edpico de secano en los pa\u00edses mediterr\u00e1neos. Su rusticidad y su f\u00e1cil multiplicaci\u00f3n hacen de la higuera un frutal muy apropiado para el cultivo extensivo.. Siempre ha sido considerado como \u00e1rbol que no requiere cuidado alguno una vez plantado y arraigado, limit\u00e1ndose el hombre a recoger de \u00e9l los frutos cuando maduran, unos para consumo en fresco y otros para conserva. Las \u00fanicas higueras con cuidados culturales esmerados, en muchas comarcas, son las brevales, por el inter\u00e9s econ\u00f3mico de su primera cosecha, la de brevas.",
-            "cantidad_en_stock": 50,
+            "cantidadEnStock": 50,
             "precio_venta": 15,
             "precio_proveedor": 12,
             "id": 99
@@ -1126,7 +1126,7 @@
             "dimensiones": "10/12",
             "proveedor": "Frutales Talavera S.A",
             "descripcion": "La higuera (Ficus carica L.) es un \u00e1rbol t\u00edpico de secano en los pa\u00edses mediterr\u00e1neos. Su rusticidad y su f\u00e1cil multiplicaci\u00f3n hacen de la higuera un frutal muy apropiado para el cultivo extensivo.. Siempre ha sido considerado como \u00e1rbol que no requiere cuidado alguno una vez plantado y arraigado, limit\u00e1ndose el hombre a recoger de \u00e9l los frutos cuando maduran, unos para consumo en fresco y otros para conserva. Las \u00fanicas higueras con cuidados culturales esmerados, en muchas comarcas, son las brevales, por el inter\u00e9s econ\u00f3mico de su primera cosecha, la de brevas.",
-            "cantidad_en_stock": 50,
+            "cantidadEnStock": 50,
             "precio_venta": 22,
             "precio_proveedor": 17,
             "id": 100
@@ -1137,7 +1137,7 @@
             "gama": "Frutales",
             "proveedor": "NaranjasValencianas.com",
             "descripcion": "El limonero, pertenece al grupo de los c\u00edtricos, teniendo su origen hace unos 20 millones de a\u00f1os en el sudeste asi\u00e1tico. Fue introducido por los \u00e1rabes en el \u00e1rea mediterr\u00e1nea entre los a\u00f1os 1.000 a 1.200, habiendo experimentando numerosas modificaciones debidas tanto a la selecci\u00f3n natural mediante hibridaciones espont\u00e1neas como a las producidas por el",
-            "cantidad_en_stock": 15,
+            "cantidadEnStock": 15,
             "precio_venta": 6,
             "precio_proveedor": 4,
             "id": 101
@@ -1149,7 +1149,7 @@
             "dimensiones": "12/14",
             "proveedor": "Frutales Talavera S.A",
             "descripcion": "La higuera (Ficus carica L.) es un \u00e1rbol t\u00edpico de secano en los pa\u00edses mediterr\u00e1neos. Su rusticidad y su f\u00e1cil multiplicaci\u00f3n hacen de la higuera un frutal muy apropiado para el cultivo extensivo.. Siempre ha sido considerado como \u00e1rbol que no requiere cuidado alguno una vez plantado y arraigado, limit\u00e1ndose el hombre a recoger de \u00e9l los frutos cuando maduran, unos para consumo en fresco y otros para conserva. Las \u00fanicas higueras con cuidados culturales esmerados, en muchas comarcas, son las brevales, por el inter\u00e9s econ\u00f3mico de su primera cosecha, la de brevas.",
-            "cantidad_en_stock": 50,
+            "cantidadEnStock": 50,
             "precio_venta": 32,
             "precio_proveedor": 25,
             "id": 102
@@ -1161,7 +1161,7 @@
             "dimensiones": "14/16",
             "proveedor": "Frutales Talavera S.A",
             "descripcion": "La higuera (Ficus carica L.) es un \u00e1rbol t\u00edpico de secano en los pa\u00edses mediterr\u00e1neos. Su rusticidad y su f\u00e1cil multiplicaci\u00f3n hacen de la higuera un frutal muy apropiado para el cultivo extensivo.. Siempre ha sido considerado como \u00e1rbol que no requiere cuidado alguno una vez plantado y arraigado, limit\u00e1ndose el hombre a recoger de \u00e9l los frutos cuando maduran, unos para consumo en fresco y otros para conserva. Las \u00fanicas higueras con cuidados culturales esmerados, en muchas comarcas, son las brevales, por el inter\u00e9s econ\u00f3mico de su primera cosecha, la de brevas.",
-            "cantidad_en_stock": 50,
+            "cantidadEnStock": 50,
             "precio_venta": 49,
             "precio_proveedor": 39,
             "id": 103
@@ -1173,7 +1173,7 @@
             "dimensiones": "16/18",
             "proveedor": "Frutales Talavera S.A",
             "descripcion": "La higuera (Ficus carica L.) es un \u00e1rbol t\u00edpico de secano en los pa\u00edses mediterr\u00e1neos. Su rusticidad y su f\u00e1cil multiplicaci\u00f3n hacen de la higuera un frutal muy apropiado para el cultivo extensivo.. Siempre ha sido considerado como \u00e1rbol que no requiere cuidado alguno una vez plantado y arraigado, limit\u00e1ndose el hombre a recoger de \u00e9l los frutos cuando maduran, unos para consumo en fresco y otros para conserva. Las \u00fanicas higueras con cuidados culturales esmerados, en muchas comarcas, son las brevales, por el inter\u00e9s econ\u00f3mico de su primera cosecha, la de brevas.",
-            "cantidad_en_stock": 50,
+            "cantidadEnStock": 50,
             "precio_venta": 70,
             "precio_proveedor": 56,
             "id": 104
@@ -1185,7 +1185,7 @@
             "dimensiones": "18/20",
             "proveedor": "Frutales Talavera S.A",
             "descripcion": "La higuera (Ficus carica L.) es un \u00e1rbol t\u00edpico de secano en los pa\u00edses mediterr\u00e1neos. Su rusticidad y su f\u00e1cil multiplicaci\u00f3n hacen de la higuera un frutal muy apropiado para el cultivo extensivo.. Siempre ha sido considerado como \u00e1rbol que no requiere cuidado alguno una vez plantado y arraigado, limit\u00e1ndose el hombre a recoger de \u00e9l los frutos cuando maduran, unos para consumo en fresco y otros para conserva. Las \u00fanicas higueras con cuidados culturales esmerados, en muchas comarcas, son las brevales, por el inter\u00e9s econ\u00f3mico de su primera cosecha, la de brevas.",
-            "cantidad_en_stock": 50,
+            "cantidadEnStock": 50,
             "precio_venta": 80,
             "precio_proveedor": 64,
             "id": 105
@@ -1197,7 +1197,7 @@
             "dimensiones": "8/10",
             "proveedor": "NaranjasValencianas.com",
             "descripcion": "De crecimiento algo lento los primeros a\u00f1os, llega a alcanzar hasta doce metros de altura o m\u00e1s, aunque en cultivo se prefiere algo m\u00e1s bajo (5-6). Tronco corto y copa extendida. Ramifica muy poco debido a la dominancia apical. Porte m\u00e1s o menos piramidal, aunque con la edad se hace m\u00e1s globoso.",
-            "cantidad_en_stock": 50,
+            "cantidadEnStock": 50,
             "precio_venta": 13,
             "precio_proveedor": 10,
             "id": 106
@@ -1209,7 +1209,7 @@
             "dimensiones": "16/18",
             "proveedor": "NaranjasValencianas.com",
             "descripcion": "De crecimiento algo lento los primeros a\u00f1os, llega a alcanzar hasta doce metros de altura o m\u00e1s, aunque en cultivo se prefiere algo m\u00e1s bajo (5-6). Tronco corto y copa extendida. Ramifica muy poco debido a la dominancia apical. Porte m\u00e1s o menos piramidal, aunque con la edad se hace m\u00e1s globoso.",
-            "cantidad_en_stock": 50,
+            "cantidadEnStock": 50,
             "precio_venta": 70,
             "precio_proveedor": 56,
             "id": 107
@@ -1221,7 +1221,7 @@
             "dimensiones": "8/10",
             "proveedor": "Frutales Talavera S.A",
             "descripcion": "alcanza como m\u00e1ximo 10 m. de altura y tiene una copa globosa. Tronco derecho que normalmente alcanza de 2 a 2,5 m. de altura, con corteza cubierta de lenticelas, lisa, adherida, de color ceniciento verdoso sobre los ramos y escamosa y gris parda sobre las partes viejas del \u00e1rbol. Tiene una vida de unos 60-80 a\u00f1os. Las ramas se insertan en \u00e1ngulo abierto sobre el tallo, de color verde oscuro, a veces tendiendo a negruzco o viol\u00e1ceo. Los brotes j\u00f3venes terminan con frecuencia en una espina",
-            "cantidad_en_stock": 50,
+            "cantidadEnStock": 50,
             "precio_venta": 11,
             "precio_proveedor": 8,
             "id": 108
@@ -1233,7 +1233,7 @@
             "dimensiones": "10/12",
             "proveedor": "Frutales Talavera S.A",
             "descripcion": "alcanza como m\u00e1ximo 10 m. de altura y tiene una copa globosa. Tronco derecho que normalmente alcanza de 2 a 2,5 m. de altura, con corteza cubierta de lenticelas, lisa, adherida, de color ceniciento verdoso sobre los ramos y escamosa y gris parda sobre las partes viejas del \u00e1rbol. Tiene una vida de unos 60-80 a\u00f1os. Las ramas se insertan en \u00e1ngulo abierto sobre el tallo, de color verde oscuro, a veces tendiendo a negruzco o viol\u00e1ceo. Los brotes j\u00f3venes terminan con frecuencia en una espina",
-            "cantidad_en_stock": 50,
+            "cantidadEnStock": 50,
             "precio_venta": 22,
             "precio_proveedor": 17,
             "id": 109
@@ -1245,7 +1245,7 @@
             "dimensiones": "12/14",
             "proveedor": "Frutales Talavera S.A",
             "descripcion": "alcanza como m\u00e1ximo 10 m. de altura y tiene una copa globosa. Tronco derecho que normalmente alcanza de 2 a 2,5 m. de altura, con corteza cubierta de lenticelas, lisa, adherida, de color ceniciento verdoso sobre los ramos y escamosa y gris parda sobre las partes viejas del \u00e1rbol. Tiene una vida de unos 60-80 a\u00f1os. Las ramas se insertan en \u00e1ngulo abierto sobre el tallo, de color verde oscuro, a veces tendiendo a negruzco o viol\u00e1ceo. Los brotes j\u00f3venes terminan con frecuencia en una espina",
-            "cantidad_en_stock": 50,
+            "cantidadEnStock": 50,
             "precio_venta": 32,
             "precio_proveedor": 25,
             "id": 110
@@ -1257,7 +1257,7 @@
             "dimensiones": "14/16",
             "proveedor": "Frutales Talavera S.A",
             "descripcion": "alcanza como m\u00e1ximo 10 m. de altura y tiene una copa globosa. Tronco derecho que normalmente alcanza de 2 a 2,5 m. de altura, con corteza cubierta de lenticelas, lisa, adherida, de color ceniciento verdoso sobre los ramos y escamosa y gris parda sobre las partes viejas del \u00e1rbol. Tiene una vida de unos 60-80 a\u00f1os. Las ramas se insertan en \u00e1ngulo abierto sobre el tallo, de color verde oscuro, a veces tendiendo a negruzco o viol\u00e1ceo. Los brotes j\u00f3venes terminan con frecuencia en una espina",
-            "cantidad_en_stock": 50,
+            "cantidadEnStock": 50,
             "precio_venta": 49,
             "precio_proveedor": 39,
             "id": 111
@@ -1268,7 +1268,7 @@
             "gama": "Frutales",
             "proveedor": "NaranjasValencianas.com",
             "descripcion": "El limonero, pertenece al grupo de los c\u00edtricos, teniendo su origen hace unos 20 millones de a\u00f1os en el sudeste asi\u00e1tico. Fue introducido por los \u00e1rabes en el \u00e1rea mediterr\u00e1nea entre los a\u00f1os 1.000 a 1.200, habiendo experimentando numerosas modificaciones debidas tanto a la selecci\u00f3n natural mediante hibridaciones espont\u00e1neas como a las producidas por el",
-            "cantidad_en_stock": 15,
+            "cantidadEnStock": 15,
             "precio_venta": 29,
             "precio_proveedor": 23,
             "id": 112
@@ -1280,7 +1280,7 @@
             "dimensiones": "16/18",
             "proveedor": "Frutales Talavera S.A",
             "descripcion": "Aunque originario del Sudeste de China, el n\u00edspero lleg\u00f3 a Europa procedente de Jap\u00f3n en el siglo XVIII como \u00e1rbol ornamental. En el siglo XIX se inici\u00f3 el consumo de los frutos en toda el \u00e1rea mediterr\u00e1nea, donde se adapt\u00f3 muy bien a las zonas de cultivo de los c\u00edtricos.El cultivo intensivo comenz\u00f3 a desarrollarse a finales de los a\u00f1os 60 y principios de los 70, cuando comenzaron a implantarse las variedades y t\u00e9cnicas de cultivo actualmente utilizadas.",
-            "cantidad_en_stock": 50,
+            "cantidadEnStock": 50,
             "precio_venta": 70,
             "precio_proveedor": 56,
             "id": 113
@@ -1292,7 +1292,7 @@
             "dimensiones": "18/20",
             "proveedor": "Frutales Talavera S.A",
             "descripcion": "Aunque originario del Sudeste de China, el n\u00edspero lleg\u00f3 a Europa procedente de Jap\u00f3n en el siglo XVIII como \u00e1rbol ornamental. En el siglo XIX se inici\u00f3 el consumo de los frutos en toda el \u00e1rea mediterr\u00e1nea, donde se adapt\u00f3 muy bien a las zonas de cultivo de los c\u00edtricos.El cultivo intensivo comenz\u00f3 a desarrollarse a finales de los a\u00f1os 60 y principios de los 70, cuando comenzaron a implantarse las variedades y t\u00e9cnicas de cultivo actualmente utilizadas.",
-            "cantidad_en_stock": 50,
+            "cantidadEnStock": 50,
             "precio_venta": 80,
             "precio_proveedor": 64,
             "id": 114
@@ -1304,7 +1304,7 @@
             "dimensiones": "8/10",
             "proveedor": "Melocotones de Cieza S.A.",
             "descripcion": "\u00c1rbol caducifolio de porte bajo con corteza lisa, de color ceniciento. Sus hojas son alargadas con el margen ligeramente aserrado, de color verde brillante, algo m\u00e1s claras por el env\u00e9s. El melocotonero est\u00e1 muy arraigado en la cultura asi\u00e1tica.rnEn Jap\u00f3n, el noble heroe Momotaro, una especie de Cid japon\u00e9s, naci\u00f3 del interior de un enorme melocot\u00f3n que flotaba r\u00edo abajo.rnEn China se piensa que comer melocot\u00f3n confiere longevidad al ser humano, ya que formaba parte de la dieta de sus dioses inmortales.",
-            "cantidad_en_stock": 50,
+            "cantidadEnStock": 50,
             "precio_venta": 11,
             "precio_proveedor": 8,
             "id": 115
@@ -1316,7 +1316,7 @@
             "dimensiones": "10/12",
             "proveedor": "Melocotones de Cieza S.A.",
             "descripcion": "\u00c1rbol caducifolio de porte bajo con corteza lisa, de color ceniciento. Sus hojas son alargadas con el margen ligeramente aserrado, de color verde brillante, algo m\u00e1s claras por el env\u00e9s. El melocotonero est\u00e1 muy arraigado en la cultura asi\u00e1tica.rnEn Jap\u00f3n, el noble heroe Momotaro, una especie de Cid japon\u00e9s, naci\u00f3 del interior de un enorme melocot\u00f3n que flotaba r\u00edo abajo.rnEn China se piensa que comer melocot\u00f3n confiere longevidad al ser humano, ya que formaba parte de la dieta de sus dioses inmortales.",
-            "cantidad_en_stock": 50,
+            "cantidadEnStock": 50,
             "precio_venta": 22,
             "precio_proveedor": 17,
             "id": 116
@@ -1328,7 +1328,7 @@
             "dimensiones": "12/14",
             "proveedor": "Melocotones de Cieza S.A.",
             "descripcion": "\u00c1rbol caducifolio de porte bajo con corteza lisa, de color ceniciento. Sus hojas son alargadas con el margen ligeramente aserrado, de color verde brillante, algo m\u00e1s claras por el env\u00e9s. El melocotonero est\u00e1 muy arraigado en la cultura asi\u00e1tica.rnEn Jap\u00f3n, el noble heroe Momotaro, una especie de Cid japon\u00e9s, naci\u00f3 del interior de un enorme melocot\u00f3n que flotaba r\u00edo abajo.rnEn China se piensa que comer melocot\u00f3n confiere longevidad al ser humano, ya que formaba parte de la dieta de sus dioses inmortales.",
-            "cantidad_en_stock": 50,
+            "cantidadEnStock": 50,
             "precio_venta": 32,
             "precio_proveedor": 25,
             "id": 117
@@ -1340,7 +1340,7 @@
             "dimensiones": "14/16",
             "proveedor": "Melocotones de Cieza S.A.",
             "descripcion": "\u00c1rbol caducifolio de porte bajo con corteza lisa, de color ceniciento. Sus hojas son alargadas con el margen ligeramente aserrado, de color verde brillante, algo m\u00e1s claras por el env\u00e9s. El melocotonero est\u00e1 muy arraigado en la cultura asi\u00e1tica.rnEn Jap\u00f3n, el noble heroe Momotaro, una especie de Cid japon\u00e9s, naci\u00f3 del interior de un enorme melocot\u00f3n que flotaba r\u00edo abajo.rnEn China se piensa que comer melocot\u00f3n confiere longevidad al ser humano, ya que formaba parte de la dieta de sus dioses inmortales.",
-            "cantidad_en_stock": 50,
+            "cantidadEnStock": 50,
             "precio_venta": 49,
             "precio_proveedor": 39,
             "id": 118
@@ -1352,7 +1352,7 @@
             "dimensiones": "8/10",
             "proveedor": "Frutales Talavera S.A",
             "descripcion": "arbolito caducifolio de 4-6 m de altura con el tronco tortuoso y la corteza lisa, gris\u00e1cea, que se desprende en escamas con la edad. Copa irregular, con ramas inermes, flexuosas, parduzcas, punteadas. Ramillas j\u00f3venes tomentosas",
-            "cantidad_en_stock": 50,
+            "cantidadEnStock": 50,
             "precio_venta": 11,
             "precio_proveedor": 8,
             "id": 119
@@ -1364,7 +1364,7 @@
             "dimensiones": "10/12",
             "proveedor": "Frutales Talavera S.A",
             "descripcion": "arbolito caducifolio de 4-6 m de altura con el tronco tortuoso y la corteza lisa, gris\u00e1cea, que se desprende en escamas con la edad. Copa irregular, con ramas inermes, flexuosas, parduzcas, punteadas. Ramillas j\u00f3venes tomentosas",
-            "cantidad_en_stock": 50,
+            "cantidadEnStock": 50,
             "precio_venta": 22,
             "precio_proveedor": 17,
             "id": 120
@@ -1376,7 +1376,7 @@
             "dimensiones": "12/14",
             "proveedor": "Frutales Talavera S.A",
             "descripcion": "arbolito caducifolio de 4-6 m de altura con el tronco tortuoso y la corteza lisa, gris\u00e1cea, que se desprende en escamas con la edad. Copa irregular, con ramas inermes, flexuosas, parduzcas, punteadas. Ramillas j\u00f3venes tomentosas",
-            "cantidad_en_stock": 50,
+            "cantidadEnStock": 50,
             "precio_venta": 32,
             "precio_proveedor": 25,
             "id": 121
@@ -1388,7 +1388,7 @@
             "dimensiones": "14/16",
             "proveedor": "Frutales Talavera S.A",
             "descripcion": "arbolito caducifolio de 4-6 m de altura con el tronco tortuoso y la corteza lisa, gris\u00e1cea, que se desprende en escamas con la edad. Copa irregular, con ramas inermes, flexuosas, parduzcas, punteadas. Ramillas j\u00f3venes tomentosas",
-            "cantidad_en_stock": 50,
+            "cantidadEnStock": 50,
             "precio_venta": 49,
             "precio_proveedor": 39,
             "id": 122
@@ -1399,7 +1399,7 @@
             "gama": "Ornamentales",
             "dimensiones": "40-60",
             "proveedor": "Valencia Garden Service",
-            "cantidad_en_stock": 25,
+            "cantidadEnStock": 25,
             "precio_venta": 5,
             "precio_proveedor": 4,
             "id": 123
@@ -1411,7 +1411,7 @@
             "dimensiones": "100-110",
             "proveedor": "Viveros EL OASIS",
             "descripcion": "Acacia dealbata. Nombre com\u00fan o vulgar: Mimosa fina, Mimosa, Mimosa com\u00fan, Mimosa plateada, Aromo franc\u00e9s. Familia: Mimosaceae. Origen: Australia, Sureste, (N. G. del Sur y Victoria). Arbol de follaje persistente muy usado en parques por su atractiva floraci\u00f3n amarilla hacia fines del invierno. Altura: de 3 a 10 metros generalmente. Crecimiento r\u00e1pido. Follaje perenne de tonos plateados, muy ornamental. Sus hojas son de textura fina, de color verde y sus flores amarillas que aparecen en racimos grandes. Florece de Enero a Marzo (Hemisferio Norte). Legumbre de 5-9 cm de longitud, recta o ligeramente curvada, con los bordes algo constre\u00f1idos entre las semillas, que se disponen en el fruto longitudinalmente...",
-            "cantidad_en_stock": 100,
+            "cantidadEnStock": 100,
             "precio_venta": 12,
             "precio_proveedor": 9,
             "id": 124
@@ -1423,7 +1423,7 @@
             "dimensiones": "170-200",
             "proveedor": "Viveros EL OASIS",
             "descripcion": "Acacia dealbata. Nombre com\u00fan o vulgar: Mimosa fina, Mimosa, Mimosa com\u00fan, Mimosa plateada, Aromo franc\u00e9s. Familia: Mimosaceae. Origen: Australia, Sureste, (N. G. del Sur y Victoria). Arbol de follaje persistente muy usado en parques por su atractiva floraci\u00f3n amarilla hacia fines del invierno. Altura: de 3 a 10 metros generalmente. Crecimiento r\u00e1pido. Follaje perenne de tonos plateados, muy ornamental. Sus hojas son de textura fina, de color verde y sus flores amarillas que aparecen en racimos grandes. Florece de Enero a Marzo (Hemisferio Norte). Legumbre de 5-9 cm de longitud, recta o ligeramente curvada, con los bordes algo constre\u00f1idos entre las semillas, que se disponen en el fruto longitudinalmente...",
-            "cantidad_en_stock": 100,
+            "cantidadEnStock": 100,
             "precio_venta": 6,
             "precio_proveedor": 4,
             "id": 125
@@ -1435,7 +1435,7 @@
             "dimensiones": "170-200",
             "proveedor": "Viveros EL OASIS",
             "descripcion": "Acacia dealbata. Nombre com\u00fan o vulgar: Mimosa fina, Mimosa, Mimosa com\u00fan, Mimosa plateada, Aromo franc\u00e9s. Familia: Mimosaceae. Origen: Australia, Sureste, (N. G. del Sur y Victoria). Arbol de follaje persistente muy usado en parques por su atractiva floraci\u00f3n amarilla hacia fines del invierno. Altura: de 3 a 10 metros generalmente. Crecimiento r\u00e1pido. Follaje perenne de tonos plateados, muy ornamental. Sus hojas son de textura fina, de color verde y sus flores amarillas que aparecen en racimos grandes. Florece de Enero a Marzo (Hemisferio Norte). Legumbre de 5-9 cm de longitud, recta o ligeramente curvada, con los bordes algo constre\u00f1idos entre las semillas, que se disponen en el fruto longitudinalmente...",
-            "cantidad_en_stock": 100,
+            "cantidadEnStock": 100,
             "precio_venta": 6,
             "precio_proveedor": 4,
             "id": 126
@@ -1447,7 +1447,7 @@
             "dimensiones": "200-225",
             "proveedor": "Viveros EL OASIS",
             "descripcion": "Acacia dealbata. Nombre com\u00fan o vulgar: Mimosa fina, Mimosa, Mimosa com\u00fan, Mimosa plateada, Aromo franc\u00e9s. Familia: Mimosaceae. Origen: Australia, Sureste, (N. G. del Sur y Victoria). Arbol de follaje persistente muy usado en parques por su atractiva floraci\u00f3n amarilla hacia fines del invierno. Altura: de 3 a 10 metros generalmente. Crecimiento r\u00e1pido. Follaje perenne de tonos plateados, muy ornamental. Sus hojas son de textura fina, de color verde y sus flores amarillas que aparecen en racimos grandes. Florece de Enero a Marzo (Hemisferio Norte). Legumbre de 5-9 cm de longitud, recta o ligeramente curvada, con los bordes algo constre\u00f1idos entre las semillas, que se disponen en el fruto longitudinalmente...",
-            "cantidad_en_stock": 100,
+            "cantidadEnStock": 100,
             "precio_venta": 10,
             "precio_proveedor": 8,
             "id": 127
@@ -1459,7 +1459,7 @@
             "dimensiones": "200-225",
             "proveedor": "Viveros EL OASIS",
             "descripcion": "Acacia dealbata. Nombre com\u00fan o vulgar: Mimosa fina, Mimosa, Mimosa com\u00fan, Mimosa plateada, Aromo franc\u00e9s. Familia: Mimosaceae. Origen: Australia, Sureste, (N. G. del Sur y Victoria). Arbol de follaje persistente muy usado en parques por su atractiva floraci\u00f3n amarilla hacia fines del invierno. Altura: de 3 a 10 metros generalmente. Crecimiento r\u00e1pido. Follaje perenne de tonos plateados, muy ornamental. Sus hojas son de textura fina, de color verde y sus flores amarillas que aparecen en racimos grandes. Florece de Enero a Marzo (Hemisferio Norte). Legumbre de 5-9 cm de longitud, recta o ligeramente curvada, con los bordes algo constre\u00f1idos entre las semillas, que se disponen en el fruto longitudinalmente...",
-            "cantidad_en_stock": 100,
+            "cantidadEnStock": 100,
             "precio_venta": 10,
             "precio_proveedor": 8,
             "id": 128
@@ -1471,7 +1471,7 @@
             "dimensiones": "160-170",
             "proveedor": "Viveros EL OASIS",
             "descripcion": "Acacia dealbata. Nombre com\u00fan o vulgar: Mimosa fina, Mimosa, Mimosa com\u00fan, Mimosa plateada, Aromo franc\u00e9s. Familia: Mimosaceae. Origen: Australia, Sureste, (N. G. del Sur y Victoria). Arbol de follaje persistente muy usado en parques por su atractiva floraci\u00f3n amarilla hacia fines del invierno. Altura: de 3 a 10 metros generalmente. Crecimiento r\u00e1pido. Follaje perenne de tonos plateados, muy ornamental. Sus hojas son de textura fina, de color verde y sus flores amarillas que aparecen en racimos grandes. Florece de Enero a Marzo (Hemisferio Norte). Legumbre de 5-9 cm de longitud, recta o ligeramente curvada, con los bordes algo constre\u00f1idos entre las semillas, que se disponen en el fruto longitudinalmente...",
-            "cantidad_en_stock": 100,
+            "cantidadEnStock": 100,
             "precio_venta": 6,
             "precio_proveedor": 4,
             "id": 129
@@ -1483,7 +1483,7 @@
             "dimensiones": "200-225",
             "proveedor": "Viveros EL OASIS",
             "descripcion": "Acacia dealbata. Nombre com\u00fan o vulgar: Mimosa fina, Mimosa, Mimosa com\u00fan, Mimosa plateada, Aromo franc\u00e9s. Familia: Mimosaceae. Origen: Australia, Sureste, (N. G. del Sur y Victoria). Arbol de follaje persistente muy usado en parques por su atractiva floraci\u00f3n amarilla hacia fines del invierno. Altura: de 3 a 10 metros generalmente. Crecimiento r\u00e1pido. Follaje perenne de tonos plateados, muy ornamental. Sus hojas son de textura fina, de color verde y sus flores amarillas que aparecen en racimos grandes. Florece de Enero a Marzo (Hemisferio Norte). Legumbre de 5-9 cm de longitud, recta o ligeramente curvada, con los bordes algo constre\u00f1idos entre las semillas, que se disponen en el fruto longitudinalmente...",
-            "cantidad_en_stock": 100,
+            "cantidadEnStock": 100,
             "precio_venta": 10,
             "precio_proveedor": 8,
             "id": 130
@@ -1495,7 +1495,7 @@
             "dimensiones": "120-140",
             "proveedor": "Viveros EL OASIS",
             "descripcion": "Acacia dealbata. Nombre com\u00fan o vulgar: Mimosa fina, Mimosa, Mimosa com\u00fan, Mimosa plateada, Aromo franc\u00e9s. Familia: Mimosaceae. Origen: Australia, Sureste, (N. G. del Sur y Victoria). Arbol de follaje persistente muy usado en parques por su atractiva floraci\u00f3n amarilla hacia fines del invierno. Altura: de 3 a 10 metros generalmente. Crecimiento r\u00e1pido. Follaje perenne de tonos plateados, muy ornamental. Sus hojas son de textura fina, de color verde y sus flores amarillas que aparecen en racimos grandes. Florece de Enero a Marzo (Hemisferio Norte). Legumbre de 5-9 cm de longitud, recta o ligeramente curvada, con los bordes algo constre\u00f1idos entre las semillas, que se disponen en el fruto longitudinalmente...",
-            "cantidad_en_stock": 100,
+            "cantidadEnStock": 100,
             "precio_venta": 6,
             "precio_proveedor": 4,
             "id": 131
@@ -1506,7 +1506,7 @@
             "gama": "Ornamentales",
             "dimensiones": "35-45",
             "proveedor": "Viveros EL OASIS",
-            "cantidad_en_stock": 100,
+            "cantidadEnStock": 100,
             "precio_venta": 5,
             "precio_proveedor": 4,
             "id": 132
@@ -1518,7 +1518,7 @@
             "dimensiones": "35-45",
             "proveedor": "Viveros EL OASIS",
             "descripcion": "Limpitatubos. arbolito de 6-7 m de altura. Ramas flexibles y colgantes (de ah\u00ed lo de \"llor\u00f3n\")..",
-            "cantidad_en_stock": 100,
+            "cantidadEnStock": 100,
             "precio_venta": 5,
             "precio_proveedor": 4,
             "id": 133
@@ -1530,7 +1530,7 @@
             "dimensiones": "40-60",
             "proveedor": "Viveros EL OASIS",
             "descripcion": "Limpitatubos. arbolito de 6-7 m de altura. Ramas flexibles y colgantes (de ah\u00ed lo de \"llor\u00f3n\")..",
-            "cantidad_en_stock": 100,
+            "cantidadEnStock": 100,
             "precio_venta": 2,
             "precio_proveedor": 1,
             "id": 134
@@ -1541,7 +1541,7 @@
             "gama": "Ornamentales",
             "dimensiones": "35-45",
             "proveedor": "Viveros EL OASIS",
-            "cantidad_en_stock": 100,
+            "cantidadEnStock": 100,
             "precio_venta": 5,
             "precio_proveedor": 4,
             "id": 135
@@ -1552,7 +1552,7 @@
             "gama": "Ornamentales",
             "dimensiones": "35-45",
             "proveedor": "Viveros EL OASIS",
-            "cantidad_en_stock": 120,
+            "cantidadEnStock": 120,
             "precio_venta": 5,
             "precio_proveedor": 4,
             "id": 136
@@ -1563,7 +1563,7 @@
             "gama": "Ornamentales",
             "dimensiones": "35-45",
             "proveedor": "Viveros EL OASIS",
-            "cantidad_en_stock": 120,
+            "cantidadEnStock": 120,
             "precio_venta": 5,
             "precio_proveedor": 4,
             "id": 137
@@ -1574,7 +1574,7 @@
             "gama": "Ornamentales",
             "dimensiones": "35-45",
             "proveedor": "Viveros EL OASIS",
-            "cantidad_en_stock": 120,
+            "cantidadEnStock": 120,
             "precio_venta": 5,
             "precio_proveedor": 4,
             "id": 138
@@ -1585,7 +1585,7 @@
             "gama": "Ornamentales",
             "dimensiones": "35-45",
             "proveedor": "Viveros EL OASIS",
-            "cantidad_en_stock": 120,
+            "cantidadEnStock": 120,
             "precio_venta": 7,
             "precio_proveedor": 5,
             "id": 139
@@ -1597,7 +1597,7 @@
             "dimensiones": "35-45",
             "proveedor": "Viveros EL OASIS",
             "descripcion": "Por su capacidad de soportar podas, pueden ser f\u00e1cilmente moldeadas como bons\u00e1i en el transcurso de pocos a\u00f1os. Flores de muchos colores seg\u00fan la variedad, desde el blanco puro al rojo intenso, del amarillo al anaranjado. La flor apenas dura 1 d\u00eda, pero continuamente aparecen nuevas y la floraci\u00f3n se prolonga durante todo el periodo de crecimiento vegetativo.",
-            "cantidad_en_stock": 120,
+            "cantidadEnStock": 120,
             "precio_venta": 7,
             "precio_proveedor": 5,
             "id": 140
@@ -1609,7 +1609,7 @@
             "dimensiones": "35-45",
             "proveedor": "Viveros EL OASIS",
             "descripcion": "Por su capacidad de soportar podas, pueden ser f\u00e1cilmente moldeadas como bons\u00e1i en el transcurso de pocos a\u00f1os. Flores de muchos colores seg\u00fan la variedad, desde el blanco puro al rojo intenso, del amarillo al anaranjado. La flor apenas dura 1 d\u00eda, pero continuamente aparecen nuevas y la floraci\u00f3n se prolonga durante todo el periodo de crecimiento vegetativo.",
-            "cantidad_en_stock": 120,
+            "cantidadEnStock": 120,
             "precio_venta": 7,
             "precio_proveedor": 5,
             "id": 141
@@ -1621,7 +1621,7 @@
             "dimensiones": "35-45",
             "proveedor": "Viveros EL OASIS",
             "descripcion": "Por su capacidad de soportar podas, pueden ser f\u00e1cilmente moldeadas como bons\u00e1i en el transcurso de pocos a\u00f1os. Flores de muchos colores seg\u00fan la variedad, desde el blanco puro al rojo intenso, del amarillo al anaranjado. La flor apenas dura 1 d\u00eda, pero continuamente aparecen nuevas y la floraci\u00f3n se prolonga durante todo el periodo de crecimiento vegetativo.",
-            "cantidad_en_stock": 120,
+            "cantidadEnStock": 120,
             "precio_venta": 7,
             "precio_proveedor": 5,
             "id": 142
@@ -1632,7 +1632,7 @@
             "gama": "Ornamentales",
             "dimensiones": "40-50",
             "proveedor": "Viveros EL OASIS",
-            "cantidad_en_stock": 120,
+            "cantidadEnStock": 120,
             "precio_venta": 5,
             "precio_proveedor": 4,
             "id": 143
@@ -1643,7 +1643,7 @@
             "gama": "Ornamentales",
             "dimensiones": "35-45",
             "proveedor": "Viveros EL OASIS",
-            "cantidad_en_stock": 120,
+            "cantidadEnStock": 120,
             "precio_venta": 5,
             "precio_proveedor": 4,
             "id": 144
@@ -1654,7 +1654,7 @@
             "gama": "Ornamentales",
             "dimensiones": "35-45",
             "proveedor": "Viveros EL OASIS",
-            "cantidad_en_stock": 120,
+            "cantidadEnStock": 120,
             "precio_venta": 5,
             "precio_proveedor": 4,
             "id": 145
@@ -1665,7 +1665,7 @@
             "gama": "Ornamentales",
             "dimensiones": "35-45",
             "proveedor": "Viveros EL OASIS",
-            "cantidad_en_stock": 120,
+            "cantidadEnStock": 120,
             "precio_venta": 5,
             "precio_proveedor": 4,
             "id": 146
@@ -1676,7 +1676,7 @@
             "gama": "Ornamentales",
             "dimensiones": "35-45",
             "proveedor": "Viveros EL OASIS",
-            "cantidad_en_stock": 120,
+            "cantidadEnStock": 120,
             "precio_venta": 5,
             "precio_proveedor": 4,
             "id": 147
@@ -1687,7 +1687,7 @@
             "gama": "Ornamentales",
             "dimensiones": "35-45",
             "proveedor": "Viveros EL OASIS",
-            "cantidad_en_stock": 120,
+            "cantidadEnStock": 120,
             "precio_venta": 5,
             "precio_proveedor": 4,
             "id": 148
@@ -1698,7 +1698,7 @@
             "gama": "Ornamentales",
             "dimensiones": "35-45",
             "proveedor": "Viveros EL OASIS",
-            "cantidad_en_stock": 120,
+            "cantidadEnStock": 120,
             "precio_venta": 5,
             "precio_proveedor": 4,
             "id": 149
@@ -1709,7 +1709,7 @@
             "gama": "Ornamentales",
             "dimensiones": "35-45",
             "proveedor": "Viveros EL OASIS",
-            "cantidad_en_stock": 120,
+            "cantidadEnStock": 120,
             "precio_venta": 5,
             "precio_proveedor": 4,
             "id": 150
@@ -1721,7 +1721,7 @@
             "dimensiones": "40-60",
             "proveedor": "Viveros EL OASIS",
             "descripcion": "Arbusto excepcional por su floraci\u00f3n oto\u00f1al, invernal o primaveral. Flores: Las flores son solitarias, aparecen en el \u00e1pice de cada rama, y son con una corola simple o doble, y comprendiendo varios colores. Suelen medir unos 7-12 cm de di\u00c3 metro y tienen 5 s\u00e9palos y 5 p\u00e9talos. Estambres numerosos unidos en la mitad o en 2/3 de su longitud.",
-            "cantidad_en_stock": 50,
+            "cantidadEnStock": 50,
             "precio_venta": 7,
             "precio_proveedor": 5,
             "id": 151
@@ -1733,7 +1733,7 @@
             "dimensiones": "200-250",
             "proveedor": "Viveros EL OASIS",
             "descripcion": "Arbusto excepcional por su floraci\u00f3n oto\u00f1al, invernal o primaveral. Flores: Las flores son solitarias, aparecen en el \u00e1pice de cada rama, y son con una corola simple o doble, y comprendiendo varios colores. Suelen medir unos 7-12 cm de di\u00c3 metro y tienen 5 s\u00e9palos y 5 p\u00e9talos. Estambres numerosos unidos en la mitad o en 2/3 de su longitud.",
-            "cantidad_en_stock": 50,
+            "cantidadEnStock": 50,
             "precio_venta": 98,
             "precio_proveedor": 78,
             "id": 152
@@ -1745,7 +1745,7 @@
             "dimensiones": "250-300",
             "proveedor": "Viveros EL OASIS",
             "descripcion": "Arbusto excepcional por su floraci\u00f3n oto\u00f1al, invernal o primaveral. Flores: Las flores son solitarias, aparecen en el \u00e1pice de cada rama, y son con una corola simple o doble, y comprendiendo varios colores. Suelen medir unos 7-12 cm de di\u00c3 metro y tienen 5 s\u00e9palos y 5 p\u00e9talos. Estambres numerosos unidos en la mitad o en 2/3 de su longitud.",
-            "cantidad_en_stock": 50,
+            "cantidadEnStock": 50,
             "precio_venta": 110,
             "precio_proveedor": 88,
             "id": 153
@@ -1757,7 +1757,7 @@
             "dimensiones": "110/120",
             "proveedor": "Viveros EL OASIS",
             "descripcion": "Limpitatubos. arbolito de 6-7 m de altura. Ramas flexibles y colgantes (de ah\u00ed lo de \"llor\u00f3n\")..",
-            "cantidad_en_stock": 50,
+            "cantidadEnStock": 50,
             "precio_venta": 18,
             "precio_proveedor": 14,
             "id": 154
@@ -1768,7 +1768,7 @@
             "gama": "Ornamentales",
             "dimensiones": "80-100",
             "proveedor": "Viveros EL OASIS",
-            "cantidad_en_stock": 50,
+            "cantidadEnStock": 50,
             "precio_venta": 18,
             "precio_proveedor": 14,
             "id": 155
@@ -1779,7 +1779,7 @@
             "gama": "Ornamentales",
             "dimensiones": "110/120",
             "proveedor": "Viveros EL OASIS",
-            "cantidad_en_stock": 50,
+            "cantidadEnStock": 50,
             "precio_venta": 18,
             "precio_proveedor": 14,
             "id": 156
@@ -1790,7 +1790,7 @@
             "gama": "Ornamentales",
             "dimensiones": "40-45",
             "proveedor": "Viveros EL OASIS",
-            "cantidad_en_stock": 50,
+            "cantidadEnStock": 50,
             "precio_venta": 2,
             "precio_proveedor": 1,
             "id": 157
@@ -1801,7 +1801,7 @@
             "gama": "Ornamentales",
             "dimensiones": "160-200",
             "proveedor": "Viveros EL OASIS",
-            "cantidad_en_stock": 100,
+            "cantidadEnStock": 100,
             "precio_venta": 38,
             "precio_proveedor": 30,
             "id": 158
@@ -1812,7 +1812,7 @@
             "gama": "Ornamentales",
             "dimensiones": "50-60",
             "proveedor": "Viveros EL OASIS",
-            "cantidad_en_stock": 100,
+            "cantidadEnStock": 100,
             "precio_venta": 5,
             "precio_proveedor": 4,
             "id": 159
@@ -1823,7 +1823,7 @@
             "gama": "Ornamentales",
             "dimensiones": "225-250",
             "proveedor": "Viveros EL OASIS",
-            "cantidad_en_stock": 100,
+            "cantidadEnStock": 100,
             "precio_venta": 18,
             "precio_proveedor": 14,
             "id": 160
@@ -1833,7 +1833,7 @@
             "nombre": "ROSAL TREPADOR",
             "gama": "Ornamentales",
             "proveedor": "Viveros EL OASIS",
-            "cantidad_en_stock": 100,
+            "cantidadEnStock": 100,
             "precio_venta": 4,
             "precio_proveedor": 3,
             "id": 161
@@ -1843,7 +1843,7 @@
             "nombre": "Camelia Blanco, Chrysler Rojo, Soraya Naranja, ",
             "gama": "Ornamentales",
             "proveedor": "Viveros EL OASIS",
-            "cantidad_en_stock": 100,
+            "cantidadEnStock": 100,
             "precio_venta": 4,
             "precio_proveedor": 3,
             "id": 162
@@ -1853,7 +1853,7 @@
             "nombre": "Landora Amarillo, Rose Gaujard bicolor blanco-rojo",
             "gama": "Ornamentales",
             "proveedor": "Viveros EL OASIS",
-            "cantidad_en_stock": 100,
+            "cantidadEnStock": 100,
             "precio_venta": 4,
             "precio_proveedor": 3,
             "id": 163
@@ -1863,7 +1863,7 @@
             "nombre": "Kordes Perfect bicolor rojo-amarillo, Roundelay rojo fuerte",
             "gama": "Ornamentales",
             "proveedor": "Viveros EL OASIS",
-            "cantidad_en_stock": 100,
+            "cantidadEnStock": 100,
             "precio_venta": 4,
             "precio_proveedor": 3,
             "id": 164
@@ -1873,7 +1873,7 @@
             "nombre": "Pitimini rojo",
             "gama": "Ornamentales",
             "proveedor": "Viveros EL OASIS",
-            "cantidad_en_stock": 100,
+            "cantidadEnStock": 100,
             "precio_venta": 4,
             "precio_proveedor": 3,
             "id": 165
@@ -1884,7 +1884,7 @@
             "gama": "Ornamentales",
             "dimensiones": "150-160",
             "proveedor": "Viveros EL OASIS",
-            "cantidad_en_stock": 100,
+            "cantidadEnStock": 100,
             "precio_venta": 2,
             "precio_proveedor": 1,
             "id": 166
@@ -1894,7 +1894,7 @@
             "nombre": "Wisteria Sinensis  azul, rosa, blanca",
             "gama": "Ornamentales",
             "proveedor": "Viveros EL OASIS",
-            "cantidad_en_stock": 100,
+            "cantidadEnStock": 100,
             "precio_venta": 9,
             "precio_proveedor": 7,
             "id": 167
@@ -1905,7 +1905,7 @@
             "gama": "Ornamentales",
             "dimensiones": "140-150",
             "proveedor": "Viveros EL OASIS",
-            "cantidad_en_stock": 100,
+            "cantidadEnStock": 100,
             "precio_venta": 12,
             "precio_proveedor": 9,
             "id": 168
@@ -1916,7 +1916,7 @@
             "gama": "Ornamentales",
             "dimensiones": "80-100",
             "proveedor": "Viveros EL OASIS",
-            "cantidad_en_stock": 100,
+            "cantidadEnStock": 100,
             "precio_venta": 2,
             "precio_proveedor": 1,
             "id": 169
@@ -1927,7 +1927,7 @@
             "gama": "Ornamentales",
             "dimensiones": "125-150",
             "proveedor": "Viveros EL OASIS",
-            "cantidad_en_stock": 100,
+            "cantidadEnStock": 100,
             "precio_venta": 4,
             "precio_proveedor": 3,
             "id": 170
@@ -1938,7 +1938,7 @@
             "gama": "Ornamentales",
             "dimensiones": "180-200",
             "proveedor": "Viveros EL OASIS",
-            "cantidad_en_stock": 100,
+            "cantidadEnStock": 100,
             "precio_venta": 7,
             "precio_proveedor": 5,
             "id": 171
@@ -1949,7 +1949,7 @@
             "gama": "Ornamentales",
             "dimensiones": "45-50",
             "proveedor": "Viveros EL OASIS",
-            "cantidad_en_stock": 100,
+            "cantidadEnStock": 100,
             "precio_venta": 7,
             "precio_proveedor": 5,
             "id": 172
@@ -1960,7 +1960,7 @@
             "gama": "Ornamentales",
             "dimensiones": "140-150",
             "proveedor": "Viveros EL OASIS",
-            "cantidad_en_stock": 100,
+            "cantidadEnStock": 100,
             "precio_venta": 17,
             "precio_proveedor": 13,
             "id": 173
@@ -1971,7 +1971,7 @@
             "gama": "Ornamentales",
             "dimensiones": "110-130",
             "proveedor": "Viveros EL OASIS",
-            "cantidad_en_stock": 100,
+            "cantidadEnStock": 100,
             "precio_venta": 2,
             "precio_proveedor": 1,
             "id": 174
@@ -1981,7 +1981,7 @@
             "nombre": "Bougamvillea Sanderiana, 3 tut. piramide",
             "gama": "Ornamentales",
             "proveedor": "Viveros EL OASIS",
-            "cantidad_en_stock": 100,
+            "cantidadEnStock": 100,
             "precio_venta": 6,
             "precio_proveedor": 4,
             "id": 175
@@ -1992,7 +1992,7 @@
             "gama": "Ornamentales",
             "dimensiones": "170-200",
             "proveedor": "Viveros EL OASIS",
-            "cantidad_en_stock": 100,
+            "cantidadEnStock": 100,
             "precio_venta": 6,
             "precio_proveedor": 4,
             "id": 176
@@ -2003,7 +2003,7 @@
             "gama": "Ornamentales",
             "dimensiones": "170-200",
             "proveedor": "Viveros EL OASIS",
-            "cantidad_en_stock": 100,
+            "cantidadEnStock": 100,
             "precio_venta": 6,
             "precio_proveedor": 4,
             "id": 177
@@ -2014,7 +2014,7 @@
             "gama": "Ornamentales",
             "dimensiones": "170-200",
             "proveedor": "Viveros EL OASIS",
-            "cantidad_en_stock": 100,
+            "cantidadEnStock": 100,
             "precio_venta": 6,
             "precio_proveedor": 4,
             "id": 178
@@ -2025,7 +2025,7 @@
             "gama": "Ornamentales",
             "dimensiones": "200-225",
             "proveedor": "Viveros EL OASIS",
-            "cantidad_en_stock": 100,
+            "cantidadEnStock": 100,
             "precio_venta": 6,
             "precio_proveedor": 4,
             "id": 179
@@ -2036,7 +2036,7 @@
             "gama": "Ornamentales",
             "dimensiones": "200-225",
             "proveedor": "Viveros EL OASIS",
-            "cantidad_en_stock": 100,
+            "cantidadEnStock": 100,
             "precio_venta": 10,
             "precio_proveedor": 8,
             "id": 180
@@ -2047,7 +2047,7 @@
             "gama": "Ornamentales",
             "dimensiones": "200-225",
             "proveedor": "Viveros EL OASIS",
-            "cantidad_en_stock": 100,
+            "cantidadEnStock": 100,
             "precio_venta": 10,
             "precio_proveedor": 8,
             "id": 181
@@ -2058,7 +2058,7 @@
             "gama": "Ornamentales",
             "dimensiones": "200-225",
             "proveedor": "Viveros EL OASIS",
-            "cantidad_en_stock": 100,
+            "cantidadEnStock": 100,
             "precio_venta": 6,
             "precio_proveedor": 4,
             "id": 182
@@ -2069,7 +2069,7 @@
             "gama": "Ornamentales",
             "dimensiones": "200-225",
             "proveedor": "Viveros EL OASIS",
-            "cantidad_en_stock": 100,
+            "cantidadEnStock": 100,
             "precio_venta": 6,
             "precio_proveedor": 4,
             "id": 183
@@ -2080,7 +2080,7 @@
             "gama": "Ornamentales",
             "dimensiones": "170-200",
             "proveedor": "Viveros EL OASIS",
-            "cantidad_en_stock": 100,
+            "cantidadEnStock": 100,
             "precio_venta": 10,
             "precio_proveedor": 8,
             "id": 184
@@ -2091,7 +2091,7 @@
             "gama": "Ornamentales",
             "dimensiones": "200-225",
             "proveedor": "Viveros EL OASIS",
-            "cantidad_en_stock": 100,
+            "cantidadEnStock": 100,
             "precio_venta": 6,
             "precio_proveedor": 4,
             "id": 185
@@ -2102,7 +2102,7 @@
             "gama": "Ornamentales",
             "dimensiones": "200-225",
             "proveedor": "Viveros EL OASIS",
-            "cantidad_en_stock": 100,
+            "cantidadEnStock": 100,
             "precio_venta": 10,
             "precio_proveedor": 8,
             "id": 186
@@ -2113,7 +2113,7 @@
             "gama": "Ornamentales",
             "dimensiones": "200-225",
             "proveedor": "Viveros EL OASIS",
-            "cantidad_en_stock": 80,
+            "cantidadEnStock": 80,
             "precio_venta": 10,
             "precio_proveedor": 8,
             "id": 187
@@ -2124,7 +2124,7 @@
             "gama": "Ornamentales",
             "dimensiones": "170-180",
             "proveedor": "Viveros EL OASIS",
-            "cantidad_en_stock": 80,
+            "cantidadEnStock": 80,
             "precio_venta": 6,
             "precio_proveedor": 4,
             "id": 188
@@ -2135,7 +2135,7 @@
             "gama": "Ornamentales",
             "dimensiones": "200-225",
             "proveedor": "Viveros EL OASIS",
-            "cantidad_en_stock": 80,
+            "cantidadEnStock": 80,
             "precio_venta": 10,
             "precio_proveedor": 8,
             "id": 189
@@ -2146,7 +2146,7 @@
             "gama": "Ornamentales",
             "dimensiones": "170-200",
             "proveedor": "Viveros EL OASIS",
-            "cantidad_en_stock": 80,
+            "cantidadEnStock": 80,
             "precio_venta": 6,
             "precio_proveedor": 4,
             "id": 190
@@ -2157,7 +2157,7 @@
             "gama": "Ornamentales",
             "dimensiones": "170-200",
             "proveedor": "Viveros EL OASIS",
-            "cantidad_en_stock": 80,
+            "cantidadEnStock": 80,
             "precio_venta": 6,
             "precio_proveedor": 4,
             "id": 191
@@ -2168,7 +2168,7 @@
             "gama": "Ornamentales",
             "dimensiones": "200-225",
             "proveedor": "Viveros EL OASIS",
-            "cantidad_en_stock": 80,
+            "cantidadEnStock": 80,
             "precio_venta": 10,
             "precio_proveedor": 8,
             "id": 192
@@ -2179,7 +2179,7 @@
             "gama": "Ornamentales",
             "dimensiones": "170-200",
             "proveedor": "Viveros EL OASIS",
-            "cantidad_en_stock": 80,
+            "cantidadEnStock": 80,
             "precio_venta": 12,
             "precio_proveedor": 9,
             "id": 193
@@ -2190,7 +2190,7 @@
             "gama": "Ornamentales",
             "dimensiones": "140-150",
             "proveedor": "Viveros EL OASIS",
-            "cantidad_en_stock": 80,
+            "cantidadEnStock": 80,
             "precio_venta": 6,
             "precio_proveedor": 4,
             "id": 194
@@ -2201,7 +2201,7 @@
             "gama": "Ornamentales",
             "dimensiones": "200-225",
             "proveedor": "Viveros EL OASIS",
-            "cantidad_en_stock": 80,
+            "cantidadEnStock": 80,
             "precio_venta": 10,
             "precio_proveedor": 8,
             "id": 195
@@ -2212,7 +2212,7 @@
             "gama": "Ornamentales",
             "dimensiones": "200-225",
             "proveedor": "Viveros EL OASIS",
-            "cantidad_en_stock": 80,
+            "cantidadEnStock": 80,
             "precio_venta": 18,
             "precio_proveedor": 14,
             "id": 196
@@ -2223,7 +2223,7 @@
             "gama": "Ornamentales",
             "dimensiones": "200-225",
             "proveedor": "Viveros EL OASIS",
-            "cantidad_en_stock": 80,
+            "cantidadEnStock": 80,
             "precio_venta": 6,
             "precio_proveedor": 4,
             "id": 197
@@ -2234,7 +2234,7 @@
             "gama": "Ornamentales",
             "dimensiones": "200-225",
             "proveedor": "Viveros EL OASIS",
-            "cantidad_en_stock": 80,
+            "cantidadEnStock": 80,
             "precio_venta": 18,
             "precio_proveedor": 14,
             "id": 198
@@ -2245,7 +2245,7 @@
             "gama": "Ornamentales",
             "dimensiones": "200-225",
             "proveedor": "Viveros EL OASIS",
-            "cantidad_en_stock": 80,
+            "cantidadEnStock": 80,
             "precio_venta": 10,
             "precio_proveedor": 8,
             "id": 199
@@ -2256,7 +2256,7 @@
             "gama": "Ornamentales",
             "dimensiones": "200-225",
             "proveedor": "Viveros EL OASIS",
-            "cantidad_en_stock": 80,
+            "cantidadEnStock": 80,
             "precio_venta": 10,
             "precio_proveedor": 8,
             "id": 200
@@ -2267,7 +2267,7 @@
             "gama": "Ornamentales",
             "dimensiones": "200-225",
             "proveedor": "Viveros EL OASIS",
-            "cantidad_en_stock": 80,
+            "cantidadEnStock": 80,
             "precio_venta": 15,
             "precio_proveedor": 12,
             "id": 201
@@ -2278,7 +2278,7 @@
             "gama": "Ornamentales",
             "dimensiones": "170-200",
             "proveedor": "Viveros EL OASIS",
-            "cantidad_en_stock": 80,
+            "cantidadEnStock": 80,
             "precio_venta": 6,
             "precio_proveedor": 4,
             "id": 202
@@ -2289,7 +2289,7 @@
             "gama": "Ornamentales",
             "dimensiones": "170-200",
             "proveedor": "Viveros EL OASIS",
-            "cantidad_en_stock": 80,
+            "cantidadEnStock": 80,
             "precio_venta": 6,
             "precio_proveedor": 4,
             "id": 203
@@ -2300,7 +2300,7 @@
             "gama": "Ornamentales",
             "dimensiones": "170-200",
             "proveedor": "Viveros EL OASIS",
-            "cantidad_en_stock": 80,
+            "cantidadEnStock": 80,
             "precio_venta": 6,
             "precio_proveedor": 4,
             "id": 204
@@ -2311,7 +2311,7 @@
             "gama": "Ornamentales",
             "dimensiones": "200-225",
             "proveedor": "Viveros EL OASIS",
-            "cantidad_en_stock": 80,
+            "cantidadEnStock": 80,
             "precio_venta": 10,
             "precio_proveedor": 8,
             "id": 205
@@ -2322,7 +2322,7 @@
             "gama": "Ornamentales",
             "dimensiones": "200-225",
             "proveedor": "Viveros EL OASIS",
-            "cantidad_en_stock": 80,
+            "cantidadEnStock": 80,
             "precio_venta": 6,
             "precio_proveedor": 4,
             "id": 206
@@ -2333,7 +2333,7 @@
             "gama": "Ornamentales",
             "dimensiones": "200-225",
             "proveedor": "Viveros EL OASIS",
-            "cantidad_en_stock": 80,
+            "cantidadEnStock": 80,
             "precio_venta": 10,
             "precio_proveedor": 8,
             "id": 207
@@ -2344,7 +2344,7 @@
             "gama": "Ornamentales",
             "dimensiones": "170-200",
             "proveedor": "Viveros EL OASIS",
-            "cantidad_en_stock": 80,
+            "cantidadEnStock": 80,
             "precio_venta": 6,
             "precio_proveedor": 4,
             "id": 208
@@ -2355,7 +2355,7 @@
             "gama": "Ornamentales",
             "dimensiones": "15-20",
             "proveedor": "Viveros EL OASIS",
-            "cantidad_en_stock": 80,
+            "cantidadEnStock": 80,
             "precio_venta": 6,
             "precio_proveedor": 4,
             "id": 209
@@ -2366,7 +2366,7 @@
             "gama": "Ornamentales",
             "dimensiones": "20-30",
             "proveedor": "Viveros EL OASIS",
-            "cantidad_en_stock": 80,
+            "cantidadEnStock": 80,
             "precio_venta": 6,
             "precio_proveedor": 4,
             "id": 210
@@ -2377,7 +2377,7 @@
             "gama": "Ornamentales",
             "dimensiones": "40-45",
             "proveedor": "Viveros EL OASIS",
-            "cantidad_en_stock": 80,
+            "cantidadEnStock": 80,
             "precio_venta": 10,
             "precio_proveedor": 8,
             "id": 211
@@ -2388,7 +2388,7 @@
             "gama": "Ornamentales",
             "dimensiones": "50-60",
             "proveedor": "Viveros EL OASIS",
-            "cantidad_en_stock": 80,
+            "cantidadEnStock": 80,
             "precio_venta": 25,
             "precio_proveedor": 20,
             "id": 212
@@ -2399,7 +2399,7 @@
             "gama": "Ornamentales",
             "dimensiones": "180-200",
             "proveedor": "Viveros EL OASIS",
-            "cantidad_en_stock": 80,
+            "cantidadEnStock": 80,
             "precio_venta": 22,
             "precio_proveedor": 17,
             "id": 213
@@ -2410,7 +2410,7 @@
             "gama": "Ornamentales",
             "dimensiones": "250-300",
             "proveedor": "Viveros EL OASIS",
-            "cantidad_en_stock": 80,
+            "cantidadEnStock": 80,
             "precio_venta": 32,
             "precio_proveedor": 25,
             "id": 214
@@ -2421,7 +2421,7 @@
             "gama": "Ornamentales",
             "dimensiones": "180-200",
             "proveedor": "Viveros EL OASIS",
-            "cantidad_en_stock": 80,
+            "cantidadEnStock": 80,
             "precio_venta": 24,
             "precio_proveedor": 19,
             "id": 215
@@ -2432,7 +2432,7 @@
             "gama": "Ornamentales",
             "dimensiones": "160-170",
             "proveedor": "Viveros EL OASIS",
-            "cantidad_en_stock": 80,
+            "cantidadEnStock": 80,
             "precio_venta": 22,
             "precio_proveedor": 17,
             "id": 216
@@ -2443,7 +2443,7 @@
             "gama": "Ornamentales",
             "dimensiones": "160-180",
             "proveedor": "Viveros EL OASIS",
-            "cantidad_en_stock": 80,
+            "cantidadEnStock": 80,
             "precio_venta": 20,
             "precio_proveedor": 16,
             "id": 217
@@ -2454,7 +2454,7 @@
             "gama": "Ornamentales",
             "dimensiones": "225-250",
             "proveedor": "Viveros EL OASIS",
-            "cantidad_en_stock": 80,
+            "cantidadEnStock": 80,
             "precio_venta": 20,
             "precio_proveedor": 16,
             "id": 218
@@ -2465,7 +2465,7 @@
             "gama": "Ornamentales",
             "dimensiones": "30-40",
             "proveedor": "Viveros EL OASIS",
-            "cantidad_en_stock": 80,
+            "cantidadEnStock": 80,
             "precio_venta": 6,
             "precio_proveedor": 4,
             "id": 219
@@ -2476,7 +2476,7 @@
             "gama": "Ornamentales",
             "dimensiones": "80-100",
             "proveedor": "Viveros EL OASIS",
-            "cantidad_en_stock": 80,
+            "cantidadEnStock": 80,
             "precio_venta": 10,
             "precio_proveedor": 8,
             "id": 220
@@ -2487,7 +2487,7 @@
             "gama": "Ornamentales",
             "dimensiones": "rastrero",
             "proveedor": "Viveros EL OASIS",
-            "cantidad_en_stock": 80,
+            "cantidadEnStock": 80,
             "precio_venta": 12,
             "precio_proveedor": 9,
             "id": 221
@@ -2498,7 +2498,7 @@
             "gama": "Ornamentales",
             "dimensiones": "20-30",
             "proveedor": "Viveros EL OASIS",
-            "cantidad_en_stock": 80,
+            "cantidadEnStock": 80,
             "precio_venta": 4,
             "precio_proveedor": 3,
             "id": 222
@@ -2509,7 +2509,7 @@
             "gama": "Ornamentales",
             "dimensiones": "20-30",
             "proveedor": "Viveros EL OASIS",
-            "cantidad_en_stock": 80,
+            "cantidadEnStock": 80,
             "precio_venta": 4,
             "precio_proveedor": 3,
             "id": 223
@@ -2520,7 +2520,7 @@
             "gama": "Ornamentales",
             "dimensiones": "20-30",
             "proveedor": "Viveros EL OASIS",
-            "cantidad_en_stock": 80,
+            "cantidadEnStock": 80,
             "precio_venta": 4,
             "precio_proveedor": 3,
             "id": 224
@@ -2531,7 +2531,7 @@
             "gama": "Ornamentales",
             "dimensiones": "20-30",
             "proveedor": "Viveros EL OASIS",
-            "cantidad_en_stock": 80,
+            "cantidadEnStock": 80,
             "precio_venta": 4,
             "precio_proveedor": 3,
             "id": 225
@@ -2542,7 +2542,7 @@
             "gama": "Ornamentales",
             "dimensiones": "20-30",
             "proveedor": "Viveros EL OASIS",
-            "cantidad_en_stock": 80,
+            "cantidadEnStock": 80,
             "precio_venta": 4,
             "precio_proveedor": 3,
             "id": 226
@@ -2553,7 +2553,7 @@
             "gama": "Ornamentales",
             "dimensiones": "80-100",
             "proveedor": "Viveros EL OASIS",
-            "cantidad_en_stock": 80,
+            "cantidadEnStock": 80,
             "precio_venta": 10,
             "precio_proveedor": 8,
             "id": 227
@@ -2564,7 +2564,7 @@
             "gama": "Ornamentales",
             "dimensiones": "160-180",
             "proveedor": "Viveros EL OASIS",
-            "cantidad_en_stock": 80,
+            "cantidadEnStock": 80,
             "precio_venta": 10,
             "precio_proveedor": 8,
             "id": 228
@@ -2575,7 +2575,7 @@
             "gama": "Ornamentales",
             "dimensiones": "70-80",
             "proveedor": "Viveros EL OASIS",
-            "cantidad_en_stock": 80,
+            "cantidadEnStock": 80,
             "precio_venta": 10,
             "precio_proveedor": 8,
             "id": 229
@@ -2586,7 +2586,7 @@
             "gama": "Ornamentales",
             "dimensiones": "80-100",
             "proveedor": "Viveros EL OASIS",
-            "cantidad_en_stock": 80,
+            "cantidadEnStock": 80,
             "precio_venta": 5,
             "precio_proveedor": 4,
             "id": 230
@@ -2597,7 +2597,7 @@
             "gama": "Ornamentales",
             "dimensiones": "20-30",
             "proveedor": "Viveros EL OASIS",
-            "cantidad_en_stock": 80,
+            "cantidadEnStock": 80,
             "precio_venta": 4,
             "precio_proveedor": 3,
             "id": 231
@@ -2608,7 +2608,7 @@
             "gama": "Ornamentales",
             "dimensiones": "20-30",
             "proveedor": "Viveros EL OASIS",
-            "cantidad_en_stock": 80,
+            "cantidadEnStock": 80,
             "precio_venta": 4,
             "precio_proveedor": 3,
             "id": 232
@@ -2619,7 +2619,7 @@
             "gama": "Ornamentales",
             "dimensiones": "80 - 100",
             "proveedor": "Viveros EL OASIS",
-            "cantidad_en_stock": 80,
+            "cantidadEnStock": 80,
             "precio_venta": 10,
             "precio_proveedor": 8,
             "id": 233
@@ -2630,7 +2630,7 @@
             "gama": "Ornamentales",
             "dimensiones": "130  - 150",
             "proveedor": "Viveros EL OASIS",
-            "cantidad_en_stock": 2,
+            "cantidadEnStock": 2,
             "precio_venta": 39,
             "precio_proveedor": 31,
             "id": 234
@@ -2641,7 +2641,7 @@
             "gama": "Ornamentales",
             "dimensiones": "180 - 200",
             "proveedor": "Viveros EL OASIS",
-            "cantidad_en_stock": 5,
+            "cantidadEnStock": 5,
             "precio_venta": 59,
             "precio_proveedor": 47,
             "id": 235
@@ -2652,7 +2652,7 @@
             "gama": "Ornamentales",
             "dimensiones": "200 - 220",
             "proveedor": "Viveros EL OASIS",
-            "cantidad_en_stock": 4,
+            "cantidadEnStock": 4,
             "precio_venta": 217,
             "precio_proveedor": 173,
             "id": 236
@@ -2663,7 +2663,7 @@
             "gama": "Ornamentales",
             "dimensiones": "240 - 260",
             "proveedor": "Viveros EL OASIS",
-            "cantidad_en_stock": 4,
+            "cantidadEnStock": 4,
             "precio_venta": 266,
             "precio_proveedor": 212,
             "id": 237
@@ -2674,7 +2674,7 @@
             "gama": "Ornamentales",
             "dimensiones": "45 - 60",
             "proveedor": "Viveros EL OASIS",
-            "cantidad_en_stock": 0,
+            "cantidadEnStock": 0,
             "precio_venta": 10,
             "precio_proveedor": 8,
             "id": 238
@@ -2685,7 +2685,7 @@
             "gama": "Ornamentales",
             "dimensiones": "120 - 140",
             "proveedor": "Viveros EL OASIS",
-            "cantidad_en_stock": 100,
+            "cantidadEnStock": 100,
             "precio_venta": 112,
             "precio_proveedor": 89,
             "id": 239
@@ -2696,7 +2696,7 @@
             "gama": "Ornamentales",
             "dimensiones": "80 - 100",
             "proveedor": "Viveros EL OASIS",
-            "cantidad_en_stock": 100,
+            "cantidadEnStock": 100,
             "precio_venta": 19,
             "precio_proveedor": 15,
             "id": 240
@@ -2707,7 +2707,7 @@
             "gama": "Ornamentales",
             "dimensiones": "140 - 160",
             "proveedor": "Viveros EL OASIS",
-            "cantidad_en_stock": 100,
+            "cantidadEnStock": 100,
             "precio_venta": 64,
             "precio_proveedor": 51,
             "id": 241
@@ -2718,7 +2718,7 @@
             "gama": "Ornamentales",
             "dimensiones": "70 - 90",
             "proveedor": "Viveros EL OASIS",
-            "cantidad_en_stock": 100,
+            "cantidadEnStock": 100,
             "precio_venta": 25,
             "precio_proveedor": 20,
             "id": 242
@@ -2729,7 +2729,7 @@
             "gama": "Ornamentales",
             "dimensiones": "90 - 110",
             "proveedor": "Viveros EL OASIS",
-            "cantidad_en_stock": 100,
+            "cantidadEnStock": 100,
             "precio_venta": 29,
             "precio_proveedor": 23,
             "id": 243
@@ -2740,7 +2740,7 @@
             "gama": "Ornamentales",
             "dimensiones": "90 - 120",
             "proveedor": "Viveros EL OASIS",
-            "cantidad_en_stock": 100,
+            "cantidadEnStock": 100,
             "precio_venta": 36,
             "precio_proveedor": 28,
             "id": 244
@@ -2751,7 +2751,7 @@
             "gama": "Ornamentales",
             "dimensiones": "85 - 105",
             "proveedor": "Viveros EL OASIS",
-            "cantidad_en_stock": 100,
+            "cantidadEnStock": 100,
             "precio_venta": 59,
             "precio_proveedor": 47,
             "id": 245
@@ -2762,7 +2762,7 @@
             "gama": "Ornamentales",
             "dimensiones": "130 - 150",
             "proveedor": "Viveros EL OASIS",
-            "cantidad_en_stock": 100,
+            "cantidadEnStock": 100,
             "precio_venta": 87,
             "precio_proveedor": 69,
             "id": 246
@@ -2773,7 +2773,7 @@
             "gama": "Ornamentales",
             "dimensiones": "40 - 45",
             "proveedor": "Viveros EL OASIS",
-            "cantidad_en_stock": 100,
+            "cantidadEnStock": 100,
             "precio_venta": 4,
             "precio_proveedor": 3,
             "id": 247
@@ -2784,7 +2784,7 @@
             "gama": "Ornamentales",
             "dimensiones": "50 - 60",
             "proveedor": "Viveros EL OASIS",
-            "cantidad_en_stock": 100,
+            "cantidadEnStock": 100,
             "precio_venta": 7,
             "precio_proveedor": 5,
             "id": 248
@@ -2795,7 +2795,7 @@
             "gama": "Ornamentales",
             "dimensiones": "70 - 90",
             "proveedor": "Viveros EL OASIS",
-            "cantidad_en_stock": 100,
+            "cantidadEnStock": 100,
             "precio_venta": 10,
             "precio_proveedor": 8,
             "id": 249
@@ -2806,7 +2806,7 @@
             "gama": "Ornamentales",
             "dimensiones": "115 - 130",
             "proveedor": "Viveros EL OASIS",
-            "cantidad_en_stock": 100,
+            "cantidadEnStock": 100,
             "precio_venta": 38,
             "precio_proveedor": 30,
             "id": 250
@@ -2817,7 +2817,7 @@
             "gama": "Ornamentales",
             "dimensiones": "130 - 150",
             "proveedor": "Viveros EL OASIS",
-            "cantidad_en_stock": 100,
+            "cantidadEnStock": 100,
             "precio_venta": 64,
             "precio_proveedor": 51,
             "id": 251
@@ -2828,7 +2828,7 @@
             "gama": "Ornamentales",
             "dimensiones": "70 - 80",
             "proveedor": "Viveros EL OASIS",
-            "cantidad_en_stock": 100,
+            "cantidadEnStock": 100,
             "precio_venta": 32,
             "precio_proveedor": 25,
             "id": 252
@@ -2839,7 +2839,7 @@
             "gama": "Ornamentales",
             "dimensiones": "130 - 150",
             "proveedor": "Viveros EL OASIS",
-            "cantidad_en_stock": 100,
+            "cantidadEnStock": 100,
             "precio_venta": 22,
             "precio_proveedor": 17,
             "id": 253
@@ -2850,7 +2850,7 @@
             "gama": "Ornamentales",
             "dimensiones": "190 - 210",
             "proveedor": "Viveros EL OASIS",
-            "cantidad_en_stock": 100,
+            "cantidadEnStock": 100,
             "precio_venta": 38,
             "precio_proveedor": 30,
             "id": 254
@@ -2861,7 +2861,7 @@
             "gama": "Ornamentales",
             "dimensiones": "55 - 65",
             "proveedor": "Viveros EL OASIS",
-            "cantidad_en_stock": 100,
+            "cantidadEnStock": 100,
             "precio_venta": 15,
             "precio_proveedor": 12,
             "id": 255
@@ -2872,7 +2872,7 @@
             "gama": "Ornamentales",
             "dimensiones": "80 - 90",
             "proveedor": "Viveros EL OASIS",
-            "cantidad_en_stock": 100,
+            "cantidadEnStock": 100,
             "precio_venta": 34,
             "precio_proveedor": 27,
             "id": 256
@@ -2883,7 +2883,7 @@
             "gama": "Ornamentales",
             "dimensiones": "60 - 70",
             "proveedor": "Viveros EL OASIS",
-            "cantidad_en_stock": 1,
+            "cantidadEnStock": 1,
             "precio_venta": 13,
             "precio_proveedor": 10,
             "id": 257
@@ -2894,7 +2894,7 @@
             "gama": "Ornamentales",
             "dimensiones": "130 - 150",
             "proveedor": "Viveros EL OASIS",
-            "cantidad_en_stock": 2,
+            "cantidadEnStock": 2,
             "precio_venta": 64,
             "precio_proveedor": 51,
             "id": 258
@@ -2905,7 +2905,7 @@
             "gama": "Ornamentales",
             "dimensiones": "150 - 175",
             "proveedor": "Viveros EL OASIS",
-            "cantidad_en_stock": 2,
+            "cantidadEnStock": 2,
             "precio_venta": 92,
             "precio_proveedor": 73,
             "id": 259
@@ -2915,7 +2915,7 @@
             "nombre": "Jubaea Chilensis",
             "gama": "Ornamentales",
             "proveedor": "Viveros EL OASIS",
-            "cantidad_en_stock": 100,
+            "cantidadEnStock": 100,
             "precio_venta": 49,
             "precio_proveedor": 39,
             "id": 260
@@ -2926,7 +2926,7 @@
             "gama": "Ornamentales",
             "dimensiones": "100 - 125",
             "proveedor": "Viveros EL OASIS",
-            "cantidad_en_stock": 50,
+            "cantidadEnStock": 50,
             "precio_venta": 19,
             "precio_proveedor": 15,
             "id": 261
@@ -2937,7 +2937,7 @@
             "gama": "Ornamentales",
             "dimensiones": "90 - 110",
             "proveedor": "Viveros EL OASIS",
-            "cantidad_en_stock": 50,
+            "cantidadEnStock": 50,
             "precio_venta": 19,
             "precio_proveedor": 15,
             "id": 262
@@ -2948,7 +2948,7 @@
             "gama": "Ornamentales",
             "dimensiones": "180 - 200",
             "proveedor": "Viveros EL OASIS",
-            "cantidad_en_stock": 50,
+            "cantidadEnStock": 50,
             "precio_venta": 49,
             "precio_proveedor": 39,
             "id": 263
@@ -2959,7 +2959,7 @@
             "gama": "Ornamentales",
             "dimensiones": "110 - 130",
             "proveedor": "Viveros EL OASIS",
-            "cantidad_en_stock": 50,
+            "cantidadEnStock": 50,
             "precio_venta": 6,
             "precio_proveedor": 4,
             "id": 264
@@ -2970,7 +2970,7 @@
             "gama": "Ornamentales",
             "dimensiones": "180 - 200",
             "proveedor": "Viveros EL OASIS",
-            "cantidad_en_stock": 50,
+            "cantidadEnStock": 50,
             "precio_venta": 19,
             "precio_proveedor": 15,
             "id": 265
@@ -2981,7 +2981,7 @@
             "gama": "Ornamentales",
             "dimensiones": "80 - 100",
             "proveedor": "Viveros EL OASIS",
-            "cantidad_en_stock": 50,
+            "cantidadEnStock": 50,
             "precio_venta": 21,
             "precio_proveedor": 16,
             "id": 266
@@ -2992,7 +2992,7 @@
             "gama": "Ornamentales",
             "dimensiones": "150- 170",
             "proveedor": "Viveros EL OASIS",
-            "cantidad_en_stock": 50,
+            "cantidadEnStock": 50,
             "precio_venta": 64,
             "precio_proveedor": 51,
             "id": 267
@@ -3003,7 +3003,7 @@
             "gama": "Ornamentales",
             "dimensiones": "60 - 75",
             "proveedor": "Viveros EL OASIS",
-            "cantidad_en_stock": 50,
+            "cantidadEnStock": 50,
             "precio_venta": 11,
             "precio_proveedor": 8,
             "id": 268
@@ -3014,7 +3014,7 @@
             "gama": "Ornamentales",
             "dimensiones": "120 - 140",
             "proveedor": "Viveros EL OASIS",
-            "cantidad_en_stock": 50,
+            "cantidadEnStock": 50,
             "precio_venta": 34,
             "precio_proveedor": 27,
             "id": 269
@@ -3025,7 +3025,7 @@
             "gama": "Ornamentales",
             "dimensiones": "90 - 105",
             "proveedor": "Viveros EL OASIS",
-            "cantidad_en_stock": 50,
+            "cantidadEnStock": 50,
             "precio_venta": 18,
             "precio_proveedor": 14,
             "id": 270
@@ -3036,7 +3036,7 @@
             "gama": "Ornamentales",
             "dimensiones": "250-300",
             "proveedor": "Viveros EL OASIS",
-            "cantidad_en_stock": 2,
+            "cantidadEnStock": 2,
             "precio_venta": 462,
             "precio_proveedor": 369,
             "id": 271
@@ -3047,7 +3047,7 @@
             "gama": "Ornamentales",
             "dimensiones": "60 - 70",
             "proveedor": "Viveros EL OASIS",
-            "cantidad_en_stock": 15,
+            "cantidadEnStock": 15,
             "precio_venta": 3,
             "precio_proveedor": 2,
             "id": 272
@@ -3058,7 +3058,7 @@
             "gama": "Ornamentales",
             "dimensiones": "130 - 150",
             "proveedor": "Viveros EL OASIS",
-            "cantidad_en_stock": 15,
+            "cantidadEnStock": 15,
             "precio_venta": 5,
             "precio_proveedor": 4,
             "id": 273
@@ -3069,7 +3069,7 @@
             "gama": "Ornamentales",
             "dimensiones": "80 - 105",
             "proveedor": "Viveros EL OASIS",
-            "cantidad_en_stock": 15,
+            "cantidadEnStock": 15,
             "precio_venta": 10,
             "precio_proveedor": 8,
             "id": 274
@@ -3080,7 +3080,7 @@
             "gama": "Ornamentales",
             "dimensiones": "90 - 110",
             "proveedor": "Viveros EL OASIS",
-            "cantidad_en_stock": 15,
+            "cantidadEnStock": 15,
             "precio_venta": 168,
             "precio_proveedor": 134,
             "id": 275
@@ -3092,7 +3092,7 @@
             "dimensiones": "200-225",
             "proveedor": "Viveros EL OASIS",
             "descripcion": "Acacia dealbata. Nombre com\u00fan o vulgar: Mimosa fina, Mimosa, Mimosa com\u00fan, Mimosa plateada, Aromo franc\u00e9s. Familia: Mimosaceae. Origen: Australia, Sureste, (N. G. del Sur y Victoria). Arbol de follaje persistente muy usado en parques por su atractiva floraci\u00f3n amarilla hacia fines del invierno. Altura: de 3 a 10 metros generalmente. Crecimiento r\u00e1pido. Follaje perenne de tonos plateados, muy ornamental. Sus hojas son de textura fina, de color verde y sus flores amarillas que aparecen en racimos grandes. Florece de Enero a Marzo (Hemisferio Norte). Legumbre de 5-9 cm de longitud, recta o ligeramente curvada, con los bordes algo constre\u00f1idos entre las semillas, que se disponen en el fruto longitudinalmente...",
-            "cantidad_en_stock": 100,
+            "cantidadEnStock": 100,
             "precio_venta": 14,
             "precio_proveedor": 11,
             "id": 276

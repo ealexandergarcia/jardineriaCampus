@@ -40,7 +40,7 @@ def getAllStocksPriceGama(gama, stock):
             "dimensiones": val.get("dimensiones"),
             "proveedor": val.get("proveedor"),
             "descripcion": f'{val.get("descripcion")[:5]}...' if condiciones[i].get("descripcion") else val.get("descripcion"),
-            "Stock": val.get("cantidad_en_stock"),
+            "Stock": val.get("cantidadEnStock"),
             "base": val.get("precio_proveedor"),
         }
     return condiciones

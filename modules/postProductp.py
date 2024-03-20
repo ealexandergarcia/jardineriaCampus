@@ -95,11 +95,11 @@ def postProducto():
                         "La descripcion no cumple con el estandar establecido")
 
             # Cantidad de stock
-            if not producto.get("cantidad_en_stock"):
+            if not producto.get("cantidadEnStock"):
                 cantidadStock = input("Ingrese la cantidad de stock: ")
                 if re.match(r'^[0-9]+$', cantidadStock) is not None:
                     cantidadStock = int(cantidadStock)
-                    producto["cantidad_en_stock"] = cantidadStock
+                    producto["cantidadEnStock"] = cantidadStock
                 else:
                     raise Exception(
                         "El Stock no cumple con el estandar establecido")
