@@ -12,12 +12,12 @@ def updateProductoNombre(codigo):
                 opc = int(input("""
                     Este es el producto que desea actualizar?
                     1. si
-                    2. no
+                    0. no
                 """))
                 if opc:
                     headers={'Content-type': 'application/json', 'charset':'UTF-8'}
                     producto[0]["nombre"] = input("Ingrese el nuevo nombre del producto")
-                    peticion = requests.put(f"http://154.38.171.54:5008/productos/{producto.get('id')}", headers= headers)
+                    peticion = requests.put(f"http://154.38.171.54:5008/productos/{producto[0].get('id')}", headers= headers, data=json.dumps(producto[0]))
                     data = peticion.json()
                     return data
                 else:
