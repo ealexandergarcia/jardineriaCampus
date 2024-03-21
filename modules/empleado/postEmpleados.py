@@ -5,6 +5,8 @@ import re
 import requests
 from tabulate import tabulate
 import modules.empleado.getEmpleados as gE
+import modules.empleado.deleteEmpleado as dE
+import modules.empleado.updateEmpleado as uE
 import modules.validaciones as vali
 
 def postEmpleado():
@@ -18,9 +20,9 @@ def postEmpleado():
         try:
             #Codigo de empleado
             if not empleado.get("codigo_empleado"):
-                empleado["codigo_cliente"] = ultimo_elemento + 1
+                empleado["codigo_empleado"] = ultimo_elemento + 1
 
-            # # Nombre del cliente
+            # # Nombre del Empleado
             if not empleado.get("nombre"):
                 print("Nombre del Empleado")
                 nombre = input("Ingrese el nombre del Empleado (Marcos): ")
@@ -115,15 +117,6 @@ def postEmpleado():
     res = peticion.json()
     return [res]
 
-def deleteEmpleado(id):
-    data =  gE.getEmpleadoCodigo(id)
-
-    if (len(data)):
-        peticion = requests.delete(f"http://154.38.171.54:5003/empleados/{id}")
-        if peticion.ok:
-            print("Eliminado con éxito")
-        else:
-            print(f"Error al guardar: {peticion.status_code}")
 
 def menu():
     while True:
@@ -142,9 +135,10 @@ def menu():
                            /_/                                                                                                                                                                                                
     """)
         print("""
-    01. Guardar un empleado nuevo
+    01. Guardar un Empleado nuevo
     02. Eliminar un Empleado
-    03. Atras
+    03. Actualizar un Empleado 
+    04. Atras
     """)
         opcion = int(input("\n Ingrese su opcion: "))
 
@@ -153,11 +147,15 @@ def menu():
                 print(tabulate(postEmpleado(), headers="keys", tablefmt="grid"))
                 input("\nPresiona Enter para volver al menú...")
             case 2:
-                idEmpleado = input(
+                idCliente = input(
                     "Ingrese el id del empleado que desea eliminar: ")
-                print(tabulate(deleteEmpleado(idEmpleado), headers="keys", tablefmt="grid"))
+                dE.deleteEmpleado(idCliente)
+                print("Se elimino correctamente")
                 input("\nPresiona Enter para volver al menú...")
             case 3:
+                uE.menuUpdateEmpleados()
+                input("\nPresiona Enter para volver al menú...")
+            case 4:
                 break
             case _:
                 print("Opcion invalida")
