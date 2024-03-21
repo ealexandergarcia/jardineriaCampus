@@ -160,8 +160,6 @@ def postCliente():
         except Exception as error:
             print(error)
 
-    print(cliente)
-    
     # peticion = requests.post("http://localhost:5501",
     #                          timeout=10, data=json.dumps(cliente).encode("UTF-8"))
     peticion = requests.post("http://154.38.171.54:5001/cliente",
@@ -204,9 +202,9 @@ def menu():
                 print("Se elimino correctamente")
                 input("\nPresiona Enter para volver al menú...")
             case 3:
-                idCliente = input(
-                    "Ingrese el id del cliente que desea actualizar: ")
-                uC.updateMenuCliente(idCliente)
+                # idCliente = input(
+                #     "Ingrese el id del cliente que desea actualizar: ")
+                uC.menuUpdateCliente()
                 input("\nPresiona Enter para volver al menú...")
             case 4:
                 break

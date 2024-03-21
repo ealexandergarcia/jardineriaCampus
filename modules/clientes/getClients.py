@@ -5,7 +5,6 @@ import requests
 import modules.empleado.getEmpleados as gE
 import modules.pago.getPago as gP
 
-
 # Data
 def getAllData():
     # json-server producto.json -b 5501
@@ -15,11 +14,21 @@ def getAllData():
     return data
 
 
-def getClienteCodigo(codigo):
-    # peticion = requests.get(f"http://localhost:5501/cliente/{codigo}", timeout=10)
-    peticion = requests.get(f"http://154.38.171.54:5001/cliente/{codigo}", timeout=30)
-
-    return [peticion.json()] if peticion.ok else []
+# Método para obtener un cliente por su ID
+def getClienteCodigo(id_cliente):
+    url = f"http://154.38.171.54:5001/cliente/{id_cliente}"
+    
+    try:
+        response = requests.get(url)
+        # si la solicitud no fue exitosa (por ejemplo, 404 o 500), raise_for_status() genera una excepción HTTPError. 
+        # Esto detendra la ejecucion del programa y mostrara un mensaje de error que indica la causa del fallo.
+        response.raise_for_status()  # Verifica si la solicitud fue exitosa
+        
+        cliente = response.json()
+        return cliente
+    except requests.exceptions.RequestException as e:
+        print(f"Error al obtener el cliente: {e}")
+        return None
 
 
 def getAllClientName():

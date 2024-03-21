@@ -1,100 +1,102 @@
-from os import system
-import json
-import time
-import requests
+from os import system # Importa la función 'system' del módulo 'os' para realizar limpieza de pantalla
+import requests  # Importa el módulo 'requests' para realizar solicitudes HTTP
+import re  # Importa el módulo 're' para utilizar expresiones regulares
+# Importa una función para obtener clientes desde un módulo
 import modules.clientes.getClients as gC
-import modules.validaciones as vali
 
-def updateCliente(key, id):
-    data = gC.getClienteCodigo(id)
-    
-    for i in data:
-        print(i.keys())
-        nuevoDato = input("Ingrese el nuevo dato: ")
-        if (key == "limite_credito") in  i.keys():
-            nuevoDato = int(nuevoDato)
-            print(type(nuevoDato))
-            # i[key] = nuevoDato
-            # respuesta = requests.put(f"http://154.38.171.54:5001/cliente/{id}", timeout=10, data=json.dumps(i).encode("UTF-8"))
-            # if respuesta.ok:
-            #     print("Guardado con éxito")
-            # else:
-            #     print(f"Error al guardar: {respuesta.status_code}")
+
+# Función que muestra un menú para actualizar clientes
+def menuUpdateCliente():
+    # Expresión regular para verificar si la cadena es "si"
+    regexSi = re.compile(r'^si$', re.IGNORECASE)
+    system("clear")
+    while True:
+        idCliente = input("Ingrese el ID del cliente que desea actualizar: ")
+        cliente = gC.getClienteCodigo(idCliente)
+
+        if cliente:
+            print("Cliente encontrado:")
+            actualizarCliente(cliente)
         else:
-            print(type(nuevoDato))
-            # i[key] = nuevoDato
-            # respuesta = requests.put(f"http://154.38.171.54:5001/cliente/{id}", timeout=10, data=json.dumps(i).encode("UTF-8"))
-            # if respuesta.ok:
-            #     print("Guardado con éxito")
-            # else:
-            #     print(f"Error al guardar: {respuesta.status_code}")
+            print("Cliente no encontrado.")
 
-def updateMenuCliente(id):
-    # system("clear")
-    data = gC.getClienteCodigo(id)
-    if(len(data)):
-        nombre= data[0].get("nombre_cliente")
-        print(f"Datos del cliente: {nombre}")
-        while True:
-            system("clear")
-            if vali.solicitar_confirmacion(nombre):
-                print("""
-            01. Modificar Nombre del cliente
-            02. Modificar Nombre del contacto del cliente
-            03. Modificar Apellido del contacto del cliente
-            04. Modificar telefono del cliente
-            05. Modificar fax del cliente
-            06. Modificar la direccion principal del cliente
-            07. Modificar la direccion secundaria del cliente
-            08. Modificar la ciudad del cliente
-            09. Modificar la region del cliente
-            10. Modificar el pais del cliente
-            11. Modificar el codigo postal del cliente
-            12. Modificar el limite de credito del empleado
-            13. Volver
-            """)
-                opcion = int(input("\n Ingrese su opcion: "))
-                match opcion:
-                    case 1:
-                        updateCliente("nombre_cliente", id)
-                        time.sleep(2)  # espera en segundos
-                    case 2:
-                        updateCliente("nombre_contacto",id)
-                        time.sleep(2)  # espera en segundos
-                    case 3:
-                        updateCliente("apellido_contacto",id)
-                        time.sleep(2)  # espera en segundos
-                    case 4:
-                        updateCliente("telefono",id)
-                        time.sleep(2)  # espera en segundos
-                    case 5:
-                        updateCliente("fax",id)
-                        time.sleep(2)  # espera en segundos
-                    case 6:
-                        updateCliente("linea_direccion1",id)
-                        time.sleep(2)  # espera en segundos
-                    case 7:
-                        updateCliente("linea_direccion2",id)
-                        time.sleep(2)  # espera en segundos
-                    case 8:
-                        updateCliente("ciudad",id)
-                        time.sleep(2)  # espera en segundos
-                    case 9:
-                        updateCliente("region",id)
-                        time.sleep(2)  # espera en segundos
-                    case 10:
-                        updateCliente("pais",id)
-                        time.sleep(2)  # espera en segundos
-                    case 11:
-                        updateCliente("codigo_postal",id)
-                        time.sleep(2)  # espera en segundos
-                    case 12:
-                        updateCliente("limite_credito",id)
-                        time.sleep(2)  # espera en segundos
-                    case _:
-                        print("Opcion invalida")
-                        time.sleep(2)  # espera en segundos
-            else:
-                print("La validacion no es corrcta")
-                time.sleep(2)  # espera en segundos
-                break
+        continuar = input("¿Desea actualizar otro cliente? (si/no): ").lower()
+        if not regexSi.match(continuar):
+            break
+
+
+# Función para actualizar un cliente con nuevos datos
+def actualizarCliente(cliente):
+    try:
+        for i, (key, val) in enumerate(cliente.items()):
+            if key != "id" and key != "codigo_cliente":
+                print(f"{i}. {key}: {val}")
+
+        # Confirmar si se desean realizar cambios en el cliente
+        confirmacion = input(
+            "\n¿Desea realizar cambios en este cliente? (si/no): ").lower()
+        if confirmacion == "si":
+            while True:
+                # Preguntar si se desea editar un dato específico o modificar toda la información
+                opcion = input(
+                    "\n¿Desea editar un dato específico o modificar toda la información? (dato/toda): ").lower()
+                if opcion == "dato":
+                    # Editar un dato específico
+                    keySeleccionada = input("Ingrese el campo que desea editar: ")
+                    if re.match(r'^\d+$', keySeleccionada):
+                        keySeleccionada = int(keySeleccionada)
+                        if 0 <= keySeleccionada < len(cliente):
+                            key = list(cliente.keys())[keySeleccionada]
+                            if key in cliente:
+                                nuevoValor = input(f"Ingrese el nuevo valor para '{key}': ")
+                                # Validar si el campo es numérico antes de convertirlo
+                                if key == "codigo_empleado_rep_ventas" or key == "limite_credito":
+                                    if isinstance(cliente[key], int):
+                                        try:
+                                            nuevoValor = int(nuevoValor)
+                                        except ValueError:
+                                            print(
+                                                f"Error: El valor proporcionado para '{key}' no es un número válido.")
+                                    else:
+                                        nuevoValor = int(nuevoValor)  # Conv
+                                cliente[key] = nuevoValor
+                                print("Cliente actualizado.")
+                                break
+                            else:
+                                print("Campo no válido.")
+                elif opcion == "toda":
+                    # Modificar toda la información del cliente excepto el campo "id" y "codigo_cliente"
+                    nuevosDatos = {}
+                    for key in cliente.keys():
+                        if key != "id" and key != "codigo_cliente":
+                            nuevoValor = input(
+                                f"Ingrese el nuevo valor para '{key}': ")
+                            # Validar si el campo es numérico antes de convertirlo
+                            if key == "codigo_empleado_rep_ventas" or key == "limite_credito":
+                                if isinstance(cliente[key], int):
+                                    try:
+                                        nuevoValor = int(nuevoValor)
+                                    except ValueError:
+                                        print(
+                                            f"Error: El valor proporcionado para '{key}' no es un número válido.")
+                                else:
+                                    # Convertir a entero si es posible
+                                    nuevoValor = int(nuevoValor)
+                            nuevosDatos[key] = nuevoValor
+                    cliente.update(nuevosDatos)
+                    print("Cliente actualizado.")
+                    break
+                else:
+                    print("Opción no válida. Por favor, seleccione 'dato' o 'toda'.")
+
+            # Realizar la actualización en el servidor
+            url = f"http://154.38.171.54:5001/cliente/{cliente['id']}"
+            response = requests.put(url, json=cliente)
+            response.raise_for_status()  # Verifica si la solicitud fue exitosa
+            print("Información del cliente actualizada en el servidor.")
+
+        else:
+            print("No se realizarán cambios en el cliente.")
+
+    except Exception as e:
+        print(f"Error: {e}")

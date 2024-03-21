@@ -52,7 +52,6 @@ def postProducto():
                     print(f"{i}. {gamma}")
                 seleccion = input()
                 if re.match(r'^\d+$', seleccion) is not None:
-                    print("funciona")
                     seleccion = int(seleccion)
                     if 0 <= seleccion < len(gammas):
                         print("funciona2")
