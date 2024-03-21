@@ -7,12 +7,13 @@ import re
 import modules.oficina.getOficina as gO
 import modules.validaciones as vali
 import modules.oficina.deleteOficina as dO
+import modules.oficina.updateOficina as uO
 
 
 def postOficina():
     # json-server oficina.json -b 5502
     oficina = {}
-    
+    system("clear")
     while True:
         try: 
             if not oficina.get("codigo_oficina"):
@@ -90,17 +91,14 @@ def postOficina():
                     raise Exception("La direccion no cumple con lo establecido")
 
             # Direccion 2
-            print("Direccion Secundaria")
-            linea_direccion2 = input("Ingrese la direccion secundaria de la oficina (ej. CL. 123 #456 - 789): ") or None
-            if linea_direccion2 is None:
-                oficina["linea_direccion2"] = linea_direccion2
-                break
-            elif vali.valiDire(linea_direccion2):
-                oficina["linea_direccion2"] = linea_direccion2
-                break
-            else:
-                raise Exception("La dirección del cliente no cumple con lo establecido")
-
+            if not oficina.get("linea_direccion2"):
+                print("Direccion Secundaria")
+                linea_direccion2 = input("Ingrese la direccion secundaria de la oficina (ej. CL. 123 #456 - 789): ")
+                if not linea_direccion2 or vali.valiDire(linea_direccion2):
+                    oficina["linea_direccion2"] = linea_direccion2 or None
+                    break
+                else:
+                    raise Exception("La dirección del cliente no cumple con lo establecido")
 
         except Exception as error:
             print(error)
@@ -131,15 +129,15 @@ def menu():
         print("""
     01. Guardar una oficina nueva
     02. Eliminar una oficina
-    03. Atras
+    03. Actualizar una oficina 
+    04. Atras
     """)
         opcion = int(input("\n Ingrese su opcion: "))
 
         match opcion:
             case 1:
-                postOficina()
-                print("SE GUARDO CORRECTAMENTE")
                 print(tabulate(postOficina(), headers="keys", tablefmt="grid"))
+                print("SE GUARDO CORRECTAMENTE")
                 input("\nPresiona Enter para volver al menú...")
             case 2:
                 idOficina= input(
@@ -147,6 +145,9 @@ def menu():
                 dO.deleteOficina(idOficina)
                 input("\nPresiona Enter para volver al menú...")
             case 3:
+                uO.menuUpdateOficina()
+                input("\nPresiona Enter para volver al menú...")
+            case 4:
                 break
             case _:
                 print("Opcion invalida")

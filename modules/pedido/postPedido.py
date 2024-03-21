@@ -44,8 +44,8 @@ def postPedido():
             if not pedido.get("fecha_entrega"):
                 print("Fecha de entrega".center(50,"="))
                 fechaEntrega = input("Ingrese la fecha de entrega (ej. 2006-01-17): ")
-                if vali.valFecha(fechaEntrega):
-                    pedido["fecha_entrega"] = fechaEntrega
+                if not fechaEntrega or vali.valFecha(fechaEntrega):
+                    pedido["fecha_entrega"] = fechaEntrega or None
                 else:
                     raise Exception("La fecha no cumple con lo establecido")
 
@@ -71,8 +71,8 @@ def postPedido():
             if not pedido.get("comentario"):
                 print("Ingrese un comentario del pedido: ".center(50,"="))
                 comentario = input()
-                if vali.valTextoLargo(comentario):
-                    pedido["comentario"] = comentario
+                if not comentario or vali.valTextoLargo(comentario):
+                    pedido["comentario"] = comentario or None
                 else:
                     raise Exception(
                         "El comentario no cumple con el estandar establecido")

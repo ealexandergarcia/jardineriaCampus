@@ -83,8 +83,8 @@ def postCliente():
             if not cliente.get("linea_direccion2"):
                 print("Direccion Secundaria")
                 linea_direccion2 = input("Ingrese la direccion secundaria del cliente (ej. CL. 123 #456 - 789): ")
-                if vali.valiDire(linea_direccion2):
-                    cliente["linea_direccion2"] = linea_direccion2
+                if not linea_direccion2 or vali.valiDire(linea_direccion2):
+                    cliente["linea_direccion2"] = linea_direccion2 or None
                 else:
                     raise Exception("La dirección del cliente no cumple con lo establecido")
 
@@ -93,8 +93,8 @@ def postCliente():
                 print("Ciudad del cliente")
                 ciudad = input(
                     "Ingrese la ciudad del cliente (ej. Fuenlabrada): ")
-                if vali.valUbi(ciudad):
-                    cliente["ciudad"] = ciudad
+                if not ciudad or vali.valUbi(ciudad):
+                    cliente["ciudad"] = ciudad or None
                 else:
                     raise Exception(
                         "La Ciudad del cliente no cumple con lo establecido")
@@ -104,8 +104,8 @@ def postCliente():
                 print("Region del cliente")
                 region = input(
                     "Ingrese la region del cliente (ej. Madrid): ")
-                if vali.valUbi(region):
-                    cliente["region"] = region
+                if not region or vali.valUbi(region):
+                    cliente["region"] = region or None
                 else:
                     raise Exception(
                         "La Region del cliente no cumple con lo establecido")
