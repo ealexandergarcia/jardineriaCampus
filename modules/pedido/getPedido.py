@@ -11,10 +11,21 @@ def getAllData():
     data = peticion.json()
     return data
 
-# Obtener el pedido por Id
+# Método para obtener un cliente por su ID
 def getPedidoCodigo(codigo):
-    peticion = requests.get(f"http://154.38.171.54:5007/pedidos/{codigo}", timeout=10)
-    return [peticion.json()] if peticion.ok else []
+    url = f"http://154.38.171.54:5007/pedidos/{codigo}"
+    
+    try:
+        response = requests.get(url)
+        # si la solicitud no fue exitosa (por ejemplo, 404 o 500), raise_for_status() genera una excepción HTTPError.
+        # Esto detendra la ejecucion del programa y mostrara un mensaje de error que indica la causa del fallo.
+        response.raise_for_status()  # Verifica si la solicitud fue exitosa
+        
+        cliente = response.json()
+        return cliente
+    except requests.exceptions.RequestException as e:
+        print(f"Error al obtener el cliente: {e}")
+        return None
 
 # Devuelve un listado con los distintos estados por los que puede pasar un pedido
 def getAllListadoEstadoPedidos():

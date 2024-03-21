@@ -141,7 +141,7 @@ def menu():
                 input("\nPresiona Enter para volver al menú...")
             case 2:
                 idOficina= input(
-                    "Ingrese el id del cliente que desea eliminar: ")
+                    "Ingrese el id de la oficina que desea eliminar: ")
                 dO.deleteOficina(idOficina)
                 input("\nPresiona Enter para volver al menú...")
             case 3:

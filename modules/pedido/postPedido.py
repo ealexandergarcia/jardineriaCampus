@@ -6,6 +6,8 @@ import requests
 from tabulate import tabulate
 import modules.pedido.getPedido as gP
 import modules.clientes.getClients as gC
+import modules.pedido.deletePedido as dP
+import modules.pedido.updatePedido as uP
 import modules.validaciones as vali
 
 
@@ -100,16 +102,6 @@ def postPedido():
     res = peticion.json()
     return [res]
 
-def deletePedido(id):
-    data = gP.getPedidoCodigo(id)
-
-    if(len(data)):
-        peticion = requests.delete(f"http://154.38.171.54:5007/pedidos/{id}")
-        if peticion.ok:
-            print("Eliminado con éxito")
-        else:
-            print(f"Error al guardar: {peticion.status_code}")
-
 def menu():
     while True:
         system("clear")
@@ -138,11 +130,14 @@ def menu():
                 print(tabulate(postPedido(), headers="keys", tablefmt="grid"))
                 input("\nPresiona Enter para volver al menú...")
             case 2:
-                idPedido = input(
+                idPedido= input(
                     "Ingrese el id del pedido que desea eliminar: ")
-                deletePedido(idPedido)
+                dP.deletePedido(idPedido)
                 input("\nPresiona Enter para volver al menú...")
             case 3:
+                uP.menuUpdatepedidos()
+                input("\nPresiona Enter para volver al menú...")
+            case 4:
                 break
             case _:
                 print("Opcion invalida")
