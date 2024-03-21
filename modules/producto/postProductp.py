@@ -1,13 +1,14 @@
 from os import system
 import re
 import time
-from tabulate import tabulate
+import json
 import requests
+from tabulate import tabulate
 import modules.getGamas as gG
 import modules.producto.getProducto as gP
 import modules.producto.updateProducto as uP
+import modules.producto.deleteProducto as dP
 import modules.validaciones as vali
-import json
 
 
 def postProducto():
@@ -24,9 +25,9 @@ def postProducto():
                 # mayusculas pero la cadena es de 6 caracteres  los dos primeros son
                 # las letras en mayusculas seguido de un guion y los 3 ultimos caracteres
                 if vali.validacionCodProd(codigo) is not None:
-                    data = gP.getProductCodigo(codigo)
-                    if data:
-                        print(tabulate(data, headers="keys", tablefmt="grid"))
+                    data = gP.getAllData()
+                    codeProdExist= True if any(codigo == i.get("codigo_producto") for i in data) else False
+                    if codeProdExist:
                         raise Exception(
                             "El codigo del producto ya existe")
                     else:
@@ -135,18 +136,6 @@ def postProducto():
     res["Mensaje"] = "Producto Guardado"
     return [res]
 
-
-def deleteProducto(id):
-    data = gP.getProductCodigo(id)
-
-    if (len(data)):
-        peticion = requests.delete(f"http://154.38.171.54:5008/productos/{id}")
-        if peticion.ok:
-            print("Eliminado con éxito")
-        else:
-            print(f"Error al guardar: {peticion.status_code}")
-
-
 def menu():
     while True:
         system("clear")
@@ -166,7 +155,7 @@ def menu():
         print("""
     01. Guardar un producto nuevo
     02. Eliminar un producto
-    03. Actualizar el nombre del producto
+    03. Actualizar un producto
     03. Atras
     """)
         opcion = int(input("\n Ingrese su opcion: "))
@@ -178,13 +167,10 @@ def menu():
             case 2:
                 idProducto = input(
                     "Ingrese el id del producto que desea eliminar: ")
-                deleteProducto(idProducto)
+                dP.deleteProducto(idProducto)
                 input("\nPresiona Enter para volver al menú...")
             case 3:
-                idProducto = input(
-                    "Ingrese el id del producto que desea actualizar: ")
-                uP.updateProductoNombre(idProducto)
-                # print(tabulate(uP.updateProductoNombre(idProducto), headers="keys", tablefmt="grid"))
+                uP.menuUpdateProductos()
                 input("\nPresiona Enter para volver al menú...")
             case 4:
                 break

@@ -136,7 +136,7 @@ def menu():
                 dP.deletePedido(idPedido)
                 input("\nPresiona Enter para volver al menú...")
             case 3:
-                uP.menuUpdatepedidos()
+                uP.menuUpdatePedidos()
                 input("\nPresiona Enter para volver al menú...")
             case 4:
                 break

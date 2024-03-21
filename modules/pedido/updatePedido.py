@@ -6,7 +6,7 @@ import modules.pedido.getPedido as gP
 
 
 # Función que muestra un menú para actualizar pedidos
-def menuUpdatepedidos():
+def menuUpdatePedidos():
     # Expresión regular para verificar si la cadena es "si"
     regexSi = re.compile(r'^si$', re.IGNORECASE)
     system("clear")

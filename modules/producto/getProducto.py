@@ -11,13 +11,21 @@ def getAllData():
     data = peticion.json()
     return data
 
-def getProductCodigo(codigo):
-    peticion = requests.get(f"http://154.38.171.54:5008/productos/{codigo}", timeout=10)
-    return [peticion.json()] if peticion.ok else []
-    # if(peticion.ok):
-    #     return [peticion.json()]
-    # else:
-    #     return[]
+# Método para obtener un cliente por su ID
+def getProductCodigo(id_cliente):
+    url = f"http://154.38.171.54:5008/productos/{id_cliente}"
+    
+    try:
+        response = requests.get(url)
+        # si la solicitud no fue exitosa (por ejemplo, 404 o 500), raise_for_status() genera una excepción HTTPError. 
+        # Esto detendra la ejecucion del programa y mostrara un mensaje de error que indica la causa del fallo.
+        response.raise_for_status()  # Verifica si la solicitud fue exitosa
+        
+        cliente = response.json()
+        return cliente
+    except requests.exceptions.RequestException as e:
+        print(f"Error al obtener el cliente: {e}")
+        return None
 
 def getProductCodigo2(codigo):
     peticion = requests.get(f"http://154.38.171.54:5008/productos?codigo_producto={codigo.upper()}", timeout=10)
