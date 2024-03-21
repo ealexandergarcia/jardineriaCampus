@@ -1,7 +1,7 @@
 
-# Jardineria Camoues
+# Jardineria Campus
 
-Desarrollando un CRUD para gestionar información en Python. El programa permite agregar, leer, actualizar y eliminar datos de oficinas almacenados. Utiliza estructuras de datos y operaciones de entrada/salida de Python para interactuar con el usuario y gestionar los datos de oficinas.
+Desarrollando un CRUD para gestionar información en Python. El programa permite agregar, leer, actualizar y eliminar datos de una jardineria almacenados. Utiliza estructuras de datos y operaciones de entrada/salida de Python para interactuar con el usuario y gestionar los datos de la jardineria.
 
 
 
