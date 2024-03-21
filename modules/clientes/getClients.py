@@ -1,9 +1,28 @@
 from os import system  # import of the standard function os.system()
 import time
+import re
 from tabulate import tabulate
 import requests
 import modules.empleado.getEmpleados as gE
 import modules.pago.getPago as gP
+
+imgerror = """
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡠⠴⠒⠒⠲⠤⠤⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡴⠋⠀⠀⠀⠀⠠⢚⣂⡀⠈⠲⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣀⡀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡎⡴⠆⠀⠀⠀⠀⠀⢎⠐⢟⡇⠀⠈⢣⣠⠞⠉⠉⠑⢄⠀⠀⣰⠋⡯⠗⣚⣉⣓⡄
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣸⢠⢞⠉⡆⠀⠀⠀⠀⠀⠓⠋⠀⠀⠀⠀⢿⠀⠀⠀⠀⠈⢧⠀⢹⣠⠕⠘⢧⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡇⠘⠮⠔⠁⠀⠀⠀⠀⢀⠀⠀⠀⠀⠀⠀⠸⡀⠀⠀⠀⠀⠈⣇⠀⢳⠀⠀⠘⡆⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡴⠋⠉⠓⠦⣧⠀⠀⠀⠀⢦⠤⠤⠖⠋⠇⠀⠀⠀⠀⠀⠀⡇⠀⠀⠀⠀⠀⠸⡄⠈⡇⠀⠀⢹⡀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⠁⠀⠀⠀⠀⠙⡆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡇⠀⠈⣆⠀⠀⠀⢱⠀⡇⠀⠀⠀⡇⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣼⠀⠀⠀⠀⠀⠀⠘⢆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡰⠁⠀⠀⠸⡄⠀⠀⠀⠳⠃⠀⠀⠀⡇⠀
+⠀⠀⠀⠀⠀⢠⢏⠉⢳⡀⠀⠀⢹⠀⠀⠀⠀⢠⠀⠀⠀⠑⠤⣄⣀⡀⠀⠀⠀⠀⠀⣀⡤⠚⠀⠀⠀⠀⠀⢸⢢⡀⠀⠀⠀⠀⠀⢰⠁⠀
+⠀⠀⣀⣤⡞⠓⠉⠁⠀⢳⠀⠀⢸⠀⠀⠀⠀⢸⡆⠀⠀⠀⠀⠀⠀⠉⠉⠉⠉⠉⠉⠁⠀⠀⠀⠀⠀⠀⠀⢸⠀⠙⠦⣤⣀⣀⡤⠃⠀⠀
+⠀⣰⠗⠒⣚⠀⢀⡤⠚⠉⢳⠀⠈⡇⠀⠀⠀⢸⡧⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠸⠵⡾⠋⠉⠉⡏⠀⠀⠀⠈⠣⣀⣳⠀⠀⠀⢸⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠹⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⡼⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣸⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠳⡄⠀⠀⠀⠀⠀⠀⠀⡰⠁⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠈⠓⠲⠤⠤⠤⠴⠚⠁⠀⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"""
 
 # Data
 def getAllData():
@@ -234,68 +253,81 @@ def menu():
     12. Obtener todos los clientes que no hayan realizado pagos junto con el nombre de sus representantes de ventas
     13. Volver al menu princupal
     """)
-        opcion = int(input("\n Ingrese su opcion: "))
-
-        match opcion:
-            case 1:
-                print(tabulate(getAllClientName(), headers="keys", tablefmt="grid"))
-                input("\nPresiona Enter para volver al menú...")
-            case 2:
-                codigoC = int(input("Ingrese el código del cliente: "))
-                print(tabulate(getOneClientCodigo(codigoC),
-                      headers="keys", tablefmt="grid"))
-                input("\nPresiona Enter para volver al menú...")
-            case 3:
-                ciudad = input("Ingrese la ciudad deseada: ")
-                limitCredit = float(input("Ingrese el límite de crédito: "))
-                print(tabulate(getAllClientCreditCiudad(
-                    limitCredit, ciudad), headers="keys", tablefmt="grid"))
-                input("\nPresiona Enter para volver al menú...")
-            case 4:
-                pais = input("Ingrese el país: ")
-                region = input("Ingrese la región (opcional): ") or None
-                ciudad = input("Ingrese la ciudad (opcional): ") or None
-                print(tabulate(getAllClientPaisRegionCiudad(
-                    pais, region, ciudad), headers="keys", tablefmt="grid"))
-                input("\nPresiona Enter para volver al menú...")
-            case 5:
-                codigoPostal = input("Ingrese el código postal: ")
-                print(tabulate(getClientCodigoPostal(codigoPostal),
-                      headers="keys", tablefmt="grid"))
-                input("\nPresiona Enter para volver al menú...")
-            case 6:
-                codeRepreVen = int(
-                    input("Ingrese el código del representante de ventas: "))
-                print(tabulate(getClientByRepresentanteVentas(
-                    codeRepreVen), headers="keys", tablefmt="grid"))
-                input("\nPresiona Enter para volver al menú...")
-            case 7:
-                country = input("Ingrese el país: ")
-                postal_code = input("Ingrese el código postal: ")
-                print(tabulate(getClientByCountryAndPostalCode(
-                    country, postal_code), headers="keys", tablefmt="grid"))
-                input("\nPresiona Enter para volver al menú...")
-            case 8:
-                nacionalidad = "Spain"
-                print(tabulate(getAllClientesEspañoles(
-                    nacionalidad), headers="keys", tablefmt="grid"))
-                input("\nPresiona Enter para volver al menú...")
-            case 9:
-                print(tabulate(getAllClientMadridRepre(),
-                      headers="keys", tablefmt="grid"))
-                input("\nPresiona Enter para volver al menú...")
-            case 10:
-                print(tabulate(getAllClientNameRepreName(),
-                      headers="keys", tablefmt="grid"))
-                input("\nPresiona Enter para volver al menú...")
-            case 11:
-                print(tabulate(clientes_con_pagos, headers="keys", tablefmt="grid"))
-                input("\nPresiona Enter para volver al menú...")
-            case 12:
-                print(tabulate(clientes_sin_pagos, headers="keys", tablefmt="grid"))
-                input("\nPresiona Enter para volver al menú...")
-            case 13:
-                break
-            case _:
-                print("Opcion invalida")
-                time.sleep(2)  # espera en segundos
+        opcion = input("\n Ingrese su opcion: ")
+        if(re.match(r'[0-9]+$', opcion) is not None):
+            opcion= int(opcion)
+            match opcion:
+                case 1:
+                    print(tabulate(getAllClientName(), headers="keys", tablefmt="grid"))
+                    input("\nPresiona Enter para volver al menú...")
+                case 2:
+                    codigoC = int(input("Ingrese el código del cliente: "))
+                    print(tabulate(getOneClientCodigo(codigoC),
+                        headers="keys", tablefmt="grid"))
+                    input("\nPresiona Enter para volver al menú...")
+                case 3:
+                    ciudad = input("Ingrese la ciudad deseada: ")
+                    limitCredit = float(input("Ingrese el límite de crédito: "))
+                    print(tabulate(getAllClientCreditCiudad(
+                        limitCredit, ciudad), headers="keys", tablefmt="grid"))
+                    input("\nPresiona Enter para volver al menú...")
+                case 4:
+                    pais = input("Ingrese el país: ")
+                    region = input("Ingrese la región (opcional): ") or None
+                    ciudad = input("Ingrese la ciudad (opcional): ") or None
+                    print(tabulate(getAllClientPaisRegionCiudad(
+                        pais, region, ciudad), headers="keys", tablefmt="grid"))
+                    input("\nPresiona Enter para volver al menú...")
+                case 5:
+                    codigoPostal = input("Ingrese el código postal: ")
+                    print(tabulate(getClientCodigoPostal(codigoPostal),
+                        headers="keys", tablefmt="grid"))
+                    input("\nPresiona Enter para volver al menú...")
+                case 6:
+                    codeRepreVen = int(
+                        input("Ingrese el código del representante de ventas: "))
+                    print(tabulate(getClientByRepresentanteVentas(
+                        codeRepreVen), headers="keys", tablefmt="grid"))
+                    input("\nPresiona Enter para volver al menú...")
+                case 7:
+                    country = input("Ingrese el país: ")
+                    postal_code = input("Ingrese el código postal: ")
+                    print(tabulate(getClientByCountryAndPostalCode(
+                        country, postal_code), headers="keys", tablefmt="grid"))
+                    input("\nPresiona Enter para volver al menú...")
+                case 8:
+                    nacionalidad = "Spain"
+                    print(tabulate(getAllClientesEspañoles(
+                        nacionalidad), headers="keys", tablefmt="grid"))
+                    input("\nPresiona Enter para volver al menú...")
+                case 9:
+                    print(tabulate(getAllClientMadridRepre(),
+                        headers="keys", tablefmt="grid"))
+                    input("\nPresiona Enter para volver al menú...")
+                case 10:
+                    print(tabulate(getAllClientNameRepreName(),
+                        headers="keys", tablefmt="grid"))
+                    input("\nPresiona Enter para volver al menú...")
+                case 11:
+                    print(tabulate(clientes_con_pagos, headers="keys", tablefmt="grid"))
+                    input("\nPresiona Enter para volver al menú...")
+                case 12:
+                    print(tabulate(clientes_sin_pagos, headers="keys", tablefmt="grid"))
+                    input("\nPresiona Enter para volver al menú...")
+                case 13:
+                    break
+                case _:
+                    print("Opcion invalida")
+                    time.sleep(2)  # espera en segundos
+        else:
+            system("clear")
+            print(imgerror)
+            print("""
+      ____             _   __           _              __  ___     __
+     / __ \____  _____(_)_/_/ ____     (_)___ _   ____/_/_/ (_)___/ /___ _
+    / / / / __ \/ ___/ / __ \/ __ \   / / __ \ | / / __ `/ / / __  / __ `/
+   / /_/ / /_/ / /__/ / /_/ / / / /  / / / / / |/ / /_/ / / / /_/ / /_/ /
+   \____/ .___/\___/_/\____/_/ /_/  /_/_/ /_/|___/\__,_/_/_/\__,_/\__,_/
+        /_/
+""")
+            time.sleep(2)  # espera en segundos

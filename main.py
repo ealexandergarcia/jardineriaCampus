@@ -49,27 +49,42 @@ def menuCliente():
         2. Guardar, Actualizar y Eliminar Clientes
         3. Volver al menu princupal
         """)
-        opcion = int(input("Ingrese su opcion: "))
-        match opcion:
-            case 1:
-                listCliente.menu()
-            case 2:
-                CRUDCliente.menu()
-            case 3:
-                break
-            case _:
-                system("clear")
-                print(imgerror)
-                print("""
+        opcion = input("Ingrese su opcion: ")
+        if(re.match(r'[0-9]+$', opcion) is not None):
+            opcion= int(opcion)
+            match opcion:
+                case 1:
+                    listCliente.menu()
+                case 2:
+                    CRUDCliente.menu()
+                case 3:
+                    break
+                case _:
+                    system("clear")
+                    print(imgerror)
+                    print("""
 
-   ____             _   __           _              __  ___     __
-  / __ \____  _____(_)_/_/ ____     (_)___ _   ____/_/_/ (_)___/ /___ _
- / / / / __ \/ ___/ / __ \/ __ \   / / __ \ | / / __ `/ / / __  / __ `/
-/ /_/ / /_/ / /__/ / /_/ / / / /  / / / / / |/ / /_/ / / / /_/ / /_/ /
-\____/ .___/\___/_/\____/_/ /_/  /_/_/ /_/|___/\__,_/_/_/\__,_/\__,_/
-    /_/
+       ____             _   __           _              __  ___     __
+      / __ \____  _____(_)_/_/ ____     (_)___ _   ____/_/_/ (_)___/ /___ _
+     / / / / __ \/ ___/ / __ \/ __ \   / / __ \ | / / __ `/ / / __  / __ `/
+    / /_/ / /_/ / /__/ / /_/ / / / /  / / / / / |/ / /_/ / / / /_/ / /_/ /
+    \____/ .___/\___/_/\____/_/ /_/  /_/_/ /_/|___/\__,_/_/_/\__,_/\__,_/
+        /_/
+    """)
+                    time.sleep(2)  # espera en segundos
+        else:
+            system("clear")
+            print(imgerror)
+            print("""
+       ____             _   __           _              __  ___     __
+      / __ \____  _____(_)_/_/ ____     (_)___ _   ____/_/_/ (_)___/ /___ _
+     / / / / __ \/ ___/ / __ \/ __ \   / / __ \ | / / __ `/ / / __  / __ `/
+    / /_/ / /_/ / /__/ / /_/ / / / /  / / / / / |/ / /_/ / / / /_/ / /_/ /
+    \____/ .___/\___/_/\____/_/ /_/  /_/_/ /_/|___/\__,_/_/_/\__,_/\__,_/
+        /_/
 """)
-                time.sleep(2)  # espera en segundos
+            time.sleep(2)  # espera en segundos
+
 
 def menuOficinas():
     while True:
@@ -85,27 +100,42 @@ def menuOficinas():
         2. Guardar, Actualizar y Eliminar Oficinas
         3. Volver al menu princupal
         """)
-        opcion = int(input("Ingrese su opcion: "))
-        match opcion:
-            case 1:
-                listOficina.menu()
-            case 2:
-                CRUDOficina.menu()
-            case 3:
-                break
-            case _:
-                system("clear")
-                print(imgerror)
-                print("""
+        opcion = input("Ingrese su opcion: ")
+        if(re.match(r'[0-9]+$', opcion) is not None):
+            opcion= int(opcion)
+            match opcion:
+                case 1:
+                    listOficina.menu()
+                case 2:
+                    CRUDOficina.menu()
+                case 3:
+                    break
+                case _:
+                    system("clear")
+                    print(imgerror)
+                    print("""
 
-   ____             _   __           _              __  ___     __
-  / __ \____  _____(_)_/_/ ____     (_)___ _   ____/_/_/ (_)___/ /___ _
- / / / / __ \/ ___/ / __ \/ __ \   / / __ \ | / / __ `/ / / __  / __ `/
-/ /_/ / /_/ / /__/ / /_/ / / / /  / / / / / |/ / /_/ / / / /_/ / /_/ /
-\____/ .___/\___/_/\____/_/ /_/  /_/_/ /_/|___/\__,_/_/_/\__,_/\__,_/
-    /_/
+       ____             _   __           _              __  ___     __
+      / __ \____  _____(_)_/_/ ____     (_)___ _   ____/_/_/ (_)___/ /___ _
+     / / / / __ \/ ___/ / __ \/ __ \   / / __ \ | / / __ `/ / / __  / __ `/
+    / /_/ / /_/ / /__/ / /_/ / / / /  / / / / / |/ / /_/ / / / /_/ / /_/ /
+    \____/ .___/\___/_/\____/_/ /_/  /_/_/ /_/|___/\__,_/_/_/\__,_/\__,_/
+        /_/
+    """)
+                    time.sleep(2)  # espera en segundos
+        else:
+            system("clear")
+            print(imgerror)
+            print("""
+       ____             _   __           _              __  ___     __
+      / __ \____  _____(_)_/_/ ____     (_)___ _   ____/_/_/ (_)___/ /___ _
+     / / / / __ \/ ___/ / __ \/ __ \   / / __ \ | / / __ `/ / / __  / __ `/
+    / /_/ / /_/ / /__/ / /_/ / / / /  / / / / / |/ / /_/ / / / /_/ / /_/ /
+    \____/ .___/\___/_/\____/_/ /_/  /_/_/ /_/|___/\__,_/_/_/\__,_/\__,_/
+        /_/
 """)
-                time.sleep(2)  # espera en segundos
+            time.sleep(2)  # espera en segundos
+
 
 def menuEmpleado():
     while True:
@@ -121,27 +151,41 @@ def menuEmpleado():
         2. Guardar, Actualizar y Eliminar Empleados
         3. Volver al menu princupal
         """)
-        opcion = int(input("Ingrese su opcion: "))
-        match opcion:
-            case 1:
-                listEmpleado.menu()
-            case 2:
-                CRUDEmpleado.menu()
-            case 3:
-                break
-            case _:
-                system("clear")
-                print(imgerror)
-                print("""
+        opcion = input("Ingrese su opcion: ")
+        if(re.match(r'[0-9]+$', opcion) is not None):
+            opcion= int(opcion)
+            match opcion:
+                case 1:
+                    listEmpleado.menu()
+                case 2:
+                    CRUDEmpleado.menu()
+                case 3:
+                    break
+                case _:
+                    system("clear")
+                    print(imgerror)
+                    print("""
 
-   ____             _   __           _              __  ___     __
-  / __ \____  _____(_)_/_/ ____     (_)___ _   ____/_/_/ (_)___/ /___ _
- / / / / __ \/ ___/ / __ \/ __ \   / / __ \ | / / __ `/ / / __  / __ `/
-/ /_/ / /_/ / /__/ / /_/ / / / /  / / / / / |/ / /_/ / / / /_/ / /_/ /
-\____/ .___/\___/_/\____/_/ /_/  /_/_/ /_/|___/\__,_/_/_/\__,_/\__,_/
-    /_/
+       ____             _   __           _              __  ___     __
+      / __ \____  _____(_)_/_/ ____     (_)___ _   ____/_/_/ (_)___/ /___ _
+     / / / / __ \/ ___/ / __ \/ __ \   / / __ \ | / / __ `/ / / __  / __ `/
+    / /_/ / /_/ / /__/ / /_/ / / / /  / / / / / |/ / /_/ / / / /_/ / /_/ /
+    \____/ .___/\___/_/\____/_/ /_/  /_/_/ /_/|___/\__,_/_/_/\__,_/\__,_/
+        /_/
+    """)
+                    time.sleep(2)  # espera en segundos
+        else:
+            system("clear")
+            print(imgerror)
+            print("""
+       ____             _   __           _              __  ___     __
+      / __ \____  _____(_)_/_/ ____     (_)___ _   ____/_/_/ (_)___/ /___ _
+     / / / / __ \/ ___/ / __ \/ __ \   / / __ \ | / / __ `/ / / __  / __ `/
+    / /_/ / /_/ / /__/ / /_/ / / / /  / / / / / |/ / /_/ / / / /_/ / /_/ /
+    \____/ .___/\___/_/\____/_/ /_/  /_/_/ /_/|___/\__,_/_/_/\__,_/\__,_/
+        /_/
 """)
-                time.sleep(2)  # espera en segundos
+            time.sleep(2)  # espera en segundos
 
 def menuPedidos():
     while True:
@@ -156,27 +200,41 @@ def menuPedidos():
         2. Guardar, Actualizar y Eliminar Pedidos
         3. Volver al menu princupal
         """)
-        opcion = int(input("Ingrese su opcion: "))
-        match opcion:
-            case 1:
-                listPedido.menu()
-            case 2:
-                CRUDPedido.menu()
-            case 3:
-                break
-            case _:
-                system("clear")
-                print(imgerror)
-                print("""
+        opcion = input("Ingrese su opcion: ")
+        if(re.match(r'[0-9]+$', opcion) is not None):
+            opcion= int(opcion)
+            match opcion:
+                case 1:
+                    listPedido.menu()
+                case 2:
+                    CRUDPedido.menu()
+                case 3:
+                    break
+                case _:
+                    system("clear")
+                    print(imgerror)
+                    print("""
 
-   ____             _   __           _              __  ___     __
-  / __ \____  _____(_)_/_/ ____     (_)___ _   ____/_/_/ (_)___/ /___ _
- / / / / __ \/ ___/ / __ \/ __ \   / / __ \ | / / __ `/ / / __  / __ `/
-/ /_/ / /_/ / /__/ / /_/ / / / /  / / / / / |/ / /_/ / / / /_/ / /_/ /
-\____/ .___/\___/_/\____/_/ /_/  /_/_/ /_/|___/\__,_/_/_/\__,_/\__,_/
-    /_/
+       ____             _   __           _              __  ___     __
+      / __ \____  _____(_)_/_/ ____     (_)___ _   ____/_/_/ (_)___/ /___ _
+     / / / / __ \/ ___/ / __ \/ __ \   / / __ \ | / / __ `/ / / __  / __ `/
+    / /_/ / /_/ / /__/ / /_/ / / / /  / / / / / |/ / /_/ / / / /_/ / /_/ /
+    \____/ .___/\___/_/\____/_/ /_/  /_/_/ /_/|___/\__,_/_/_/\__,_/\__,_/
+        /_/
+    """)
+                    time.sleep(2)  # espera en segundos
+        else:
+            system("clear")
+            print(imgerror)
+            print("""
+       ____             _   __           _              __  ___     __
+      / __ \____  _____(_)_/_/ ____     (_)___ _   ____/_/_/ (_)___/ /___ _
+     / / / / __ \/ ___/ / __ \/ __ \   / / __ \ | / / __ `/ / / __  / __ `/
+    / /_/ / /_/ / /__/ / /_/ / / / /  / / / / / |/ / /_/ / / / /_/ / /_/ /
+    \____/ .___/\___/_/\____/_/ /_/  /_/_/ /_/|___/\__,_/_/_/\__,_/\__,_/
+        /_/
 """)
-                time.sleep(2)  # espera en segundos
+            time.sleep(2)  # espera en segundos
 
 def menuPagos():
     while True:
@@ -192,26 +250,40 @@ def menuPagos():
         2. Guardar, Actualizar y Eliminar Oficinas
         3. Volver al menu princupal
         """)
-        opcion = int(input("Ingrese su opcion: "))
-        match opcion:
-            case 1:
-                listPago.menu()
-            case 2:
-                CRUDPago.menu()
-            case 3:
-                break
-            case _:
-                print("""
-
-   ____             _   __           _              __  ___     __
-  / __ \____  _____(_)_/_/ ____     (_)___ _   ____/_/_/ (_)___/ /___ _
- / / / / __ \/ ___/ / __ \/ __ \   / / __ \ | / / __ `/ / / __  / __ `/
-/ /_/ / /_/ / /__/ / /_/ / / / /  / / / / / |/ / /_/ / / / /_/ / /_/ /
-\____/ .___/\___/_/\____/_/ /_/  /_/_/ /_/|___/\__,_/_/_/\__,_/\__,_/
-    /_/
+        opcion = input("Ingrese su opcion: ")
+        if(re.match(r'[0-9]+$', opcion) is not None):
+            opcion= int(opcion)
+            match opcion:
+                case 1:
+                    listPago.menu()
+                case 2:
+                    CRUDPago.menu()
+                case 3:
+                    break
+                case _:
+                    system("clear")
+                    print(imgerror)
+                    print("""
+       ____             _   __           _              __  ___     __
+      / __ \____  _____(_)_/_/ ____     (_)___ _   ____/_/_/ (_)___/ /___ _
+     / / / / __ \/ ___/ / __ \/ __ \   / / __ \ | / / __ `/ / / __  / __ `/
+    / /_/ / /_/ / /__/ / /_/ / / / /  / / / / / |/ / /_/ / / / /_/ / /_/ /
+    \____/ .___/\___/_/\____/_/ /_/  /_/_/ /_/|___/\__,_/_/_/\__,_/\__,_/
+        /_/
+    """)
+                    time.sleep(2)  # espera en segundos
+        else:
+            system("clear")
+            print(imgerror)
+            print("""
+       ____             _   __           _              __  ___     __
+      / __ \____  _____(_)_/_/ ____     (_)___ _   ____/_/_/ (_)___/ /___ _
+     / / / / __ \/ ___/ / __ \/ __ \   / / __ \ | / / __ `/ / / __  / __ `/
+    / /_/ / /_/ / /__/ / /_/ / / / /  / / / / / |/ / /_/ / / / /_/ / /_/ /
+    \____/ .___/\___/_/\____/_/ /_/  /_/_/ /_/|___/\__,_/_/_/\__,_/\__,_/
+        /_/
 """)
-                print(imgerror)
-                time.sleep(2)  # espera en segundos
+            time.sleep(2)  # espera en segundos
 
 def menuProducto():
     while True:
@@ -227,27 +299,40 @@ def menuProducto():
         2. Guardar, Actualizar y Eliminar Productos
         3. Volver al menu princupal
         """)
-        opcion = int(input("Ingrese su opcion: "))
-        match opcion:
-            case 1:
-                listProducto.menu()
-            case 2:
-                CRUDProducto.menu()
-            case 3:
-                break
-            case _:
-                system("clear")
-                print(imgerror)
-                print("""
-
-   ____             _   __           _              __  ___     __
-  / __ \____  _____(_)_/_/ ____     (_)___ _   ____/_/_/ (_)___/ /___ _
- / / / / __ \/ ___/ / __ \/ __ \   / / __ \ | / / __ `/ / / __  / __ `/
-/ /_/ / /_/ / /__/ / /_/ / / / /  / / / / / |/ / /_/ / / / /_/ / /_/ /
-\____/ .___/\___/_/\____/_/ /_/  /_/_/ /_/|___/\__,_/_/_/\__,_/\__,_/
-    /_/
+        opcion = input("Ingrese su opcion: ")
+        if(re.match(r'[0-9]+$', opcion) is not None):
+            opcion= int(opcion)
+            match opcion:
+                case 1:
+                    listProducto.menu()
+                case 2:
+                    CRUDProducto.menu()
+                case 3:
+                    break
+                case _:
+                    system("clear")
+                    print(imgerror)
+                    print("""
+       ____             _   __           _              __  ___     __
+      / __ \____  _____(_)_/_/ ____     (_)___ _   ____/_/_/ (_)___/ /___ _
+     / / / / __ \/ ___/ / __ \/ __ \   / / __ \ | / / __ `/ / / __  / __ `/
+    / /_/ / /_/ / /__/ / /_/ / / / /  / / / / / |/ / /_/ / / / /_/ / /_/ /
+    \____/ .___/\___/_/\____/_/ /_/  /_/_/ /_/|___/\__,_/_/_/\__,_/\__,_/
+        /_/
+    """)
+                    time.sleep(2)  # espera en segundos
+        else:
+            system("clear")
+            print(imgerror)
+            print("""
+       ____             _   __           _              __  ___     __
+      / __ \____  _____(_)_/_/ ____     (_)___ _   ____/_/_/ (_)___/ /___ _
+     / / / / __ \/ ___/ / __ \/ __ \   / / __ \ | / / __ `/ / / __  / __ `/
+    / /_/ / /_/ / /__/ / /_/ / / / /  / / / / / |/ / /_/ / / / /_/ / /_/ /
+    \____/ .___/\___/_/\____/_/ /_/  /_/_/ /_/|___/\__,_/_/_/\__,_/\__,_/
+        /_/
 """)
-                time.sleep(2)  # espera en segundos
+            time.sleep(2)  # espera en segundos
 
 def mainMenu():
     while True:
@@ -337,13 +422,8 @@ def mainMenu():
 
 if(__name__ == "__main__"):
 
-    # peticion = requests.get("http://154.38.171.54:5008/productos?gama=Ornamentales&cantidadEnStock=100&_sort=-precio_venta")
-    # data = json.dumps(peticion.json(), indent=4)
-    # print(data)
     mainMenu()
-    # print(listCliente.getAllClientPago())
 
-    # CRUDPago.menu()
 
 # # Actualziar los json para agregar el id
 #     with open("storage/pago.json", "r") as f:
