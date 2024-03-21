@@ -9,12 +9,22 @@ def getAllData():
     peticion = requests.get("http://154.38.171.54:5005/oficinas", timeout=10)
     data = peticion.json()
     return data
-
+  
+# Método para obtener un cliente por su ID
 def getOficinaCodigo(codigo):
-    peticion = requests.get(f"http://154.38.171.54:5005/oficinas/{codigo}", timeout=10)
-
-    return [peticion.json()] if peticion.ok else []
+    url = f"http://154.38.171.54:5005/oficinas/{codigo}"
     
+    try:
+        response = requests.get(url)
+        # si la solicitud no fue exitosa (por ejemplo, 404 o 500), raise_for_status() genera una excepción HTTPError.
+        # Esto detendra la ejecucion del programa y mostrara un mensaje de error que indica la causa del fallo.
+        response.raise_for_status()  # Verifica si la solicitud fue exitosa
+        
+        cliente = response.json()
+        return cliente
+    except requests.exceptions.RequestException as e:
+        print(f"Error al obtener el cliente: {e}")
+        return None
 
 
 def getAllCodigoCiudad():

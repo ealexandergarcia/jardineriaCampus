@@ -6,6 +6,7 @@ import requests
 import re
 import modules.oficina.getOficina as gO
 import modules.validaciones as vali
+import modules.oficina.deleteOficina as dO
 
 
 def postOficina():
@@ -110,17 +111,6 @@ def postOficina():
     return [res]
 
 
-def deleteOficina(id):
-    data = gO.getOficinaCodigo(id)
-    print(data)
-    if(len(data)):
-        peticion = requests.delete(f"http://154.38.171.54:5005/oficinas/{id}",timeout=10)
-        if peticion.ok:
-            print("Guardado con éxito")
-        else:
-            print(f"Error al guardar: {peticion.status_code}")
-
-
 def menu():
     while True:
         system("clear")
@@ -154,7 +144,7 @@ def menu():
             case 2:
                 idOficina= input(
                     "Ingrese el id del cliente que desea eliminar: ")
-                deleteOficina(idOficina)
+                dO.deleteOficina(idOficina)
                 input("\nPresiona Enter para volver al menú...")
             case 3:
                 break
