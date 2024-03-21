@@ -7,6 +7,8 @@ from tabulate import tabulate
 import modules.validaciones as vali
 import modules.clientes.getClients as gC
 import modules.pago.getPago as gP
+import modules.pago.deletePago as dP
+import modules.pago.updatePago as uP
 
 def postPago():
     # json-server pago.json -b 5505
@@ -85,28 +87,6 @@ def postPago():
     res = peticion.json()
     return [res]
 
-def deletePago(id):
-    data = gP.getPedidoCodigo(id)
-    if(len(data)):
-        peticion = requests.delete(f"http://154.38.171.54:5006/pagos/{id}")
-        if peticion.ok:
-            print("Guardado con éxito")
-        else:
-            print(f"Error al guardar: {peticion.status_code}")
-
-# Función para modificar los datos
-def modificarPago(producto_id, nuevoValorPago):
-    pagos = gP.getAllData()
-    for pago in pagos:
-        pagoId= True if any(producto_id == pago.get("id") for i in pagos) else False
-        if pagoId:
-            print(f"No se encontró un producto con ID {producto_id}")
-        else:
-            # print(pago)
-            pago["total"] = nuevoValorPago
-            peticion = requests.put(f"http://154.38.171.54:5006/pagos/{producto_id}", timeout=10, data=json.dumps(pago).encode("UTF-8"))
-            res = peticion.json()
-            return [res]
 
 def menu():
     while True:
@@ -128,7 +108,7 @@ def menu():
         print("""
     01. Guardar un nuevo pago
     02. Eliminar un pago
-    03. Modificar el valor del pago
+    03. Actualizar un pago 
     04. Atras
     """)
         opcion = int(input("\n Ingrese su opcion: "))
@@ -140,15 +120,10 @@ def menu():
             case 2:
                 idPago = input(
                     "Ingrese el id del pago que desea eliminar: ")
-                deletePago(idPago)
+                dP.deletePago(idPago)
                 input("\nPresiona Enter para volver al menú...")
             case 3:
-                print("Ingrese el identificador del pago:".center(50,"="))
-                idPago = input()
-                print("Pago total (ej. 3000):".center(50,"="))
-                pagoTot = int(input())
-                print(tabulate(modificarPago(idPago,pagoTot), headers="keys", tablefmt="grid"))
-                
+                uP.menuUpdatePago()
                 input("\nPresiona Enter para volver al menú...")
             case 4:
                 break
